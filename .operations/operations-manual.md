@@ -26,9 +26,12 @@ If the contents will be translated into other languages, take a look at how the 
 
 **Updates**
 
-- [x] Update top badges with best practices item count and last update
-- [x] Update 'thank you' stars & flowers
-- [x] Notify and thanks the contributors of the month
+- [ ] Update top badges with best practices item count and last update
+- [ ] Update the 'Latest Best Practices and News' section
+- [ ] Update the Welcome message
+- [ ] Update the Table of Contents
+- [ ] Update 'thank you' stars & flowers
+- [ ] Notify and thanks the contributors of the month
 
 **Flowers**
 - @someone2
