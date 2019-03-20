@@ -87,6 +87,6 @@ An approved new best practice Be the first to collect a ⭐, contribute to this 
 
 <br/><br/><br/>
 
-This repository is inspired to the [nodebestpractices](https://github.com/i0natan/nodebestpractices) one, thank you [Yoni]() and the whole [steering team]() to keep it updated and to allow the creation of this repository.
+This repository is inspired to the [nodebestpractices](https://github.com/i0natan/nodebestpractices) one, thank you [Yoni](https://github.com/i0natan) and the whole [steering team](https://github.com/i0natan/nodebestpractices#steering-committee) to keep it updated and to allow the creation of this repository.
 
 <br/><br/><br/>
