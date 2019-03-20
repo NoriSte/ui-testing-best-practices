@@ -1,6 +1,6 @@
 [✔]: assets/images/checkbox-small-blue.png
 
-# UI Testing Best Practices
+# UI Testing Best Practices (Work in progress)
 
 <h1 align="center">
   <img src="assets/images/banner-2.jpg" alt="UI testing Best Practices">
@@ -22,6 +22,7 @@
 
 # Latest Best Practices and News
 
+(Work in progress)
 <!-- - **New translation:** ![BR](/assets/flags/BR.png) [Brazilian Portuguese](/README.brazilian-portuguese.md) available now, courtesy of [Marcelo Melo](https://github.com/marcelosdm)! ❤️
 
 - **New best practice:** 4.2: Include 3 parts in each test name - [_From the section "Testing and overall quality"_](https://github.com/i0natan/nodebestpractices#4-testing-and-overall-quality-practices)
