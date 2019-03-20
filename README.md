@@ -1,6 +1,6 @@
 [✔]: assets/images/checkbox-small-blue.png
 
-# Node.js Best Practices
+# UI Testing Best Practices
 
 <h1 align="center">
   <img src="assets/images/banner-2.jpg" alt="UI testing Best Practices">
@@ -68,7 +68,7 @@ A positive-minded front-end developer. He's a passion for good UIs, automation, 
 
 Thank you to all our collaborators! 🙏
 
-Our collaborators are members who are contributing to the repository on a reguar basis, through suggesting new best practices, triaging issues, reviewing pull requests and more. If you are interested in helping us guide thousands of people to craft better Node.js applications, please read our [contributor guidelines](/.operations/CONTRIBUTING.md) 🎉
+Our collaborators are members who are contributing to the repository on a reguar basis, through suggesting new best practices, triaging issues, reviewing pull requests and more. If you are interested in helping us guide thousands of people to craft better UI tests, please read our [contributor guidelines](/.operations/CONTRIBUTING.md) 🎉
 
 <br/>
 
