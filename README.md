@@ -44,7 +44,7 @@
 <br/><br/>
 
 ## Table of Contents
-
+(Work in progress, take a look at the [sections draft](/sections/draft.md) file)
 
 <br/><br/><br/>
 
