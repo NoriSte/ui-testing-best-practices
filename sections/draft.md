@@ -1,0 +1,108 @@
+
+- beginners? go to the dedicated section
+
+- [ ] await, don't sleep
+    - [ ] wait for contents
+        - [ ] standard
+        - [ ] with custom selectors
+    - [ ] wait for network requests
+    - [ ] wait for front-end specific state
+- [ ] back-end related tests
+    - [ ] test request and response payloads
+    - [ ] test the frontend with the integration tests, the backend with the E2E ones
+    - [ ] test the server schema (or everything that can impact the front-end app like PostMan exports, Elastic Search mappings etc.). That sould not be part of the front-end tests but consider that the app will be often broken by a server data change
+    - [ ] allow to run the integration tests only (during the development phase) or the E2E ones only (for colleagues, CI etc.)
+- [ ] testing strategy
+    - [ ] component vs integration vs e2e testing
+    - [ ] write a lot of integration tests, make a few E2E ones (happy paths)
+    - [ ] when you find a bug, write the test and then fix the bug
+    - [ ] choose a reference browser (and if you need mobile browsers use TestCafè)
+    - [ ] avoid perfectionism, lot of UI interaction details are useful but they don't need to be tested (unless you have been proven that they bring value to your company)
+    - [ ] if you use typescript in your app, use it in your tests too, the initial temptation of avoiding it will not last long
+- [ ] ui testing best practices
+    - [ ] assert frequently. An assertion is auto-explicative, an error isn't.
+    - [ ] choose a made on purpose library
+    - [ ] use the same front-end constants/functions
+    - [ ] UI testing framework as a development tool. Write tests step by step to avoid manual testing during even during the development phase and to have them already written when you finished (easier with Cypress).
+    - [ ] don't use the UI to reach the desired UI state. But remember to avoid writing one more app into your testing framework to consume the same resources
+    - [ ] we aren't unit-testing, every test has a flow and a lot of assertions
+    - [ ] deterministic tests as wrote here https://docs.cypress.io/guides/core-concepts/conditional-testing.html#Error-Recovery
+- [ ] in your app / practical advices
+    - [ ] expose costants/functions. It makes tests more portable too
+        - [ ] don't delay this process, by definition UI tests are slow, avoid them failing for a silly string
+    - [ ] expose some shortcuts. Everything useful for leting the UI run faster (without compromising reliability) is welcome
+    - [ ] let the front-end work for you
+- [ ] base your tests on contents
+    - [ ] ui testing is framework agnostic, base it on contents (the same consumed by the user)
+    - [ ] pay attention of the pages that update frequently
+    - [ ] a content-based failing test needs just a screenshot to be debugged, an attribute-based one needs the page to be inspected
+    - [ ] if you can't rely on contents, use test-ids, never user classes of ids
+- [ ] generic testing best practices
+    - [ ] use the right assertion
+    - [ ] use "only" and "skip"
+    - [ ] name the test wisely
+    - [ ] name the test file wisely
+    - [ ] check the Yoni's post https://medium.com/@me_37286/yoni-goldberg-javascript-nodejs-testing-best-practices-2b98924c9347
+    - [ ] don't share the state between tests
+- [ ] component testing
+    - [ ] use storybook  (or a styleguide framework of choice) for components reporting all cases. In fact, they are tests too
+    - [ ] add snapshot testing to storybook (or a styleguide framework of choice)
+    - [ ] add regression testing to storybook (or a styleguide framework of choice)
+- [ ] performance
+    - [ ] always choose the "simplest"/fastest test. dom-ui-testing is faster then Puppeteer that's faster then Cypress etc.
+- [ ] UI test debugging (mark every single tip necessary/unnecessary with existing frameworks)
+    - [ ] make screenshots
+    - [ ] launch the browser in non-headless mode
+    - [ ] launch the browser with the devtools already opened
+    - [ ] slow down the browser actions
+    - [ ] increase the test timeout
+    - [ ] avoid closing the browser when the test ends
+    - [ ] console.log the name of the test
+    - controlla altri trucchi sulle slide
+- [ ] frameworks
+    - [ ] everything is async
+    - [ ] dedicated ones vs generic ones
+    - [ ] device emulation
+    - [ ] cross browser support
+    - [ ] custom extension installation
+    - [ ] test management dedicated UI
+    - [ ] running tests command log
+    - [ ] hidden flags etc.
+    - [ ] dedicated development browser
+    - [ ] available plugins
+    - [ ] generic browser automations
+    - [ ] automatic dynamic waiting (like the cypress one)
+    - [ ] snapshot management (like the cypress one)
+    - [ ] dom-testing-library integration
+    - [ ] automatic screenshot/video management
+    - [ ] Puppeeteer only: Node.js UI, make self-contained Node.js apps with a UI (thank to Carlo by Google)
+    - [ ] automatic retry (cypress)
+    - [ ] browser automation
+    - [ ] common issues
+        - [ ] promise everything
+        - [ ] puppeteer evaluate
+        - [ ] cypress then
+    - [ ] ... ?
+- [ ] beginners
+    - [ ] what is UI testing
+        - [ ] why is it so important
+        - [ ] headless browser
+        - [ ] use it while studying
+        - [ ] automate repetitive and annoying
+        - [ ] use testing frameworks as development tools
+        - [ ] data scraping (take care that some sites will block you because of the high number of login requests etc.)
+        - [ ] avoid regression
+        - [ ] avoid manually testing
+    - [ ] the other kind of tests
+        - [ ] unit
+        - [ ] integration
+        - [ ] regression
+        - [ ] the testing pyramid (standard and the kent's one)
+        - [ ] Always use the simplest kind of test
+    - [ ] Why it's hard to do UI testing
+        - [ ] you aren’t in isolation (like in Unit tests), nor in a super-mocked environment...
+        - [ ] You have a real browser on a real network
+        - [ ] Simulating the (exact) user behaviour sometimes could be very tricky
+        - [ ] They can fail
+        - [ ] They are slow
+- [ ] a11n?
