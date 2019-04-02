@@ -37,6 +37,7 @@
     - [ ] pay attention of the pages that update frequently
     - [ ] a content-based failing test needs just a screenshot to be debugged, an attribute-based one needs the page to be inspected
     - [ ] if you can't rely on contents, use test-ids, never user classes of ids
+    - [ ] avoid testing implementation details
 - [ ] generic testing best practices
     - [ ] use the right assertion
     - [ ] use "only" and "skip"
