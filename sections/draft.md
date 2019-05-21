@@ -98,6 +98,7 @@
         - [ ] unit
         - [ ] integration
         - [ ] regression
+        - [ ] snap shot testing
         - [ ] the testing pyramid (standard and the kent's one)
         - [ ] Always use the simplest kind of test
     - [ ] Why it's hard to do UI testing
