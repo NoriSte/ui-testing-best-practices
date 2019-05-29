@@ -23,7 +23,7 @@
     - [ ] assert frequently. An assertion is auto-explicative, an error isn't.
     - [ ] choose a made on purpose library
     - [ ] use the same front-end constants/functions
-    - [ ] UI testing framework as a development tool. Write tests step by step to avoid manual testing during even during the development phase and to have them already written when you finished (easier with Cypress).
+    - [ ] UI testing framework as a development tool. Write tests step by step to avoid manual testing even during the development phase and to have them already written when you finished (easier with Cypress).
     - [ ] don't use the UI to reach the desired UI state. But remember to avoid writing one more app into your testing framework to consume the same resources
     - [ ] we aren't unit-testing, every test has a flow and a lot of assertions
     - [ ] deterministic tests as wrote here https://docs.cypress.io/guides/core-concepts/conditional-testing.html#Error-Recovery
@@ -34,7 +34,7 @@
     - [ ] let the front-end work for you
 - [ ] base your tests on contents
     - [ ] ui testing is framework agnostic, base it on contents (the same consumed by the user)
-    - [ ] pay attention of the pages that update frequently
+    - [ ] pay attention on the pages that update frequently
     - [ ] a content-based failing test needs just a screenshot to be debugged, an attribute-based one needs the page to be inspected
     - [ ] if you can't rely on contents, use test-ids, never user classes of ids
     - [ ] avoid testing implementation details
@@ -76,7 +76,7 @@
     - [ ] snapshot management (like the cypress one)
     - [ ] dom-testing-library integration
     - [ ] automatic screenshot/video management
-    - [ ] Puppeeteer only: Node.js UI, make self-contained Node.js apps with a UI (thank to Carlo by Google)
+    - [ ] Puppeteer only: Node.js UI, make self-contained Node.js apps with a UI (thank to Carlo by Google)
     - [ ] automatic retry (cypress)
     - [ ] browser automation
     - [ ] common issues
@@ -108,3 +108,6 @@
         - [ ] They can fail
         - [ ] They are slow
 - [ ] a11n?
+
+- take a look at https://slides.com/noriste/milano-frontend-ui-testing-best-practices to check if
+  some contents are missing
