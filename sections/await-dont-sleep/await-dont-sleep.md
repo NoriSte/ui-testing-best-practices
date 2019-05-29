@@ -8,17 +8,17 @@ When testing your UI, you define a sort of key points the app must pass through.
 points is an asynchronous process because, almost 100% of the times, your UI does not update
 synchronously.
 
-Those key points are called deterministic events, as known as something that you know that must happen.
+Those key points are called **deterministic events**, as known as something that you know that must happen.
 
 It depends on the events you define and how your UI reaches them but, usually, there are some
 "long" waitings, like XHR requests, and some faster ones, like re-render updates.
 
 The solution to the asynchronous updates seems handy: sleeping/pausing the test for a bunch of
 milliseconds, tenths of a second, or even seconds. It can make your test working because it gives
-the app the time to update itself and moving to the next step deterministic event be tested.
+the app the time to update itself and moving to the next deterministic event to be tested.
 
 Consider that, unless you know exactly how much time is needed (like when you use `setInterval` or
-`setTimeout`), it's totally unpredictable how much the sleeping time should be because it could depend on:
+`setTimeout`), **it's totally unpredictable** how much the sleeping time should be because it could depend on:
 - the network state (for XHR requests)
 - the total amount of available machine resources (CPU, RAM, etc.)
   - a CI pipeline can limit them for example
