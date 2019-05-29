@@ -217,14 +217,14 @@ concentrate on writing a custom waiting. Since UI testing is 100% asynchronous, 
 should face recursive promises, a concept not to handy to manage at the beginning.
 
 Luckily, there are some handy solutions and plugins to help us with that. Consider if we want to
-wait until a global variable (`foo`) is assigned with a particular value (`foot`): below you are going to
+wait until a global variable (`foo`) is assigned with a particular value (`bar`): below you are going to
 find some examples.
 
 ### Code Examples
 
 <details><summary>Cypress</summary>
 
-Thanks to the (cypress-wait-until plugin)[https://github.com/NoriSte/cypress-wait-until].
+Thanks to the [cypress-wait-until plugin](https://github.com/NoriSte/cypress-wait-until) you can do:
 ```javascript
 cy.waitUntil(() => cy.window().then(win => win.foo === "bar"))
 ```
