@@ -19,4 +19,6 @@
 
 [Eggplant best practices blog](https://blog.eggplant.io/topic/testing-best-practices)
 
+[Guide Unit Testing](https://github.com/mawrkus/js-unit-testing-guide)
+
 
