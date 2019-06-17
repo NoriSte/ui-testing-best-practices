@@ -1,12 +1,6 @@
 
 - beginners? go to the dedicated section
 
-- [ ] await, don't sleep
-    - [ ] wait for contents
-        - [ ] standard
-        - [ ] with custom selectors
-    - [ ] wait for network requests
-    - [ ] wait for front-end specific state
 - [ ] back-end related tests
     - [ ] test request and response payloads
     - [ ] test the frontend with the integration tests, the backend with the E2E ones
@@ -20,6 +14,12 @@
     - [ ] avoid perfectionism, lot of UI interaction details are useful but they don't need to be tested (unless you have been proven that they bring value to your company)
     - [ ] if you use typescript in your app, use it in your tests too, the initial temptation of avoiding it will not last long
 - [ ] ui testing best practices
+    - [x] await, don't sleep
+        - [x] wait for contents
+            - [x] standard
+            - [x] with custom selectors
+        - [x] wait for network requests
+        - [x] wait for front-end specific state
     - [ ] assert frequently. An assertion is auto-explicative, an error isn't.
     - [ ] choose a made on purpose library
     - [ ] use the same front-end constants/functions
