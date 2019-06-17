@@ -54,12 +54,11 @@ of implementing the listed waitings.
 Every tool manages the page load waiting in a different way (in terms of what is waited before
 considering the page loaded), below you can find some examples.
 
-<details><summary>Cypress</summary>
+Cypress
 
 ```javascript
 cy.visit('http://localhost:3000')
 ```
-</details>
 
 <details><summary>Puppeteer</summary>
 
@@ -97,7 +96,7 @@ Take a look at the following examples to see how waiting for a DOM element could
 the available tools.
 
 ### Code Examples
-<details><summary>Cypress</summary>
+Cypress
 
 Cypress automatically waits up (and automatically retries) to 4 seconds (customizable) before making
 the test fail. You have nothing to do but using [`cy.get`](https://docs.cypress.io/api/commands/get.html)
@@ -110,7 +109,6 @@ cy.get("#form-feedback")
 ```javascript
 cy.get("#form-feedback").contains("Success")
 ```
-</details>
 
 <details><summary>Puppeteer</summary>
 
@@ -174,7 +172,7 @@ await waitForElement(() => getByText('Success'), { container });
 
 ### Code Examples
 
-<details><summary>Cypress</summary>
+Cypress
 
 - waiting for an XHR request/response
 ```javascript
@@ -184,7 +182,7 @@ cy.wait("@employees")
   .then(xhr => xhr.response.body)
   .then(body => {/* ... */})
 ```
-</details>
+
 
 <details><summary>Puppeteer</summary>
 
@@ -222,13 +220,13 @@ find some examples.
 
 ### Code Examples
 
-<details><summary>Cypress</summary>
+Cypress
 
 Thanks to the [cypress-wait-until plugin](https://github.com/NoriSte/cypress-wait-until) you can do:
 ```javascript
 cy.waitUntil(() => cy.window().then(win => win.foo === "bar"))
 ```
-</details>
+
 
 <details><summary>Puppeteer</summary>
 
