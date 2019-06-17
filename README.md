@@ -9,7 +9,7 @@
 <br/>
 
 <div align="center">
-  <img src="https://img.shields.io/badge/⚙%20Item%20count%20-%201%20Best%20Practices-blue.svg" alt="1 items"> <img src="https://img.shields.io/badge/%F0%9F%93%85%20Last%20update%20-%20Mar%2019%202019-green.svg" alt="Last update: March 19, 2019">
+  <img src="https://img.shields.io/badge/⚙%20Item%20count%20-%202%20Best%20Practices-blue.svg" alt="2 items"> <img src="https://img.shields.io/badge/%F0%9F%93%85%20Last%20update%20-%20Jun%2017%202019-green.svg" alt="Last update: June 17, 2019">
 </div>
 
 <br/>
@@ -59,6 +59,15 @@ know that must happen. You need to wait for these events to make your tests robu
 **Otherwise:** Sleeping the tests make your tests slow and brittle, it's one of the most common and biggest errors in UI testing.
 
 🔗 [**Read More: Await, don't sleep**](/sections/generic-best-practices/await-dont-sleep.md)
+
+<br/>
+
+## ![✔] 1.2 Name your test files wisely
+
+**TL;DR:** Lot of times you need to launch just a type of tests and it's super easy if you follow a
+common pattern while naming your testing files.
+
+🔗 [**Read More: Name the test files wisely**](/sections/generic-best-practices/name-test-files-wisely.md)
 
 <br/><br/>
 

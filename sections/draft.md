@@ -41,8 +41,7 @@
 - [ ] generic testing best practices
     - [ ] use the right assertion
     - [ ] use "only" and "skip"
-    - [ ] name the test wisely
-    - [ ] name the test file wisely
+    - [x] name the test file wisely
     - [ ] check the Yoni's post https://medium.com/@me_37286/yoni-goldberg-javascript-nodejs-testing-best-practices-2b98924c9347
     - [ ] don't share the state between tests
 - [ ] component testing
