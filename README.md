@@ -45,6 +45,23 @@
 
 ## Table of Contents
 (Work in progress, take a look at the [sections draft](/sections/draft.md) file)
+1.  [Generic Best Practices (1)](#1-generic-best-practices)
+
+# `1. Generic Best Practices`
+
+## ![✔] 1.1 Await, don't sleep
+
+**TL;DR:** When testing your UI, you define a sort of key points the app must pass through. Reaching these key
+points is an asynchronous process because, almost 100% of the times, your UI does not update
+synchronously. Those key points are called **deterministic events**, as known as something that you
+know that must happen. You need to wait for these events to make your tests robust.
+
+**Otherwise:** Sleeping the tests make your tests slow and brittle, it's one of the most common and biggest errors in UI testing.
+
+🔗 [**Read More: Await, don't sleep**](/sections/generic-best-practices/await-dont-sleep.md)
+
+<br/><br/>
+
 
 <br/><br/><br/>
 
