@@ -11,7 +11,7 @@ It's useful because often you need to run just a type of tests, the situations c
 - during the development process, you need to run just some of them
   - you're changing some related components and you need to check that the generated markup does not change
   - you're changing a global CSS rule and you need to run only the visual tests
-  - you're changing an app flow and you need to tun the whole app integration tests
+  - you're changing an app flow and you need to run the whole app integration tests
 - your DevOps colleague needs to be sure that everything is up and running and the easiest way to do
   that is launching just the E2E tests
 - your building pipeline needs to run just the integration and E2E tests
