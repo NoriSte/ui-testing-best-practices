@@ -72,6 +72,8 @@ common pattern while naming your testing files.
 🔗 [**Read More: Name the test files
 wisely**](/sections/generic-best-practices/name-test-files-wisely.md)
 
+<br/>
+
 ## ![✔] 1.3 Use your testing tool as your primary development tool
 
 **TL;DR:** Leveraging your testing tool to avoid manual tests is one of the biggest improvements you
