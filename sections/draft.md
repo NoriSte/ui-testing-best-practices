@@ -23,7 +23,7 @@
     - [ ] assert frequently. An assertion is auto-explicative, an error isn't.
     - [ ] choose a made on purpose library
     - [ ] use the same front-end constants/functions
-    - [ ] UI testing framework as a development tool. Write tests step by step to avoid manual testing even during the development phase and to have them already written when you finished (easier with Cypress).
+    - [x] UI testing framework as a development tool. Write tests step by step to avoid manual testing even during the development phase and to have them already written when you finished (easier with Cypress).
     - [ ] don't use the UI to reach the desired UI state. But remember to avoid writing one more app into your testing framework to consume the same resources
     - [ ] we aren't unit-testing, every test has a flow and a lot of assertions
     - [ ] deterministic tests as wrote here https://docs.cypress.io/guides/core-concepts/conditional-testing.html#Error-Recovery
@@ -58,7 +58,6 @@
     - [ ] increase the test timeout
     - [ ] avoid closing the browser when the test ends
     - [ ] console.log the name of the test
-    - controlla altri trucchi sulle slide
 - [ ] frameworks
     - [ ] everything is async
     - [ ] dedicated ones vs generic ones
@@ -89,7 +88,7 @@
         - [ ] headless browser
         - [ ] use it while studying
         - [ ] automate repetitive and annoying
-        - [ ] use testing frameworks as development tools
+        - [x] use testing frameworks as development tools
         - [ ] data scraping (take care that some sites will block you because of the high number of login requests etc.)
         - [ ] avoid regression
         - [ ] avoid manually testing

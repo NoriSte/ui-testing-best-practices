@@ -67,7 +67,22 @@ know that must happen. You need to wait for these events to make your tests robu
 **TL;DR:** Lot of times you need to launch just a type of tests and it's super easy if you follow a
 common pattern while naming your testing files.
 
-🔗 [**Read More: Name the test files wisely**](/sections/generic-best-practices/name-test-files-wisely.md)
+**Otherwise:** You need to launch a long test suite just to have some of them run.
+
+🔗 [**Read More: Name the test files
+wisely**](/sections/generic-best-practices/name-test-files-wisely.md)
+
+## ![✔] 1.3 Use your testing tool as your primary development tool
+
+**TL;DR:** Leveraging your testing tool to avoid manual tests is one of the biggest improvements you
+could do to speed up your working flow. Testing tools are faster than you and the most modern ones include
+some UI utilities that make easy to use them as a development tool.
+
+**Otherwise:** You code the app the old way, losing a lot of time interacting manually with the UI itself.
+
+🔗 [**Read More: Use your testing tool as your primary development tool**](/sections/generic-best-practices/use-your-testing-tool-as-your-primary-development-tool.md)
+
+<br/>
 
 <br/><br/>
 
