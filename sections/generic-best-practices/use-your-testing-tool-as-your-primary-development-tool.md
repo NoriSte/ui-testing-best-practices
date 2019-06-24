@@ -82,3 +82,5 @@ devtools](../../assets/images/use-your-testing-tool-as-your-primary-development-
 ![Cypress Skip and Only
 UI](../../assets/images/use-your-testing-tool-as-your-primary-development-tool/skip-and-only-ui.png
 "Cypress Skip and Only UI")
+
+**Cypress [Watch and Reload plugin](https://github.com/bahmutov/cypress-watch-and-reload)**
