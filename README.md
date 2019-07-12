@@ -45,9 +45,13 @@
 
 ## Table of Contents
 (Work in progress, take a look at the [sections draft](/sections/draft.md) file)
-1.  [Generic Best Practices (1)](#1-generic-best-practices)
+1.  [Generic Best Practices (3)](#1-generic-best-practices)
+2.  [Server Communication Testing (1)](#2-server-communication-testing)
+
+<br/><br/>
 
 # `1. Generic Best Practices`
+
 
 ## ![✔] 1.1 Await, don't sleep
 
@@ -84,9 +88,21 @@ some UI utilities that make easy to use them as a development tool.
 
 🔗 [**Read More: Use your testing tool as your primary development tool**](/sections/generic-best-practices/use-your-testing-tool-as-your-primary-development-tool.md)
 
-<br/>
 
 <br/><br/>
+
+# `2. Server Communication Testing`
+
+
+## ![✔] 2.1 Test the request and response payloads
+
+**TL;DR:** The UI communicates continuously with the back-end, and usually every communication is critical. A bad request or a bed response could cause inconsistent data and inconsistent UI state. Remember that all the business is built around data and the user experience is scratched by every single UI failure. So, every single XHR request must be checked carefully. XHR request checks make your test more robust too, correct XHR management and testing are one of the most important aspects of a UI test.
+
+**Otherwise:** You could miss some relevant communication inconsistencies and when you need to debug them, you are going to waste a lot of time because the test will not drive you directly to the issue.
+
+🔗 [**Read More: Test the request and response payloads**](/sections/server-communication-testing/test-request-and-response-payload.md)
+
+<br/>
 
 
 <br/><br/><br/>
