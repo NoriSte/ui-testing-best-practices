@@ -84,3 +84,6 @@ UI](../../assets/images/use-your-testing-tool-as-your-primary-development-tool/s
 "Cypress Skip and Only UI")
 
 **Cypress [Watch and Reload plugin](https://github.com/bahmutov/cypress-watch-and-reload)**
+
+
+If you want to see the React/Redux devtools in action with the Cypress controlled browser you can use the [cypress-react-devtools](https://github.com/NoriSte/cypress-react-devtools) repository.
