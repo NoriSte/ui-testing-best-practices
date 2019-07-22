@@ -8,7 +8,7 @@ Testing really changes the way you work but, like everything, it requires a bit 
 
 - tests are little programs after all. Perfectionism could drive you to write **extremely complex tests** before knowing how to manage the different testing contexts.
 
-  Tests complexity is a big enemy because debugging a failing test is much harder than debugging a failing application. And complex tests makes you lose the advantage of testing practices themselves, make you lose a lot of time, and inevitably make you exclude them sooner or later. **If it happens to you don't give up**, it's the same for a lot of testing beginners (it was the same for me, that why I started writing this repo 😊) and do not be afraid of asking your colleagues or publicly to other developers.
+  Tests complexity is a big enemy because debugging a failing test is harder than debugging a failing application. And complex tests make you lose the advantage of testing practices themselves, make you lose a lot of time, and inevitably make you exclude them sooner or later. **If it happens to you don't give up**, it's the same for a lot of testing beginners (it was the same for me, that's why I started writing this repo 😊) and do not be afraid of asking your colleagues or publicly to other developers.
 
 - false negatives: perfectionism-driven tests lead to a lot of false negatives. A false negative is a situation where your application works as expected but the test fails.
 
@@ -44,4 +44,4 @@ A beginning todo list to avoid falling into the perfectionism trap could be:
 
 Software testing is an amazing journey and the goal of this repo is helping you avoid the most common pitfalls.
 
-This above flow is just one of the possible approaches, I know it's completely subjective and please, open a PR if you have suggestions about something that worked for you!
+The suggested flow is just one of the possible approaches. I know that everything is subjective and please, open a PR for every suggestion!
