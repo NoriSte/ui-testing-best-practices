@@ -8,9 +8,8 @@
     - [ ] allow to run the integration tests only (during the development phase) or the E2E ones only (for colleagues, CI etc.)
     - [ ] monitoring tests?
 - [ ] testing strategy
-    - [ ] component vs integration vs e2e testing
-    - [ ] write a lot of integration tests, make a few E2E ones (happy paths)
-    - [ ] when you find a bug, write the test and then fix the bug
+    - [x] component vs integration vs e2e testing
+    - [ ] when you find a bug, write the test (that fails, it's important) and then fix the bug
     - [ ] choose a reference browser (and if you need mobile browsers use TestCafè)
     - [ ] avoid perfectionism, lot of UI interaction details are useful but they don't need to be tested (unless you have been proven that they bring value to your company)
     - [ ] if you use typescript in your app, use it in your tests too, the initial temptation of avoiding it will not last long
