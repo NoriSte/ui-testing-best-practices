@@ -20,17 +20,17 @@ Speaking about UI Testing (remember that we are speaking about the UI only, not 
   - **the interaction/state tests**: some interactions with a component expect correct state management. This kind of test must be written from the consumer point of view, not from the inner one (ex. the value of the input field when the user fills it, not the inner state). An interaction/state test should assert the input field value after the keyboard events triggered.
 
 
-- **UI Integration tests**: they run the whole app in a real browser without hitting a real server. These tests are the ace in the hole of every front-end developer. They are blazing fast and less exposed to random failures or false negatives.
+- **UI Integration tests**: they run the whole app in a real browser **without hitting a real server**. These tests are the ace in the hole of every front-end developer. They are blazing fast and less exposed to random failures or false negatives.
 
   The front-end application does not know that there is not a real server: every AJAX call is resolved in no time by the testing tool. Static JSON responses (called "fixtures") are used to simulate the server responses. Fixtures allow us to test the front-end state simulating every possible back-end state.
 
-  Another interesting effect: Fixtures allow you to work without a working back-end application. You can think about UI Integration tests as "front-end-only tests".
+  Another interesting effect: Fixtures **allow you to work without a working back-end** application. You can think about UI Integration tests as "front-end-only tests".
 
   At the core of the most successful test suites, there is a lot of UI Integration tests, considering the best type of test for your front-end app.
 
 - **End-to-end (E2E) tests**: they run the whole app interacting with the real server. From the user interactions (one of the "end") to the business data (the other "end"): everything must work as designed. E2E tests are typically slow because
-  - they need a working back-end application, typically launched alongside the front-end application. You can't launch them without a server, so you depend on the back-end developers to work
-  - they need reliable data, seeding and cleaning it before every test
+  - they need a **working back-end** application, typically launched alongside the front-end application. You can't launch them without a server, so you depend on the back-end developers to work
+  - they need **reliable data**, seeding and cleaning it before every test
 
   That's why E2E tests are not feasible to be used as the only/main test type. They are pretty important because they are testing everything (front-end + back-end) but they must be used carefully to avoid brittle and hour-long test suites.
 
