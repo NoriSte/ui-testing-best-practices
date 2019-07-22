@@ -125,7 +125,7 @@ some UI utilities that make easy to use them as a development tool.
 
 Meet the steering committee members - the people who work together to provide guidance and future direction to the project.
 
-<img align="left" width="100" height="100" src="assets/images/members/noriste.png">
+<img align="left" width="100" height="100" src="https://avatars0.githubusercontent.com/u/173663?v=4"  style="border-radius:50%;border:4px solid #f36;margin-right:10px;">
 
 [Stefano Magni](https://github.com/NoriSte)
 <a href="https://twitter.com/NoriSte"><img src="assets/images/twitter-s.png" width="16" height="16"></img></a>
@@ -146,6 +146,12 @@ Our collaborators are members who are contributing to the repository on a reguar
 
 <br/>
 
+| <a href="https://github.com/anoop-gupt" target="_blank"><img src="https://avatars2.githubusercontent.com/u/1118525?s=460&v=4" width="75" height="75"></a> |
+| :--: |
+| [Anoop Kumar Gupta](https://github.com/anoop-gupt) |
+
+<br/>
+
 ## Thank You Notes
 
 We appreciate any contribution, from a single word fix to a new best practice. Below is a list of everyone who contributed to this project. A 🌻 marks a successful pull request and a ⭐ marks an approved new best practice.
@@ -153,6 +159,9 @@ We appreciate any contribution, from a single word fix to a new best practice. B
 ### Flowers
 
 A successfull PR gives you a 🌻, be the first to collect it.
+
+🌻 [Luca Piazzoni](https://github.com/bioz87),
+🌻 [Luca Previtali](https://www.linkedin.com/in/previtaliluca/)
 
 ### Stars
 
