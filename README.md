@@ -9,7 +9,7 @@
 <br/>
 
 <div align="center">
-  <img src="https://img.shields.io/badge/⚙%20Item%20count%20-%205%20Best%20Practices-blue.svg" alt="2 items"> <img src="https://img.shields.io/badge/%F0%9F%93%85%20Last%20update%20-%20Jul%2022%202019-green.svg" alt="Last update: July 22, 2019">
+  <img src="https://img.shields.io/badge/⚙%20Item%20count%20-%206%20Best%20Practices-blue.svg" alt="2 items"> <img src="https://img.shields.io/badge/%F0%9F%93%85%20Last%20update%20-%20Jul%2022%202019-green.svg" alt="Last update: July 22, 2019">
 </div>
 
 <br/>
@@ -45,7 +45,7 @@
 
 ## Table of Contents
 (Work in progress, take a look at the [sections draft](/sections/draft.md) file)
-1.  [Testing strategies (1)](#1-testing-strategies)
+1.  [Testing strategies (2)](#1-testing-strategies)
 2.  [Generic Best Practices (3)](#2-generic-best-practices)
 3.  [Server Communication Testing (1)](#3-server-communication-testing)
 
@@ -63,6 +63,16 @@
 🔗 [**Read More: Component vs (UI) Integration vs E2E tests**](/sections/testing-strategy/component-vs-integration-vs-e2e-testing.md)
 
 <br/><br/>
+
+## ![✔] 1.2 In the beginning, avoid perfectionism
+
+**TL;DR:** Software Testing is an amazing topic but a limited experience could make you fighting with a new enemy instead of relying on a new ally. Avoid, if you can, to test every complex user flows since the beginning of your UI testing journey. The simpler your first tests are, the sooner you get the advantages.
+
+**Otherwise:** You create complex and hard to be debugged tests. This kind of tests slow down your work and do not have any kind of usefulness.
+
+🔗 [**Read More: In the beginning, avoid perfectionism**](/sections/testing-strategy/avoid-perfectionism.md)
+
+<br/>
 
 # `2. Generic Best Practices`
 
