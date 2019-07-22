@@ -125,7 +125,7 @@ some UI utilities that make easy to use them as a development tool.
 
 Meet the steering committee members - the people who work together to provide guidance and future direction to the project.
 
-<img align="left" width="100" height="100" src="https://avatars0.githubusercontent.com/u/173663?v=4"  style="border-radius:50%;border:4px solid #f36;margin-right:10px;">
+<img align="left" width="100" height="100" src="https://avatars0.githubusercontent.com/u/173663?v=4" style="border-radius:50%;border:4px solid #f36;margin-right:10px;">
 
 [Stefano Magni](https://github.com/NoriSte)
 <a href="https://twitter.com/NoriSte"><img src="assets/images/twitter-s.png" width="16" height="16"></img></a>
