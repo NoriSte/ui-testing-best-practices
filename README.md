@@ -74,7 +74,17 @@
 
 <br/>
 
-## ![✔] 1.3 Found a bug? Write the test, then fix it
+## ![✔] 1.3 Choose a reference browser
+
+**TL;DR:** Cross-browser testing is way overrated. It's an important topic and it's the first thing you can think while starting evaluating the right testing tool. Don't worry: start by splitting functional testing from visual testing, that's the first step to correctly evaluate the need for cross-browser support (and to choose the right testing tool, too). Visual testing can be integrated into every testing tool, thank services like Applitools and Percy.
+
+**Otherwise:** You could choose the wrong testing tool based on the cross-browser support.
+
+🔗 [**Read More: Choose a reference browser**](/sections/testing-strategy/choose-a-reference-browser.md)
+
+<br/>
+
+## ![✔] 1.4 Found a bug? Write the test, then fix it
 
 **TL;DR:** A test is a good ally when you need to be sure that you are able to systematically reproducing a bug. A test allows you to speed up the fixing flow and to be 100% confident that the same bug is caught forever.
 

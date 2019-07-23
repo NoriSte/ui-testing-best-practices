@@ -9,7 +9,7 @@
 - [ ] testing strategy
     - [x] component vs integration vs e2e testing
     - [x] when you find a bug, write the test (that fails, it's important) and then fix the bug
-    - [ ] choose a reference browser (and if you need mobile browsers use TestCafè)
+    - [x] choose a reference browser (and if you need mobile browsers use TestCafè)
     - [x] avoid perfectionism, lot of UI interaction details are useful but they don't need to be tested (unless you have been proven that they bring value to your company)
     - [ ] if you use typescript in your app, use it in your tests too, the initial temptation of avoiding it will not last long
 - [ ] ui testing best practices
@@ -106,6 +106,7 @@
         - [ ] They are slow
 - [ ] a11n?
 - [ ] take a look at every TODO in the various contents
+- [ ] link every section to each other
 
 - take a look at https://slides.com/noriste/milano-frontend-ui-testing-best-practices to check if
   some contents are missing
@@ -113,3 +114,5 @@
 For contributors, write:
 - that a lot of missing content could be applied and you ask for contributors
 - that your English could need a check
+- that you'd like to hear from other experts, you have not years of experience with every tool
+- tool creators could help a lot, too

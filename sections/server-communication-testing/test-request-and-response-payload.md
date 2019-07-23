@@ -23,7 +23,7 @@ Full XHR request waiting and inspection is not so common in the existing testing
 
 <br/><br/>
 
-*Please note: all the following examples are for Cypres, it has the best XHR testing support at the moment.*
+*Please note: all the following examples are for Cypress, it has the best XHR testing support at the moment.*
 
 ## Asserting about an XHR request, a complete example
 
