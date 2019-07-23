@@ -148,6 +148,15 @@ some UI utilities that make easy to use them as a development tool.
 
 <br/>
 
+## ![✔] 3.2 Test the server schema
+
+**TL;DR:** A lot of times, the front-end application breaks because of a change in the back-end. Ask your back-end colleagues to allow you to export every schema that describes the back-end entities and the communication with the front-end. Some examples could be the GraphQL schema, the ElasticSearch mapping, a Postman configuration, etc. more in general, everything that can warn you that something changed in the back-end. Every back-end change could impact the front-end and you must discover it as soonest as possible. You can keep the schema checked with a simple [snapshot test](https://jestjs.io/docs/en/snapshot-testing).
+
+**Otherwise:** You could miss some back-end change and your front-end application could break inadvertently.
+
+
+<br/>
+
 
 <br/><br/><br/>
 
