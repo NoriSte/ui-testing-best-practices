@@ -9,7 +9,7 @@
 <br/>
 
 <div align="center">
-  <img src="https://img.shields.io/badge/⚙%20Item%20count%20-%206%20Best%20Practices-blue.svg" alt="2 items"> <img src="https://img.shields.io/badge/%F0%9F%93%85%20Last%20update%20-%20Jul%2022%202019-green.svg" alt="Last update: July 22, 2019">
+  <img src="https://img.shields.io/badge/⚙%20Item%20count%20-%207%20Best%20Practices-blue.svg" alt="2 items"> <img src="https://img.shields.io/badge/%F0%9F%93%85%20Last%20update%20-%20Jul%2022%202019-green.svg" alt="Last update: July 22, 2019">
 </div>
 
 <br/>
@@ -45,7 +45,7 @@
 
 ## Table of Contents
 (Work in progress, take a look at the [sections draft](/sections/draft.md) file)
-1.  [Testing strategies (2)](#1-testing-strategies)
+1.  [Testing strategies (3)](#1-testing-strategies)
 2.  [Generic Best Practices (3)](#2-generic-best-practices)
 3.  [Server Communication Testing (1)](#3-server-communication-testing)
 
@@ -62,7 +62,7 @@
 
 🔗 [**Read More: Component vs (UI) Integration vs E2E tests**](/sections/testing-strategy/component-vs-integration-vs-e2e-testing.md)
 
-<br/><br/>
+<br/>
 
 ## ![✔] 1.2 In the beginning, avoid perfectionism
 
@@ -71,6 +71,16 @@
 **Otherwise:** You create complex and hard to be debugged tests. This kind of tests slow down your work and do not have any kind of usefulness.
 
 🔗 [**Read More: In the beginning, avoid perfectionism**](/sections/testing-strategy/avoid-perfectionism.md)
+
+<br/>
+
+## ![✔] 1.3 Found a bug? Write the test, then fix it
+
+**TL;DR:** A test is a good ally when you need to be sure that you are able to systematically reproducing a bug. A test allows you to speed up the fixing flow and to be 100% confident that the same bug is caught forever.
+
+**Otherwise:** You could not identify correctly the bug and you can not be sure that the bug will not present again in the future.
+
+🔗 [**Read More: Found a bug? Write the test, then fix it**](/sections/testing-strategy/write-test-then-fix-bug.md)
 
 <br/>
 
