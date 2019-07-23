@@ -32,4 +32,4 @@ You can take a sneak peek at some differences between the various testing tools 
 <br />
 <a name="footnote2">2</a>: Firefox support for Puppeteer [is not complete yet](https://aslushnikov.github.io/ispuppeteerfirefoxready/)
 <br />
-<a name="footnote3">3</a>: Selenium supports mobile browser trhough [Appium](http://appium.io/docs/en/writing-running-appium/web/mobile-web/)
+<a name="footnote3">3</a>: Selenium supports mobile browser through [Appium](http://appium.io/docs/en/writing-running-appium/web/mobile-web/)
