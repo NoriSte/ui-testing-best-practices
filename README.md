@@ -9,7 +9,7 @@
 <br/>
 
 <div align="center">
-  <img src="https://img.shields.io/badge/⚙%20Item%20count%20-%207%20Best%20Practices-blue.svg" alt="2 items"> <img src="https://img.shields.io/badge/%F0%9F%93%85%20Last%20update%20-%20Jul%2022%202019-green.svg" alt="Last update: July 22, 2019">
+  <img src="https://img.shields.io/badge/⚙%20Item%20count%20-%208%20Best%20Practices-blue.svg" alt="2 items"> <img src="https://img.shields.io/badge/%F0%9F%93%85%20Last%20update%20-%20Jul%2022%202019-green.svg" alt="Last update: July 22, 2019">
 </div>
 
 <br/>
@@ -45,7 +45,7 @@
 
 ## Table of Contents
 (Work in progress, take a look at the [sections draft](/sections/draft.md) file)
-1.  [Testing strategies (3)](#1-testing-strategies)
+1.  [Testing strategies (4)](#1-testing-strategies)
 2.  [Generic Best Practices (3)](#2-generic-best-practices)
 3.  [Server Communication Testing (1)](#3-server-communication-testing)
 
