@@ -9,7 +9,7 @@
 <br/>
 
 <div align="center">
-  <img src="https://img.shields.io/badge/⚙%20Item%20count%20-%208%20Best%20Practices-blue.svg" alt="2 items"> <img src="https://img.shields.io/badge/%F0%9F%93%85%20Last%20update%20-%20Jul%2022%202019-green.svg" alt="Last update: July 22, 2019">
+  <img src="https://img.shields.io/badge/⚙%20Item%20count%20-%209%20Best%20Practices-blue.svg" alt="2 items"> <img src="https://img.shields.io/badge/%F0%9F%93%85%20Last%20update%20-%20Jul%2022%202019-green.svg" alt="Last update: July 23, 2019">
 </div>
 
 <br/>
@@ -47,7 +47,7 @@
 (Work in progress, take a look at the [sections draft](/sections/draft.md) file)
 1.  [Testing strategies (4)](#1-testing-strategies)
 2.  [Generic Best Practices (3)](#2-generic-best-practices)
-3.  [Server Communication Testing (1)](#3-server-communication-testing)
+3.  [Server Communication Testing (3)](#3-server-communication-testing)
 
 <br/><br/>
 
@@ -153,6 +153,16 @@ some UI utilities that make easy to use them as a development tool.
 **TL;DR:** A lot of times, the front-end application breaks because of a change in the back-end. Ask your back-end colleagues to allow you to export every schema that describes the back-end entities and the communication with the front-end. Some examples could be the GraphQL schema, the ElasticSearch mapping, a Postman configuration, etc. more in general, everything that can warn you that something changed in the back-end. Every back-end change could impact the front-end and you must discover it as soonest as possible. You can keep the schema checked with a simple [snapshot test](https://jestjs.io/docs/en/snapshot-testing).
 
 **Otherwise:** You could miss some back-end change and your front-end application could break inadvertently.
+
+<br/>
+
+## ![✔] 3.3 Monitoring tests
+
+**TL;DR:** The more the test suites are launched periodically, the more confident you are that everything works as expected. UI tests should be based on the user perspective but there are a lot of small tests that could give you a lot of immediate feedback without debugging the expected user flows. Monitoring small and taken-for-granted tech details helps you preventing bigger test failures.
+
+**Otherwise:** You mix tech-details tests with the user-oriented ones.
+
+🔗 [**Read More: Monitoring tests**](/sections/server-communication-testing/monitoring-tests.md)
 
 
 <br/>
