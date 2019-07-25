@@ -13,7 +13,7 @@ Those key points are called **deterministic events**, as known as something that
 It depends on the events you define and how your UI reaches them but, usually, there are some
 "long" waitings, like XHR requests, and some faster ones, like re-render updates.
 
-The solution to the asynchronous updates seems handy: sleeping/pausing the test for a bunch of
+The solution to the asynchronous updates seems handy: **sleeping/pausing the test** for a bunch of
 milliseconds, tenths of a second, or even seconds. It can make your test working because it gives
 the app the time to update itself and moving to the next deterministic event to be tested.
 
@@ -27,7 +27,7 @@ Consider that, except for specific and known waitings (like when you use `setInt
 - a bunch of unpredictable game players like Service Workers, cache management etc. that can make
   the UI update process faster or slower
 
-Every fixed delay leads your test to be more brittle and increasing its duration. You are going to
+Every fixed delay leads your test to be more brittle and **increasing its duration**. You are going to
 find a balance between false negatives—when the test fails because of a too low sleeping
 time—and exaggerate test duration.
 
@@ -49,10 +49,10 @@ of implementing the listed waitings.
 
 <br/><br/>
 
-## Page Load waitings
+## Page load waitings
 
 Every tool manages the page load waiting in a different way (in terms of what is waited before
-considering the page loaded), below you can find some examples.
+considering the page loaded).
 
 Cypress
 
@@ -105,7 +105,7 @@ cy.get("#form-feedback")
 // the timeout can be customized
 cy.get("#form-feedback", {timeout: 5000})
 ```
-- waiting for an element with a specific content
+- waiting for an element with specific content
 ```javascript
 cy.get("#form-feedback").contains("Success")
 ```
@@ -119,7 +119,7 @@ await page.waitForSelector('#form-feedback');
 // the timeout can be customized
 await page.waitForSelector('#form-feedback', {timeout: 5000});
 ```
-- waiting for an element with a specific content
+- waiting for an element with specific content
 ```javascript
 await page.waitForFunction(selector => {
   const el = document.querySelector(selector);
@@ -135,7 +135,7 @@ await page.waitForFunction(selector => {
 ```javascript
 driver.wait(until.elementLocated(By.id('#form-feedback')), 4000);
 ```
-- waiting for an element with a specific content
+- waiting for an element with specific content
 ```javascript
 const el = driver.wait(until.elementLocated(By.id('#form-feedback')), 4000);
 wait.until(ExpectedConditions.textToBePresentInElement(el, "Success"));
@@ -149,7 +149,7 @@ wait.until(ExpectedConditions.textToBePresentInElement(el, "Success"));
 let formFeedback = Selector('#form-feedback').with({timeout: 4000});
 await formFeedback;
 ```
-- waiting for an element with a specific content
+- waiting for an element with specific content
 ```javascript
 let formFeedback = Selector('#form-feedback').withText("Success").with({timeout: 4000});
 await formFeedback;
@@ -162,7 +162,7 @@ await formFeedback;
 ```javascript
 await waitForElement(() => getByTestId('form-feedback'));
 ```
-- waiting for an element with a specific content
+- waiting for an element with specific content
 ```javascript
 const container = await waitForElement(() => getByTestId('form-feedback'));
 await waitForElement(() => getByText('Success'), { container });
@@ -213,7 +213,7 @@ something in the DOM that reflects the XHR result instead of looking for the XHR
 
 ## Custom waitings
 
-The various UI testing tools/frameworks have built-in solutions to perform lot of checks, but let's
+The various UI testing tools/frameworks have built-in solutions to perform a lot of checks, but let's
 concentrate on writing a custom waiting. Since UI testing is 100% asynchronous, a custom waiting
 should face recursive promises, a concept not so handy to manage at the beginning.
 
