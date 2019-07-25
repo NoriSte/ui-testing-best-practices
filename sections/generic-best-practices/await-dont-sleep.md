@@ -79,7 +79,7 @@ driver.wait(function() {
 ```
 </details>
 
-<details><summary>TestCafe</summary>
+<details><summary>TestCafé</summary>
 
 ```javascript
 fixture `Page Load`
@@ -142,7 +142,7 @@ wait.until(ExpectedConditions.textToBePresentInElement(el, "Success"));
 ```
 </details>
 
-<details><summary>TestCafe</summary>
+<details><summary>TestCafé</summary>
 
 - waiting for an element:
 ```javascript
@@ -207,7 +207,7 @@ common. With exceptions for Cypress and Puppeteer, other tools/frameworks force 
 something in the DOM that reflects the XHR result instead of looking for the XHR request itself. You can read more about th topic:
 
 - Selenium WebDriver: [5 Ways to Test AJAX Calls in Selenium WebDriver](https://www.blazemeter.com/blog/five-ways-to-test-ajax-calls-with-selenium-webdriver)
-- TestCafe: [Wait Mechanism for XHR and Fetch Requests](https://devexpress.github.io/testcafe/documentation/test-api/built-in-waiting-mechanisms.html#wait-mechanism-for-xhr-and-fetch-requests)
+- TestCafé: [Wait Mechanism for XHR and Fetch Requests](https://devexpress.github.io/testcafe/documentation/test-api/built-in-waiting-mechanisms.html#wait-mechanism-for-xhr-and-fetch-requests)
 - DOM Testing Library: [await API](https://testing-library.com/docs/dom-testing-library/api-async#wait)
 
 <br /><br />
@@ -252,7 +252,7 @@ browser.executeAsyncScript(`
 ```
 </details>
 
-<details><summary>TestCafe</summary>
+<details><summary>TestCafé</summary>
 
 ```javascript
 const waiting = ClientFunction(() => {
