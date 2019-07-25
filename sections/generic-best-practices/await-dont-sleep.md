@@ -17,7 +17,7 @@ The solution to the asynchronous updates seems handy: sleeping/pausing the test 
 milliseconds, tenths of a second, or even seconds. It can make your test working because it gives
 the app the time to update itself and moving to the next deterministic event to be tested.
 
-Consider that, unless you know exactly how much time is needed (like when you use `setInterval` or
+Consider that, except for specific and known waitings (like when you use `setInterval` or
 `setTimeout`), **it's totally unpredictable** how much the sleeping time should be because it could depend on:
 - the network state (for XHR requests)
 - the total amount of available machine resources (CPU, RAM, etc.)
@@ -98,12 +98,12 @@ the available tools.
 ### Code Examples
 Cypress
 
-Cypress automatically waits up (and automatically retries) to 4 seconds (customizable) before making
-the test fail. You have nothing to do but using [`cy.get`](https://docs.cypress.io/api/commands/get.html)
-
 - waiting for an element:
 ```javascript
+// it waits up to 4 seconds by default
 cy.get("#form-feedback")
+// the timeout can be customized
+cy.get("#form-feedback", {timeout: 5000})
 ```
 - waiting for an element with a specific content
 ```javascript
@@ -114,7 +114,10 @@ cy.get("#form-feedback").contains("Success")
 
 - waiting for an element:
 ```javascript
-await page.waitForSelector('#form-feedback', {timeout: 4000});
+// it waits up to 30 seconds by default
+await page.waitForSelector('#form-feedback');
+// the timeout can be customized
+await page.waitForSelector('#form-feedback', {timeout: 5000});
 ```
 - waiting for an element with a specific content
 ```javascript
@@ -153,7 +156,7 @@ await formFeedback;
 ```
 </details>
 
-<details><summary>DOM Testing Library</summary>
+<details><summary>DOM Testing Library<sup> <a href="#footnote1">1</a></sup></summary>
 
 - waiting for an element:
 ```javascript
@@ -200,7 +203,7 @@ const body = response.json();
 <br />
 Even if it's a really important point, at the time of writing (May, 2019) it seems that waiting for XHR requests and responses is not so
 common. With exceptions for Cypress and Puppeteer, other tools/frameworks force you to look for
-something in the DOM that reflects the XHR result instead of looking for the XHR request itself:
+something in the DOM that reflects the XHR result instead of looking for the XHR request itself. You can read more about th topic:
 
 - Selenium WebDriver: [5 Ways to Test AJAX Calls in Selenium WebDriver](https://www.blazemeter.com/blog/five-ways-to-test-ajax-calls-with-selenium-webdriver)
 - TestCafe: [Wait Mechanism for XHR and Fetch Requests](https://devexpress.github.io/testcafe/documentation/test-api/built-in-waiting-mechanisms.html#wait-mechanism-for-xhr-and-fetch-requests)
@@ -212,7 +215,7 @@ something in the DOM that reflects the XHR result instead of looking for the XHR
 
 The various UI testing tools/frameworks have built-in solutions to perform lot of checks, but let's
 concentrate on writing a custom waiting. Since UI testing is 100% asynchronous, a custom waiting
-should face recursive promises, a concept not to handy to manage at the beginning.
+should face recursive promises, a concept not so handy to manage at the beginning.
 
 Luckily, there are some handy solutions and plugins to help us with that. Consider if we want to
 wait until a global variable (`foo`) is assigned with a particular value (`bar`): below you are going to
@@ -264,7 +267,7 @@ await waiting();
 ```
 </details>
 
-<details><summary>DOM Testing Library</summary>
+<details><summary>DOM Testing Library<sup> <a href="#footnote1">1</a></sup></summary>
 
 ```javascript
 await wait(() => global.foo === "bar");
@@ -272,6 +275,8 @@ await wait(() => global.foo === "bar");
 </details>
 
 
+<br />
+<a id="footnote1">1</a>: unlike Cypress, Puppeteer, etc. DOM Testing Library is quite a different tool, that's why the examples are not available for every single part.
 
 [//]: <> (useful https://www.freecodecamp.org/news/how-to-write-reliable-browser-tests-using-selenium-and-node-js-c3fdafdca2a9/)
 [//]: <> (useful https://testcafe-discuss.devexpress.com/t/how-do-i-make-a-selector-wait-for-element-to-exist/569/2)
