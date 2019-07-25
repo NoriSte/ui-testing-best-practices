@@ -209,8 +209,8 @@ We appreciate any contribution, from a single word fix to a new best practice. B
 
 A successfull PR gives you a 🌻, be the first to collect it.
 
-🌻 [Ferdinando Santacroce](https://github.com/jesuswasrasta),
-🌻 [Luca Piazzoni](https://github.com/bioz87),
+🌻 [Ferdinando Santacroce](https://github.com/jesuswasrasta)
+🌻 [Luca Piazzoni](https://github.com/bioz87)
 🌻 [Luca Previtali](https://www.linkedin.com/in/previtaliluca/)
 
 ### Stars
