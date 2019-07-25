@@ -146,13 +146,14 @@ wait.until(ExpectedConditions.textToBePresentInElement(el, "Success"));
 
 - waiting for an element:
 ```javascript
-let formFeedback = Selector('#form-feedback').with({timeout: 4000});
-await formFeedback;
+// it waits up to 10 seconds by default
+await Selector('#form-feedback')
+// the timeout can be customized
+await Selector('#form-feedback').with({timeout: 4000})
 ```
 - waiting for an element with specific content
 ```javascript
-let formFeedback = Selector('#form-feedback').withText("Success").with({timeout: 4000});
-await formFeedback;
+await Selector('#form-feedback').withText('Success')
 ```
 </details>
 
