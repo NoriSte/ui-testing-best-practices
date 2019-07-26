@@ -255,16 +255,8 @@ browser.executeAsyncScript(`
 <details><summary>TestCafé</summary>
 
 ```javascript
-const waiting = ClientFunction(() => {
-  return Promise(resolve => {
-    window.setTimeout(function(){
-      if(window.foo === "bar") {
-        resolve();
-      }
-    }, 300);
-  });
-});
-await waiting();
+const waiting = ClientFunction(() => window.foo === 'bar')
+await t.expect(waiting()).ok({ timeout: 5000 })
 ```
 </details>
 
