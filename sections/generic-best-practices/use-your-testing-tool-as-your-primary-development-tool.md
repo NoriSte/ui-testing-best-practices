@@ -49,7 +49,7 @@ What are the most important advantages of doing that?
   a lot of time**
 - you don't have to write the test after you coded the form (again, TDD developers already avoid it)
   that, only at the first approaches, could seem an annoying task
-- you completely **avoid putting some temporary state into your source code** (input field default
+- you completely **avoid putting some temporary states into your source code** (input field default
   values, fake XHR responses)
 - you test your app directly with a real network response (remember that your app does not know that
   the network request is stubbed by the testing tool)
