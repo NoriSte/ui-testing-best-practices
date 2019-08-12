@@ -4,6 +4,7 @@
 
 ### One Paragraph Explainer
 
+
 An example speaks itself. Let's say you're developing an authentication form, probably, you:
 - code the username input field
 - **try it manually** in the browser
@@ -54,8 +55,9 @@ What are the most important advantages of doing that?
 - you test your app directly with a real network response (remember that your app does not know that
   the network request is stubbed by the testing tool)
 - the test is relaunched every time you save the test file
+- you can leverage both the Chrome DevTools and the framework-specific devtools
 
-One more question: how can I leverage the **existing Development Tools**?<br>
+How to leverage the **existing Development Tools**?<br>
 Well, you can do that in
 almost every testing tool but Cypress stands out for this kind of goal. Cypress has a dedicated
 Chrome user that's persisted across all your tests and all your projects. Doing so, Cypress allows
@@ -73,17 +75,21 @@ primary development tool.
 selection](../../assets/images/use-your-testing-tool-as-your-primary-development-tool/browser-selection.png
 "Cypress browser selection")
 
-**Browser DevTools**
+**The Cypress-controlled browser DevTools**
 ![Cypress browser
-devtools](../../assets/images/use-your-testing-tool-as-your-primary-development-tool/devtools.png
+devtools](../../assets/images/use-your-testing-tool-as-your-primary-development-tool/devtools.jpg
 "Cypress browser devtools")
 
-**Cypress [Skip and Only UI plugin](https://github.com/bahmutov/cypress-skip-and-only-ui)**
+**Cypress [Skip and Only UI plugin](https://github.com/bahmutov/cypress-skip-and-only-ui)** that allows you to add some `.only` or `.skip` to the tests directly from the Cypress UI.
 ![Cypress Skip and Only
-UI](../../assets/images/use-your-testing-tool-as-your-primary-development-tool/skip-and-only-ui.png
+UI](../../assets/images/use-your-testing-tool-as-your-primary-development-tool/skip-and-only.gif
 "Cypress Skip and Only UI")
 
-**Cypress [Watch and Reload plugin](https://github.com/bahmutov/cypress-watch-and-reload)**
+**Cypress [Watch and Reload plugin](https://github.com/bahmutov/cypress-watch-and-reload)** that allows you to re-run the cypress tests on every source code compilation.
 
 
 If you want to see the React/Redux devtools in action with the Cypress controlled browser you can use the [cypress-react-devtools](https://github.com/NoriSte/cypress-react-devtools) repository.
+
+<br /><br />
+
+*Crossposted by [NoriSte](https://github.com/NoriSte) on [dev.to](https://dev.to/noriste/front-end-productivity-boost-cypress-as-your-main-development-browser-5cdk) and [Medium](https://medium.com/@NoriSte/front-end-productivity-boost-cypress-as-your-main-development-browser-f08721123498).*

@@ -87,3 +87,7 @@ context('The robots.txt file should disallow the crawling of the staging site an
   it('production', () => test(urls.production, "Allow: /"))
 })
 ```
+
+<br /><br />
+
+*Crossposted by [NoriSte](https://github.com/NoriSte) on [dev.to](https://dev.to/noriste/the-concept-of-monitoring-tests-4l5j) and [Medium](https://medium.com/@NoriSte/the-concept-of-monitoring-tests-d7cb5af514e5).*

@@ -40,3 +40,7 @@ Speaking about UI Testing (remember that we are speaking about the UI only, not 
   - everything that breaks often: weak areas of the system must be monitored too
 
 Identifying/defining the type of test is useful to group them, to [name the test files]((/sections/generic-best-practices/name-test-files-wisely.md)), to limit their scope, and to choose where to run them or not though the whole application and deployment pipelines.
+
+<br /><br />
+
+*Crossposted by [NoriSte](https://github.com/NoriSte) on [dev.to](https://dev.to/noriste/component-vs-ui-integration-vs-e2e-tests-3i0d) and [Medium](https://medium.com/@NoriSte/component-vs-ui-integration-vs-e2e-tests-f02b575339dc).*
