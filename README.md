@@ -132,6 +132,9 @@ some UI utilities that make easy to use them as a development tool.
 
 🔗 [**Read More: Use your testing tool as your primary development tool**](/sections/generic-best-practices/use-your-testing-tool-as-your-primary-development-tool.md)
 
+## ![✔] 2.4 How to organize the folder structure
+## ![✔] 2.5 Do not bundle your tests
+
 
 <br/><br/>
 
@@ -156,7 +159,7 @@ some UI utilities that make easy to use them as a development tool.
 
 <br/>
 
-## ![✔] 3.3 Monitoring tests
+## ![✔] 3.3 Monitoring and Reporting tests
 
 **TL;DR:** The more the test suites are launched periodically, the more confident you are that everything works as expected. UI tests should be based on the user perspective but there are a lot of small tests that could give you a lot of immediate feedback without debugging the expected user flows. Monitoring small and taken-for-granted tech details helps you preventing bigger test failures.
 
