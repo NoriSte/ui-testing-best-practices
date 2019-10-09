@@ -89,16 +89,8 @@ tests firstly!**
 First of all, what's a UI Test (also called Functional Test, E2E Test, etc.)?
 It's essentially a script that opens a real browser and interacts with the DOM
 elements, the same way the real end-user does. Some videos could tell more than
-hundreds of words.
-
-<center><iframe width="100%" height="315" src="https://www.youtube.com/embed/gdly-oU72X0?rel=0" frameborder="0" allowfullscreen></iframe></center>
-
-_An E2E test running against
-[Conduit - the RealWorld project](http://realworld.io/)._
-
-<center><iframe width="100%" height="315" src="https://www.youtube.com/embed/lNEMKeTYEPI?rel=0" frameborder="0" allowfullscreen></iframe></center>
-
-_Some UI tests of the [Conio](https://conio.com/) Backoffice._
+hundreds of words: take a look at [an E2E test running against
+Conduit - the RealWorld project](https://www.youtube.com/watch?v=gdly-oU72X0&feature=youtu.be) and [some UI tests of the Conio Backoffice](https://www.youtube.com/watch?v=lNEMKeTYEPI&feature=youtu.be).
 
 In the above videos, you can see a real browser that loads the whole front-end
 application and interacts with it. The pros are:
