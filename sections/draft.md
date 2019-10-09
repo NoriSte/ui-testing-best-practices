@@ -109,7 +109,7 @@
 - [ ] link every section to each other
 - [ ] consider adding some links to a-z testing
 
-- take a look at https://slides.com/noriste/milano-frontend-ui-testing-best-practices to check if
+- take a look at https://slides.com/noriste/milano-frontend-ui-testing-best-practices (and the React Testing course too) to check if
   some contents are missing
 
 For contributors, write:
