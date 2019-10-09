@@ -21,4 +21,6 @@
 
 [Guide Unit Testing](https://github.com/mawrkus/js-unit-testing-guide)
 
+[UI Testing at Apium](https://apiumhub.com/tech-blog-barcelona/ui-testing/)
+
 
