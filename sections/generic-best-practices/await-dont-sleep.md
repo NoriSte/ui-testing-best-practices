@@ -273,3 +273,7 @@ await wait(() => global.foo === "bar");
 
 [//]: <> (useful https://www.freecodecamp.org/news/how-to-write-reliable-browser-tests-using-selenium-and-node-js-c3fdafdca2a9/)
 [//]: <> (useful https://testcafe-discuss.devexpress.com/t/how-do-i-make-a-selector-wait-for-element-to-exist/569/2)
+
+<br /><br />
+
+*Crossposted by [NoriSte](https://github.com/NoriSte) on [dev.to](https://dev.to/noriste/await-do-not-make-your-e2e-tests-sleep-4g1o) and [Medium](https://medium.com/@NoriSte/react-hooks-memorandum-bf1c2758a672).*

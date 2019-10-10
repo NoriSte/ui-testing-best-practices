@@ -9,7 +9,7 @@
 <br/>
 
 <div align="center">
-  <img src="https://img.shields.io/badge/⚙%20Item%20count%20-%209%20Best%20Practices-blue.svg" alt="2 items"> <img src="https://img.shields.io/badge/%F0%9F%93%85%20Last%20update%20-%20Jul%2022%202019-green.svg" alt="Last update: July 23, 2019">
+  <img src="https://img.shields.io/badge/⚙%20Item%20count%20-%2010%20Best%20Practices-blue.svg" alt="10 items"> <img src="https://img.shields.io/badge/%F0%9F%93%85%20Last%20update%20-%20Oct%209%202019-green.svg" alt="Last update: July 23, 2019">
 </div>
 
 <br/>
@@ -48,6 +48,7 @@
 1.  [Testing strategies (4)](#1-testing-strategies)
 2.  [Generic Best Practices (3)](#2-generic-best-practices)
 3.  [Server Communication Testing (3)](#3-server-communication-testing)
+4.  [Beginners (1)](#4-beginners)
 
 <br/><br/>
 
@@ -132,7 +133,6 @@ some UI utilities that make easy to use them as a development tool.
 
 🔗 [**Read More: Use your testing tool as your primary development tool**](/sections/generic-best-practices/use-your-testing-tool-as-your-primary-development-tool.md)
 
-
 <br/><br/>
 
 # `3. Server Communication Testing`
@@ -163,6 +163,20 @@ some UI utilities that make easy to use them as a development tool.
 **Otherwise:** You mix tech-details tests with the user-oriented ones.
 
 🔗 [**Read More: Monitoring tests**](/sections/server-communication-testing/monitoring-tests.md)
+
+
+<br/><br/>
+
+# `4. Beginners`
+
+
+## ![✔] 4.1 Approach the testing pyramid from the top!
+
+**TL;DR:** Approaching the testing world could be inefficient and not satisfactory. You start writing some unit tests but you are left with a lot of doubts. UI Testing allows you to start with a high confidence since the very first day.
+
+**Otherwise:** The wrong approach could condition the way you think about testing and could leave you with the false idea of testing the right way when the truth is you're testing nothing.
+
+🔗 [**Read More: Approach the testing pyramid from the top!**](/sections/beginners/top-to-bottom-approach.md)
 
 
 <br/>
