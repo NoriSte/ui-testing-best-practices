@@ -193,22 +193,22 @@ some UI utilities that make easy to use them as a development tool.
 🔗 [**Read More: Test the front-end with the integration tests, the back-end with the E2E ones**](./sections/real-life-examples/test-front-end-with-integration-back-end-with-e2e.md)
 
 
-# `5. Advanced`
+# `6. Advanced`
 
-## ![✔] 5.1 Test States
+## ![✔] 6.1 Test States
 
 **TL;DR:** Tests should be repeatable, modular and should handle their own state setup. UI Tests should not be repeated in order to achieve state for another test. 
 
-🔗 [**Read More: Test States**](/sections/advanced/test-states.md)
+🔗 [**Read More: Test States**](./sections/advanced/test-states.md)
 
 <br/>
 
-## ![✔] 5.2 Test Flake
+## ![✔] 6.2 Test Flake
 
 **TL;DR:** Tests must produce consistent results every time. Repeatable pipeline execution results is the quorum.
 If a test cannot produce reliable results, it reduces confidence in the tests and requires maintenance which reduces all value. In these cases it is best to manually test the functionality.
 
-🔗 [**Read More: Test Flake**](/sections/advanced/test-flake.md)
+🔗 [**Read More: Test Flake**](./sections/advanced/test-flake.md)
 
 
 <br/><br/><br/>
@@ -242,6 +242,7 @@ Our collaborators are members who are contributing to the repository on a reguar
 | :--: | :--: |
 | [Anoop Kumar Gupta](https://github.com/anoop-gupt) | [Murat Ozcan](https://github.com/muratkeremozcan) |
 <br/>
+
 
 ## Thank You Notes
 
