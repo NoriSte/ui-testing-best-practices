@@ -243,7 +243,6 @@ Our collaborators are members who are contributing to the repository on a reguar
 | [Anoop Kumar Gupta](https://github.com/anoop-gupt) | [Murat Ozcan](https://github.com/muratkeremozcan) |
 <br/>
 
-
 ## Thank You Notes
 
 We appreciate any contribution, from a single word fix to a new best practice. Below is a list of everyone who contributed to this project. A 🌻 marks a successful pull request and a ⭐ marks an approved new best practice.
