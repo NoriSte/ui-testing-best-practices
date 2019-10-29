@@ -182,6 +182,24 @@ some UI utilities that make easy to use them as a development tool.
 <br/>
 
 
+# `5. Advanced`
+
+## ![✔] 5.1 Test States
+
+**TL;DR:** Tests should be repeatable, modular and should handle their own state setup. UI Tests should not be repeated in order to achieve state for another test. 
+
+🔗 [**Read More: Test States**](/sections/advanced/test-states.md)
+
+<br/>
+
+## ![✔] 5.2 Test Flake
+
+**TL;DR:** Tests must produce consistent results every time. Repeatable pipeline execution results is the quorum.
+If a test cannot produce reliable results, it reduces confidence in the tests and requires maintenance which reduces all value. In these cases it is best to manually test the functionality.
+
+🔗 [**Read More: Test Flake**](/sections/advanced/test-flake.md)
+
+
 <br/><br/><br/>
 
 ## Steering Committee
@@ -214,6 +232,7 @@ Our collaborators are members who are contributing to the repository on a reguar
 | [Anoop Kumar Gupta](https://github.com/anoop-gupt) |
 
 <br/>
+
 
 ## Thank You Notes
 
