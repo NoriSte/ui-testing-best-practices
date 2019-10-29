@@ -227,11 +227,10 @@ Our collaborators are members who are contributing to the repository on a reguar
 
 <br/>
 
-| <a href="https://github.com/anoop-gupt" target="_blank"><img src="https://avatars2.githubusercontent.com/u/1118525?s=460&v=4" width="75" height="75"></a> |
-| :--: |
-| [Anoop Kumar Gupta](https://github.com/anoop-gupt) |
+| <a href="https://github.com/anoop-gupt" target="_blank"><img src="https://avatars2.githubusercontent.com/u/1118525?s=460&v=4" width="75" height="75"></a> |  <a href="https://github.com/muratkeremozcan" target="_blank"><img src="https://avatars.githubusercontent.com/muratkeremozcan" width="75" height="75"></a> |
+| :--: | :--: |
+| [Anoop Kumar Gupta](https://github.com/anoop-gupt) | [Murat Ozcan](https://github.com/muratkeremozcan) |
 
-<br/>
 
 ## Thank You Notes
 
