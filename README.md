@@ -164,6 +164,13 @@ some UI utilities that make easy to use them as a development tool.
 
 🔗 [**Read More: Monitoring tests**](/sections/server-communication-testing/monitoring-tests.md)
 
+## ![✔] 3.4 Test the front-end with the integration tests, the back-end with the E2E ones
+
+**TL;DR:** UI-tests with a stubbed server are reliable and faster versus full e2e tests. Full e2e tests are not necessary to ensure front-end quality. We can instead have high confidence in front-end quality by using lower cost UI-Integration tests, and saving higher cost e2e tests for the back-end.
+
+**Otherwise:** We use full e2e tests for the front-end; the tests provide the same value but have a high cost: slower, brittle, unreliable.
+
+🔗 [**Read More: Test the front-end with the integration tests, the back-end with the E2E ones**](/sections/server-communication-testing/test-front-end-with-integration-back-end-with-e2e.md)
 
 <br/><br/>
 
