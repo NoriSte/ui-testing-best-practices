@@ -6,6 +6,7 @@
     - [ ] test the frontend with the integration tests, the backend with the E2E ones
     - [x] test the server schema (or everything that can impact the front-end app like PostMan exports, Elastic Search mappings etc.). That sould not be part of the front-end tests but consider that the app will be often broken by a server data change
     - [x] monitoring tests?
+    - [ ] PACT
 - [ ] testing strategy
     - [x] component vs integration vs e2e testing
     - [x] when you find a bug, write the test (that fails, it's important) and then fix the bug
@@ -19,9 +20,10 @@
             - [x] with custom selectors
         - [x] wait for network requests
         - [x] wait for front-end specific state
+    - [ ] managinag/stubbing websocket
     - [ ] assert frequently. An assertion is auto-explicative, an error isn't.
     - [ ] choose a made on purpose library
-    - [ ] use the same front-end constants/functions
+    - [ ] use the same front-end constants/functions (with an example with ReactIntl)
     - [x] UI testing framework as a development tool. Write tests step by step to avoid manual testing even during the development phase and to have them already written when you finished (easier with Cypress).
     - [ ] don't use the UI to reach the desired UI state. But remember to avoid writing one more app into your testing framework to consume the same resources
     - [ ] we aren't unit-testing, every test has a flow and a lot of assertions
@@ -43,6 +45,7 @@
     - [x] name the test file wisely
     - [ ] check the Yoni's post https://medium.com/@me_37286/yoni-goldberg-javascript-nodejs-testing-best-practices-2b98924c9347
     - [ ] don't share the state between tests
+    - [ ] keep your tests simple with a low abstraction level
 - [ ] component testing
     - [ ] use storybook  (or a styleguide framework of choice) for components reporting all cases. In fact, they are tests too
     - [ ] add snapshot testing to storybook (or a styleguide framework of choice)
@@ -104,10 +107,16 @@
         - [ ] Simulating the (exact) user behaviour sometimes could be very tricky
         - [ ] They can fail
         - [ ] They are slow
-- [ ] a11n?
+  - [ ] teests as a documentation tools (with smart fixture names)
+- [ ] advanced
+    - [ ] cypress code coverage
+    - [ ] cucumber andh gherkins deserve some words
+- [ ] a11y?
 - [ ] take a look at every TODO in the various contents
 - [ ] link every section to each other
 - [ ] consider adding some links to a-z testing
+- [ ] take a look at the ReactJSDay course book and add new contents
+- [ ] explain why, in Cypress, custom commands can't have all the assertions we'd like (no retrieval from failing error)
 
 - take a look at https://slides.com/noriste/milano-frontend-ui-testing-best-practices (and the React Testing course too) to check if
   some contents are missing
