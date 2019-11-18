@@ -24,7 +24,7 @@ A high-level architectural view from a real-world Building Controls Cloud applic
 
 > Depending on needs, UI-E2E tests can be supplemented with pure API tests. Some popular tools for API testing are [Postman](https://www.getpostman.com/), [Rest Client for VS COde](https://marketplace.visualstudio.com/items?itemName=humao.rest-client), as well as Cypress.
 
-![](./test-architecture-example.png)
+![](./../../assets/images/test-architecture-example.png)
 
 <br/>
 
