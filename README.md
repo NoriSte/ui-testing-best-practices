@@ -57,7 +57,7 @@
 
 ## ![✔] 1.1 Component tests vs (UI) Integration tests vs E2E tests
 
-**TL;DR:** Identifying the test types is the starting point to understand and master all the UI testing strategies, the tools, and the pro/cons of them. UI Integration tests are the most effective ones (you are going to love them), E2E tests give you the highest confidence, and Component tests allow you to test the units of the UI in isolation.
+**TL;DR:** Identifying the test types is the starting point to understand and master all the UI testing strategies, the tools, and the pro/cons of them. UI integration tests are the most effective ones (you are going to love them), E2E tests give you the highest confidence, and Component tests allow you to test the units of the UI in isolation.
 
 **Otherwise:** You end up writing a lot of E2E tests without leveraging other simpler kind of tests. E2E tests are the most confident type of tests but even the hardest, slowest and most brittle ones.
 
@@ -166,9 +166,9 @@ some UI utilities that make easy to use them as a development tool.
 
 ## ![✔] 3.4 Test the front-end with the integration tests, the back-end with the E2E ones
 
-**TL;DR:** UI-tests with a stubbed server are reliable and faster versus full e2e tests. Full e2e tests are not necessary to ensure front-end quality. We can instead have high confidence in front-end quality by using lower cost UI-Integration tests, and saving higher cost e2e tests for the back-end.
+**TL;DR:** UI tests with a stubbed server are reliable and faster compared to full E2E tests. Full E2E tests are not always necessary to ensure front-end quality. We can instead have high confidence in front-end quality by using lower-cost UI integration tests and saving higher cost E2E tests for the back-end.
 
-**Otherwise:** We use full e2e tests for the front-end; the tests provide the same value but have a high cost: slower, brittle, unreliable.
+**Otherwise:** You waste time and resources with slow and brittle E2E tests while you can get a lot of confidence with a lot of UI integrations tests.
 
 🔗 [**Read More: Test the front-end with the integration tests, the back-end with the E2E ones**](/sections/server-communication-testing/test-front-end-with-integration-back-end-with-e2e.md)
 
