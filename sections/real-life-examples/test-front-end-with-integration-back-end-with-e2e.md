@@ -1,4 +1,4 @@
-# Test the front-end with the integration tests, the back-end with the E2E ones
+# Real life example: *Test the front-end with the integration tests, the back-end with the E2E ones* - in reference to  [Component vs Integration vs E2e Testing](./sections/testing-strategy/component-vs-integration-vs-e2e-testing.md): 
 
 <br/><br/>
 
@@ -15,7 +15,7 @@ We can still achieve high confidence for the front-end by using lower-cost UI in
 
 ### Sample Test Architecture Diagram
 
-A high-level architectural view from a real-world Building Controls Cloud application.
+A high-level architectural view from a real-world [Building Controls Cloud application](https://new.siemens.com/global/en/products/buildings/digitalization/building-operator.html).
 
 * Angular front-end
 * Node-Express API (back-end)

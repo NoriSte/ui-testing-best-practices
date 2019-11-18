@@ -3,7 +3,7 @@
 
 - [ ] back-end related tests
     - [x] test request and response payloads
-    - [ ] test the frontend with the integration tests, the backend with the E2E ones
+    - [x] test the frontend with the integration tests, the backend with the E2E ones
     - [x] test the server schema (or everything that can impact the front-end app like PostMan exports, Elastic Search mappings etc.). That sould not be part of the front-end tests but consider that the app will be often broken by a server data change
     - [x] monitoring tests?
 - [ ] testing strategy
