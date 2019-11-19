@@ -131,6 +131,8 @@ if (isLocalHost()) {
 
 ```
 
+For Cypress users, recently [cypress-skip-test plugin](https://github.com/cypress-io/cypress-skip-test) added support for environment variables. Per CTO Gleb Bahmutov, this may soon become a standard for specifying environmental constraints on a per spec or per test basis. 
+
 ### References
 
 [Mastering UI Testing - conference video](https://www.youtube.com/watch?v=RwWz4hllDtg)
