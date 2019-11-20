@@ -184,7 +184,7 @@ some UI utilities that make easy to use them as a development tool.
 # `5. Real Life Examples`
 
 
-## ![✔] 5.1 Test the front-end with the integration tests, the back-end with the E2E ones  - in reference to  [Component vs Integration vs E2e Testing](./sections/testing-strategy/component-vs-integration-vs-e2e-testing.md)
+## ![✔] Siemens - Test the front-end with the integration tests, the back-end with the E2E ones  - in reference to  [Component vs Integration vs E2e Testing](./sections/testing-strategy/component-vs-integration-vs-e2e-testing.md)
 
 **TL;DR:** UI tests with a stubbed server are reliable and faster compared to full E2E tests. Full E2E tests are not always necessary to ensure front-end quality. We can instead have high confidence in front-end quality by using lower-cost UI integration tests and saving higher cost E2E tests for the back-end.
 

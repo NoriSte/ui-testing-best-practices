@@ -104,6 +104,9 @@
       - [ ] report the real case of conio
         - [ ] remember to use unique fixture names instead of reusing them, they could be confusing
         - [ ] keep the tests easy to read
+- [ ] Real life examples
+  - [x] Siemens
+  - [ ] Conio? (for the custody process)
 
 - [ ] a11n?
 - [ ] take a look at every TODO in the various contents
