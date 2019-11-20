@@ -11,7 +11,38 @@
     - [x] when you find a bug, write the test (that fails, it's important) and then fix the bug
     - [x] choose a reference browser (and if you need mobile browsers use TestCafè)
     - [x] avoid perfectionism, lot of UI interaction details are useful but they don't need to be tested (unless you have been proven that they bring value to your company)
-    - [ ] if you use typescript in your app, use it in your tests too, the initial temptation of avoiding it will not last long
+    - [ ] if you use typescript in your app, use it in your tests too, the initial temptation of avoiding it will not last long (added later: TS makes the test harder to be read, it's up to you if you want to give priority to test clearness or type-safe checking)
+- [ ] testing rules (the nexrt contents come from this course https://noriste.github.io/reactjsday-2019-testing-course/book/testing-rules.html and while writing them we need to choose if they will be completely separate or grouped chapters)
+  - [ ] Generic rule
+    - [ ] you must write the test as soon as you write the code
+    - [ ] False negatives:
+        - [ ] a failing test is a good thing, really! Because it has protected us from a regression! The important thing is that...
+        - [ ] ... The tests should not fail for randomly. False-negative tests are the worst ones, you do not know why they fail and you stop trusting them
+        - [ ] obviously, the opposite is important too: tests must fail if the app does not work, otherwise, what are they testing?
+    - [ ] Test usefulness
+        - [ ] tests must be simple. Simple to be read, understood, and changed
+            - [ ] ... Debugging a failing test is way harder than debugging an application
+        - [ ] do not DRY the test code too early. While testing, you need to change more or less every line of the test code to simulate the different cases. Applying DRY when not necessary increases the test complexity and makes you add a lot of conditions to the DRYed code
+        - [ ] avoid conditional tests as much as you can, the test code must be straightforward
+        - [ ] a failing test must give useful feedback. It must tell you what failed and why, without re-launching or debugging it
+        - [ ] tests must be deterministic
+        - [ ] deterministic tests also mean that you should not rely on their execution order
+        - [ ] the test must fail before you write the code and succeed when you have written the code
+        - [ ] tests must be fast, as fast as possible. You should never sacrifice speed for reliability, but the speed is really important because the faster the tests are, the faster you have feedback, the higher the chance you run them frequently, the sooner you discover regressions. Slow tests make you move your mind to another task, make you waste your time, make you angry when they fail after a 30-minutes pipeline, and, sooner or later, You will start wondering about removing them...
+    - [ ] Test fragility
+        - [ ] never do white-box testing You must test as the consumer, not as the author
+        - [ ] tests failing because of some slight code changes are fragile and should be avoided
+        - [ ] tests must be independent from each other, they must not share any state
+        - [ ] you cannot manually interact with the tests. It's easier when doing functional tests but it's a generic rule, the tests must not depend on human changes
+    - [ ] Tools
+        - [ ] different test types provide different feedback and have different cost, get used with that. Following the black-box testing rule, an E2E test can not provide useful feedback for a single function, and a unit test can not tell you if your app works
+        - [ ] code coverage helps us find what we have not tested yet, it is not an end in itself
+    - [ ] What not to test
+        - [ ] you should not test external services, you should test how you consume them, not if they work or not
+        - [ ] you should not test third party scripts and libraries
+        - [ ] you should not test native APIs
+    - [ ] if you're not enough confident about your application (you are not sure that it works even if the tests pass), think twice about your tests. Why they do not give you enough confidence? How could you improve them?
+    - [ ] last but not least: always remember that testing and TDD are two different things. TDD is a step further and requires a particular context to be practiced, you can test everything without ever applying TDD
 - [ ] ui testing best practices
     - [x] await, don't sleep
         - [x] wait for contents
@@ -19,76 +50,41 @@
             - [x] with custom selectors
         - [x] wait for network requests
         - [x] wait for front-end specific state
-    - [ ] assert frequently. An assertion is auto-explicative, an error isn't.
-    - [ ] choose a made on purpose library
-    - [ ] use the same front-end constants/functions
+    - [ ] assert frequently. An assertion is auto-explicative, an error isn't. (starting point could be https://noriste.github.io/reactjsday-2019-testing-course/book/utility-in-case-of-failure.html)
+    - [ ] choose a made on purpose library (Cypress or TestCafé) (most of the best practices reported [here](https://slides.com/noriste/e2e-testinùg-workshop-cafe) are useless)
+    - [ ] avoid false negatives and maintaining two different ways of consuming the same resources (ex. API calls both in the test and in the front-end) and avoid using the UI to reach the desired front-end state: import/consume app constants/actions from the front-end app.  App actions allows you to let the front-end working for you
     - [x] UI testing framework as a development tool. Write tests step by step to avoid manual testing even during the development phase and to have them already written when you finished (easier with Cypress).
-    - [ ] don't use the UI to reach the desired UI state. But remember to avoid writing one more app into your testing framework to consume the same resources
     - [ ] we aren't unit-testing, every test has a flow and a lot of assertions
     - [ ] deterministic tests as wrote here https://docs.cypress.io/guides/core-concepts/conditional-testing.html#Error-Recovery
-- [ ] in your app / practical advices
-    - [ ] expose costants/functions. It makes tests more portable too
-        - [ ] don't delay this process, by definition UI tests are slow, avoid them failing for a silly string
-    - [ ] expose some shortcuts. Everything useful for leting the UI run faster (without compromising reliability) is welcome
-    - [ ] let the front-end work for you
 - [ ] base your tests on contents
     - [ ] ui testing is framework agnostic, base it on contents (the same consumed by the user)
-    - [ ] pay attention on the pages that update frequently
-    - [ ] a content-based failing test needs just a screenshot to be debugged, an attribute-based one needs the page to be inspected
-    - [ ] if you can't rely on contents, use test-ids, never user classes of ids
-    - [ ] avoid testing implementation details
+      - [ ] a content-based failing test needs just a screenshot to be debugged, an attribute-based one needs the page to be inspected
+      - [ ] if you can't rely on contents or aria-attributes, use test-ids, never user classes of ids, they're going to change a lot of times
+    - [ ] pay attention on the pages that update frequently (read the contents from the same ajax calls?)
+    - [ ] avoid testing implementation details (#1 reason for failing tests)
 - [ ] generic testing best practices
     - [ ] use the right assertion
     - [ ] use "only" and "skip"
     - [x] name the test file wisely
     - [ ] check the Yoni's post https://medium.com/@me_37286/yoni-goldberg-javascript-nodejs-testing-best-practices-2b98924c9347
-    - [ ] don't share the state between tests
+    - [ ] don't share the state between tests (the golden rule is "tests must be independent", starting point: https://noriste.github.io/reactjsday-2019-testing-course/book/sharing-authentication-state.html)
 - [ ] component testing
     - [ ] use storybook  (or a styleguide framework of choice) for components reporting all cases. In fact, they are tests too
+      - [ ] and use Cypress or TestCafé against Storybook, or Testing Library
     - [ ] add snapshot testing to storybook (or a styleguide framework of choice)
     - [ ] add regression testing to storybook (or a styleguide framework of choice)
+      - [ ] and to the project too
 - [ ] performance
     - [ ] always choose the "simplest"/fastest test. dom-ui-testing is faster then Puppeteer that's faster then Cypress etc.
-- [ ] UI test debugging (mark every single tip necessary/unnecessary with existing frameworks)
-    - [ ] make screenshots
-    - [ ] launch the browser in non-headless mode
-    - [ ] launch the browser with the devtools already opened
-    - [ ] slow down the browser actions
-    - [ ] increase the test timeout
-    - [ ] avoid closing the browser when the test ends
-    - [ ] console.log the name of the test
-- [ ] frameworks
-    - [ ] everything is async
-    - [ ] dedicated ones vs generic ones
-    - [ ] device emulation
-    - [ ] cross browser support
-    - [ ] custom extension installation
-    - [ ] test management dedicated UI
-    - [ ] running tests command log
-    - [ ] hidden flags etc.
-    - [ ] dedicated development browser
-    - [ ] available plugins
-    - [ ] generic browser automations
-    - [ ] automatic dynamic waiting (like the cypress one)
-    - [ ] snapshot management (like the cypress one)
-    - [ ] dom-testing-library integration
-    - [ ] automatic screenshot/video management
-    - [ ] Puppeteer only: Node.js UI, make self-contained Node.js apps with a UI (thank to Carlo by Google)
-    - [ ] automatic retry (cypress)
-    - [ ] browser automation
-    - [ ] common issues
-        - [ ] promise everything
-        - [ ] puppeteer evaluate
-        - [ ] cypress then
-    - [ ] ... ?
 - [ ] beginners
-    - [ ] what is UI testing
-        - [ ] why is it so important
+    - [x] start from the top of the pyramid
+    - [ ] enrich start from the top of the pyramid with the contents of the "breaking the fear of front-end testing" and the feedback from the various talks
+    - [ ] what is UI testing (starting point: https://slides.com/noriste/breaking-the-fear-of-front-end-testing#/)
+        - [ ] why it is so important
         - [ ] headless browser
         - [ ] use it while studying
         - [ ] automate repetitive and annoying
         - [x] use testing frameworks as development tools
-        - [ ] data scraping (take care that some sites will block you because of the high number of login requests etc.)
         - [ ] avoid regression
         - [ ] avoid manually testing
     - [ ] the other kind of tests
@@ -96,7 +92,7 @@
         - [ ] integration
         - [ ] regression
         - [ ] snap shot testing
-        - [ ] the testing pyramid (standard and the kent's one)
+        - [ ] the testing pyramid (standard and the kent's trophy)
         - [ ] Always use the simplest kind of test
     - [ ] Why it's hard to do UI testing
         - [ ] you aren’t in isolation (like in Unit tests), nor in a super-mocked environment...
@@ -104,15 +100,19 @@
         - [ ] Simulating the (exact) user behaviour sometimes could be very tricky
         - [ ] They can fail
         - [ ] They are slow
+    - [ ] tests as documentation
+      - [ ] report the real case of conio
+        - [ ] remember to use unique fixture names instead of reusing them, they could be confusing
+        - [ ] keep the tests easy to read
+
 - [ ] a11n?
 - [ ] take a look at every TODO in the various contents
+- [ ] (Stefano) take a look at your own slide-feedback document in  case you missed something
 - [ ] link every section to each other
 - [ ] consider adding some links to a-z testing
 
-- take a look at https://slides.com/noriste/milano-frontend-ui-testing-best-practices (and the React Testing course too) to check if
-  some contents are missing
 
-For contributors, write:
+For future contributors, write:
 - that a lot of missing content could be applied and you ask for contributors
 - that your English could need a check
 - that you'd like to hear from other experts, you have not years of experience with every tool
