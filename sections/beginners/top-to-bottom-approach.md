@@ -50,7 +50,7 @@ the submit button.
 Speaking again about the missing experience of testing newbies (like I was, two
 years ago): **everything new requires a big cognitive load** and you cannot face
 too much new stuff at the same time. It's hard to face the usual development of
-your app, the new Testing topic, the Unit Tests world and the UI Tests one (the
+your app, the new Testing topic, the Unit Tests world and the UI tests one (the
 latter two require different tools and efforts).
 
 Take a look at this exhaustive image from the
@@ -105,7 +105,7 @@ application and interacts with it. The pros are:
   😁
 - **UI Testing best fits** the little-to-medium size of most of **the projects
   you work on a daily basis**. From a landing page to a little CMS: all of them
-  require at least some UI Tests, yet you could overfly on the Unit Tests based
+  require at least some UI tests, yet you could overfly on the Unit Tests based
   on the testing confidence and the deliveries you have to respect. Just a few
   of you work at Facebook, Spotify, Netflix, etc., products that require strict
   testing strategies, code coverage requisites, etc. More in general: if you
@@ -133,11 +133,11 @@ of test is important and **different tests provide different feedback**! A
 developer that approaches the pyramid from the top is enough happy to love the
 whole testing world.
 
-Then, you are going to discover the limitations of the high-level **UI Tests**:
+Then, you are going to discover the limitations of the high-level **UI tests**:
 
 - they **are slow**: I know that the above videos give you the idea that they're
   super fast but they are not. They are fast when you have five, ten, twenty of
-  them, but when you have hundreds of UI Tests and they need minutes, you start
+  them, but when you have hundreds of UI tests and they need minutes, you start
   asking yourself how you can improve the situation
 - they give you mostly **high-level feedback**: if the submit button of the form
   does not work, what's the bug? There are a ton of possible causes but the UI
