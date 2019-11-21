@@ -192,6 +192,7 @@ some UI utilities that make easy to use them as a development tool.
 
 🔗 [**Read More: Test the front-end with the integration tests, the back-end with the E2E ones**](./sections/real-life-examples/test-front-end-with-integration-back-end-with-e2e.md)
 
+<br/> <br/>
 
 # `6. Advanced`
 
@@ -240,7 +241,7 @@ Our collaborators are members who are contributing to the repository on a reguar
 
 | <a href="https://github.com/anoop-gupt" target="_blank"><img src="https://avatars2.githubusercontent.com/u/1118525?s=460&v=4" width="75" height="75"></a> |  <a href="https://github.com/muratkeremozcan" target="_blank"><img src="https://avatars.githubusercontent.com/muratkeremozcan" width="75" height="75"></a> |
 | :--: | :--: |
-| [Anoop Kumar Gupta](https://github.com/anoop-gupt) | [Murat Ozcan](https://github.com/muratkeremozcan) |
+| [Anoop Kumar Gupta](https://github.com/anoop-gupt) | [Murat Ozcan](https://github.com/muratkeremozcan) <a href="https://www.linkedin.com/in/murat-ozcan-3489898/"><img src="assets/images/linkedin.png" width="16" height="16"></img></a> |
 <br/>
 
 
