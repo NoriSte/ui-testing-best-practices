@@ -6,6 +6,7 @@
     - [x] test the frontend with the integration tests, the backend with the E2E ones
     - [x] test the server schema (or everything that can impact the front-end app like PostMan exports, Elastic Search mappings etc.). That sould not be part of the front-end tests but consider that the app will be often broken by a server data change
     - [x] monitoring tests?
+    - [ ] PACT
 - [ ] testing strategy
     - [x] component vs integration vs e2e testing
     - [x] when you find a bug, write the test (that fails, it's important) and then fix the bug
@@ -52,7 +53,7 @@
         - [x] wait for front-end specific state
     - [ ] assert frequently. An assertion is auto-explicative, an error isn't. (starting point could be https://noriste.github.io/reactjsday-2019-testing-course/book/utility-in-case-of-failure.html)
     - [ ] choose a made on purpose library (Cypress or TestCafé) (most of the best practices reported [here](https://slides.com/noriste/e2e-testinùg-workshop-cafe) are useless)
-    - [ ] avoid false negatives and maintaining two different ways of consuming the same resources (ex. API calls both in the test and in the front-end) and avoid using the UI to reach the desired front-end state: import/consume app constants/actions from the front-end app.  App actions allows you to let the front-end working for you
+    - [ ] avoid false negatives and maintaining two different ways of consuming the same resources (ex. API calls both in the test and in the front-end) and avoid using the UI to reach the desired front-end state: import/consume app constants/actions from the front-end app.  App actions allows you to let the front-end working for you. About constants: an examplew with React Intl would be fine
     - [x] UI testing framework as a development tool. Write tests step by step to avoid manual testing even during the development phase and to have them already written when you finished (easier with Cypress).
     - [ ] we aren't unit-testing, every test has a flow and a lot of assertions
     - [ ] deterministic tests as wrote here https://docs.cypress.io/guides/core-concepts/conditional-testing.html#Error-Recovery
@@ -109,10 +110,16 @@
   - [ ] Conio? (for the custody process)
 
 - [ ] a11n?
+- [ ] advanced
+    - [ ] cypress code coverage
+    - [ ] cucumber andh gherkins deserve some words
 - [ ] take a look at every TODO in the various contents
 - [ ] (Stefano) take a look at your own slide-feedback document in  case you missed something
 - [ ] link every section to each other
 - [ ] consider adding some links to a-z testing
+- [ ] take a look at the ReactJSDay course book and add new contents
+- [ ] explain why, in Cypress, custom commands can't have all the assertions we'd like (no retrieval from failing error)
+- [ ] managinag/stubbing websocket
 
 
 For future contributors, write:
