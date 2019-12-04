@@ -1,4 +1,4 @@
-# Real life example: *Test the front-end with the integration tests, the back-end with the E2E ones* - in reference to  [Component vs Integration vs E2e Testing](./sections/testing-strategy/component-vs-integration-vs-e2e-testing.md): 
+# Real life example: *Test the front-end with the integration tests, the back-end with the E2E ones* - in reference to  [Component vs Integration vs E2e Testing](..//testing-strategy/component-vs-integration-vs-e2e-testing.md): 
 
 <br/><br/>
 
