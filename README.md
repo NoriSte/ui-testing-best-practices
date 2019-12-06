@@ -9,7 +9,7 @@
 <br/>
 
 <div align="center">
-  <img src="https://img.shields.io/badge/⚙%20Item%20count%20-%2010%20Best%20Practices-blue.svg" alt="10 items"> <img src="https://img.shields.io/badge/%F0%9F%93%85%20Last%20update%20-%20Oct%209%202019-green.svg" alt="Last update: July 23, 2019">
+  <img src="https://img.shields.io/badge/⚙%20Item%20count%20-%2011%20Best%20Practices-blue.svg" alt="12 items"> <img src="https://img.shields.io/badge/%F0%9F%93%85%20Last%20update%20-%20Dec%206%202019-green.svg" alt="Last update: December 6, 2019">
 </div>
 
 <br/>
@@ -23,6 +23,7 @@
 # Latest Best Practices and News
 
 (Work in progress)
+
 <!-- - **New translation:** ![BR](/assets/flags/BR.png) [Brazilian Portuguese](/README.brazilian-portuguese.md) available now, courtesy of [Marcelo Melo](https://github.com/marcelosdm)! ❤️
 
 - **New best practice:** 4.2: Include 3 parts in each test name - [_From the section "Testing and overall quality"_](https://github.com/i0natan/nodebestpractices#4-testing-and-overall-quality-practices)
@@ -44,16 +45,18 @@
 <br/><br/>
 
 ## Table of Contents
+
 (Work in progress, take a look at the [sections draft](/sections/draft.md) file)
+
 1.  [Testing strategies (4)](#1-testing-strategies)
 2.  [Generic Best Practices (3)](#2-generic-best-practices)
 3.  [Server Communication Testing (3)](#3-server-communication-testing)
 4.  [Beginners (1)](#4-beginners)
+5.  [Generic testing perks (1)](#5-generic-testing-perks)
 
 <br/><br/>
 
 # `1. Testing strategies`
-
 
 ## ![✔] 1.1 Component tests vs (UI) Integration tests vs E2E tests
 
@@ -97,7 +100,6 @@
 
 # `2. Generic Best Practices`
 
-
 ## ![✔] 2.1 Await, don't sleep
 
 **TL;DR:** When testing your UI, you define a sort of key points the app must pass through. Reaching these key
@@ -137,7 +139,6 @@ some UI utilities that make easy to use them as a development tool.
 
 # `3. Server Communication Testing`
 
-
 ## ![✔] 3.1 Test the request and response payloads
 
 **TL;DR:** The UI communicates continuously with the back-end, and usually every communication is critical. A bad request or a bed response could cause inconsistent data and inconsistent UI state. Remember that all the business is built around data and the user experience is scratched by every single UI failure. So, every single XHR request must be checked carefully. XHR request checks make your test more robust too, correct XHR management and testing are one of the most important aspects of a UI test.
@@ -164,11 +165,9 @@ some UI utilities that make easy to use them as a development tool.
 
 🔗 [**Read More: Monitoring tests**](/sections/server-communication-testing/monitoring-tests.md)
 
-
 <br/><br/>
 
 # `4. Beginners`
-
 
 ## ![✔] 4.1 Approach the testing pyramid from the top!
 
@@ -178,20 +177,29 @@ some UI utilities that make easy to use them as a development tool.
 
 🔗 [**Read More: Approach the testing pyramid from the top!**](/sections/beginners/top-to-bottom-approach.md)
 
+<br/><br/>
+
+# `5. Generic testing perks`
+
+## ![✔] 5.1 Software tests as a documentation tool
+
+**TL;DR:** Tests are a good way to have a concise, code-coupled, and updated documentation. Good storytelling test descriptions could make the comprehension of a codebase or a new project very simple.
+
+**Otherwise:** You rely on the code documentation or, worse, on the readability of the code to comprehend that the code does.
+
+🔗 [**Read More: Approach the testing pyramid from the top!**](/sections/testing-perks/tests-as-documentation.md)
 
 <br/> <br/>
 
-# `5. Real Life Examples`
+# `6. Real Life Examples`
 
-
-## ![✔] Siemens - Test the front-end with the integration tests, the back-end with the E2E ones  - in reference to  [Component vs Integration vs E2e Testing](./sections/testing-strategy/component-vs-integration-vs-e2e-testing.md)
+## ![✔] Siemens - Test the front-end with the integration tests, the back-end with the E2E ones - in reference to [Component vs Integration vs E2e Testing](./sections/testing-strategy/component-vs-integration-vs-e2e-testing.md)
 
 **TL;DR:** UI tests with a stubbed server are reliable and faster compared to full E2E tests. Full E2E tests are not always necessary to ensure front-end quality. We can instead have high confidence in front-end quality by using lower-cost UI integration tests and saving higher cost E2E tests for the back-end.
 
 **Otherwise:** You waste time and resources with slow and brittle E2E tests while you can get a lot of confidence with a lot of UI integrations tests.
 
 🔗 [**Read More: Test the front-end with the integration tests, the back-end with the E2E ones**](./sections/real-life-examples/test-front-end-with-integration-back-end-with-e2e.md)
-
 
 <br/><br/><br/>
 
@@ -210,8 +218,6 @@ A positive-minded front-end developer and Cypress Ambassador. He's a passion for
 
 <br/>
 
-
-
 ## Collaborators
 
 Thank you to all our collaborators! 🙏
@@ -220,9 +226,10 @@ Our collaborators are members who are contributing to the repository on a reguar
 
 <br/>
 
-| <a href="https://github.com/anoop-gupt" target="_blank"><img src="https://avatars2.githubusercontent.com/u/1118525?s=460&v=4" width="75" height="75"></a> |  <a href="https://github.com/muratkeremozcan" target="_blank"><img src="https://avatars.githubusercontent.com/muratkeremozcan" width="75" height="75"></a> |
-| :--: | :--: |
-| [Anoop Kumar Gupta](https://github.com/anoop-gupt) | [Murat Ozcan](https://github.com/muratkeremozcan) |
+| <a href="https://github.com/anoop-gupt" target="_blank"><img src="https://avatars2.githubusercontent.com/u/1118525?s=460&v=4" width="75" height="75"></a> | <a href="https://github.com/muratkeremozcan" target="_blank"><img src="https://avatars.githubusercontent.com/muratkeremozcan" width="75" height="75"></a> |
+| :-------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|                                                    [Anoop Kumar Gupta](https://github.com/anoop-gupt)                                                     |                                                     [Murat Ozcan](https://github.com/muratkeremozcan)                                                     |
+
 <br/>
 
 ## Thank You Notes
