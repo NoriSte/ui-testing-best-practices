@@ -53,6 +53,7 @@
 3.  [Server Communication Testing (3)](#3-server-communication-testing)
 4.  [Beginners (1)](#4-beginners)
 5.  [Generic testing perks (1)](#5-generic-testing-perks)
+6.  [Real Life Examples (!)](#6-real-life-examples)
 
 <br/><br/>
 
@@ -187,7 +188,7 @@ some UI utilities that make easy to use them as a development tool.
 
 **Otherwise:** You rely on the code documentation or, worse, on the readability of the code to comprehend that the code does.
 
-🔗 [**Read More: Approach the testing pyramid from the top!**](/sections/testing-perks/tests-as-documentation.md)
+🔗 [**Read More: Software tests as a documentation tool**](/sections/testing-perks/tests-as-documentation.md)
 
 <br/> <br/>
 
