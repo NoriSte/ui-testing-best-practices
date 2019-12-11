@@ -161,12 +161,12 @@ await Selector('#form-feedback').withText('Success')
 
 - waiting for an element:
 ```javascript
-await waitForElement(() => getByTestId('form-feedback'));
+await findByTestId(document.body, 'form-feedback');
 ```
 - waiting for an element with specific content
 ```javascript
-const container = await waitForElement(() => getByTestId('form-feedback'));
-await waitForElement(() => getByText('Success'), { container });
+const container = await findByTestId(document.body, 'form-feedback');
+await findByText(container, 'Success');
 ```
 </details>
 
