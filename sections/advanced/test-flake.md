@@ -100,6 +100,8 @@ Given that:
  >*"It fails at 10% rate over 40 executions on the weekend... We ran the test suite 40 times, and in one of them saw the spec retrying 2 times until it passed..."*
 ![](../../assets/images/test-retry-pipeline.PNG)
 
+*Pleas note: the camera icon means that there are some test failures because Cypress takes videos and screenshot on failures.*
+
 
 In these cases, consistency testing with [cron jobs](https://crontab.guru/#0_1-23_*_*_6-7) overnights or the weekends can be utilized as the initial indicator of deeper system issues. These are usually the ambiguous defects that are likely to leak into production, be found on the field and have costly repercussions at a larger scale.
 
