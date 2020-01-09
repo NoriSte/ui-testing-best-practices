@@ -198,7 +198,7 @@ some UI utilities that make easy to use them as a development tool.
 
 ## ![✔] 6.1 Test States
 
-**TL;DR:** Tests should be repeatable, modular and should handle their own state setup. UI Tests should not be repeated in order to achieve state for another test. 
+**TL;DR:** Tests should be repeatable, modular and should handle their own state setup. UI Tests should not be repeated in order to achieve state for another test.
 
 🔗 [**Read More: Test States**](./sections/advanced/test-states.md)
 
@@ -206,7 +206,7 @@ some UI utilities that make easy to use them as a development tool.
 
 ## ![✔] 6.2 Test Flake
 
-**TL;DR:** Tests must produce consistent results every time. Repeatable pipeline execution results is the quorum.
+**TL;DR:** Tests must produce consistent results every time. Repeatable pipeline execution results are the quorum.
 If a test cannot produce reliable results, it reduces confidence in the tests and requires maintenance which reduces all value. In these cases it is best to manually test the functionality.
 
 🔗 [**Read More: Test Flake**](./sections/advanced/test-flake.md)
@@ -239,9 +239,9 @@ Our collaborators are members who are contributing to the repository on a reguar
 
 <br/>
 
-| <a href="https://github.com/anoop-gupt" target="_blank"><img src="https://avatars2.githubusercontent.com/u/1118525?s=460&v=4" width="75" height="75"></a> |  <a href="https://github.com/muratkeremozcan" target="_blank"><img src="https://avatars.githubusercontent.com/muratkeremozcan" width="75" height="75"></a> |
-| :--: | :--: |
-| [Anoop Kumar Gupta](https://github.com/anoop-gupt) | [Murat Ozcan](https://github.com/muratkeremozcan) <a href="https://www.linkedin.com/in/murat-ozcan-3489898/"><img src="assets/images/linkedin.png" width="16" height="16"></img></a> |
+| <a href="https://github.com/anoop-gupt" target="_blank"><img src="https://avatars2.githubusercontent.com/u/1118525?s=460&v=4" width="75" height="75"></a> |              <a href="https://github.com/muratkeremozcan" target="_blank"><img src="https://avatars.githubusercontent.com/muratkeremozcan" width="75" height="75"></a>               |
+| :-------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|                                                    [Anoop Kumar Gupta](https://github.com/anoop-gupt)                                                     | [Murat Ozcan](https://github.com/muratkeremozcan) <a href="https://www.linkedin.com/in/murat-ozcan-3489898/"><img src="assets/images/linkedin.png" width="16" height="16"></img></a> |
 <br/>
 
 
