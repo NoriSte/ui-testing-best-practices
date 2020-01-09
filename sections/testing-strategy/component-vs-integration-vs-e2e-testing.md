@@ -39,7 +39,7 @@ Speaking about UI Testing (remember that we are speaking about the UI only, not 
   - everything valuable for your business: happy path or not, test whatever your business cares about (prioritizing them, obviously)
   - everything that breaks often: weak areas of the system must be monitored too
 
-Identifying/defining the type of test is useful to group them, to [name the test files]((/sections/generic-best-practices/name-test-files-wisely.md)), to limit their scope, and to choose where to run them or not though the whole application and deployment pipelines.
+Identifying/defining the type of test is useful to group them, to [name the test files](/sections/generic-best-practices/name-test-files-wisely.md), to limit their scope, and to choose where to run them or not though the whole application and deployment pipelines.
 
 <br /><br />
 
