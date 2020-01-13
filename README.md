@@ -222,6 +222,15 @@ If a test cannot produce reliable results, it reduces confidence in the tests an
 🔗 [**Read More: Test Flake**](./sections/advanced/test-flake.md)
 
 
+<br/>
+
+## ![✔] 6.3 Combinatorial Testing
+
+**TL;DR:** Most sw bugs and failures are caused by one or two parameters. Testing parameter combinations can provide more efficient fault detection than conventional methods. Combinatorial Testing is a proven method for more effective sw testing at a lower cost.
+
+🔗 [**Read More: Combinatorial Testing**](./sections/advanced/combinatorial-testing.md)
+
+
 <br/><br/><br/>
 
 ## Steering Committee
@@ -237,7 +246,7 @@ Meet the steering committee members - the people who work together to provide gu
 
 A positive-minded front-end developer and Cypress Ambassador. He's a passion for good UIs, automation, testing and teaching. He's developed every kind of interface: webapps, mobile apps, smartTV apps and games.
 
-<br/>
+<br/>6.3
 
 ## Collaborators
 
