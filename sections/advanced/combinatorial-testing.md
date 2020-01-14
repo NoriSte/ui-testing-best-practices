@@ -9,7 +9,7 @@
 * Testing parameter combinations can provide more efficient fault detection than conventional methods.
 
 
-A series of studies by NIST from 1999 to 2004 showed that most software bugs and failures are caused by one or two parameters, with
+A series of studies by [NIST](https://www.nist.gov/) from 1999 to 2004 showed that most software bugs and failures are caused by one or two parameters, with
 progressively fewer by three or more. This finding, referred to as the interaction rule, has important implications for software testing because it means that testing parameter combinations can provide more efficient fault detection than conventional methods. The data gathered by NIST and others suggest that software failures are triggered by only a few variables interacting (6 or fewer). Pairwise (2-way combinations) testing is sometimes used to obtain reasonably good results at low cost, generally not less than 60% fault coverage, but this may not be sufficient for mission-critical software.
 
 <br/><br/>
@@ -65,7 +65,7 @@ Model POquestion
    # customer = 5 => features = A || features = B || features = C || features = D || features = E #
 ```
 
-Pasting to [CTWedge](https://foselab.unibg.it/ctwedge/) this gives a test suite with 31 tests. If you add some constraints, saying some feature does notwork with some config, you can even lean it further.
+Pasting to [CTWedge](https://foselab.unibg.it/ctwedge/) this gives a test suite with 31 tests. If you add some constraints, saying some feature is not supposed to work with some config, you can even lean it further.
 
 Mind that modeling CT can and does incorporate equivalence partitions, boundary value analysis and other techniques. The more accurate the model is, the higher fault-detecting capabilities the test suite will have.
 
@@ -80,12 +80,6 @@ There are 17 billion ways to cover the entirety of exhaustive tests.
 ![](../../assets/images/combinatorial-testing/nasa-switches.PNG)
 
 You do not need to test all 2^34. Modeling with CT you can make a calculated decision, depending on risk
-
-* 14tests : failures from 2-way interactions between switches - will find 60-99% of all possible failures depending on product
-* 33tests : failures from 3-way interactions between switches - will find 90-99% of all possible failures depending on product
-* 85 tests : failures from 4-way interactions between switches - will find 95-99% of all possible failures depending on product
-* 220 tests: failures from 5-way interactions between switches - will find above 99% of all possible failures
-* 538 tests: failures from 6-way interactions between switches - will find 100% of all possible failures
 
 ```
 Model NASAswitches
@@ -126,13 +120,20 @@ Parameters:
     switch33: Boolean
     switch34: Boolean
 ```
-Switch the number of interacts to test using the dropdown in [CTWedge](https://foselab.unibg.it/ctwedge/).
+Switch the number of interactions to test using the dropdown in [CTWedge](https://foselab.unibg.it/ctwedge/).
+* 14tests : failures from 2-way interactions between switches - will find 60-99% of all possible failures depending on product
+* 33tests : failures from 3-way interactions between switches - will find 90-99% of all possible failures depending on product
+* 85 tests : failures from 4-way interactions between switches - will find 95-99% of all possible failures depending on product
+* 220 tests: failures from 5-way interactions between switches - will find above 99% of all possible failures
+* 538 tests: failures from 6-way interactions between switches - will find 100% of all possible failures
 
 <br/><br/>
 
 ### (2) Code Example - [Siemens Building Operator CI configuration](https://cypress.slides.com/cypress-io/siemens-case-study#/16)
 
-Refer to the slides link above or the [webcast](https://www.youtube.com/watch?v=aMPkaLOpyns&t=1624s) for a detailed explanation on how to measure combinatorial coverage with [CAMetrics](https://matris.sba-research.org/tools/cametrics/#/new).
+Refer to the slides link above or the [webcast](https://www.youtube.com/watch?v=aMPkaLOpyns&t=1624s) for a detailed explanation on how to measure combinatorial coverage with [CAMetrics](https://matris.sba-research.org/tools/cametrics/#/new). Essentially, you generate a csv file with any CT tool and drag&drop it to CAMetrics. After that, CAMetrics can give you various combinatorial coverage reports.
+
+> Mind that it is trivial to [convert csv to JSON](https://www.csvjson.com/csv2json), then use the JSON file for data-driven testing in any test framework of choice.
 
 ```
 Model CI
