@@ -246,7 +246,7 @@ Meet the steering committee members - the people who work together to provide gu
 
 A positive-minded front-end developer and Cypress Ambassador. He's a passion for good UIs, automation, testing and teaching. He's developed every kind of interface: webapps, mobile apps, smartTV apps and games.
 
-<br/>6.3
+<br/>
 
 ## Collaborators
 
