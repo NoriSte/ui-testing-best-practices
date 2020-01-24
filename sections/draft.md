@@ -51,7 +51,7 @@
   - [ ] add regression testing to storybook (or a styleguide framework of choice)
 - [ ] performance
   - [ ] always choose the "simplest"/fastest test. dom-ui-testing is faster then Puppeteer that's faster then Cypress etc.
-- [ ] UI test debugging (mark every single tip necessary/unnecessary with existing frameworks)
+- [ ] UI test debugging (mark every single tip necessary/unnecessary with existing frameworks) (the problems are partially explained in the Cypress chapter, list these problems too. It could become a "how to debug a test without Cypress")
   - [ ] make screenshots
   - [ ] launch the browser in non-headless mode
   - [ ] launch the browser with the devtools already opened
@@ -59,30 +59,9 @@
   - [ ] increase the test timeout
   - [ ] avoid closing the browser when the test ends
   - [ ] console.log the name of the test
-- [ ] frameworks
-  - [ ] everything is async
-  - [ ] dedicated ones vs generic ones
-  - [ ] device emulation
-  - [ ] cross browser support
-  - [ ] custom extension installation
-  - [ ] test management dedicated UI
-  - [ ] running tests command log
-  - [ ] hidden flags etc.
-  - [ ] dedicated development browser
-  - [ ] available plugins
-  - [ ] generic browser automation
-  - [ ] automatic dynamic waiting (like the cypress one)
-  - [ ] snapshot management (like the cypress one)
-  - [ ] dom-testing-library integration
-  - [ ] automatic screenshot/video management
-  - [ ] Puppeteer only: Node.js UI, make self-contained Node.js apps with a UI (thank to Carlo by Google)
-  - [ ] automatic retry (cypress)
-  - [ ] browser automation
-  - [ ] common issues
-    - [ ] promise everything
-    - [ ] puppeteer evaluate
-    - [ ] cypress then
-  - [ ] ... ?
+- [ ] frameworks/tools
+  - [x] Cypress
+  - [ ] TestCafé
 - [ ] beginners
   - [ ] what is UI testing
     - [ ] why is it so important
@@ -100,12 +79,7 @@
     - [ ] snap shot testing
     - [ ] the testing pyramid (standard and the kent's one)
     - [ ] Always use the simplest kind of test
-  - [ ] Why it's hard to do UI testing
-    - [ ] you aren’t in isolation (like in Unit tests), nor in a super-mocked environment...
-    - [ ] You have a real browser on a real network
-    - [ ] Simulating the (exact) user behavior sometimes could be very tricky
-    - [ ] They can fail
-    - [ ] They are slow
+  - [x] Why it's hard to do UI testing (actually mixed with the Cypress section)
   - [x] tests as a documentation tools
 - [ ] advanced
   - [ ] cypress code coverage

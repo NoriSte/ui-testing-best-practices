@@ -9,7 +9,7 @@
 <br/>
 
 <div align="center">
-  <img src="https://img.shields.io/badge/⚙%20Item%20count%20-%2011%20Best%20Practices-blue.svg" alt="12 items"> <img src="https://img.shields.io/badge/%F0%9F%93%85%20Last%20update%20-%20Dec%206%202019-green.svg" alt="Last update: December 6, 2019">
+  <img src="https://img.shields.io/badge/⚙%20Item%20count%20-%2014%20Best%20Practices-blue.svg" alt="12 items"> <img src="https://img.shields.io/badge/%F0%9F%93%85%20Last%20update%20-%20Jan%202020-green.svg" alt="Last update: December 6, 2019">
 </div>
 
 <br/>
@@ -53,7 +53,8 @@
 3.  [Server Communication Testing (3)](#3-server-communication-testing)
 4.  [Beginners (1)](#4-beginners)
 5.  [Generic testing perks (1)](#5-generic-testing-perks)
-6.  [Real Life Examples (!)](#6-real-life-examples)
+6.  [Tools (1)](#5-tools)
+7.  [Real Life Examples (!)](#7-real-life-examples)
 
 <br/><br/>
 
@@ -190,9 +191,21 @@ some UI utilities that make easy to use them as a development tool.
 
 🔗 [**Read More: Software tests as a documentation tool**](/sections/testing-perks/tests-as-documentation.md)
 
+<br/><br/>
+
+# `6. Tools`
+
+## ![✔] 6.1 Some UI testing problems and the Cypress way
+
+**TL;DR:** Why is testing a web application so hard? Why generic browser automation tools do not fit well the UI/E2E testing needs? Why does Cypress outstand?
+
+**Otherwise:** A generic features comparison is not enough to understand what are the main UI Testing pains and how Cypress removes them..
+
+🔗 [**Read More: Some UI testing problems and the Cypress way**](/sections/tools/ui-testing-problems-cypress.md)
+
 <br/> <br/>
 
-# `6. Real Life Examples`
+# `7. Real Life Examples`
 
 ## ![✔] Siemens - Test the front-end with the integration tests, the back-end with the E2E ones - in reference to [Component vs Integration vs E2e Testing](./sections/testing-strategy/component-vs-integration-vs-e2e-testing.md)
 
