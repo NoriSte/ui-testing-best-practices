@@ -199,7 +199,7 @@ some UI utilities that make easy to use them as a development tool.
 
 **TL;DR:** Why is testing a web application so hard? Why generic browser automation tools do not fit well the UI/E2E testing needs? Why does Cypress outstand?
 
-**Otherwise:** A generic features comparison is not enough to understand what are the main UI Testing pains and how Cypress removes them..
+**Otherwise:** A generic features comparison is not enough to understand what are the main UI Testing pains and how Cypress removes them.
 
 🔗 [**Read More: Some UI testing problems and the Cypress way**](/sections/tools/ui-testing-problems-cypress.md)
 
@@ -234,7 +234,6 @@ If a test cannot produce reliable results, it reduces confidence in the tests an
 
 🔗 [**Read More: Test Flake**](./sections/advanced/test-flake.md)
 
-
 <br/><br/><br/>
 
 ## Steering Committee
@@ -263,8 +262,8 @@ Our collaborators are members who are contributing to the repository on a reguar
 | <a href="https://github.com/anoop-gupt" target="_blank"><img src="https://avatars2.githubusercontent.com/u/1118525?s=460&v=4" width="75" height="75"></a> |              <a href="https://github.com/muratkeremozcan" target="_blank"><img src="https://avatars.githubusercontent.com/muratkeremozcan" width="75" height="75"></a>               |
 | :-------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 |                                                    [Anoop Kumar Gupta](https://github.com/anoop-gupt)                                                     | [Murat Ozcan](https://github.com/muratkeremozcan) <a href="https://www.linkedin.com/in/murat-ozcan-3489898/"><img src="assets/images/linkedin.png" width="16" height="16"></img></a> |
-<br/>
 
+<br/>
 
 ## Thank You Notes
 

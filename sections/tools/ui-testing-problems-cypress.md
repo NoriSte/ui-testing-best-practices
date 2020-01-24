@@ -116,10 +116,7 @@ What does it mean? What are the main [Command Log UI](https://docs.cypress.io/gu
 
 But, as I told you, the lack of retroactive debuggability is a big missing while writing UI tests… Let me introduce you…
 
-- **Interactive time-traveling**: not sure how the app reached a particular command or how the test failed? Would you take a look at the UI at a previous step? That is why the Command Log is interactive! You can hover the various logged steps and see how the app looks at a particular step! Or, obviously, you can pin a step and inspect the DOM, check how the app looks before/after the step, etc. This is another life-saver feature, both at the first approach (debugging a test when you do not know the testing tool could be a nightmare) and in the day-by-day testing work. It makes test inspection so handy that you completely forget how was testing without it.
-  Watch it in action
-
-{% youtube C62rYlmKLho %}
+- **Interactive time-traveling**: not sure how the app reached a particular command or how the test failed? Would you take a look at the UI at a previous step? That is why the Command Log is interactive! You can hover the various logged steps and see how the app looks at a particular step! Or, obviously, you can pin a step and inspect the DOM, check how the app looks before/after the step, etc. This is another life-saver feature, both at the first approach (debugging a test when you do not know the testing tool could be a nightmare) and in the day-by-day testing work. It makes test inspection so handy that you completely forget how was testing without it. Watch it in action [in this video](https://www.youtube.com/watch?v=C62rYlmKLho&feature=youtu.be).
 
 Others Command Log utilities are:
 
