@@ -9,7 +9,7 @@
 <br/>
 
 <div align="center">
-  <img src="https://img.shields.io/badge/⚙%20Item%20count%20-%2011%20Best%20Practices-blue.svg" alt="12 items"> <img src="https://img.shields.io/badge/%F0%9F%93%85%20Last%20update%20-%20Dec%206%202019-green.svg" alt="Last update: December 6, 2019">
+  <img src="https://img.shields.io/badge/⚙%20Item%20count%20-%2014%20Best%20Practices-blue.svg" alt="12 items"> <img src="https://img.shields.io/badge/%F0%9F%93%85%20Last%20update%20-%20Jan%202020-green.svg" alt="Last update: December 6, 2019">
 </div>
 
 <br/>
@@ -53,7 +53,8 @@
 3.  [Server Communication Testing (3)](#3-server-communication-testing)
 4.  [Beginners (1)](#4-beginners)
 5.  [Generic testing perks (1)](#5-generic-testing-perks)
-6.  [Real Life Examples (!)](#6-real-life-examples)
+6.  [Tools (1)](#5-tools)
+7.  [Real Life Examples (!)](#7-real-life-examples)
 
 <br/><br/>
 
@@ -142,7 +143,7 @@ some UI utilities that make easy to use them as a development tool.
 
 ## ![✔] 3.1 Test the request and response payloads
 
-**TL;DR:** The UI communicates continuously with the back-end, and usually every communication is critical. A bad request or a bed response could cause inconsistent data and inconsistent UI state. Remember that all the business is built around data and the user experience is scratched by every single UI failure. So, every single XHR request must be checked carefully. XHR request checks make your test more robust too, correct XHR management and testing are one of the most important aspects of a UI test.
+**TL;DR:** The UI communicates continuously with the back-end, and usually every communication is critical. A bad request or a bad response could cause inconsistent data and inconsistent UI state. Remember that all the business is built around data and the user experience is scratched by every single UI failure. So, every single XHR request must be checked carefully. XHR request checks make your test more robust too, correct XHR management and testing are one of the most important aspects of a UI test.
 
 **Otherwise:** You could miss some relevant communication inconsistencies and when you need to debug them, you are going to waste a lot of time because the test will not drive you directly to the issue.
 
@@ -190,9 +191,21 @@ some UI utilities that make easy to use them as a development tool.
 
 🔗 [**Read More: Software tests as a documentation tool**](/sections/testing-perks/tests-as-documentation.md)
 
+<br/><br/>
+
+# `6. Tools`
+
+## ![✔] 6.1 Some UI testing problems and the Cypress way
+
+**TL;DR:** Why is testing a web application so hard? Why generic browser automation tools do not fit well the UI/E2E testing needs? Why does Cypress outstand?
+
+**Otherwise:** A generic features comparison is not enough to understand what are the main UI Testing pains and how Cypress removes them.
+
+🔗 [**Read More: Some UI testing problems and the Cypress way**](/sections/tools/ui-testing-problems-cypress.md)
+
 <br/> <br/>
 
-# `6. Real Life Examples`
+# `7. Real Life Examples`
 
 ## ![✔] Siemens - Test the front-end with the integration tests, the back-end with the E2E ones - in reference to [Component vs Integration vs E2e Testing](./sections/testing-strategy/component-vs-integration-vs-e2e-testing.md)
 
@@ -204,9 +217,9 @@ some UI utilities that make easy to use them as a development tool.
 
 <br/> <br/>
 
-# `6. Advanced`
+# `8. Advanced`
 
-## ![✔] 6.1 Test States
+## ![✔] 8.1 Test States
 
 **TL;DR:** Tests should be repeatable, modular and should handle their own state setup. UI Tests should not be repeated in order to achieve state for another test.
 
@@ -214,7 +227,7 @@ some UI utilities that make easy to use them as a development tool.
 
 <br/>
 
-## ![✔] 6.2 Test Flake
+## ![✔] 8.2 Test Flake
 
 **TL;DR:** Tests must produce consistent results every time. Repeatable pipeline execution results are the quorum.
 If a test cannot produce reliable results, it reduces confidence in the tests and requires maintenance which reduces all value. In these cases it is best to manually test the functionality.
@@ -224,7 +237,7 @@ If a test cannot produce reliable results, it reduces confidence in the tests an
 
 <br/>
 
-## ![✔] 6.3 Combinatorial Testing
+## ![✔] 8.3 Combinatorial Testing
 
 **TL;DR:** Most software bugs and failures are caused by one or two parameters. Testing parameter combinations can provide more efficient fault detection than conventional methods. Combinatorial Testing is a proven method for more effective software testing at a lower cost.
 
@@ -259,8 +272,8 @@ Our collaborators are members who are contributing to the repository on a reguar
 | <a href="https://github.com/anoop-gupt" target="_blank"><img src="https://avatars2.githubusercontent.com/u/1118525?s=460&v=4" width="75" height="75"></a> |              <a href="https://github.com/muratkeremozcan" target="_blank"><img src="https://avatars.githubusercontent.com/muratkeremozcan" width="75" height="75"></a>               |
 | :-------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 |                                                    [Anoop Kumar Gupta](https://github.com/anoop-gupt)                                                     | [Murat Ozcan](https://github.com/muratkeremozcan) <a href="https://www.linkedin.com/in/murat-ozcan-3489898/"><img src="assets/images/linkedin.png" width="16" height="16"></img></a> |
-<br/>
 
+<br/>
 
 ## Thank You Notes
 
