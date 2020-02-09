@@ -48,7 +48,7 @@ If you have more than 2 parameters, 2-way interaction coverage between them will
 
 ![Combinatorial testing graph](../../assets/images/combinatorial-testing/combinatorial-testing-graph.png)
 
-In this example you would profit from adding another *parameter*. Let's name it `configuration` and assume 5 possible configurations / *parameter values*. This would make the exhaustive suite of 125 tests.
+In this example you would profit from adding another *parameter*. Let us name it `configuration` and assume 5 possible configurations / *parameter values*. This would make the exhaustive suite of 125 tests.
 
 ```
 Model POquestion
