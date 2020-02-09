@@ -46,7 +46,7 @@ The goal is to test 2-way (or more) interactions between parameters. When you ha
 
 If you have more than 2 parameters, 2-way interaction coverage between them will guarantee to find 60-99% of all possible defects that can arise from that area. 3-way 90%, 4-way 95% , 5-way 97%, 6-way guarantees 100%.
 
-![Combinatorial testing graph](../../assets/images/combinatorial-testing/combinatorial-testing-graph.jpg)
+![Combinatorial testing graph](../../assets/images/combinatorial-testing/combinatorial-testing-graph.PNG)
 
 In this example you would profit from adding another *parameter*. Let's name it `configuration` and assume 5 possible configurations / *parameter values*. This would make the exhaustive suite of 125 tests.
 
