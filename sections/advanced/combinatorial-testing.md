@@ -4,27 +4,27 @@
 
 ### One Paragraph Explainer
 
-* [Combinatorial Testing](http://csrc.nist.gov/Projects/automated-combinatorial-testing-for-software) is a proven method for more effective sw testing at a lower cost.
+* [Combinatorial Testing](http://csrc.nist.gov/Projects/automated-combinatorial-testing-for-software) is a proven method for more effective software testing at a lower cost.
 * The key insight underlying this form of testing is that not every parameter contributes to every failure and most failures are caused by interactions between relatively few parameters.
 * Testing parameter combinations can provide more efficient fault detection than conventional methods.
 
 
 A series of studies by [NIST](https://www.nist.gov/) from 1999 to 2004 showed that most software bugs and failures are caused by one or two parameters, with
-progressively fewer by three or more. This finding, referred to as the interaction rule, has important implications for software testing because it means that testing parameter combinations can provide more efficient fault detection than conventional methods. The data gathered by NIST and others suggest that software failures are triggered by only a few variables interacting (6 or fewer). Pairwise (2-way combinations) testing is sometimes used to obtain reasonably good results at low cost, generally not less than 60% fault coverage, but this may not be sufficient for mission-critical software.
+progressively fewer by three or more. This finding, referred to as the Interaction Rule, has important implications for software testing because it means that testing parameter combinations can provide more efficient fault detection than conventional methods. The data gathered by NIST and others suggest that software failures are triggered by only a few variables interacting (six or fewer). Pairwise (2-way combinations) testing is sometimes used to obtain reasonably good results at low cost, generally not less than 60% fault coverage, but this may not be sufficient for mission-critical software.
 
 <br/><br/>
 
 ### (1) Code Example – product owner question
 
 A product owner once asked:
-> "From a best practice standpoint or maybe a practical standpoint, are you supposed to test a system in every possible configuration? 
-For example, say you have features A, B, C, D, E and customer 1 has features A/B, customer 2 has A/B/C, and customer 3 has A/D, customer 4 has B/D, and customer 5 has A/B/C/D/E.... 
-Are you supposed to test every possible combination of features or do you test each of the individual features and if they work independently you trust them to work as a whole?"  
+> "From a best practice standpoint or maybe a practical standpoint, are you supposed to test a system in every possible configuration?
+For example, say you have features A, B, C, D, E and customer 1 has features A/B, customer 2 has A/B/C, and customer 3 has A/D, customer 4 has B/D, and customer 5 has A/B/C/D/E....
+Are you supposed to test every possible combination of features or do you test each of the individual features and if they work independently you trust them to work as a whole?"
 
 
 5 customers and 5 features. This would be 25 tests exhaustively.
 With the constraints described, it would be 14 tests.
-For the purpose of having a code sample, we will use a [CTWedge](https://foselab.unibg.it/ctwedge/) scripted combinatorial model of the described spec. There are many other CT tools listed at http://pairwise.org/ . Some of the other tools we have used are [ACTs](https://csrc.nist.gov/projects/automated-combinatorial-testing-for-software) and [CAgen](https://matris.sba-research.org/tools/cagen/#/workspaces).
+For the purpose of having a code sample, we will use a [CTWedge](https://foselab.unibg.it/ctwedge/) scripted combinatorial model of the described spec. There are many other CT tools listed at [pairwise.org](http://pairwise.org/). Some of the other tools we (at Siemens) have used are [ACTs](https://csrc.nist.gov/projects/automated-combinatorial-testing-for-software) and [CAgen](https://matris.sba-research.org/tools/cagen/#/workspaces).
 
 ```
 Model POquestion
@@ -40,15 +40,15 @@ Model POquestion
    # customer = 5 => features = A || features = B || features = C || features = D || features = E #
 ```
 
-Paste the script in here to generate results http://foselab.unibg.it/ctwedge/. 
+Paste the script in here to generate results [here](http://foselab.unibg.it/ctwedge/).
 
-The goal is to test 2-way (or more) interactions between parameters. When you have only 2 parameters, there isn't much profit, because it is exhaustive.
+The goal is to test 2-way (or more) interactions between parameters. When you have only 2 parameters, there is not much profit, because it is exhaustive.
 
-If you have more than 2 parameters,  2-way interaction coverage between them will guarantee to find 60-99% of all possible defects that can arise from that area. 3-way 90%, 4-way 95% , 5way 97, 6-way guarantees 100%. 
+If you have more than 2 parameters, 2-way interaction coverage between them will guarantee to find 60-99% of all possible defects that can arise from that area. 3-way 90%, 4-way 95% , 5-way 97%, 6-way guarantees 100%.
 
-![](../../assets/images/combinatorial-testing/combinatorial-Testing-graph.jpg)
+![Combinatorial testing graph](../../assets/images/combinatorial-testing/combinatorial-testing-graph.jpg)
 
-In this example you would profit from adding another *parameter*. Let's name it `configuration` and assume assume 5 possible configurations / *parameter values*. This would make the exhaustive suite of 125 tests.
+In this example you would profit from adding another *parameter*. Let's name it `configuration` and assume 5 possible configurations / *parameter values*. This would make the exhaustive suite of 125 tests.
 
 ```
 Model POquestion
@@ -67,7 +67,7 @@ Model POquestion
 
 Pasting to [CTWedge](https://foselab.unibg.it/ctwedge/) this gives a test suite with 31 tests. If you add some constraints, saying some feature is not supposed to work with some config, you can even lean it further.
 
-Mind that modeling CT can and does incorporate equivalence partitions, boundary value analysis and other techniques. The more accurate the model is, the higher fault-detecting capabilities the test suite will have.
+Mind that modeling Combinatorial Testing can and does incorporate equivalence partitions, boundary value analysis and other techniques. The more accurate the model is, the higher fault-detecting capabilities the test suite will have.
 
 
 <br/><br/>
@@ -79,7 +79,7 @@ There are 17 billion ways to cover the entirety of exhaustive tests.
 
 ![](../../assets/images/combinatorial-testing/nasa-switches.PNG)
 
-You do not need to test all 2^34. Modeling with CT you can make a calculated decision, depending on risk
+You do not need to test all 2^34. Modeling with Combinatorial Testing you can make a calculated decision, depending on risk
 
 ```
 Model NASAswitches
@@ -131,7 +131,7 @@ Switch the number of interactions to test using the dropdown in [CTWedge](https:
 
 ### (2) Code Example - [Siemens Building Operator CI configuration](https://cypress.slides.com/cypress-io/siemens-case-study#/16)
 
-Refer to the slides link above or the [webcast](https://www.youtube.com/watch?v=aMPkaLOpyns&t=1624s) for a detailed explanation on how to measure combinatorial coverage with [CAMetrics](https://matris.sba-research.org/tools/cametrics/#/new). Essentially, you generate a csv file with any CT tool and drag&drop it to CAMetrics. After that, CAMetrics can give you various combinatorial coverage reports.
+Refer to the slides link above or the [webcast](https://www.youtube.com/watch?v=aMPkaLOpyns&t=1624s) for a detailed explanation on how to measure combinatorial coverage with [CAMetrics](https://matris.sba-research.org/tools/cametrics/#/new). Essentially, you generate a CSV file with any Combinatorial Testing tool and drag&drop it to CAMetrics. After that, CAMetrics can give you various combinatorial coverage reports.
 
 > Mind that it is trivial to [convert csv to JSON](https://www.csvjson.com/csv2json), then use the JSON file for data-driven testing in any test framework of choice.
 
@@ -175,4 +175,3 @@ Model CI
 [Common Patterns in Combinatorial Models](http://barbie.uta.edu/~mehra/62_Common%20Patterns%20in%20Combinatorial%20Models.pdf)
 
 [Efficient Verification of Equivalence Classes and Simultaneous Testing Using Two-layer Covering Arrays](https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=917899)
-

@@ -226,7 +226,7 @@ If a test cannot produce reliable results, it reduces confidence in the tests an
 
 ## ![✔] 6.3 Combinatorial Testing
 
-**TL;DR:** Most sw bugs and failures are caused by one or two parameters. Testing parameter combinations can provide more efficient fault detection than conventional methods. Combinatorial Testing is a proven method for more effective sw testing at a lower cost.
+**TL;DR:** Most software bugs and failures are caused by one or two parameters. Testing parameter combinations can provide more efficient fault detection than conventional methods. Combinatorial Testing is a proven method for more effective software testing at a lower cost.
 
 🔗 [**Read More: Combinatorial Testing**](./sections/advanced/combinatorial-testing.md)
 
