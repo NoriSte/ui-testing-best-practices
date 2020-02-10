@@ -54,7 +54,8 @@
 4.  [Beginners (1)](#4-beginners)
 5.  [Generic testing perks (1)](#5-generic-testing-perks)
 6.  [Tools (1)](#5-tools)
-7.  [Real Life Examples (!)](#7-real-life-examples)
+7.  [Real Life Examples (1)](#7-real-life-examples)
+8.  [Advanced (3)](#8-advanced)
 
 <br/><br/>
 
@@ -234,7 +235,6 @@ If a test cannot produce reliable results, it reduces confidence in the tests an
 
 🔗 [**Read More: Test Flake**](./sections/advanced/test-flake.md)
 
-
 <br/>
 
 ## ![✔] 8.3 Combinatorial Testing
@@ -242,7 +242,6 @@ If a test cannot produce reliable results, it reduces confidence in the tests an
 **TL;DR:** Most software bugs and failures are caused by one or two parameters. Testing parameter combinations can provide more efficient fault detection than conventional methods. Combinatorial Testing is a proven method for more effective software testing at a lower cost.
 
 🔗 [**Read More: Combinatorial Testing**](./sections/advanced/combinatorial-testing.md)
-
 
 <br/><br/><br/>
 
