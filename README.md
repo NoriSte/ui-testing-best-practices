@@ -9,7 +9,7 @@
 <br/>
 
 <div align="center">
-  <img src="https://img.shields.io/badge/⚙%20Item%20count%20-%2014%20Best%20Practices-blue.svg" alt="12 items"> <img src="https://img.shields.io/badge/%F0%9F%93%85%20Last%20update%20-%20Jan%202020-green.svg" alt="Last update: December 6, 2019">
+  <img src="https://img.shields.io/badge/⚙%20Item%20count%20-%2017%20Best%20Practices-blue.svg" alt="12 items"> <img src="https://img.shields.io/badge/%F0%9F%93%85%20Last%20update%20-%20Feb%202020-green.svg" alt="Last update: February 10, 2020">
 </div>
 
 <br/>
