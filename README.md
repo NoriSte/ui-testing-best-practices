@@ -9,7 +9,7 @@
 <br/>
 
 <div align="center">
-  <img src="https://img.shields.io/badge/⚙%20Item%20count%20-%2014%20Best%20Practices-blue.svg" alt="12 items"> <img src="https://img.shields.io/badge/%F0%9F%93%85%20Last%20update%20-%20Jan%202020-green.svg" alt="Last update: December 6, 2019">
+  <img src="https://img.shields.io/badge/⚙%20Item%20count%20-%2017%20Best%20Practices-blue.svg" alt="12 items"> <img src="https://img.shields.io/badge/%F0%9F%93%85%20Last%20update%20-%20Feb%202020-green.svg" alt="Last update: February 10, 2020">
 </div>
 
 <br/>
@@ -217,9 +217,9 @@ some UI utilities that make easy to use them as a development tool.
 
 <br/> <br/>
 
-# `6. Advanced`
+# `8. Advanced`
 
-## ![✔] 6.1 Test States
+## ![✔] 8.1 Test States
 
 **TL;DR:** Tests should be repeatable, modular and should handle their own state setup. UI Tests should not be repeated in order to achieve state for another test.
 
@@ -227,12 +227,22 @@ some UI utilities that make easy to use them as a development tool.
 
 <br/>
 
-## ![✔] 6.2 Test Flake
+## ![✔] 8.2 Test Flake
 
 **TL;DR:** Tests must produce consistent results every time. Repeatable pipeline execution results are the quorum.
 If a test cannot produce reliable results, it reduces confidence in the tests and requires maintenance which reduces all value. In these cases it is best to manually test the functionality.
 
 🔗 [**Read More: Test Flake**](./sections/advanced/test-flake.md)
+
+
+<br/>
+
+## ![✔] 8.3 Combinatorial Testing
+
+**TL;DR:** Most software bugs and failures are caused by one or two parameters. Testing parameter combinations can provide more efficient fault detection than conventional methods. Combinatorial Testing is a proven method for more effective software testing at a lower cost.
+
+🔗 [**Read More: Combinatorial Testing**](./sections/advanced/combinatorial-testing.md)
+
 
 <br/><br/><br/>
 
