@@ -9,7 +9,7 @@
 <br/>
 
 <div align="center">
-  <img src="https://img.shields.io/badge/⚙%20Item%20count%20-%2018%20Best%20Practices-blue.svg" alt="12 items"> <img src="https://img.shields.io/badge/%F0%9F%93%85%20Last%20update%20-%20Apr%202020-green.svg" alt="Last update: April 1, 2020">
+  <img src="https://img.shields.io/badge/⚙%20Item%20count%20-%2019%20Best%20Practices-blue.svg" alt="12 items"> <img src="https://img.shields.io/badge/%F0%9F%93%85%20Last%20update%20-%20Apr%202020-green.svg" alt="Last update: April 1, 2020">
 </div>
 
 <br/>
@@ -53,9 +53,9 @@
 3.  [Server Communication Testing (3)](#3-server-communication-testing)
 4.  [Beginners (1)](#4-beginners)
 5.  [Generic testing perks (1)](#5-generic-testing-perks)
-6.  [Tools (1)](#6-tools)
+6.  [Tools (2)](#6-tools)
 7.  [Real Life Examples (1)](#7-real-life-examples)
-8.  [Advanced (3)](#8-advanced)
+8.  [Advanced (4)](#8-advanced)
 
 <br/><br/>
 
@@ -251,7 +251,17 @@ If a test cannot produce reliable results, it reduces confidence in the tests an
 
 🔗 [**Read More: Combinatorial Testing**](./sections/advanced/combinatorial-testing.md)
 
-<br/><br/><br/>
+<br/>
+
+## ![✔] 8.4 Performance Testing
+
+**TL;DR:** Although this is a vast topic, Performance testing from a web development perspective can be simplified with modern tools and understanding. It is highly effective in ensuring user experience, satisfying non-functional requirements (NFRS), and detecting possible system-flake early on.
+
+🔗 [**Read More: Performance Testing**](./sections/advanced/performance-testing.md)
+
+<br/>
+
+<br/><br/>
 
 ## Steering Committee
 

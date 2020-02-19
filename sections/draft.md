@@ -2,7 +2,6 @@
 
 - [ ] back-end related tests
   - [x] test request and response payloads
-  - [ ] test the frontend with the integration tests, the backend with the E2E ones
   - [x] test the server schema (or everything that can impact the front-end app like PostMan exports, Elastic Search mappings etc.). That should not be part of the front-end tests but consider that the app will be often broken by a server data change
   - [x] monitoring tests?
   - [ ] PACT
@@ -20,18 +19,15 @@
     - [x] wait for network requests
     - [x] wait for front-end specific state
   - [ ] managing/stubbing websocket
-  - [ ] assert frequently. An assertion is auto-explicative, an error isn't.
+  - [ ] assert frequently. An assertion is auto-explicative, an error isn't. We aren't unit-testing, every test has a flow and a lot of assertions
   - [ ] choose a made on purpose library
   - [ ] use the same front-end constants/functions (with an example with ReactIntl)
   - [x] UI testing framework as a development tool. Write tests step by step to avoid manual testing even during the development phase and to have them already written when you finished (easier with Cypress).
   - [ ] don't use the UI to reach the desired UI state. But remember to avoid writing one more app into your testing framework to consume the same resources
-  - [ ] we aren't unit-testing, every test has a flow and a lot of assertions
   - [ ] deterministic tests as wrote here https://docs.cypress.io/guides/core-concepts/conditional-testing.html#Error-Recovery
 - [ ] in your app / practical advices
-  - [ ] expose constants/functions. It makes tests more portable too
-    - [ ] don't delay this process, by definition UI tests are slow, avoid them failing for a silly string
-  - [ ] expose some shortcuts. Everything useful for letting the UI run faster (without compromising reliability) is welcome
-  - [ ] let the front-end work for you
+  - [ ] expose constants/functions. It makes tests more portable too. don't delay this process, by definition UI tests are slow, avoid them failing for a silly string
+  - [ ] expose some shortcuts. Everything useful for letting the UI run faster (without compromising reliability) is welcome. let the front-end work for you
 - [ ] base your tests on contents
   - [ ] ui testing is framework agnostic, base it on contents (the same consumed by the user)
   - [ ] pay attention on the pages that update frequently
@@ -47,10 +43,9 @@
   - [ ] keep your tests simple with a low abstraction level
 - [ ] component testing
   - [ ] use storybook (or a styleguide framework of choice) for components reporting all cases. In fact, they are tests too
-  - [ ] add snapshot testing to storybook (or a styleguide framework of choice)
   - [ ] add regression testing to storybook (or a styleguide framework of choice)
 - [ ] performance
-  - [ ] always choose the "simplest"/fastest test. dom-ui-testing is faster then Puppeteer that's faster then Cypress etc.
+  - [ ] always choose the "simplest"/fastest test. dom-ui-testing is faster then Cypress etc.
 - [ ] UI test debugging (mark every single tip necessary/unnecessary with existing frameworks) (the problems are partially explained in the Cypress chapter, list these problems too. It could become a "how to debug a test without Cypress")
   - [ ] make screenshots
   - [ ] launch the browser in non-headless mode
