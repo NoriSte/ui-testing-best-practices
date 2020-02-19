@@ -55,7 +55,7 @@
 5.  [Generic testing perks (1)](#5-generic-testing-perks)
 6.  [Tools (1)](#5-tools)
 7.  [Real Life Examples (1)](#7-real-life-examples)
-8.  [Advanced (3)](#8-advanced)
+8.  [Advanced (4)](#8-advanced)
 
 <br/><br/>
 
@@ -243,7 +243,17 @@ If a test cannot produce reliable results, it reduces confidence in the tests an
 
 🔗 [**Read More: Combinatorial Testing**](./sections/advanced/combinatorial-testing.md)
 
-<br/><br/><br/>
+<br/>
+
+## ![✔] 8.4 Performance Testing
+
+**TL;DR:** Although this is a vast topic, Performance testing from web development perspective can be simplified with modern tools and understanding. It  is highly effective in ensuring user experience, satisfying non-functional requirements (NFRS), and detecting possible system-flake early on.  
+
+🔗 [**Read More: Performance Testing**](./sections/advanced/performance-testing.md)
+
+<br/>
+
+<br/><br/>
 
 ## Steering Committee
 
