@@ -9,7 +9,7 @@
 <br/>
 
 <div align="center">
-  <img src="https://img.shields.io/badge/⚙%20Item%20count%20-%2017%20Best%20Practices-blue.svg" alt="12 items"> <img src="https://img.shields.io/badge/%F0%9F%93%85%20Last%20update%20-%20Feb%202020-green.svg" alt="Last update: February 10, 2020">
+  <img src="https://img.shields.io/badge/⚙%20Item%20count%20-%2018%20Best%20Practices-blue.svg" alt="12 items"> <img src="https://img.shields.io/badge/%F0%9F%93%85%20Last%20update%20-%20Apr%202020-green.svg" alt="Last update: April 1, 2020">
 </div>
 
 <br/>
@@ -53,7 +53,7 @@
 3.  [Server Communication Testing (3)](#3-server-communication-testing)
 4.  [Beginners (1)](#4-beginners)
 5.  [Generic testing perks (1)](#5-generic-testing-perks)
-6.  [Tools (1)](#5-tools)
+6.  [Tools (1)](#6-tools)
 7.  [Real Life Examples (1)](#7-real-life-examples)
 8.  [Advanced (3)](#8-advanced)
 
@@ -203,6 +203,14 @@ some UI utilities that make easy to use them as a development tool.
 **Otherwise:** A generic features comparison is not enough to understand what are the main UI Testing pains and how Cypress removes them.
 
 🔗 [**Read More: Some UI testing problems and the Cypress way**](/sections/tools/ui-testing-problems-cypress.md)
+
+## ![✔] 6.1 Testing a component with Cypress and Storybook
+
+**TL;DR:** Components ar the building blocks of your app, testing them in isolation is important to discover, as soon as possible, iof there is something wrong with them.
+
+**Otherwise:** UI Tests without lower-level tests do not allow you to understand the source of the problem.
+
+🔗 [**Read More: Testing a component with Cypress and Storybook**](/sections/tools/cypress-and-storybook.md)
 
 <br/> <br/>
 
