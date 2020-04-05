@@ -19,6 +19,7 @@ the app the time to update itself and moving to the next deterministic event to 
 
 Consider that, except for specific and known waitings (like when you use `setInterval` or
 `setTimeout`), **it's totally unpredictable** how much the sleeping time should be because it could depend on:
+
 - the network state (for XHR requests)
 - the total amount of available machine resources (CPU, RAM, etc.)
   - a CI pipeline can limit them for example
@@ -35,6 +36,7 @@ What about waiting just the right amount of time? The amount of time that makes 
 possible!
 
 Waitings fall in four main categories
+
 - **[page load waitings](#page-load-waitings)**: the first waiting to manage while testing your app, waiting for an event that
   allows you to understand that the page is interactive
 - **[content waitings](#content-waitings)**: waiting for DOM element that matches a selector
@@ -45,7 +47,6 @@ Waitings fall in four main categories
 Every UI testing tool manages waitings in different ways, sometimes automatically and
 sometimes manually. Below you can find some examples
 of implementing the listed waitings.
-
 
 <br/><br/>
 
@@ -60,33 +61,34 @@ Cypress
 cy.visit('http://localhost:3000')
 ```
 
-<details><summary>Puppeteer</summary>
+<details><summary>Puppeteer (and Playwright)</summary>
 
 ```javascript
-await page.goto("http://localhost:3000");
+await page.goto('http://localhost:3000')
 ```
+
 </details>
 
 <details><summary>Selenium</summary>
 
 ```javascript
-driver.get('http://localhost:3000');
-driver.wait(function() {
-  return driver.executeScript('return document.readyState').then(function(readyState) {
-    return readyState === 'complete';
-  });
-});
+driver.get('http://localhost:3000')
+driver.wait(function () {
+  return driver.executeScript('return document.readyState').then(function (readyState) {
+    return readyState === 'complete'
+  })
+})
 ```
+
 </details>
 
 <details><summary>TestCafé</summary>
 
 ```javascript
-fixture `Page Load`
-    .page `http://localhost:3000`;
+fixture`Page Load`.page`http://localhost:3000`
 ```
-</details>
 
+</details>
 
 <br/><br/>
 
@@ -96,35 +98,46 @@ Take a look at the following examples to see how waiting for a DOM element could
 the available tools.
 
 ### Code Examples
+
 Cypress
 
 - waiting for an element:
+
 ```javascript
 // it waits up to 4 seconds by default
-cy.get("#form-feedback")
+cy.get('#form-feedback')
 // the timeout can be customized
-cy.get("#form-feedback", {timeout: 5000})
-```
-- waiting for an element with specific content
-```javascript
-cy.get("#form-feedback").contains("Success")
+cy.get('#form-feedback', { timeout: 5000 })
 ```
 
-<details><summary>Puppeteer</summary>
+- waiting for an element with specific content
+
+```javascript
+cy.get('#form-feedback').contains('Success')
+```
+
+<details><summary>Puppeteer (and Playwright)</summary>
 
 - waiting for an element:
+
 ```javascript
 // it waits up to 30 seconds by default
-await page.waitForSelector('#form-feedback');
+await page.waitForSelector('#form-feedback')
 // the timeout can be customized
-await page.waitForSelector('#form-feedback', {timeout: 5000});
+await page.waitForSelector('#form-feedback', { timeout: 5000 })
 ```
+
 - waiting for an element with specific content
+
 ```javascript
-await page.waitForFunction(selector => {
-  const el = document.querySelector(selector);
-  return el && el.innerText === "Success";
-}, {}, '#form-feedback');
+await page.waitForFunction(
+  (selector) => {
+    const el = document.querySelector(selector)
+    return el && el.innerText === 'Success'
+  },
+  {},
+  '#form-feedback'
+)
 ```
 
 </details>
@@ -132,42 +145,54 @@ await page.waitForFunction(selector => {
 <details><summary>Selenium</summary>
 
 - waiting for an element:
+
 ```javascript
-driver.wait(until.elementLocated(By.id('#form-feedback')), 4000);
+driver.wait(until.elementLocated(By.id('#form-feedback')), 4000)
 ```
+
 - waiting for an element with specific content
+
 ```javascript
-const el = driver.wait(until.elementLocated(By.id('#form-feedback')), 4000);
-wait.until(ExpectedConditions.textToBePresentInElement(el, "Success"));
+const el = driver.wait(until.elementLocated(By.id('#form-feedback')), 4000)
+wait.until(ExpectedConditions.textToBePresentInElement(el, 'Success'))
 ```
+
 </details>
 
 <details><summary>TestCafé</summary>
 
 - waiting for an element:
+
 ```javascript
 // it waits up to 10 seconds by default
 await Selector('#form-feedback')
 // the timeout can be customized
-await Selector('#form-feedback').with({timeout: 4000})
+await Selector('#form-feedback').with({ timeout: 4000 })
 ```
+
 - waiting for an element with specific content
+
 ```javascript
 await Selector('#form-feedback').withText('Success')
 ```
+
 </details>
 
 <details><summary>DOM Testing Library<sup> <a href="#footnote1">1</a></sup></summary>
 
 - waiting for an element:
+
 ```javascript
-await findByTestId(document.body, 'form-feedback');
+await findByTestId(document.body, 'form-feedback')
 ```
+
 - waiting for an element with specific content
+
 ```javascript
-const container = await findByTestId(document.body, 'form-feedback');
-await findByText(container, 'Success');
+const container = await findByTestId(document.body, 'form-feedback')
+await findByText(container, 'Success')
 ```
+
 </details>
 
 <br/><br/>
@@ -179,26 +204,32 @@ await findByText(container, 'Success');
 Cypress
 
 - waiting for an XHR request/response
+
 ```javascript
 cy.server()
-cy.route("http://dummy.restapiexample.com/api/v1/employees").as('employees')
-cy.wait("@employees")
-  .then(xhr => xhr.response.body)
-  .then(body => {/* ... */})
+cy.route('http://dummy.restapiexample.com/api/v1/employees').as('employees')
+cy.wait('@employees')
+  .then((xhr) => xhr.response.body)
+  .then((body) => {
+    /* ... */
+  })
 ```
 
-
-<details><summary>Puppeteer</summary>
+<details><summary>Puppeteer (and Playwright)</summary>
 
 - waiting for an XHR request
+
 ```javascript
-await page.waitForRequest('http://dummy.restapiexample.com/api/v1/employees');
+await page.waitForRequest('http://dummy.restapiexample.com/api/v1/employees')
 ```
+
 - waiting for an XHR response
+
 ```javascript
-const response = await page.waitForResponse('http://dummy.restapiexample.com/api/v1/employees');
-const body = response.json();
+const response = await page.waitForResponse('http://dummy.restapiexample.com/api/v1/employees')
+const body = response.json()
 ```
+
 </details>
 
 <br />
@@ -227,16 +258,17 @@ find some examples.
 Cypress
 
 Thanks to the [cypress-wait-until plugin](https://github.com/NoriSte/cypress-wait-until) you can do:
-```javascript
-cy.waitUntil(() => cy.window().then(win => win.foo === "bar"))
-```
-
-
-<details><summary>Puppeteer</summary>
 
 ```javascript
-await page.waitForFunction('window.foo === "bar"');
+cy.waitUntil(() => cy.window().then((win) => win.foo === 'bar'))
 ```
+
+<details><summary>Puppeteer (and Playwright)</summary>
+
+```javascript
+await page.waitForFunction('window.foo === "bar"')
+```
+
 </details>
 
 <details><summary>Selenium</summary>
@@ -248,8 +280,9 @@ browser.executeAsyncScript(`
       arguments[arguments.length - 1]();
     }
   }, 300);
-`);
+`)
 ```
+
 </details>
 
 <details><summary>TestCafé</summary>
@@ -258,15 +291,16 @@ browser.executeAsyncScript(`
 const waiting = ClientFunction(() => window.foo === 'bar')
 await t.expect(waiting()).ok({ timeout: 5000 })
 ```
+
 </details>
 
 <details><summary>DOM Testing Library<sup> <a href="#footnote1">1</a></sup></summary>
 
 ```javascript
-await wait(() => global.foo === "bar");
+await wait(() => global.foo === 'bar')
 ```
-</details>
 
+</details>
 
 <br />
 <a id="footnote1">1</a>: unlike Cypress, Puppeteer, etc. DOM Testing Library is quite a different tool, that's why the examples are not available for every single part.
@@ -276,4 +310,4 @@ await wait(() => global.foo === "bar");
 
 <br /><br />
 
-*Crossposted by [NoriSte](https://github.com/NoriSte) on [dev.to](https://dev.to/noriste/await-do-not-make-your-e2e-tests-sleep-4g1o) and [Medium](https://medium.com/@NoriSte/react-hooks-memorandum-bf1c2758a672).*
+_Crossposted by [NoriSte](https://github.com/NoriSte) on [dev.to](https://dev.to/noriste/await-do-not-make-your-e2e-tests-sleep-4g1o) and [Medium](https://medium.com/@NoriSte/react-hooks-memorandum-bf1c2758a672)._
