@@ -4,7 +4,7 @@
 
 ### One Paragraph Explainer
 
-Although performance testing is a vast topic, as a Web Developer you can quickly benefit from some of its core principles to improve user experience, satisfy functional and non-functional requirements (NFRs) and detect ambiguous system issues that may leak into production.
+Although performance testing is a vast topic, as Web Developers we can quickly benefit from some of its core principles to improve user experience, satisfy functional and non-functional requirements (NFRs) and detect ambiguous system issues that may leak into production.
 
 <br/><br/>
 
@@ -58,7 +58,7 @@ This graph summarizes their context:
 
 ![ISO/IEC standard](../../assets/images/perf-testing/performanceTesting.jpg)
 
-> **Side note about Benchmarking and Stress Testing**: Essentially, benchmarking boils down to the step-wise approach as we get a feel for our system which becomes a part of the initial work-flow with automated tools; *"Does my system break yet? No? Let me increase it"*. Stress testing on the other hand is, in short, overdoing it.
+***Side note about Benchmarking and Stress Testing**: Essentially, benchmarking boils down to the step-wise approach as we get a feel for our system which becomes a part of the initial work-flow with automated tools; *"Does my system break yet? No? Let me increase it"*. Stress testing on the other hand is, in short, overdoing it.*
 
 What is the distinction of **Scalability Testing**? It is related; the distinction is an evaluation of when exactly the system starts not responding in a satisfactory fashion. Usually, the approach with an automated tool is close enough and can be realized while analyzing graphs in a load test.
 
@@ -89,20 +89,29 @@ Instead, in this section, we will cover the overview of a k6 test, and later sho
 // k6 lifecycle overview:
 
 // 1. init code -> runs once
-// this is where we configure the type of performance testing (there are also additional options we do not cover here)
+// this is where we configure the type of performance testing (there are also
+// additional options we do not cover here)
 export let options = {
-  vus: 1, // there will be 1 virtual user
-  iterations: 1, // default function() will execute 1 time. This simple config is best when trying to get things to work
+  // there will be 1 virtual user
+  vus: 1,
+
+  // default function() will execute 1 time. This simple config
+  // is best when trying to get things to work
+  iterations: 1,
 }
 
 // 2. (optional) setup code -> runs once
 export function setup() {
-  // for example getting a token so you can run API tests in the default function that comes in (3) virtual user code
-  return getTokenForUser(); // assuming we have imported this function from another module
-  // what gets returned from this function is passed as an argument to the next function. For example: token
+  // for example getting a token so you can run API tests in the default
+  // function that comes in (3) virtual user code
+
+  // what gets returned from this function is passed as an argument to the next
+  // function. For example: `token`
+  return getTokenForUser();
 }
 
-// 3. virtual user code -> runs once or many times based on `export let options = { ... } `
+// 3. virtual user code -> runs once or many times based on
+// `export let options = { ... } `
 export default function(token) {
   // http.get is a k6 function that hits a URL with optional test parameters
   // note that  we do not need a token for this url
@@ -111,7 +120,8 @@ export default function(token) {
 
 // 4. (optional) teardown code -> runs once
 export function teardown(data) {
-  // this is in case you need to clean up, for instance if failed test may leave residue an impact state
+  // this is in case you need to clean up, for instance if failed test may
+  // leave residue an impact state
 }
 ```
 
@@ -121,7 +131,9 @@ export let options = {
   // endurance test for 30 seconds with 50 virtual users. Adds users immediately
   vus: 50,
   duration: "30s",
-  // alternative to duration, you can  specify the exact number of iterations the test will run
+
+  // alternative to duration, you can  specify the exact number of iterations
+  // the test will run
   // iterations: 500,
 }
 ```
@@ -130,7 +142,8 @@ Load test configuration:
 ```javascript
 export let options = {
   // for 15 seconds ramps up 10 users, adds users gradually
-  // adds a total of 40 users in the next 15 seconds, and up to 50 in the next 30 seconds..
+  // adds a total of 40 users in the next 15 seconds, and up to 50 in the next
+  // 30 seconds..
   // lowers down the users to 10 and 5 in the next 15 second iterations
   stages: [
     { duration: "15s", target: 10 },

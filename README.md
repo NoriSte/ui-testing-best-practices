@@ -247,7 +247,7 @@ If a test cannot produce reliable results, it reduces confidence in the tests an
 
 ## ![✔] 8.4 Performance Testing
 
-**TL;DR:** Although this is a vast topic, Performance testing from web development perspective can be simplified with modern tools and understanding. It  is highly effective in ensuring user experience, satisfying non-functional requirements (NFRS), and detecting possible system-flake early on.  
+**TL;DR:** Although this is a vast topic, Performance testing from a web development perspective can be simplified with modern tools and understanding. It is highly effective in ensuring user experience, satisfying non-functional requirements (NFRS), and detecting possible system-flake early on.
 
 🔗 [**Read More: Performance Testing**](./sections/advanced/performance-testing.md)
 
