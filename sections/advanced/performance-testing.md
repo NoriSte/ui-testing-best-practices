@@ -4,41 +4,41 @@
 
 ### One Paragraph Explainer
 
-Although performance testing is a vast topic, as a web developer you can quickly benefit from some of its core principles to improve user experience, satisfy functional and non-functional requirements (NFRs) and detect ambiguous system issues that may leak into production.
+Although performance testing is a vast topic, as a Web Developer you can quickly benefit from some of its core principles to improve user experience, satisfy functional and non-functional requirements (NFRs) and detect ambiguous system issues that may leak into production.
 
 <br/><br/>
 
 ### (1) Ensuring user experience with Lighthouse
 
-As web developers our foremost concern is the user perception of performance. Thankfully, Google has made it easy and provided us with a 3rd-party authority evaluation of our web application with [Lighthouse](https://developers.google.com/web/tools/lighthouse).
+As web developers, our foremost concern is the user perception of performance. Thankfully, Google has made it easy and provided us with a 3rd-party authority evaluation of our web application with [Lighthouse](https://developers.google.com/web/tools/lighthouse).
 
 > *"Lighthouse is an open-source, automated tool for improving the quality of web pages. You can run it against any web page, public or requiring authentication. It has audits for performance, accessibility, progressive web apps, SEO and more."*
 
-For this topic we will only focus on Performance, but you should consider also benefiting from **Progressive Web App**, **Accessibility**, **Search Engine Optimization** and **Best practices** evaluations of Lighthouse.
+For this topic, we will only focus on Performance, but you should consider also benefiting from **Progressive Web App**, **Accessibility**, **Search Engine Optimization** and **Best practices** evaluations of Lighthouse.
 
 Getting started is easy: Chrome > DevTools > Audits > Lighthouse. Then, generate the report. It will look as such and give you precise pointers on what you can do to improve the user experience.
 
 ![Lighthouse report](../../assets/images/perf-testing/lighthouse.png)
 
 Once the improvements are made and a baseline rating is agreed on, you can prevent regression by incorporating Lighthouse into your CI.
-  * Add Lighthouse as a node_module; `npm i -D lighthouse` or `yarn add --dev lighthouse` .
+  * Add Lighthouse as a node_module; `npm i -D lighthouse` or `yarn add --dev lighthouse`.
   * Follow the workflow example at [Lighthouse Git repo](https://github.com/GoogleChrome/lighthouse/blob/master/docs/readme.md#using-programmatically).
   * Prevent the performance rating (and/or other ratings) from regressing upon developer commits!
 
 
 <br/><br/>
 
-### (2) Performance as a Non-functional Requirement and KANO model
+### (2) Performance as a Non-functional Requirement and the Kano model
 
-We can start building our understanding of performance requirements with [KANO model](https://en.wikipedia.org/wiki/Kano_model).
+We can start building our understanding of performance requirements with the [Kano model](https://en.wikipedia.org/wiki/Kano_model).
 
 > *"The Kano model is a theory for product development and customer satisfaction developed in the 1980s by Professor Noriaki Kano, which classifies customer preferences into five categories."*
 
-At a high level, Kano model summarizes that performance features are standard requirements that is expected of any competitive product. This overlaps with our usage of Lighthouse; with it we ensure tha we satisfy customer preferences and that we do not regress from it.
+At a high-level, the Kano model summarizes that performance features are standard requirements that are expected of any competitive product. This overlaps with our usage of Lighthouse; with it we ensure tha we satisfy customer preferences and that we do not regress from it.
 
 ![Kano model](../../assets/images/perf-testing/KANO_model.jpg)
 
-At this point, we have fulfilled explicitly stated performance requirements. However, in complex applications we need to be aware of non-functional requirements (NFRs) as well. But, what are NFRs? Below is a high level view of them at a glance - from the double standard [ISO/IEC 25010 Product Quality Model](https://www.iso.org/standard/35733.html).
+At this point, we have fulfilled explicitly stated performance requirements. However, in complex applications, we need to be aware of non-functional requirements (NFRs) as well. But, what are NFRs? Below is a high-level view of them at a glance - from the double standard [ISO/IEC 25010 Product Quality Model](https://www.iso.org/standard/35733.html).
 
 ![ISO/IEC standard](../../assets/images/perf-testing/ISO_IEC_25010.jpg)
 
@@ -62,7 +62,7 @@ This graph summarizes their context:
 
 What is the distinction of **Scalability Testing**? It is related; the distinction is an evaluation of when exactly the system starts not responding in a satisfactory fashion. Usually, the approach with an automated tool is close enough and can be realized while analyzing graphs in a load test.
 
-Here is a high level picture of the intent with Scalability Testing:
+Here is a high-level picture of the intent with Scalability Testing:
 
 ![ISO/IEC standard](../../assets/images/perf-testing/scalabilityTesting.jpg)
 
@@ -71,18 +71,18 @@ Here is a high level picture of the intent with Scalability Testing:
 
 ### (4) Practical applications of Performance Testing with k6-loadImpact
 
-There are two qualities that sets [k6-loadImpact](https://docs.k6.io/docs) apart for web developers.
+There are two qualities that set [k6-loadImpact](https://docs.k6.io/docs) apart for web developers.
 
   * Uses JS (ES6)
   * Is built for CI
 
 Side bonus: if you hooked on Postman, you can convert those tests to k6 easily.
-K6 *can* do DOM testing, however we believe Lighthouse takes care of that. The true power of k6 comes out when testing APIs.
+K6 *can* do DOM testing, however, we believe Lighthouse takes care of that. The true power of k6 comes out when testing APIs.
 
-You can find [quick start examples with k6 here](https://github.com/muratkeremozcan/k6-loadImpact).
+You can find [quickstart examples with k6 here](https://github.com/muratkeremozcan/k6-loadImpact).
 The examples start very simple and are meant to build up the understanding quickly. They are ready to be run out of the box and tinkered with. We will not duplicate that knowledge here.
 
-Instead, in this section we will cover the overview of a k6 test, and later show a code samples on how k6 can be configured to accommodate different types of performance testing.
+Instead, in this section, we will cover the overview of a k6 test, and later show a code sample on how k6 can be configured to accommodate different types of performance testing.
 
 
 ```javascript
@@ -95,9 +95,9 @@ export let options = {
   iterations: 1, // default function() will execute 1 time. This simple config is best when trying to get things to work
 }
 
-// 2. (optional) setup code -> runs once 
+// 2. (optional) setup code -> runs once
 export function setup() {
-  // for example getting a token so you can run API tests in the default function that comes in (3) virtual user code 
+  // for example getting a token so you can run API tests in the default function that comes in (3) virtual user code
   return getTokenForUser(); // assuming we have imported this function from another module
   // what gets returned from this function is passed as an argument to the next function. For example: token
 }
@@ -162,11 +162,11 @@ As you can see, the `stages` are the utility to configure your performance test 
 
 #### How do we analyze the results?
 
-K6 provides a simple [CLI output](https://docs.k6.io/docs/results-output). We believe the most important 2 high level values here are `http_req_duration` which details response duration and `http_req` which shows the number of requests sent. If these are looking at acceptable values, CLI fulfils its purpose.
+K6 provides a simple [CLI output](https://docs.k6.io/docs/results-output). We believe the most important 2 high-level values here are `http_req_duration` which details response duration and `http_req` which shows the number of requests sent. If these are looking at acceptable values, CLI fulfills its purpose.
 
 ![k6 CLI](../../assets/images/perf-testing/k6-CLI.PNG)
 
-In case of of a need for further diagnosis, the graphical [insights](https://docs.k6.io/docs/load-impact-insights) is valuable. The key in a graph like this is for *Response time* and *Request rate* to follow the trend of *Virtual Users*. Any variances in the trend may signal to underlying issues.
+In case of a need for further diagnosis, the graphical [insights](https://docs.k6.io/docs/load-impact-insights) is valuable. The key in a graph like this is for *Response time* and *Request rate* to follow the trend of *Virtual Users*. Any variances in the trend may signal to underlying issues.
 
 ![k6 insights](../../assets/images/perf-testing/insights.PNG)
 
@@ -184,7 +184,7 @@ Refer to [Test Flake > Step (3): Identifying sporadic system issues - system fla
 
 [Lighthouse repo](https://github.com/GoogleChrome/lighthouse)
 
-[KANO model](https://en.wikipedia.org/wiki/Kano_model)
+[Kano model](https://en.wikipedia.org/wiki/Kano_model)
 
 [ISO/IEC 25010 Product Quality Model](https://www.iso.org/standard/35733.html)
 
