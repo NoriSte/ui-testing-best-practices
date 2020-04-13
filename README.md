@@ -261,6 +261,14 @@ If a test cannot produce reliable results, it reduces confidence in the tests an
 
 <br/>
 
+## ![✔] 8.5 Email Testing
+
+**TL;DR:** Email testing [critical for business success](https://www.industrialmarketer.com/why-email-testing-is-critical-for-email-marketing-success/). Modern services not only allow automated email testing but also provide a stateless, scalable solution while testing SaaS applications.
+
+🔗 [**Read More: Email Testing**](./sections/advanced/email-testing.md)
+
+<br/>
+
 <br/><br/>
 
 ## Steering Committee
@@ -313,3 +321,4 @@ An approved new best practice Be the first to collect a ⭐, contribute to this 
 This repository is inspired to the [nodebestpractices](https://github.com/i0natan/nodebestpractices) one, thank you [Yoni](https://github.com/i0natan) and the whole [steering team](https://github.com/i0natan/nodebestpractices#steering-committee) to keep it updated and to allow the creation of this repository.
 
 <br/><br/><br/>
+s
