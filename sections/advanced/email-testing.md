@@ -7,14 +7,14 @@
 Email testing is [critical for business success](https://www.industrialmarketer.com/why-email-testing-is-critical-for-email-marketing-success/) and [boosts email performance](https://litmus.com/blog/3-reasons-why-email-testing-boosts-email-performance). 
 It is not something we want to forego while testing our web applications because modern email services allow painless automated email testing.
 Typically email testing involves validating email fields (from, to, cc, bcc, subject, attachments), html content and links in the email. Email services also allow spam checks and visual checks.
-The core goal is to enable the last mile of end to end testing, to enable a typical webapp to be test from start to finish.
+The core goal is to enable the last mile of end to end testing, to enable a typical webapp to be tested from start to finish.
 
 For example imagine a scenario where a user starts having received an email invite from an organization, through company proprietary services or third party such as LinkedIn invitations. 
 Then, the user verifies email content, accepts the invite, and joins the organization.
 Later, the user can leave the organization - or get removed by an administrator - then receives another email notice.
-Using an email service The entirety of this requirement is possible to automate and execute within seconds.
+Using an email service, the entirety of this requirement is possible to automate and execute within seconds.
 
-That being stated, email testing is a fundamental enabler for SaaS test architectures by enabling stateless tests that can scale; tests that independently handle their state and can be executed by n number of entities at the same time. 
+That being stated, email testing is a fundamental enabler for SaaS test architectures by permitting stateless tests that can scale; tests that independently handle their state and can be executed by *n* number of entities at the same time. 
 Check out the topic [**Test States**](./sections/advanced/test-states.md) for further discussion on the topic.
 
 <br/><br/>
@@ -29,7 +29,7 @@ For the code snippets and working examples we will be using [Cypress](https://ww
 
 When using Cypress with Mailosaur, there are 2 test-development approaches:
 
-* Implement [Mailosaur API](https://docs.mailosaur.com/reference) using Cypress api testing capabilities using `cy.request()` or `cy.api()`. Utilize plugins and helper utilities to construct test suites.
+* Implement [Mailosaur API](https://docs.mailosaur.com/reference) using Cypress api testing capabilities using [`cy.request()`](https://docs.cypress.io/api/commands/request.html#Syntax) or [`cy.api()`](https://github.com/bahmutov/cy-api). Utilize plugins and helper utilities to construct test suites.
 
 * Utilize [Mailosaur's Node package](https://www.npmjs.com/package/mailosaur) and implement them using [`cy.task()`](https://docs.cypress.io/api/commands/task.html#Syntax) which allows to run node within Cypress.
 
@@ -43,7 +43,8 @@ When using Cypress with Mailosaur, there are 2 test-development approaches:
 Stateless tests that can scale are a necessity in any modern web application testing. We want tests that independently handle their state and tests that can be executed by *n* number of entities at the same time. 
 
 
-While testing SaaS applications, which generically have Subscriptions, Users, Organizations (ex: [Slack](https://slack.com/intl/en-sk/help/articles/115004071768-What-is-Slack-#your-team-in-slack) or [Cypress Dashboard Service](https://dashboard.cypress.io/organizations)) a lot of the end to end workflows can rely on having unique users. Elsewise only one test execution can happen at a time and they clash with other simultaneous test executions. This constraint reduces testing to cron jobs or manually triggered CI.
+While testing SaaS applications, which generically have Subscriptions, Users, Organizations (ex: [Slack](https://slack.com/intl/en-sk/help/articles/115004071768-What-is-Slack-#your-team-in-slack), [Cypress Dashboard Service](https://dashboard.cypress.io/organizations) etc.) a lot of the end to end workflows can rely on having unique users. Elsewise only one test execution can happen at a time and they clash with other simultaneous test executions. 
+This constraint reduces test automation to cron jobs or manually triggered CI.
 
 Some ways to address unique users is by utilizing [gmail tricks](https://www.idownloadblog.com/2018/12/19/gmail-email-address-tricks/) or [AWS Simple Email Service](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-email-simulator.html). It is possible that you do not have to check actual email content (from, to, cc, bcc, subject, attachments etc.) and only want to have unique users, then you are on the right path with stateless tests.
 However, these approaches can still be problematic; for example non-existing emails can prompt bouncing emails to your cloud service and that can be a headache. If you want to avoid such issues and check real email content in automation, email services provide value.
@@ -186,12 +187,13 @@ export const deleteEmail = email =>
 
 ## (2) Code sample - what to test in an email and how
 
-Validating email fields (from, to, cc, subject, attachments), html content and links in the email.
+Validating email fields (from, to, cc, bcc, subject, attachments), html content and links in the email.
 
 ```javascript
 
-// an invite goes out to the recipient from the sender
-// in the cypress spec file > it block
+// an invite goes out to the recipient from the sender...
+
+// in the cypress spec file > it block...
 
 cy.task('findEmailToUser', recipientEmail).then(emailContent => {
   cy.wrap(emailContent).its('from')..<chain as needed>.should('eq', senderEmail); // from
@@ -200,6 +202,7 @@ cy.task('findEmailToUser', recipientEmail).then(emailContent => {
   cy.wrap(emailContent).its('subject')..<chain as needed>.should(..); // subject
   // similar approach with attachments. 
   // You can always end with ... .then(console.log) to take a look at the content
+  // of you can check out the mailosaur email as JSON content, which makes everything easier!
   // cy.wrap(emailContent).then(console.log);
 
   // sample utilities to check assertions
@@ -210,7 +213,7 @@ cy.task('findEmailToUser', recipientEmail).then(emailContent => {
   htmlLinks().should(..); // or chain further
   images().should(..); 
 
-  // note that you can use different styles of api assertions.
+  // note that you can use different styles of api assertions with Cypress
   // check out api testing examples at
   // https://github.com/cypress-io/cypress-example-recipes/tree/master/examples/blogs__e2e-api-testing
   // https://github.com/muratkeremozcan/cypressExamples/blob/master/cypress-api-testing/cypress/integration/firstTest.spec.js
