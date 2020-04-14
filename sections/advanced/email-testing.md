@@ -4,10 +4,15 @@
 
 ### One Paragraph Explainer
 
-Email testing [critical for business success](https://www.industrialmarketer.com/why-email-testing-is-critical-for-email-marketing-success/) and [boosts email performance](https://litmus.com/blog/3-reasons-why-email-testing-boosts-email-performance). 
+Email testing is [critical for business success](https://www.industrialmarketer.com/why-email-testing-is-critical-for-email-marketing-success/) and [boosts email performance](https://litmus.com/blog/3-reasons-why-email-testing-boosts-email-performance). 
 It is not something we want to forego while testing our web applications because modern email services allow painless automated email testing.
-Typically email testing involves validating email fields (from, to, cc, subject, attachments), html content and links in the email. Email services also allow spam checks and visual checks.
+Typically email testing involves validating email fields (from, to, cc, bcc, subject, attachments), html content and links in the email. Email services also allow spam checks and visual checks.
 The core goal is to enable the last mile of end to end testing, to enable a typical webapp to be test from start to finish.
+
+For example imagine a scenario where a user starts having received an email invite from an organization, through company proprietary services or third party such as LinkedIn invitations. 
+Then, the user verifies email content, accepts the invite, and joins the organization.
+Later, the user can leave the organization - or get removed by an administrator - then receives another email notice.
+Using an email service The entirety of this requirement is possible to automate and execute within seconds.
 
 That being stated, email testing is a fundamental enabler for SaaS test architectures by enabling stateless tests that can scale; tests that independently handle their state and can be executed by n number of entities at the same time. 
 Check out the topic [**Test States**](./sections/advanced/test-states.md) for further discussion on the topic.
@@ -17,11 +22,11 @@ Check out the topic [**Test States**](./sections/advanced/test-states.md) for fu
 
 ## Foreword
 
-If you are using [gmail tricks](https://www.idownloadblog.com/2018/12/19/gmail-email-address-tricks/) or [AWS Simple Email Service](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-email-simulator.html) and these use cases are satisfactory for your test needs without any side effects, only topic 1 might be of interest to you.
+If you are using [gmail tricks](https://www.idownloadblog.com/2018/12/19/gmail-email-address-tricks/) or [AWS Simple Email Service](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-email-simulator.html) and these use cases are satisfactory for your test needs without any side effects, only [topic 1](#topic-1) might be of interest to you.
 
 There are plenty of [email testing solutions](https://www.g2.com/search/products?max=10&query=email+testing) available, and combinations of test frameworks that integrate with them.
 For the code snippets and working examples we will be using [Cypress](https://www.cypress.io/) and [Mailosaur](https://mailosaur.com/), but the ideas should generally apply to any tuple of email services and test automation frameworks.
- 
+
 When using Cypress with Mailosaur, there are 2 test-development approaches:
 
 * Implement [Mailosaur API](https://docs.mailosaur.com/reference) using Cypress api testing capabilities using `cy.request()` or `cy.api()`. Utilize plugins and helper utilities to construct test suites.
@@ -33,15 +38,15 @@ When using Cypress with Mailosaur, there are 2 test-development approaches:
 <br/><br/>
 
 
-## (1) Explanation & Code sample - Enabling stateless, scalable tests
+## (1) Explanation & Code sample - Enabling stateless, scalable tests <a id="topic-1"></a>
 
 Stateless tests that can scale are a necessity in any modern web application testing. We want tests that independently handle their state and tests that can be executed by *n* number of entities at the same time. 
 
 
-While testing SaaS applications, which generically have Subscriptions, Users, Organizations (ex: [Cypress Dashboard Service](https://dashboard.cypress.io/organizations)) a lot of the end to end workflows can rely on having unique users. Elsewise only one test execution can happen at a time and they clash with other simultaneous test executions. This constraint reduces testing to cron jobs or manually triggered CI.
+While testing SaaS applications, which generically have Subscriptions, Users, Organizations (ex: [Slack](https://slack.com/intl/en-sk/help/articles/115004071768-What-is-Slack-#your-team-in-slack) or [Cypress Dashboard Service](https://dashboard.cypress.io/organizations)) a lot of the end to end workflows can rely on having unique users. Elsewise only one test execution can happen at a time and they clash with other simultaneous test executions. This constraint reduces testing to cron jobs or manually triggered CI.
 
-Some ways to address unique users is by utilizing [gmail tricks](https://www.idownloadblog.com/2018/12/19/gmail-email-address-tricks/) or [AWS Simple Email Service](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-email-simulator.html). If these work for your needs - you may not have to check actual email content - then you are on the right path with stateless tests. 
-However, these approaches can be problematic; for example non-existing emails can prompt bouncing emails to your cloud service and that can be a headache. If you want to avoid such issues and check real email content in automation, email services provide value. 
+Some ways to address unique users is by utilizing [gmail tricks](https://www.idownloadblog.com/2018/12/19/gmail-email-address-tricks/) or [AWS Simple Email Service](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-email-simulator.html). It is possible that you do not have to check actual email content (from, to, cc, bcc, subject, attachments etc.) and only want to have unique users, then you are on the right path with stateless tests.
+However, these approaches can still be problematic; for example non-existing emails can prompt bouncing emails to your cloud service and that can be a headache. If you want to avoid such issues and check real email content in automation, email services provide value.
 
 Email services can also provide cost savings in text execution time by receiving emails faster, tests running quicker in the pipeline with less CI resources being consumed and less time waiting for tests to finish. If you are running 1000 pipelines a year, and save 3-4 seconds per pipeline execution, the email service can be already paying for its annual subscription just by providing extra speed.
 
@@ -89,7 +94,7 @@ We recommend these values as environment variables. You can grab them from Mailo
   "MAILOSAUR_PASSWORD": "******",
   "MAILOSAUR_API_KEY": "*******",
   "MAILOSAUR_API": "https://mailosaur.com/api",
-  "MAILOSAUR_SERVERNAME": "any-name"
+  "MAILOSAUR_SERVERNAME": "user-configurable-server-name"
 ```
 
 ### Modularizing `cy.task()` 
