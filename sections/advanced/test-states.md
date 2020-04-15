@@ -6,6 +6,12 @@
 
 Tests should be repeatable, modular and should handle their own state setup. UI Tests should not be repeated in order to achieve state for another test.
 
+We want to have stateless that can scale:
+
+* Tests that independently handle their state.
+* Have no side effects outside themselves, or manageable side effects which the test handles itself
+* Tests that can be executed by *n* number of entities simultaneously.
+
 <br/><br/>
 
 ### Code Example – explanation

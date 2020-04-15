@@ -9,7 +9,7 @@
 <br/>
 
 <div align="center">
-  <img src="https://img.shields.io/badge/⚙%20Item%20count%20-%2019%20Best%20Practices-blue.svg" alt="12 items"> <img src="https://img.shields.io/badge/%F0%9F%93%85%20Last%20update%20-%20Apr%202020-green.svg" alt="Last update: April 1, 2020">
+  <img src="https://img.shields.io/badge/⚙%20Item%20count%20-%2020%20Best%20Practices-blue.svg" alt="12 items"> <img src="https://img.shields.io/badge/%F0%9F%93%85%20Last%20update%20-%20Apr%202020-green.svg" alt="Last update: April 1, 2020">
 </div>
 
 <br/>
@@ -55,7 +55,7 @@
 5.  [Generic testing perks (1)](#5-generic-testing-perks)
 6.  [Tools (2)](#6-tools)
 7.  [Real Life Examples (1)](#7-real-life-examples)
-8.  [Advanced (4)](#8-advanced)
+8.  [Advanced (5)](#8-advanced)
 
 <br/><br/>
 
@@ -261,6 +261,14 @@ If a test cannot produce reliable results, it reduces confidence in the tests an
 
 <br/>
 
+## ![✔] 8.5 Email Testing
+
+**TL;DR:** Email testing is [critical for business success](https://www.industrialmarketer.com/why-email-testing-is-critical-for-email-marketing-success/). Modern services not only allow automated email testing but also provide a stateless, scalable solution while testing SaaS applications.
+
+🔗 [**Read More: Email Testing**](./sections/advanced/email-testing.md)
+
+<br/>
+
 <br/><br/>
 
 ## Steering Committee
@@ -286,9 +294,9 @@ Our collaborators are members who are contributing to the repository on a reguar
 
 <br/>
 
-| <a href="https://github.com/anoop-gupt" target="_blank"><img src="https://avatars2.githubusercontent.com/u/1118525?s=460&v=4" width="75" height="75"></a> |              <a href="https://github.com/muratkeremozcan" target="_blank"><img src="https://avatars.githubusercontent.com/muratkeremozcan" width="75" height="75"></a>               |
-| :-------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-|                                                    [Anoop Kumar Gupta](https://github.com/anoop-gupt)                                                     | [Murat Ozcan](https://github.com/muratkeremozcan) <a href="https://www.linkedin.com/in/murat-ozcan-3489898/"><img src="assets/images/linkedin.png" width="16" height="16"></img></a> |
+|              <a href="https://github.com/muratkeremozcan" target="_blank"><img src="https://avatars.githubusercontent.com/muratkeremozcan" width="75" height="75"></a>               |
+| :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| [Murat Ozcan](https://github.com/muratkeremozcan) <a href="https://www.linkedin.com/in/murat-ozcan-3489898/"><img src="assets/images/linkedin.png" width="16" height="16"></img></a> |
 
 <br/>
 
@@ -296,17 +304,22 @@ Our collaborators are members who are contributing to the repository on a reguar
 
 We appreciate any contribution, from a single word fix to a new best practice. Below is a list of everyone who contributed to this project. A 🌻 marks a successful pull request and a ⭐ marks an approved new best practice.
 
+### Stars
+
+An approved new best practice Be the first to collect a ⭐, contribute to this repository 😁
+
+⭐ [Murat Ozcan](https://github.com/muratkeremozcan)
+
 ### Flowers
 
 A successfull PR gives you a 🌻, be the first to collect it.
 
+🌻 [Anoop Kumar Gupta](https://github.com/anoop-gupt)
 🌻 [Ferdinando Santacroce](https://github.com/jesuswasrasta)
 🌻 [Luca Piazzoni](https://github.com/bioz87)
 🌻 [Luca Previtali](https://www.linkedin.com/in/previtaliluca/)
-
-### Stars
-
-An approved new best practice Be the first to collect a ⭐, contribute to this repository 😁
+🌻 [Luca Previtali](https://www.linkedin.com/in/previtaliluca/)
+🌻 [Filip Hric](https://github.com/filiphric)
 
 <br/><br/><br/>
 
