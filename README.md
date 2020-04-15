@@ -9,7 +9,7 @@
 <br/>
 
 <div align="center">
-  <img src="https://img.shields.io/badge/⚙%20Item%20count%20-%2019%20Best%20Practices-blue.svg" alt="12 items"> <img src="https://img.shields.io/badge/%F0%9F%93%85%20Last%20update%20-%20Apr%202020-green.svg" alt="Last update: April 1, 2020">
+  <img src="https://img.shields.io/badge/⚙%20Item%20count%20-%2020%20Best%20Practices-blue.svg" alt="12 items"> <img src="https://img.shields.io/badge/%F0%9F%93%85%20Last%20update%20-%20Apr%202020-green.svg" alt="Last update: April 1, 2020">
 </div>
 
 <br/>
@@ -55,7 +55,7 @@
 5.  [Generic testing perks (1)](#5-generic-testing-perks)
 6.  [Tools (2)](#6-tools)
 7.  [Real Life Examples (1)](#7-real-life-examples)
-8.  [Advanced (4)](#8-advanced)
+8.  [Advanced (5)](#8-advanced)
 
 <br/><br/>
 
@@ -263,7 +263,7 @@ If a test cannot produce reliable results, it reduces confidence in the tests an
 
 ## ![✔] 8.5 Email Testing
 
-**TL;DR:** Email testing [critical for business success](https://www.industrialmarketer.com/why-email-testing-is-critical-for-email-marketing-success/). Modern services not only allow automated email testing but also provide a stateless, scalable solution while testing SaaS applications.
+**TL;DR:** Email testing is [critical for business success](https://www.industrialmarketer.com/why-email-testing-is-critical-for-email-marketing-success/). Modern services not only allow automated email testing but also provide a stateless, scalable solution while testing SaaS applications.
 
 🔗 [**Read More: Email Testing**](./sections/advanced/email-testing.md)
 
