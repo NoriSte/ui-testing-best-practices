@@ -294,9 +294,9 @@ Our collaborators are members who are contributing to the repository on a reguar
 
 <br/>
 
-| <a href="https://github.com/anoop-gupt" target="_blank"><img src="https://avatars2.githubusercontent.com/u/1118525?s=460&v=4" width="75" height="75"></a> |              <a href="https://github.com/muratkeremozcan" target="_blank"><img src="https://avatars.githubusercontent.com/muratkeremozcan" width="75" height="75"></a>               |
-| :-------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-|                                                    [Anoop Kumar Gupta](https://github.com/anoop-gupt)                                                     | [Murat Ozcan](https://github.com/muratkeremozcan) <a href="https://www.linkedin.com/in/murat-ozcan-3489898/"><img src="assets/images/linkedin.png" width="16" height="16"></img></a> |
+|              <a href="https://github.com/muratkeremozcan" target="_blank"><img src="https://avatars.githubusercontent.com/muratkeremozcan" width="75" height="75"></a>               |
+| :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| [Murat Ozcan](https://github.com/muratkeremozcan) <a href="https://www.linkedin.com/in/murat-ozcan-3489898/"><img src="assets/images/linkedin.png" width="16" height="16"></img></a> |
 
 <br/>
 
@@ -304,17 +304,22 @@ Our collaborators are members who are contributing to the repository on a reguar
 
 We appreciate any contribution, from a single word fix to a new best practice. Below is a list of everyone who contributed to this project. A 🌻 marks a successful pull request and a ⭐ marks an approved new best practice.
 
+### Stars
+
+An approved new best practice Be the first to collect a ⭐, contribute to this repository 😁
+
+⭐ [Murat Ozcan](https://github.com/muratkeremozcan)
+
 ### Flowers
 
 A successfull PR gives you a 🌻, be the first to collect it.
 
+🌻 [Anoop Kumar Gupta](https://github.com/anoop-gupt)
 🌻 [Ferdinando Santacroce](https://github.com/jesuswasrasta)
 🌻 [Luca Piazzoni](https://github.com/bioz87)
 🌻 [Luca Previtali](https://www.linkedin.com/in/previtaliluca/)
-
-### Stars
-
-An approved new best practice Be the first to collect a ⭐, contribute to this repository 😁
+🌻 [Luca Previtali](https://www.linkedin.com/in/previtaliluca/)
+🌻 [Filip Hric](https://github.com/filiphric)
 
 <br/><br/><br/>
 
