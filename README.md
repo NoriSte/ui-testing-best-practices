@@ -204,7 +204,7 @@ some UI utilities that make easy to use them as a development tool.
 
 🔗 [**Read More: Some UI testing problems and the Cypress way**](/sections/tools/ui-testing-problems-cypress.md)
 
-## ![✔] 6.1 Testing a component with Cypress and Storybook
+## ![✔] 6.2 Testing a component with Cypress and Storybook
 
 **TL;DR:** Components ar the building blocks of your app, testing them in isolation is important to discover, as soon as possible, iof there is something wrong with them.
 
@@ -212,6 +212,13 @@ some UI utilities that make easy to use them as a development tool.
 
 🔗 [**Read More: Testing a component with Cypress and Storybook**](/sections/tools/cypress-and-storybook.md)
 
+## ![✔] 6.3 Cypress + Storybook. Keeping test scenario, data and component rendering in one place.
+
+**TL;DR:** You may expose the component reference from Storybook Story to test it whatever you wish in Cypress without breaking testing logic into pieces.
+
+**Otherwise:** Splitted test logic and test data will make it difficult to read and support.
+
+🔗 [**Read More: Cypress + Storybook. Keeping test scenario, data and component rendering in one place.**](/sections/tools/cypress-and-storybook-exposing-component-from-story.md)
 <br/> <br/>
 
 # `7. Real Life Examples`
