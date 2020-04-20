@@ -1,12 +1,14 @@
 # Cypress + Storybook. Keeping test scenario, data and component rendering in one place.
 
+_Russian version: [Cypress + Storybook. Хранение тестового сценария, данных и рендеринг компонента в одном месте](https://habr.com/ru/post/497544/)._
+
 ### One Paragraph Explainer
 
 Many of us have chosen Cypress as a tool to test components hosted via Storybook/Styleguidist/Docz. [@NoriSte's example](./cypress-and-storybook.md) suggests creating some Storybook Stories, put components there and expose important data to the global variable in order to have access to the test. The nice approach actually, but the test becomes broken into the pieces between Storybook and Cypress.
 
 Here I'd like to show how to go a little bit further and get the most out of executing JavaScript in Cypress. To see it in action, you may [download the source code](https://github.com/daedalius/article-exposing-component-from-storybook-to-handle-them-in-cypress) and execute then `npm i` and `npm test` in the console.
 
-- You may expose the component reference from Storybook Story to test it whatever you wish in Cypress (without breaking testing logic into pieces).
+- You may expose the component reference from Storybook Story to test it however you wish in Cypress (without breaking testing logic into pieces).
 - Cypress turned up so powerful for our team, so we do not have another utility that uses js-dom under the hood to test UI components.
 
 ## The task

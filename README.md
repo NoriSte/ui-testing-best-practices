@@ -54,7 +54,7 @@
 4.  [Beginners (1)](#4-beginners)
 5.  [Generic testing perks (1)](#5-generic-testing-perks)
 6.  [Tools (1)](#6-tools)
-7.  [Testing components with Storybook (2)](#7-testing-components-with-storybook)
+7.  [Component testing (2)](#7-component-testing)
 8.  [Real Life Examples (1)](#8-real-life-examples)
 9.  [Advanced (5)](#9-advanced)
 
@@ -207,7 +207,7 @@ some UI utilities that make easy to use them as a development tool.
 
 <br/><br/>
 
-# `7. Testing components with Storybook`
+# `7. Component Testing`
 
 ## ![✔] 7.1 [@NoriSte](https://github.com/NoriSte)'s approach: Testing a component with Cypress and Storybook
 
@@ -219,7 +219,7 @@ some UI utilities that make easy to use them as a development tool.
 
 ## ![✔] 7.2 [@daedalius](https://github.com/daedalius)'s approach: Exposing components from Storybook separating stories from tests
 
-**TL;DR:** You may expose the component reference from Storybook Story to test it whatever you wish in Cypress without breaking testing logic into pieces.
+**TL;DR:** You may expose the component reference from Storybook Story to test it however you wish in Cypress without breaking testing logic into pieces.
 
 **Otherwise:** Splitted test logic and test data will make it difficult to read and support.
 
