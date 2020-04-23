@@ -9,7 +9,7 @@
 <br/>
 
 <div align="center">
-  <img src="https://img.shields.io/badge/⚙%20Item%20count%20-%2020%20Best%20Practices-blue.svg" alt="12 items"> <img src="https://img.shields.io/badge/%F0%9F%93%85%20Last%20update%20-%20Apr%202020-green.svg" alt="Last update: April 1, 2020">
+  <img src="https://img.shields.io/badge/⚙%20Item%20count%20-%2020%21Best%20Practices-blue.svg" alt="12 items"> <img src="https://img.shields.io/badge/%F0%9F%93%85%20Last%20update%20-%20Apr%202020-green.svg" alt="Last update: April 1, 2020">
 </div>
 
 <br/>
@@ -53,9 +53,10 @@
 3.  [Server Communication Testing (3)](#3-server-communication-testing)
 4.  [Beginners (1)](#4-beginners)
 5.  [Generic testing perks (1)](#5-generic-testing-perks)
-6.  [Tools (2)](#6-tools)
-7.  [Real Life Examples (1)](#7-real-life-examples)
-8.  [Advanced (5)](#8-advanced)
+6.  [Tools (1)](#6-tools)
+7.  [Component testing (2)](#7-component-testing)
+8.  [Real Life Examples (1)](#8-real-life-examples)
+9.  [Advanced (5)](#9-advanced)
 
 <br/><br/>
 
@@ -204,7 +205,11 @@ some UI utilities that make easy to use them as a development tool.
 
 🔗 [**Read More: Some UI testing problems and the Cypress way**](/sections/tools/ui-testing-problems-cypress.md)
 
-## ![✔] 6.1 Testing a component with Cypress and Storybook
+<br/><br/>
+
+# `7. Component Testing`
+
+## ![✔] 7.1 [@NoriSte](https://github.com/NoriSte)'s approach: Testing a component with Cypress and Storybook
 
 **TL;DR:** Components ar the building blocks of your app, testing them in isolation is important to discover, as soon as possible, iof there is something wrong with them.
 
@@ -212,11 +217,18 @@ some UI utilities that make easy to use them as a development tool.
 
 🔗 [**Read More: Testing a component with Cypress and Storybook**](/sections/tools/cypress-and-storybook.md)
 
+## ![✔] 7.2 [@daedalius](https://github.com/daedalius)'s approach: Exposing components from Storybook separating stories from tests
+
+**TL;DR:** You may expose the component reference from Storybook Story to test it however you wish in Cypress without breaking testing logic into pieces.
+
+**Otherwise:** Splitted test logic and test data will make it difficult to read and support.
+
+🔗 [**Read More: Cypress + Storybook. Keeping test scenario, data and component rendering in one place.**](/sections/tools/cypress-and-storybook-exposing-component-from-story.md)
 <br/> <br/>
 
-# `7. Real Life Examples`
+# `8. Real Life Examples`
 
-## ![✔] Siemens - Test the front-end with the integration tests, the back-end with the E2E ones - in reference to [Component vs Integration vs E2e Testing](./sections/testing-strategy/component-vs-integration-vs-e2e-testing.md)
+## ![✔] 8.1 Siemens - Test the front-end with the integration tests, the back-end with the E2E ones - in reference to [Component vs Integration vs E2e Testing](./sections/testing-strategy/component-vs-integration-vs-e2e-testing.md)
 
 **TL;DR:** UI tests with a stubbed server are reliable and faster compared to full E2E tests. Full E2E tests are not always necessary to ensure front-end quality. We can instead have high confidence in front-end quality by using lower-cost UI integration tests and saving higher cost E2E tests for the back-end.
 
@@ -226,9 +238,9 @@ some UI utilities that make easy to use them as a development tool.
 
 <br/> <br/>
 
-# `8. Advanced`
+# `9. Advanced`
 
-## ![✔] 8.1 Test States
+## ![✔] 9.1 Test States
 
 **TL;DR:** Tests should be repeatable, modular and should handle their own state setup. UI Tests should not be repeated in order to achieve state for another test.
 
@@ -236,7 +248,7 @@ some UI utilities that make easy to use them as a development tool.
 
 <br/>
 
-## ![✔] 8.2 Test Flake
+## ![✔] 9.2 Test Flake
 
 **TL;DR:** Tests must produce consistent results every time. Repeatable pipeline execution results are the quorum.
 If a test cannot produce reliable results, it reduces confidence in the tests and requires maintenance which reduces all value. In these cases it is best to manually test the functionality.
@@ -245,7 +257,7 @@ If a test cannot produce reliable results, it reduces confidence in the tests an
 
 <br/>
 
-## ![✔] 8.3 Combinatorial Testing
+## ![✔] 9.3 Combinatorial Testing
 
 **TL;DR:** Most software bugs and failures are caused by one or two parameters. Testing parameter combinations can provide more efficient fault detection than conventional methods. Combinatorial Testing is a proven method for more effective software testing at a lower cost.
 
@@ -253,7 +265,7 @@ If a test cannot produce reliable results, it reduces confidence in the tests an
 
 <br/>
 
-## ![✔] 8.4 Performance Testing
+## ![✔] 9.4 Performance Testing
 
 **TL;DR:** Although this is a vast topic, Performance testing from a web development perspective can be simplified with modern tools and understanding. It is highly effective in ensuring user experience, satisfying non-functional requirements (NFRS), and detecting possible system-flake early on.
 
@@ -261,7 +273,7 @@ If a test cannot produce reliable results, it reduces confidence in the tests an
 
 <br/>
 
-## ![✔] 8.5 Email Testing
+## ![✔] 9.5 Email Testing
 
 **TL;DR:** Email testing is [critical for business success](https://www.industrialmarketer.com/why-email-testing-is-critical-for-email-marketing-success/). Modern services not only allow automated email testing but also provide a stateless, scalable solution while testing SaaS applications.
 
@@ -309,6 +321,7 @@ We appreciate any contribution, from a single word fix to a new best practice. B
 An approved new best practice Be the first to collect a ⭐, contribute to this repository 😁
 
 ⭐ [Murat Ozcan](https://github.com/muratkeremozcan)
+⭐ [Dmitriy Tishin](https://github.com/daedalius)
 
 ### Flowers
 
