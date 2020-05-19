@@ -1,5 +1,7 @@
 # Testing a component with Cypress and Storybook
 
+_**UPDATE**: After this experimental approach, take a look at the “[Unit Testing React components with Cypress](./cypress-react-component-test.md)” chapter, things got simplified and more effective with Cypress 4.5.0 release!_
+
 ### Why testing components in isolation?
 
 Components are the building blocks of your app, Storybook allows you to build them in isolation, **checking** that they work properly and that they are aligned with the graphic layouts, sharing with the rest of the team, etc. There are essentially two kinds of component checks performed with Storybook:
@@ -81,14 +83,14 @@ First of all, the RenderItem component, it just alternates the color to visually
 
 ```js
 // every `item` is an { id: string, name: string}
-const getItemText = item => `id: ${item.id} - ${item.name}`
+const getItemText = (item) => `id: ${item.id} - ${item.name}`
 
 const RenderItem = ({ item }) => {
   return (
     <div
       style={{
         height: '30px',
-        backgroundColor: parseInt(item.id) % 2 ? '#FAFAFA' : '#EEE'
+        backgroundColor: parseInt(item.id) % 2 ? '#FAFAFA' : '#EEE',
       }}
     >
       {getItemText(item)}
@@ -115,7 +117,7 @@ export const With10000Items = () => {
   )
 }
 With10000Items.story = {
-  name: 'With 10000 items'
+  name: 'With 10000 items',
 }
 ```
 
@@ -141,7 +143,7 @@ export const With10000Items = () => {
     global.storyData = {
       items,
       visibleItemsAmount: Math.ceil(listHeight / itemHeight),
-      getItemText
+      getItemText,
     }
   }, [items])
 
@@ -158,7 +160,7 @@ export const With10000Items = () => {
   )
 }
 With10000Items.story = {
-  name: 'With 10000 items'
+  name: 'With 10000 items',
 }
 ```
 
@@ -180,7 +182,7 @@ it('When the component receives 10000 items, then only the minimum number of ite
 
   cy.window()
     .its('storyData')
-    .should(storyData => {
+    .should((storyData) => {
       // the story must expose some variables
       expect(storyData.items).to.be.to.have.length(10000)
       expect(storyData.visibleItemsAmount).to.be.greaterThan(0)
@@ -202,7 +204,7 @@ it('When the component receives 10000 items, then only the minimum number of ite
 
   cy.window()
     .its('storyData')
-    .should(storyData => {
+    .should((storyData) => {
       // the story must expose some variables
       expect(storyData.items).to.be.to.have.length(10000)
       expect(storyData.visibleItemsAmount).to.be.greaterThan(0)
@@ -211,7 +213,7 @@ it('When the component receives 10000 items, then only the minimum number of ite
     .then(({ visibleItemsAmount, getItemText, items }) => {
       // items visibility check
       const visibleItems = items.slice(0, visibleItemsAmount - 1)
-      visibleItems.forEach(item => {
+      visibleItems.forEach((item) => {
         cy.findByText(getItemText(item)).should('be.visible')
       })
 
@@ -273,7 +275,7 @@ So, the test code to trigger the scroll is the following
 // triggers the wheel event
 cy.findByTestId('VirtualList').trigger('wheel', {
   deltaX: 0,
-  deltaY: 1000
+  deltaY: 1000,
 })
 ```
 
@@ -286,13 +288,13 @@ The code of the custom waiting is
 // waits until the scrollbar handle stops
 let scrollbarHandleY = Number.NEGATIVE_INFINITY
 cy.get('.scrollbar-thumb-y').waitUntil(
-  $scrollbarHandle => {
+  ($scrollbarHandle) => {
     const [newY, previousY] = [$scrollbarHandle.offset().top, scrollbarHandleY]
     scrollbarHandleY = newY
     return previousY === newY
   },
   {
-    customMessage: 'The inertial scroll ends'
+    customMessage: 'The inertial scroll ends',
   }
 )
 ```
@@ -317,7 +319,7 @@ it('When the component is scrolled, then the rendered items are not the first on
 
   cy.window()
     .its('storyData')
-    .should(storyData => {
+    .should((storyData) => {
       // the story must expose some variables
       expect(storyData.items).to.be.to.have.length(10000)
       expect(storyData.visibleItemsAmount).to.be.greaterThan(0)
@@ -327,35 +329,35 @@ it('When the component is scrolled, then the rendered items are not the first on
       // triggers the wheel event
       cy.findByTestId('VirtualList').trigger('wheel', {
         deltaX: 0,
-        deltaY: 1000
+        deltaY: 1000,
       })
 
       // waits until the scrollbar handle stops
       let scrollbarHandleY = Number.NEGATIVE_INFINITY
       cy.get('.scrollbar-thumb-y')
         .waitUntil(
-          $scrollbarHandle => {
+          ($scrollbarHandle) => {
             const [newY, previousY] = [$scrollbarHandle.offset().top, scrollbarHandleY]
             scrollbarHandleY = newY
             return previousY === newY
           },
           {
-            customMessage: 'The inertial scroll ends'
+            customMessage: 'The inertial scroll ends',
           }
         )
         // (manually) looks for the first rendered element
         .then(() =>
-          items.findIndex(item => !!Cypress.$(`*:contains("${getItemText(item)}")`).length)
+          items.findIndex((item) => !!Cypress.$(`*:contains("${getItemText(item)}")`).length)
         )
         // checks that the rendered items are not the initially rendered ones
         .should('be.greaterThan', 10)
         // checks the rendered items
-        .then(firstVisibleItemIndex => {
+        .then((firstVisibleItemIndex) => {
           const visibleItems = items.slice(
             firstVisibleItemIndex,
             firstVisibleItemIndex + visibleItemsAmount - 1
           )
-          visibleItems.forEach(item => cy.findByText(getItemText(item)).should('be.visible'))
+          visibleItems.forEach((item) => cy.findByText(getItemText(item)).should('be.visible'))
         })
     })
 })
@@ -364,7 +366,7 @@ it('When the component is scrolled, then the rendered items are not the first on
 Step by step: the code to retrieve the first rendered item is
 
 ```js
-items.findIndex(item => !!Cypress.$(`*:contains("${getItemText(item)}")`).length)
+items.findIndex((item) => !!Cypress.$(`*:contains("${getItemText(item)}")`).length)
 ```
 
 Why not leveraging the `cy.findByText` command to retrieve it? Because in Cypress, every `cy.get` command (that is at the core of `cy.findByText` command) has built-in assertions, [check them](https://docs.cypress.io/api/commands/get.html#Assertions) in the official docs. Essentially, if the element does not exist on the page, `cy.get` makes the test fail. But since we need to go through over the non-rendered items until we find the first rendered one, we should go by hand. Cypress.\$ is a global instance of jQuery, a jQuery version of `cy.findByText("XXX")` is `Cypress.$(`\*:contains("XXX")`)` and, the jQuery version of
@@ -414,20 +416,20 @@ const scrollVirtualList = ($list, deltaY = 1000) => {
   cy.wrap($list)
     .trigger('wheel', {
       deltaX: 0,
-      deltaY
+      deltaY,
     })
     .within(() => {
       // waits for the inertial scroll end
       let scrollbarY = Number.NEGATIVE_INFINITY
       getScrollbar().waitUntil(
-        $scrollbar => {
+        ($scrollbar) => {
           const newY = $scrollbar.offset().top
           const previousY = scrollbarY
           scrollbarY = newY
           return previousY === newY
         },
         {
-          customMessage: 'The inertial scroll end'
+          customMessage: 'The inertial scroll end',
         }
       )
     })
@@ -438,7 +440,7 @@ and we could do the same for finding the first rendered item
 
 ```js
 const getFirstRenderedItemIndex = (items, getItemText) => {
-  return items.findIndex(item => !!Cypress.$(`*:contains("${getItemText(item)}")`).length)
+  return items.findIndex((item) => !!Cypress.$(`*:contains("${getItemText(item)}")`).length)
 }
 ```
 
@@ -450,7 +452,7 @@ it('When the component is scrolled, then the rendered items are not the first on
 
   cy.window()
     .its('storyData')
-    .should(storyData => {
+    .should((storyData) => {
       // the story must expose some variables
       expect(storyData.items).to.be.to.have.length(10000)
       expect(storyData.visibleItemsAmount).to.be.greaterThan(0)
@@ -462,12 +464,12 @@ it('When the component is scrolled, then the rendered items are not the first on
         .then(scrollVirtualList)
         .then(() => getFirstRenderedItemIndex(items, getItemText))
         .should('be.greaterThan', 10)
-        .then(firstVisibleItemIndex => {
+        .then((firstVisibleItemIndex) => {
           const visibleItems = items.slice(
             firstVisibleItemIndex,
             firstVisibleItemIndex + visibleItemsAmount - 1
           )
-          visibleItems.forEach(item => cy.findByText(getItemText(item)).should('be.visible'))
+          visibleItems.forEach((item) => cy.findByText(getItemText(item)).should('be.visible'))
         })
     })
 })
@@ -490,7 +492,7 @@ export const WithSelectionManagement = () => {
   const [selectedItems, setSelectedItems] = React.useState([])
 
   const handleSelect = React.useCallback(({ newSelectedIds }) => setSelectedItems(newSelectedIds), [
-    setSelectedItems
+    setSelectedItems,
   ])
 
   // exposing data for Cypress
@@ -498,7 +500,7 @@ export const WithSelectionManagement = () => {
     global.storyData = {
       items,
       getItemText,
-      selectedItems
+      selectedItems,
     }
   }, [items, selectedItems])
 
@@ -529,7 +531,7 @@ it('When the items are clicked, then they are selected', () => {
 
   cy.window()
     .its('storyData')
-    .should(storyData => {
+    .should((storyData) => {
       // the story must expose some variables
       expect(storyData.items).to.be.to.have.length.of.at.least(3)
       expect(storyData.getItemText).to.be.a('function')
@@ -620,7 +622,9 @@ cy.findAllByTestId('VirtualList')
     // the tests is going to click on the first rendered item
     // keeping the SHIFT key pressed. All the items up to the first
     // rendered one should be selected
-    const expectedSelectedItemIds = items.slice(0, firstRenderedItemIndex + 1).map(item => item.id)
+    const expectedSelectedItemIds = items
+      .slice(0, firstRenderedItemIndex + 1)
+      .map((item) => item.id)
 
     cy.get('body')
       .type('{shift}', { release: false })
@@ -642,7 +646,7 @@ it('When the items are clicked, then they are selected', () => {
 
   cy.window()
     .its('storyData')
-    .should(storyData => {
+    .should((storyData) => {
       // the story must expose some variables
       expect(storyData.items).to.be.to.have.length.of.at.least(3)
       expect(storyData.getItemText).to.be.a('function')
@@ -704,7 +708,7 @@ it('When the items are clicked, then they are selected', () => {
           const firstRenderedItem = items[firstRenderedItemIndex]
           const expectedSelectedItemIds = items
             .slice(0, firstRenderedItemIndex + 1)
-            .map(item => item.id)
+            .map((item) => item.id)
 
           // x-th item click with Shift modifier
           cy.get('body')
@@ -771,7 +775,7 @@ React.useEffect(() => {
     storyName: 'With 10000 items',
     items,
     visibleItemsAmount: Math.ceil(listHeight / itemHeight),
-    getItemText
+    getItemText,
   }
 }, [items])
 ```
@@ -785,7 +789,7 @@ it('When the component receives 10000 items, then only the minimum number of ite
 
   cy.window()
     .its('storyData')
-    .should(storyData => {
+    .should((storyData) => {
       // caring about the story name
       expect(storyData.storyName).to.eq(story)
 
@@ -821,7 +825,7 @@ it('When the component is scrolled, then the rendered items are not the first on
 
   cy.window()
     .its('storyData')
-    .should(storyData => {
+    .should((storyData) => {
       expect(storyData.storyName).to.eq(story)
       expect(storyData.items).to.be.to.have.length(10000)
       expect(storyData.visibleItemsAmount).to.be.greaterThan(0)
@@ -832,7 +836,7 @@ it('When the component is scrolled, then the rendered items are not the first on
       cy.findByTestId('VirtualList')
         .trigger('wheel', {
           deltaX: 0,
-          deltaY: 1000
+          deltaY: 1000,
         })
 
         // ticking the clock by one second.
@@ -841,12 +845,12 @@ it('When the component is scrolled, then the rendered items are not the first on
 
         .then(() => getFirstRenderedItemIndex(items, getItemText))
         .should('be.greaterThan', 10)
-        .then(firstVisibleItemIndex => {
+        .then((firstVisibleItemIndex) => {
           const visibleItems = items.slice(
             firstVisibleItemIndex,
             firstVisibleItemIndex + visibleItemsAmount - 1
           )
-          visibleItems.forEach(item => cy.findByText(getItemText(item)).should('be.visible'))
+          visibleItems.forEach((item) => cy.findByText(getItemText(item)).should('be.visible'))
         })
     })
 })

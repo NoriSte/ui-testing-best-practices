@@ -9,7 +9,7 @@
 <br/>
 
 <div align="center">
-  <img src="https://img.shields.io/badge/⚙%20Item%20count%20-%2020%21Best%20Practices-blue.svg" alt="12 items"> <img src="https://img.shields.io/badge/%F0%9F%93%85%20Last%20update%20-%20Apr%202020-green.svg" alt="Last update: April 1, 2020">
+  <img src="https://img.shields.io/badge/⚙%20Item%20count%20-%2022%20Best%20Practices-blue.svg" alt="22 items"> <img src="https://img.shields.io/badge/%F0%9F%93%85%20Last%20update%20-%20May%202020-green.svg" alt="Last update: May 19th, 2020">
 </div>
 
 <br/>
@@ -54,7 +54,7 @@
 4.  [Beginners (1)](#4-beginners)
 5.  [Generic testing perks (1)](#5-generic-testing-perks)
 6.  [Tools (1)](#6-tools)
-7.  [Component testing (2)](#7-component-testing)
+7.  [Component Testing (3)](#7-component-testing)
 8.  [Real Life Examples (1)](#8-real-life-examples)
 9.  [Advanced (5)](#9-advanced)
 
@@ -209,6 +209,8 @@ some UI utilities that make easy to use them as a development tool.
 
 # `7. Component Testing`
 
+Please note: the whole Component Testing world is changing rapidly, more contents will be added.
+
 ## ![✔] 7.1 [@NoriSte](https://github.com/NoriSte)'s approach: Testing a component with Cypress and Storybook
 
 **TL;DR:** Components ar the building blocks of your app, testing them in isolation is important to discover, as soon as possible, iof there is something wrong with them.
@@ -217,13 +219,23 @@ some UI utilities that make easy to use them as a development tool.
 
 🔗 [**Read More: Testing a component with Cypress and Storybook**](/sections/tools/cypress-and-storybook.md)
 
+<br/>
+
 ## ![✔] 7.2 [@daedalius](https://github.com/daedalius)'s approach: Exposing components from Storybook separating stories from tests
 
-**TL;DR:** You may expose the component reference from Storybook Story to test it however you wish in Cypress without breaking testing logic into pieces.
+**TL;DR:** You may expose the component reference from Storybook Story to test it whatever you wish in Cypress without breaking testing logic into pieces.
 
 **Otherwise:** Splitted test logic and test data will make it difficult to read and support.
 
 🔗 [**Read More: Cypress + Storybook. Keeping test scenario, data and component rendering in one place.**](/sections/tools/cypress-and-storybook-exposing-component-from-story.md)
+
+<br/>
+
+## ![✔] 7.3 Unit Testing React components with Cypress
+
+**TL;DR:** Cypress v4.5.0 release allowed Unit Testing React components, an external tool like Storybook is not necessary anymore to test isolated components.
+
+🔗 [**Read More: Unit Testing React components with Cypress.**](/sections/tools/cypress-react-component-test.md)
 <br/> <br/>
 
 # `8. Real Life Examples`
