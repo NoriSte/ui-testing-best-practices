@@ -217,7 +217,7 @@ Please refer to the full SinonJS (wrapped and used by Cypress) [Stub](https://si
 
 Take a look at the result in [this video](https://youtu.be/yVL-yRT5hFQ). The test lasts now less than seven seconds, without depending nor loading Storybook, leveraging first-class Cypress support.
 
-What’s next? The [cypress-react-unit-test](https://github.com/bahmutov/cypress-react-unit-test) plugin is quite stable and useful now, a whole new world of experiments is open and a lot of small-to-medium projects could choose to leverage Cypress as a single testing tool. I’m waiting for your comments and experience 😊
+What’s next? The [cypress-react-unit-test](https://github.com/bahmutov/cypress-react-unit-test) plugin is quite stable and useful now, a whole new world of experiments is open and a lot of small-to-medium projects could choose to leverage Cypress as a single testing tool.
 
 <!-- TODO: in the end, decide if you want to move all the resources to a common chapter too -->
 
