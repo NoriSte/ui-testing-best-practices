@@ -286,7 +286,15 @@ If a test cannot produce reliable results, it reduces confidence in the tests an
 
 <br/>
 
+## ![✔] 9.6 Reaching UI state for tests without using the UI
+
+**TL;DR:** As a developer who wants to ensure quality, it is important to think about cost of tests vs the value they provide. Where reasonable, strive to not duplicate effort, and still get high value by considering alternatives for setting up state for a test.
+
+🔗 [**Read More: Reaching UI state**](./sections/advanced/reaching-ui-state.md)
+
+
 <br/><br/>
+
 
 ## Steering Committee
 
