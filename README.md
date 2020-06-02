@@ -9,7 +9,7 @@
 <br/>
 
 <div align="center">
-  <img src="https://img.shields.io/badge/⚙%20Item%20count%20-%2023%20Best%20Practices-blue.svg" alt="22 items"> <img src="https://img.shields.io/badge/%F0%9F%93%85%20Last%20update%20-%20Jun%202020-green.svg" alt="Last update: Jun, 2020">
+  <img src="https://img.shields.io/badge/⚙%20Item%20count%20-%2024%20Best%20Practices-blue.svg" alt="24 items"> <img src="https://img.shields.io/badge/%F0%9F%93%85%20Last%20update%20-%20Jul%202020-green.svg" alt="Last update: Jul, 2020">
 </div>
 
 <br/>
@@ -20,19 +20,12 @@
 
 ###### Built and maintained by our [Steering Committee](#steering-committee) and [Collaborators](#collaborators)
 
-# Latest Best Practices and News
-
-- **New best practice:** 2.3 [UI Tests Debugging Best Practices](./sections/generic-best-practices/ui-tests-debugging-best-practices.md)
-
-
-<br/><br/>
-
 ## Table of Contents
 
 (Work in progress, take a look at the [sections draft](/sections/draft.md) file)
 
 1.  [Testing strategies (4)](#1-testing-strategies)
-2.  [Generic Best Practices (4)](#2-generic-best-practices)
+2.  [Generic Best Practices (5)](#2-generic-best-practices)
 3.  [Server Communication Testing (3)](#3-server-communication-testing)
 4.  [Beginners (1)](#4-beginners)
 5.  [Generic testing perks (1)](#5-generic-testing-perks)
@@ -122,7 +115,15 @@ wisely**](/sections/generic-best-practices/name-test-files-wisely.md)
 
 <br/>
 
-## ![✔] 2.4 Use your testing tool as your primary development tool
+## ![✔] 2.4 Reaching UI state for tests without using the UI
+
+**TL;DR:** As a developer who wants to ensure quality, it is important to think about cost of tests vs the value they provide. Where reasonable, strive to not duplicate effort, and still get high value by considering alternatives for setting up state for a test.
+
+🔗 [**Read More: Reaching UI state**](./sections/generic-best-practices/reaching-ui-state.md)
+
+<br/>
+
+## ![✔] 2.5 Use your testing tool as your primary development tool
 
 **TL;DR:** Leveraging your testing tool to avoid manual tests is one of the biggest improvements you
 could do to speed up your working flow. Testing tools are faster than you and the most modern ones include
@@ -231,9 +232,52 @@ Please note: the whole Component Testing world is changing rapidly, more content
 🔗 [**Read More: Unit Testing React components with Cypress.**](/sections/tools/cypress-react-component-test.md)
 <br/> <br/>
 
-# `8. Real Life Examples`
+# `8. Advanced`
 
-## ![✔] 8.1 Siemens - Test the front-end with the integration tests, the back-end with the E2E ones - in reference to [Component vs Integration vs E2e Testing](./sections/testing-strategy/component-vs-integration-vs-e2e-testing.md)
+## ![✔] 8.1 Test States
+
+**TL;DR:** Tests should be repeatable, modular and should handle their own state setup. UI Tests should not be repeated in order to achieve state for another test.
+
+🔗 [**Read More: Test States**](./sections/advanced/test-states.md)
+
+<br/>
+
+## ![✔] 8.2 Test Flake
+
+**TL;DR:** Tests must produce consistent results every time. Repeatable pipeline execution results are the quorum.
+If a test cannot produce reliable results, it reduces confidence in the tests and requires maintenance which reduces all value. In these cases it is best to manually test the functionality.
+
+🔗 [**Read More: Test Flake**](./sections/advanced/test-flake.md)
+
+<br/>
+
+## ![✔] 8.3 Combinatorial Testing
+
+**TL;DR:** Most software bugs and failures are caused by one or two parameters. Testing parameter combinations can provide more efficient fault detection than conventional methods. Combinatorial Testing is a proven method for more effective software testing at a lower cost.
+
+🔗 [**Read More: Combinatorial Testing**](./sections/advanced/combinatorial-testing.md)
+
+<br/>
+
+## ![✔] 8.4 Performance Testing
+
+**TL;DR:** Although this is a vast topic, Performance testing from a web development perspective can be simplified with modern tools and understanding. It is highly effective in ensuring user experience, satisfying non-functional requirements (NFRS), and detecting possible system-flake early on.
+
+🔗 [**Read More: Performance Testing**](./sections/advanced/performance-testing.md)
+
+<br/>
+
+## ![✔] 8.5 Email Testing
+
+**TL;DR:** Email testing is [critical for business success](https://www.industrialmarketer.com/why-email-testing-is-critical-for-email-marketing-success/). Modern services not only allow automated email testing but also provide a stateless, scalable solution while testing SaaS applications.
+
+🔗 [**Read More: Email Testing**](./sections/advanced/email-testing.md)
+
+<br/><br/>
+
+# `9. Real Life Examples`
+
+## ![✔] 9.1 Siemens - Test the front-end with the integration tests, the back-end with the E2E ones - in reference to [Component vs Integration vs E2e Testing](./sections/testing-strategy/component-vs-integration-vs-e2e-testing.md)
 
 **TL;DR:** UI tests with a stubbed server are reliable and faster compared to full E2E tests. Full E2E tests are not always necessary to ensure front-end quality. We can instead have high confidence in front-end quality by using lower-cost UI integration tests and saving higher cost E2E tests for the back-end.
 
@@ -243,50 +287,6 @@ Please note: the whole Component Testing world is changing rapidly, more content
 
 <br/> <br/>
 
-# `9. Advanced`
-
-## ![✔] 9.1 Test States
-
-**TL;DR:** Tests should be repeatable, modular and should handle their own state setup. UI Tests should not be repeated in order to achieve state for another test.
-
-🔗 [**Read More: Test States**](./sections/advanced/test-states.md)
-
-<br/>
-
-## ![✔] 9.2 Test Flake
-
-**TL;DR:** Tests must produce consistent results every time. Repeatable pipeline execution results are the quorum.
-If a test cannot produce reliable results, it reduces confidence in the tests and requires maintenance which reduces all value. In these cases it is best to manually test the functionality.
-
-🔗 [**Read More: Test Flake**](./sections/advanced/test-flake.md)
-
-<br/>
-
-## ![✔] 9.3 Combinatorial Testing
-
-**TL;DR:** Most software bugs and failures are caused by one or two parameters. Testing parameter combinations can provide more efficient fault detection than conventional methods. Combinatorial Testing is a proven method for more effective software testing at a lower cost.
-
-🔗 [**Read More: Combinatorial Testing**](./sections/advanced/combinatorial-testing.md)
-
-<br/>
-
-## ![✔] 9.4 Performance Testing
-
-**TL;DR:** Although this is a vast topic, Performance testing from a web development perspective can be simplified with modern tools and understanding. It is highly effective in ensuring user experience, satisfying non-functional requirements (NFRS), and detecting possible system-flake early on.
-
-🔗 [**Read More: Performance Testing**](./sections/advanced/performance-testing.md)
-
-<br/>
-
-## ![✔] 9.5 Email Testing
-
-**TL;DR:** Email testing is [critical for business success](https://www.industrialmarketer.com/why-email-testing-is-critical-for-email-marketing-success/). Modern services not only allow automated email testing but also provide a stateless, scalable solution while testing SaaS applications.
-
-🔗 [**Read More: Email Testing**](./sections/advanced/email-testing.md)
-
-<br/>
-
-<br/><br/>
 
 ## Steering Committee
 
@@ -341,6 +341,6 @@ A successfull PR gives you a 🌻, be the first to collect it.
 
 <br/><br/><br/>
 
-This repository is inspired to the [nodebestpractices](https://github.com/i0natan/nodebestpractices) one, thank you [Yoni](https://github.com/i0natan) and the whole [steering team](https://github.com/i0natan/nodebestpractices#steering-committee) to keep it updated and to allow the creation of this repository.
+This repository is inspired by the [nodebestpractices](https://github.com/i0natan/nodebestpractices) one, thank you [Yoni](https://github.com/i0natan) and the whole [steering team](https://github.com/i0natan/nodebestpractices#steering-committee) to keep it updated and to allow the creation of this repository.
 
 <br/><br/><br/>

@@ -3,7 +3,6 @@ The _Topics list_ could be summarized in the next chapters
 - typescrtipt in tests: pros and cons
 - importance of assertions speakingness and having a lot of assertions in UI tests
 - exporting constants from the code and import in the tests
-- reaching UI state for tests without using the UI
 - base tests on contents
 - generic testing best practices
 - visual regression test
