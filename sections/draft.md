@@ -7,7 +7,6 @@ The _Topics list_ could be summarized in the next chapters
 - base tests on contents
 - generic testing best practices
 - visual regression test
-- UI test debugging
 - add more component testing articles (@makbeth has TestCafé+Storybook tests, re-try cypress-react-unit-test running `npm run component` on [this repo](https://github.com/cypress-io/cypress-example-todomvc-redux)) and improve the whole section. Update "Component tests vs (UI) Integration tests vs E2E tests" speaking about E2E tools + Storybook
 
 Below you can find the original, detailed, _Topics list_.

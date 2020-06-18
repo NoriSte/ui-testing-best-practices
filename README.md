@@ -9,7 +9,7 @@
 <br/>
 
 <div align="center">
-  <img src="https://img.shields.io/badge/⚙%20Item%20count%20-%2022%20Best%20Practices-blue.svg" alt="22 items"> <img src="https://img.shields.io/badge/%F0%9F%93%85%20Last%20update%20-%20May%202020-green.svg" alt="Last update: May 19th, 2020">
+  <img src="https://img.shields.io/badge/⚙%20Item%20count%20-%2023%20Best%20Practices-blue.svg" alt="22 items"> <img src="https://img.shields.io/badge/%F0%9F%93%85%20Last%20update%20-%20Jun%202020-green.svg" alt="Last update: Jun, 2020">
 </div>
 
 <br/>
@@ -22,25 +22,8 @@
 
 # Latest Best Practices and News
 
-(Work in progress)
+- **New best practice:** 2.3 [UI Tests Debugging Best Practices](./sections/generic-best-practices/ui-tests-debugging-best-practices.md)
 
-<!-- - **New translation:** ![BR](/assets/flags/BR.png) [Brazilian Portuguese](/README.brazilian-portuguese.md) available now, courtesy of [Marcelo Melo](https://github.com/marcelosdm)! ❤️
-
-- **New best practice:** 4.2: Include 3 parts in each test name - [_From the section "Testing and overall quality"_](https://github.com/i0natan/nodebestpractices#4-testing-and-overall-quality-practices)
-
-- **New best practice:** 7.1: Prefer native JS methods over user-land utils like Lodash - [_From the section "Performance"_](https://github.com/i0natan/nodebestpractices#7-performance-best-practices)
-
-- **News update:** [We kicked-off the performance section, wanna join?](https://github.com/i0natan/nodebestpractices/issues/302) -->
-
-<br/><br/>
-
-# Welcome! 3 Things You Ought To Know First:
-
-**1. You are, in fact, reading dozens of the best UI testing articles -** this repository is a summary and curation of the top-ranked content on UI testing best practices, as well as content written here by collaborators
-
-**2. It is the largest compilation, and it is growing every week -** currently, more than XX best practices, style guides, and architectural tips are presented. New issues and pull requests are welcome to keep this live book updated. We'd love to see you contributing here, whether that is fixing code mistakes, helping with translations, or suggesting brilliant new ideas. See our [writing guidelines here](/.operations/writing-guidelines.md)
-
-**3. Most best practices have additional info -** most bullets include a **🔗Read More** link that expands on the practice with code examples, quotes from selected blogs and more information
 
 <br/><br/>
 
@@ -49,7 +32,7 @@
 (Work in progress, take a look at the [sections draft](/sections/draft.md) file)
 
 1.  [Testing strategies (4)](#1-testing-strategies)
-2.  [Generic Best Practices (3)](#2-generic-best-practices)
+2.  [Generic Best Practices (4)](#2-generic-best-practices)
 3.  [Server Communication Testing (3)](#3-server-communication-testing)
 4.  [Beginners (1)](#4-beginners)
 5.  [Generic testing perks (1)](#5-generic-testing-perks)
@@ -129,7 +112,17 @@ wisely**](/sections/generic-best-practices/name-test-files-wisely.md)
 
 <br/>
 
-## ![✔] 2.3 Use your testing tool as your primary development tool
+## ![✔] 2.3 UI Tests Debugging Best Practices
+
+**TL;DR:** Debugging a UI test could be really hard, especially if you use generic browser automation tools. Here is a list of simple rules that are at the base of the debugging process.
+
+**Otherwise:** You are going to waste a lot of time without taming the exponential complexity of a UI test.
+
+🔗 [**Read More: UI Tests Debugging Best Practices**](/sections/generic-best-practices/ui-tests-debugging-best-practices.md)
+
+<br/>
+
+## ![✔] 2.4 Use your testing tool as your primary development tool
 
 **TL;DR:** Leveraging your testing tool to avoid manual tests is one of the biggest improvements you
 could do to speed up your working flow. Testing tools are faster than you and the most modern ones include
