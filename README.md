@@ -307,7 +307,7 @@ A positive-minded front-end developer and Cypress Ambassador. He's a passion for
 
 Thank you to all our collaborators! 🙏
 
-Our collaborators are members who are contributing to the repository on a reguar basis, through suggesting new best practices, triaging issues, reviewing pull requests and more. If you are interested in helping us guide thousands of people to craft better UI tests, please read our [contributor guidelines](/.operations/CONTRIBUTING.md) 🎉
+Our collaborators are members who are contributing to the repository on a reguar basis, through suggesting new best practices, triaging issues, reviewing pull requests and more. If you are interested in helping us guide thousands of people to craft better UI tests.
 
 <br/>
 
