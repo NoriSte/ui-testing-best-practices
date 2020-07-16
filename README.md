@@ -1,6 +1,6 @@
 [✔]: assets/images/checkbox-small-blue.png
 
-# UI Testing Best Practices (Work in progress)
+# UI Testing Best Practices
 
 <h1 align="center">
   <img src="assets/images/banner-2.jpg" alt="UI testing Best Practices">
