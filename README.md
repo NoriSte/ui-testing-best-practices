@@ -22,8 +22,6 @@
 
 ## Table of Contents
 
-(Work in progress, take a look at the [sections draft](/sections/draft.md) file)
-
 1.  [Testing strategies (4)](#1-testing-strategies)
 2.  [Generic Best Practices (5)](#2-generic-best-practices)
 3.  [Server Communication Testing (3)](#3-server-communication-testing)
