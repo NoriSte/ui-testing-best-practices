@@ -74,7 +74,7 @@ const createMailosaurEmail = randomName =>
 
 <br/><br/>
 
-## (3) Explanation - what to test in an email and how
+## (2) Explanation - what to test in an email and how
 
 First, let's elaborate on the setup we need.
 
@@ -181,7 +181,7 @@ export const deleteEmail = (email) => getEmailId(email).then((id) => deleteEmail
 
 <br/><br/>
 
-## (2) Code sample - what to test in an email and how
+## (3) Code sample - what to test in an email and how
 
 Validating email fields (from, to, cc, bcc, subject, attachments), HTML content and links in the email.
 
