@@ -26,11 +26,13 @@ If you are using [Gmail tricks](https://www.idownloadblog.com/2018/12/19/gmail-e
 There are plenty of [email testing solutions](https://www.g2.com/search/products?max=10&query=email+testing) available, and combinations of test frameworks that integrate with them.
 For the code snippets and working examples, we will be using [Cypress](https://www.cypress.io/) and [Mailosaur](https://mailosaur.com/), but the ideas should generally apply to any tuple of email services and test automation frameworks.
 
-When using Cypress with Mailosaur, there are 2 test-development approaches:
+When using Cypress with Mailosaur, there are 3 test-development approaches:
 
 - Implement [Mailosaur API](https://docs.mailosaur.com/reference) using Cypress API testing capabilities using [`cy.request()`](https://docs.cypress.io/api/commands/request.html#Syntax) or [`cy.api()`](https://github.com/bahmutov/cy-api). Utilize plugins and helper utilities to construct test suites.
 
 - Utilize [Mailosaur's Node package](https://www.npmjs.com/package/mailosaur) and implement them using [`cy.task()`](https://docs.cypress.io/api/commands/task.html#Syntax) which allows running node within Cypress.
+
+- Use the [Cypress Mailosaur plugin](https://www.npmjs.com/package/cypress-mailosaur) and abstract away all the complexity!
 
 > Check out [cypress-mailosaur-recipe](https://github.com/muratkeremozcan/cypressExamples/tree/master/cypress-mailosaur) for a working example with these approaches. Note that you will have to start a new Mailosaur trial account and replace environment variables for yourself.
 
@@ -72,7 +74,7 @@ const createMailosaurEmail = randomName =>
 
 <br/><br/>
 
-## (2) Explanation - what to test in an email and how
+## (3) Explanation - what to test in an email and how
 
 First, let's elaborate on the setup we need.
 
@@ -80,7 +82,7 @@ First, let's elaborate on the setup we need.
 
 Mailosaur provides an [npm package](https://www.npmjs.com/package/mailosaur) and effectively all the Node code samples in the [API documentation](https://docs.mailosaur.com/reference) can be converted to `cy.task()`. Another approach is to implement Mailosaur's Rest API 'from scratch with `cy.request()`.
 
-While testing, we realized a combined approach where these utilities are chained into each other gave the best results.
+> Mailosaur released  [Cypress Mailosaur plugin](https://www.npmjs.com/package/cypress-mailosaur) mid 2020, and it abstracts away all the complexity with these 2 approaches. Skip to the end to see code samples and comparison.
 
 ### Environment variables
 
@@ -212,4 +214,81 @@ cy.task('findEmailToUser', recipientEmail).then(emailContent => {
   // https://github.com/cypress-io/cypress-example-recipes/tree/master/examples/blogs__e2e-api-testing
   // https://github.com/muratkeremozcan/cypressExamples/blob/master/cypress-api-testing/cypress/integration/firstTest.spec.js
 });
+```
+
+## (4) The overhead is abstracted away with [Cypress Mailosaur plugin](https://www.npmjs.com/package/cypress-mailosaur)
+
+Mailosaur team released a Cypress plugin in mid 2020. With it, we do not have to replicate any complex API utities or use cy.task via Mailosaur npm package; none of what you have seen in section (3) is necessary. There is no need to create cy.task utilities or even hyberdize them. With the Cypress Mailosaur plugin, you can just use the custom Cypress commands Mailosaur team created for us.
+
+All we need is to install the package `npm install cypress-mailosaur --save-dev` and add the following line to cypress/support/index.js:
+`import 'cypress-mailosaur'`.
+
+Mailsaur plugin has a few handy functions which help you abtract complex needs.
+A full list can be found at at https://github.com/mailosaur/cypress-mailosaur
+
+```
+mailosaurListServers()
+mailosaurCreateServer({ name })
+mailosaurGetServer(serverId)
+mailosaurUpdateServer(serverId, server)
+mailosaurDeleteServer(serverId)
+mailosaurListMessages(serverId)
+mailosaurCreateMessage(serverId)
+mailosaurGetMessage(serverId, criteria)
+mailosaurGetMessageById(messageId)
+mailosaurSearchMessages(serverId, criteria, options)
+mailosaurGetMessagesBySubject(serverId, subjectSearchText)
+mailosaurGetMessagesByBody(serverId, bodySearchText)
+mailosaurGetMessagesBySentTo(serverId, emailAddress)
+mailosaurDeleteMessage(messageId)
+mailosaurDeleteAllMessages(serverId)
+mailosaurDownloadAttachment(attachmentId)
+mailosaurDownloadMessage(messageId)
+mailosaurGetSpamAnalysis(messageId)
+```
+
+Here is the plugin version of the above code. The usage is somewhat similar, but we did not have implement any cy.task() utilities, custom helper functions or hybrid helpers. We also get new, easy to use helper functions that work seamlessly.
+
+You can find a working version of this code and the above at the [link](https://github.com/muratkeremozcan/cypressExamples/tree/master/cypress-mailosaur).
+```javascript
+it('uses the plugin to check the email content (no need for creating complex utilities with cy.task) ', function () {
+    const userEmail = createEmail(internet.userName());
+    cy.task('sendSimpleEmail', userEmail); // an npm package to send emails, usually your app would do this
+
+    // a convenient helper functions to list mesages
+    cy.mailosaurListMessages(Cypress.env('MAILOSAUR_SERVERID')).its('items').its('length').should('not.eq', 0);
+
+    // this helper command replaces the comples cy.task('findEmailToUser') utility we had to create
+    cy.mailosaurGetMessage(
+      Cypress.env('MAILOSAUR_SERVERID'),
+      { sentTo: userEmail },
+      // note from Jon at Mailosaur:
+      // The get method looks for messages received within the last hour
+      // if looking for emails existing before that, you have to add this. Optional otherwise
+      // { receivedAfter: new Date('2000-01-01') }
+    ).then(emailContent => {
+      // this part is the same
+      cy.wrap(emailContent).its('from').its(0).its('email').should('contain', 'test@nodesendmail.com');
+      cy.wrap(emailContent).its('to').its(0).its('email').should('eq', userEmail);
+      cy.wrap(emailContent).its('subject').should('contain', 'MailComposer sendmail');
+    });
+
+    // alternate approach ot getting message by sent to'
+    cy.mailosaurGetMessagesBySentTo(Cypress.env('MAILOSAUR_SERVERID'), userEmail).then(emailItem => {
+      // the response is slightly different, but you can modify it to serve the same purpose
+      const emailContent = emailItem.items[0];
+      cy.wrap(emailContent).its('from').its(0).its('email').should('contain', 'test@nodesendmail.com');
+      cy.wrap(emailContent).its('to').its(0).its('email').should('eq', userEmail);
+      cy.wrap(emailContent).its('subject').should('contain', 'MailComposer sendmail');
+    });
+
+    // an easy to use bonus utily for checking spam score
+    cy.mailosaurGetMessagesBySentTo(Cypress.env('MAILOSAUR_SERVERID'), userEmail).its('items').its(0).its('id').then(messageId => {
+      // does convenient spam analysis
+      cy.mailosaurGetSpamAnalysis(messageId).its('score').should('eq', 0);
+      // you can observe the console output with a plain "cy.mailosaurGetSpamAnalysis(messageId);  " and check for deeper assertions
+    })
+  });
+
+
 ```
