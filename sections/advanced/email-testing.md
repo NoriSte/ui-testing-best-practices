@@ -226,27 +226,6 @@ All we need is to install the package `npm install cypress-mailosaur --save-dev`
 Mailsaur plugin has a few handy functions which help you abtract complex needs.
 A full list can be found at at https://github.com/mailosaur/cypress-mailosaur
 
-```
-mailosaurListServers()
-mailosaurCreateServer({ name })
-mailosaurGetServer(serverId)
-mailosaurUpdateServer(serverId, server)
-mailosaurDeleteServer(serverId)
-mailosaurListMessages(serverId)
-mailosaurCreateMessage(serverId)
-mailosaurGetMessage(serverId, criteria)
-mailosaurGetMessageById(messageId)
-mailosaurSearchMessages(serverId, criteria, options)
-mailosaurGetMessagesBySubject(serverId, subjectSearchText)
-mailosaurGetMessagesByBody(serverId, bodySearchText)
-mailosaurGetMessagesBySentTo(serverId, emailAddress)
-mailosaurDeleteMessage(messageId)
-mailosaurDeleteAllMessages(serverId)
-mailosaurDownloadAttachment(attachmentId)
-mailosaurDownloadMessage(messageId)
-mailosaurGetSpamAnalysis(messageId)
-```
-
 Here is the plugin version of the above code. The usage is somewhat similar, but we did not have implement any cy.task() utilities, custom helper functions or hybrid helpers. We also get new, easy to use helper functions that work seamlessly.
 
 You can find a working version of this code and the above at the [link](https://github.com/muratkeremozcan/cypressExamples/tree/master/cypress-mailosaur).
@@ -258,7 +237,7 @@ it('uses the plugin to check the email content (no need for creating complex uti
     // a convenient helper functions to list mesages
     cy.mailosaurListMessages(Cypress.env('MAILOSAUR_SERVERID')).its('items').its('length').should('not.eq', 0);
 
-    // this helper command replaces the comples cy.task('findEmailToUser') utility we had to create
+    // this helper command replaces the complex cy.task('findEmailToUser') utility we had to create
     cy.mailosaurGetMessage(
       Cypress.env('MAILOSAUR_SERVERID'),
       { sentTo: userEmail },
@@ -273,7 +252,7 @@ it('uses the plugin to check the email content (no need for creating complex uti
       cy.wrap(emailContent).its('subject').should('contain', 'MailComposer sendmail');
     });
 
-    // alternate approach ot getting message by sent to'
+    // alternate approach to getting message by sent to'
     cy.mailosaurGetMessagesBySentTo(Cypress.env('MAILOSAUR_SERVERID'), userEmail).then(emailItem => {
       // the response is slightly different, but you can modify it to serve the same purpose
       const emailContent = emailItem.items[0];
@@ -282,7 +261,7 @@ it('uses the plugin to check the email content (no need for creating complex uti
       cy.wrap(emailContent).its('subject').should('contain', 'MailComposer sendmail');
     });
 
-    // an easy to use bonus utily for checking spam score
+    // an easy to use bonus utility for checking spam score
     cy.mailosaurGetMessagesBySentTo(Cypress.env('MAILOSAUR_SERVERID'), userEmail).its('items').its(0).its('id').then(messageId => {
       // does convenient spam analysis
       cy.mailosaurGetSpamAnalysis(messageId).its('score').should('eq', 0);
