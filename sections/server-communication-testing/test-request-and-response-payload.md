@@ -11,7 +11,7 @@ The front-end application and the back-end one have a contract, and you always n
 - its URL
 - the HTTP verb used (GET, POST, etc.)
 - the request payload and headers: the data that the front-end application sends to the back-end one
-- the response payload, headers, and status: the data that the bakc-end application sends back to the front-end one
+- the response payload, headers, and status: the data that the back-end application sends back to the front-end one
 
 You need to test all of them and, more in general, you need to wait for every relevant AJAX request, why?
 
