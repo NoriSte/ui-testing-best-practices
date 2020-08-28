@@ -29,8 +29,8 @@
 5.  [Generic testing perks (1)](#5-generic-testing-perks)
 6.  [Tools (1)](#6-tools)
 7.  [Component Testing (3)](#7-component-testing)
-8.  [Real Life Examples (1)](#8-real-life-examples)
-9.  [Advanced (5)](#9-advanced)
+8.  [Advanced (5)](#8-advanced)
+9.  [Real Life Examples (1)](#9-real-life-examples)
 
 <br/><br/>
 
