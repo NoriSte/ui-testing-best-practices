@@ -64,27 +64,31 @@ Rather than the tests failing at a sporadic rate, getting ignored, or worse ***r
 
 #### Code Example
 
-Many frameworks implement retry utilities. Here is an example from Cypress' [cypress-plugin-retries](https://github.com/Bkucera/cypress-plugin-retries):
+Many frameworks implement retry utilities. Here is an example from [Cypress docs](https://docs.cypress.io/guides/references/migration-guide.html#Tests-retries):
 
+In a test:
 ```javascript
-// retry only the test
-it('should get a response 200 when it sends a request', function () {
-  // mind the function scope and use of 'this'
-  this.retries(2);
-  cy...( … );
-});
+it('allows user to login', { // can also be in a context or describe block
+  retries: {
+    runMode: 2, // for CI usage
+    openMode: 1  // for local usage
+  }
+}, () => {
+  // ...
+})
+```
 
-// retry a full spec
-describe('top level describe block', () => {
-  // can use lexical scope with this one
-  Cypress.env('RETRIES', 2);
+In a configuration file such as `cypress.json`:
+```json
+{
+  "retries": {
+    "runMode": 1,
+    "openMode": 3
+  }
+}
 
-  before( () => { // or beforeEach
-    // these do not get repeated
-  });
 
-  // your tests...
-});
+
 ```
 ### Step 3: Identifying sporadic system issues - *system flake*
 
