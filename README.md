@@ -271,6 +271,8 @@ If a test cannot produce reliable results, it reduces confidence in the tests an
 
 🔗 [**Read More: Email Testing**](./sections/advanced/email-testing.md)
 
+<br/>
+
 ## ![✔] 8.6 Combined unit & e2e code coverage
 
 **TL;DR:** Code Coverage is not the ultimate measure of quality, but it is a signal. Alongside traditional unit tests, e2e tests can also provide source code coverage -very high coverage at that-, help fill the gaps and have higher confidence in quality.
