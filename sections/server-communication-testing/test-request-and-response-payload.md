@@ -29,8 +29,7 @@ Full XHR request waiting and inspection is not so common in the existing testing
 
 ```javascript
 // ask Cypress to intercept every XHR request made to a URL ending with `/authentication`
-cy.server();
-cy.route("POST", "**/authentication").as("authentication-xhr");
+cy.intercept("POST", "**/authentication").as("authentication-xhr");
 
 // ... your test actions...
 
@@ -57,13 +56,12 @@ In the next sections, we are going to split the different characteristics of an 
 
 <details><summary>Asserting about the XHR request URL</summary>
 
-With Cypress, the URL used for the request is defined with the `cy.route` call. You could need to inspect the query string of the URL.
+With Cypress, the URL used for the request is defined with the `cy.intercept` call. You could need to inspect the query string of the URL.
 
 ```javascript
 // ask Cypress to intercept every XHR request made to a URL ending with `/authentication`
-cy.server();
 // the GET method is implied
-cy.route("**/authentication**").as("authentication-xhr");
+cy.intercept("**/authentication**").as("authentication-xhr");
 
 // ... your test actions...
 
@@ -90,17 +88,17 @@ cy.wait("@authentication-xhr")
 
 <details><summary>The XHR request method</summary>
 
-With Cypress, the method used for the request is defined calling the `cy.route` function. You specify it to define what kind of request you want to intercept.
+With Cypress, the method used for the request is defined calling the `cy.intercept` function. You specify it to define what kind of request you want to intercept.
 
 ```javascript
-// the most compact `cy.route` call, the GET method is implied
-cy.route("**/authentication").as("authentication-xhr");
+// the most compact `cy.intercept` call, the GET method is implied
+cy.intercept("**/authentication").as("authentication-xhr");
 
 // method can be explicitly defined
-cy.route("POST", "**/authentication").as("authentication-xhr");
+cy.intercept("POST", "**/authentication").as("authentication-xhr");
 
-// the extended `cy.route` call is available too
-cy.route({
+// the extended `cy.intercept` call is available too
+cy.intercept({
   method: "POST",
   url: "**/authentication"
 }).as("authentication-xhr");
@@ -117,8 +115,7 @@ Asserting about the request payload and headers allows you to have immediate and
 
 ```javascript
 // ask Cypress to intercept every XHR request made to a URL ending with `/authentication`
-cy.server();
-cy.route("POST", "**/authentication").as("authentication-xhr");
+cy.intercept("POST", "**/authentication").as("authentication-xhr");
 
 // ... your test actions...
 
@@ -141,8 +138,7 @@ The response must adhere 100% to what the front-end application expects, otherwi
 
 ```javascript
 // ask Cypress to intercept every XHR request made to a URL ending with `/authentication`
-cy.server();
-cy.route("POST", "**/authentication").as("authentication-xhr");
+cy.intercept("POST", "**/authentication").as("authentication-xhr");
 
 // ... your test actions...
 

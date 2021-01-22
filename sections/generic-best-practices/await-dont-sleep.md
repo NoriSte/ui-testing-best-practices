@@ -206,8 +206,7 @@ Cypress
 - waiting for an XHR request/response
 
 ```javascript
-cy.server()
-cy.route('http://dummy.restapiexample.com/api/v1/employees').as('employees')
+cy.intercept('http://dummy.restapiexample.com/api/v1/employees').as('employees')
 cy.wait('@employees')
   .then((xhr) => xhr.response.body)
   .then((body) => {

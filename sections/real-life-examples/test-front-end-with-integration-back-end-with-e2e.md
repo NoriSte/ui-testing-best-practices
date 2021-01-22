@@ -47,11 +47,10 @@ it("Login: front-end integration tests", () => {
 
   // A route that intercepts / sniffs every POST request that goes to the authentication URL.
   // Stubs the response with authentication-success.json fixture. This is called server stubbing
-  cy.route({
-    method: "POST",
-    response: "fixture:authentication/authentication-success.json", // Stubs the response
+  cy.intercept({
+    method: 'POST',
     url: `**${AUTHENTICATE_API_URL}`
-  }).as("auth-xhr");
+  }, { fixture: 'authentication/authentication-success.json'}).as("auth-xhr"); // Stubs the response}).as("auth-xhr");
 
   fillFormAndClick(USERNAME_PLACEHOLDER, PASSWORD_PLACEHOLDER);
 
@@ -73,7 +72,7 @@ it("Login: back-end E2E tests", () => {
 
   // A route that intercepts / sniffs every POST request that goes to the authentication URL.
   // Distinction: this is NOT stubbed!
-  cy.route({
+  cy.intercept({
     method: "POST",
     url: `**${AUTHENTICATE_API_URL}`
   }).as("auth-xhr");
@@ -109,10 +108,9 @@ You can switch focus between UI integration and E2E tests by using a conditional
 ```javascript
 // stub-services.js : a file that only includes a function to stub the back-end services
 export default function() {
-  cy.server();
   // all routes to the specified endpoint will respond with pre-packaged Json data
-  cy.route('/api/../me', 'fx:services/me.json');
-  cy.route('/api/../permissions', 'fx:services/permissions.json')
+  cy.intercept('/api/../me', { fixture: 'services/me.json' });
+  cy.intercept('/api/../permissions', { fixture: 'services/permissions.json'});
   // Lots of other fixtures ...
 }
 
