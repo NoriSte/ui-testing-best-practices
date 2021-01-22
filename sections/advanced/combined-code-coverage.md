@@ -17,10 +17,10 @@ By now there are a plethora of examples and resources on combined code coverage.
 The real life system under test stack is **Angular, Jest, Cypress & GitLab**.
 
 > Jest can be replaced with Karma; all we need from unit tests is the default *coverage* folder to be generated.
->
-> The sample bash commands can be used with any CI provider.
 > 
 > Baseline assumption: unit tests are able to generate a **coverage** folder when executed. This is the default folder that unit test frameworks use.
+>
+> The sample bash commands can be used with any CI provider.
 
 
 
@@ -53,7 +53,7 @@ To instrument the code using Angular, things are not very straightforward. Check
 
 Thankfully there is a way to extend Angular CLI's build process to instrument the code, with a bit of reliance on webpack. We need to install a few packages and configure them.
 
-* `ngx-build-plus`: extends Angular CLI's default build behavior, so that we can add a webpack config to `angular.json`.
+1. `ngx-build-plus`: extends Angular CLI's default build behavior, so that we can add a webpack config to `angular.json`.
   
 ```json
 // angular.json
@@ -65,7 +65,7 @@ Thankfully there is a way to extend Angular CLI's build process to instrument th
           },
 ```
 
-* `istanbul-instrumenter-loader`: while using webpack, helps instrument and report code coverage. We configure `cypress/coverage.webpack.js` for this.
+2. `istanbul-instrumenter-loader`: while using webpack, helps instrument and report code coverage. We configure `cypress/coverage.webpack.js` for this.
 
 ```javascript
 // cypress/coverage.webpack.js
@@ -185,7 +185,7 @@ Now we have to extract certain files from `coverage` & `coverage-e2e` folders an
     "finalize:combined-report": "npx nyc report --reporter html --reporter text --reporter json-summary --report-dir combined-coverage"
     ```
 
-We wrap up by combining the 3 scripts. Here is the full list with some additional utilities to clean up coverage folders and evaluate combined coverage. We will elaborated on `coverage:check` script in the next section
+We wrap up by combining the 3 scripts. Here is the full list with some additional utilities to clean up coverage folders and evaluate combined coverage. We will elaborate on `coverage:check` script in the next section
 
 ```json
     "coverage:combined": "yarn copy:reports && yarn combine:reports && yarn finalize:combined-report",
