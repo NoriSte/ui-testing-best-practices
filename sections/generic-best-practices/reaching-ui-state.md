@@ -34,11 +34,11 @@ cy.url().should('contain', 'endpoint');
 // cy.url().should('match', /endpoint/); // there are many, some more complex, ways of doing it
 
 
-// network wait: this is in addtion to the sanity url check, and it is more important
+// network wait: this is in addition to the sanity url check, and it is more important
 // because you want the page to "settle" before you start running assertions on it
-cy.server();  // required to use cy.route
+
 // usually a GET request. Is aliased so we can wait for it.
-cy.route('some-xhr-call-that-happens-upon-landing').as('crutcXHR');
+cy.intercept('some-xhr-call-that-happens-upon-landing').as('crutcXHR');
 // The default Cypress timeout is 4 seconds. 15 seconds here is arbitrary.
 // Most pages load faster, but if you need more time then increase the timeout.
 // The only caveat to increasing timeout is that the tests will take longer to fail, but still run as fast as possible when things work.
@@ -144,10 +144,8 @@ Start by copying the network data from devTools to a json file. Place it in `cyp
 ```javascript
 // prerequisite: the data has been copied to a file `cypress/fixtures/agents.json`
 
-// cy.server() is needed before cy.route() can be used.
-cy.server();
 // this is a shorthand for cy.fixture(). More at https://docs.cypress.io/api/commands/fixture.html#Accessing-Fixture-Data
-cy.route('some-xhr-call-that-happens-upon-landing', 'fx:agents.json').as('crutcXHR');
+cy.intercept('some-xhr-call-that-happens-upon-landing', { fixture: 'agents.json'} ).as('crutcXHR');
 // all calls to the network route will be stubbed by the data in agents.json file
 ```
 
@@ -171,11 +169,11 @@ function stubRecorder(pathToJson) {
     }
   });
 
-  // cy.route() specification below is used as a selector for the data you want to record.
+  // cy.intercept() specification below is used as a selector for the data you want to record.
   // In this example, all GET requests from any url will be selected
   // You can specify the methods and routes that are recorded
   cy.log('recording!');
-  cy.route({
+  cy.intercept({
     method: 'GET',
     url: '*',
   });
@@ -192,7 +190,7 @@ function playStubbedFixture(stateFixture) {
   cy.log(`playing fixture from ${stateFixture}`);
   cy.fixture(stateFixture, { timeout: 15000 }) // the fixture file may be large and take time in CI
     .each(({method, url, data}) => {
-      cy.route(method, url, data);
+      cy.intercept(method, url, data);
     }).as(`stateFixture_stub`);
 }
 
