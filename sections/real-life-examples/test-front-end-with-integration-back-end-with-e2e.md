@@ -1,4 +1,4 @@
-# Real life example: *Test the front-end with the integration tests, the back-end with the E2E ones* - in reference to  [Component vs Integration vs E2e Testing](..//testing-strategy/component-vs-integration-vs-e2e-testing.md): 
+# Real life example: *Test the front-end with the integration tests, the back-end with the E2E ones* - in reference to  [Component vs Integration vs E2e Testing](..//testing-strategy/component-vs-integration-vs-e2e-testing.md):
 
 <br/><br/>
 
@@ -47,21 +47,21 @@ it("Login: front-end integration tests", () => {
 
   // A route that intercepts / sniffs every POST request that goes to the authentication URL.
   // Stubs the response with authentication-success.json fixture. This is called server stubbing
-  cy.route({
+  cy.intercept({
     method: "POST",
-    response: "fixture:authentication/authentication-success.json", // Stubs the response
+    fixture: "authentication/authentication-success.json", // Stubs the response
     url: `**${AUTHENTICATE_API_URL}`
   }).as("auth-xhr");
 
   fillFormAndClick(USERNAME_PLACEHOLDER, PASSWORD_PLACEHOLDER);
 
   // wait for the POST XHR
-  cy.wait("@auth-xhr").then(xhr => {
+  cy.wait("@auth-xhr").then(interception => {
     // assert the payload body that the front end is sending to the back-end
-    expect(xhr.request.body).to.have.property("username", username);
-    expect(xhr.request.body).to.have.property("password", password);
+    expect(interception.request.body).to.have.property("username", username);
+    expect(interception.request.body).to.have.property("password", password);
     // assert the request headers in the payload
-    expect(xhr.request.headers).to.have.property('Content-Type', 'application/json;charset=utf-8');
+    expect(interception.request.headers).to.have.property('Content-Type', 'application/json;charset=utf-8');
   });
 
   // finally, the user must see the feedback
@@ -73,20 +73,20 @@ it("Login: back-end E2E tests", () => {
 
   // A route that intercepts / sniffs every POST request that goes to the authentication URL.
   // Distinction: this is NOT stubbed!
-  cy.route({
+  cy.intercept({
     method: "POST",
     url: `**${AUTHENTICATE_API_URL}`
   }).as("auth-xhr");
 
   fillFormAndClick(USERNAME_PLACEHOLDER, PASSWORD_PLACEHOLDER);
 
-  cy.wait("@auth-xhr").then(xhr => {
+  cy.wait("@auth-xhr").then(interception => {
     // since the integration tests already tested the front-end app, we use E2E tests to check the
     // back-end app. It needs to ensure that the back-end app works and gets the correct response data
 
     // response body assertions and status should be in the E2E tests since they rely on the server
-    expect(xhr.status).to.equal(200);
-    expect(xhr.response.body).to.have.property("token");
+    expect(interception.status).to.equal(200);
+    expect(interception.response.body).to.have.property("token");
   });
 
   // finally, the user must see the feedback
@@ -109,10 +109,9 @@ You can switch focus between UI integration and E2E tests by using a conditional
 ```javascript
 // stub-services.js : a file that only includes a function to stub the back-end services
 export default function() {
-  cy.server();
   // all routes to the specified endpoint will respond with pre-packaged Json data
-  cy.route('/api/../me', 'fx:services/me.json');
-  cy.route('/api/../permissions', 'fx:services/permissions.json')
+  cy.intercept('/api/../me', {fixture:'services/me.json'});
+  cy.intercept('/api/../permissions', {fixture:'services/permissions.json'});
   // Lots of other fixtures ...
 }
 
@@ -131,7 +130,6 @@ if (isLocalHost()) {
 
 ```
 
-For Cypress users, recently [cypress-skip-test plugin](https://github.com/cypress-io/cypress-skip-test) added support for environment variables. Per CTO Gleb Bahmutov, this may soon become a standard for specifying environmental constraints on a per spec or per test basis. 
 
 ### References
 

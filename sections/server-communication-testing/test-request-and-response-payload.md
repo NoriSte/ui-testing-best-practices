@@ -29,23 +29,22 @@ Full XHR request waiting and inspection is not so common in the existing testing
 
 ```javascript
 // ask Cypress to intercept every XHR request made to a URL ending with `/authentication`
-cy.server();
-cy.route("POST", "**/authentication").as("authentication-xhr");
+cy.intercept("POST", "**/authentication").as("authentication-xhr");
 
 // ... your test actions...
 
-cy.wait("@authentication-xhr").then(xhr => {
+cy.wait("@authentication-xhr").then(interception => {
   // request headers assertion
-  expect(xhr.request.headers).to.have.property("Content-Type", "application/json");
+  expect(interception.request.headers).to.have.property("Content-Type", "application/json");
   // request payload assertions
-  expect(xhr.request.body).to.have.property("username", "admin");
-  expect(xhr.request.body).to.have.property("password", "asupersecretpassword");
+  expect(interception.request.body).to.have.property("username", "admin");
+  expect(interception.request.body).to.have.property("password", "asupersecretpassword");
   // status assertion
-  expect(xhr.status).to.equal(200);
+  expect(interception.response.statusCode).to.equal(200);
   // response headers assertions
-  expect(xhr.response.body).to.have.property("access-control-allow-origin", "*");
+  expect(interception.response.body).to.have.property("access-control-allow-origin", "*");
   // response payload assertions
-  expect(xhr.response.body).to.have.property("token");
+  expect(interception.response.body).to.have.property("token");
 });
 ```
 
@@ -57,20 +56,18 @@ In the next sections, we are going to split the different characteristics of an 
 
 <details><summary>Asserting about the XHR request URL</summary>
 
-With Cypress, the URL used for the request is defined with the `cy.route` call. You could need to inspect the query string of the URL.
+With Cypress, the URL used for the request is defined with the `cy.intercept` call. You could need to inspect the query string of the URL.
 
 ```javascript
 // ask Cypress to intercept every XHR request made to a URL ending with `/authentication`
-cy.server();
-// the GET method is implied
-cy.route("**/authentication**").as("authentication-xhr");
+cy.intercept("**/authentication**").as("authentication-xhr");
 
 // ... your test actions...
 
-cy.wait("@authentication-xhr").then(xhr => {
+cy.wait("@authentication-xhr").then(interception => {
   // query string assertion
-  expect(xhr.url).to.contain("username=admin");
-  expect(xhr.url).to.contain("password=asupersecretpassword");
+  expect(interception.request.url).to.contain("username=admin");
+  expect(interception.request.url).to.contain("password=asupersecretpassword");
 });
 ```
 
@@ -90,17 +87,17 @@ cy.wait("@authentication-xhr")
 
 <details><summary>The XHR request method</summary>
 
-With Cypress, the method used for the request is defined calling the `cy.route` function. You specify it to define what kind of request you want to intercept.
+With Cypress, the method used for the request is defined calling the `cy.intercept` function. You specify it to define what kind of request you want to intercept.
 
 ```javascript
-// the most compact `cy.route` call, the GET method is implied
-cy.route("**/authentication").as("authentication-xhr");
+// the most compact `cy.intercept` call, the GET method is implied
+cy.intercept("**/authentication").as("authentication-xhr");
 
 // method can be explicitly defined
-cy.route("POST", "**/authentication").as("authentication-xhr");
+cy.intercept("POST", "**/authentication").as("authentication-xhr");
 
-// the extended `cy.route` call is available too
-cy.route({
+// the extended `cy.intercept` call is available too
+cy.intercept({
   method: "POST",
   url: "**/authentication"
 }).as("authentication-xhr");
@@ -117,17 +114,16 @@ Asserting about the request payload and headers allows you to have immediate and
 
 ```javascript
 // ask Cypress to intercept every XHR request made to a URL ending with `/authentication`
-cy.server();
-cy.route("POST", "**/authentication").as("authentication-xhr");
+cy.intercept("POST", "**/authentication").as("authentication-xhr");
 
 // ... your test actions...
 
-cy.wait("@authentication-xhr").then(xhr => {
+cy.wait("@authentication-xhr").then(interception => {
   // request headers assertion
-  expect(xhr.request.headers).to.have.property("Content-Type", "application/json");
+  expect(interception.request.headers).to.have.property("Content-Type", "application/json");
   // request payload assertions
-  expect(xhr.request.body).to.have.property("username", "admin");
-  expect(xhr.request.body).to.have.property("password", "asupersecretpassword");
+  expect(interception.request.body).to.have.property("username", "admin");
+  expect(interception.request.body).to.have.property("password", "asupersecretpassword");
 });
 ```
 </details>
@@ -141,18 +137,17 @@ The response must adhere 100% to what the front-end application expects, otherwi
 
 ```javascript
 // ask Cypress to intercept every XHR request made to a URL ending with `/authentication`
-cy.server();
-cy.route("POST", "**/authentication").as("authentication-xhr");
+cy.intercept("POST", "**/authentication").as("authentication-xhr");
 
 // ... your test actions...
 
-cy.wait("@authentication-xhr").then(xhr => {
+cy.wait("@authentication-xhr").then(intercept => {
   // status assertions
-  expect(xhr.status).to.equal(200);
+  expect(intercept.response.statusCode).to.equal(200);
   // response headers assertions
-  expect(xhr.response.body).to.have.property("access-control-allow-origin", "*");
+  expect(intercept.response.body).to.have.property("access-control-allow-origin", "*");
   // response payload assertions
-  expect(xhr.response.body).to.have.property("token");
+  expect(intercept.response.body).to.have.property("token");
 });
 ```
 </details>
