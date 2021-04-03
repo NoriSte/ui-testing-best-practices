@@ -83,12 +83,33 @@ describe('Lighthouse audit ', { taskTimeout: 90000, browser: 'chrome' }, () => {
   });
 
   it('should pass audit for another page', () => {
-    cy.navToPage('otherPage');
+    cy.forceVisit('anotherUrl');
     cy.lighthouse(thresholds, desktopConfig);
   });
 });
 
+// Commands for working around cross origin, if needed
+
+// -- Save localStorage between tests
+let LOCAL_STORAGE_MEMORY = {};
+Cypress.Commands.add('saveLocalStorage', () => {
+  Object.keys(localStorage).forEach(key => {
+    LOCAL_STORAGE_MEMORY[key] = localStorage[key];
+  });
+});
+
+Cypress.Commands.add('restoreLocalStorage', () => {
+  Object.keys(LOCAL_STORAGE_MEMORY).forEach(key => {
+    localStorage.setItem(key, LOCAL_STORAGE_MEMORY[key]);
+  });
+});
+
+// -- Visit multiple domains in one test
+Cypress.Commands.add('forceVisit', url => {
+  cy.window().then(win => win.open(url, '_self'));
+});
 ```
+
 
 
 <br/><br/>
