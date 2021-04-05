@@ -25,6 +25,92 @@ Once the improvements are made and a baseline rating is agreed on, you can preve
   * Follow the workflow example at [Lighthouse Git repo](https://github.com/GoogleChrome/lighthouse/blob/master/docs/readme.md#using-programmatically).
   * Prevent the performance rating (and/or other ratings) from regressing upon developer commits!
 
+#### Lighthouse with Cypress
+
+If you are a Cypress user, with [cypress-audit](https://github.com/mfrachet/cypress-audit) you can execute Lighthouse audits in Cypress tests as well as [Pa11y](https://www.npmjs.com/package/pa11y) for automated accessibility testing. 
+
+> In addition to the [usual plugin setup](https://github.com/mfrachet/cypress-audit#preparation), you may need to [workaround cross-origin](https://github.com/cypress-io/cypress/issues/944#issuecomment-788373384) needs of your application until Cypress has official support for it.
+
+Here is a sample test with in-line explanations.
+
+```typescript
+
+// Pass in optional configuration parameters for the Cypress test:
+// you may need to increase default timeout for the overall task, if you have a slow app. Mind that Lighthouse is only for Chromium based browsers
+describe('Lighthouse audit ', { taskTimeout: 90000, browser: 'chrome' }, () => {
+  before(() => {
+    // if you are using programmatic login, you might not need to use the cy.forceVisit('/') workaround for cross-origin (linked above)
+    cy.login(Cypress.env('USERNAME'), Cypress.env('PASSWORD'));
+  });
+
+  // thresholds is the first argument to cy.lighthouse(), most of the performance configuration is done here.
+  // a complete list of Lighthouse parameters to use as thresholds can be found at https://github.com/mfrachet/cypress-audit/blob/master/docs/lighthouse.md
+  // for an explanation of the parameters, refer to https://web.dev/lighthouse-performance/
+  const thresholds = {
+    'first-contentful-paint': 20000,
+    'largest-contentful-paint': 35000,
+    'first-meaningful-paint': 20000,
+    'speed-index': 25000,
+    interactive: 40000,
+    performance: 5,
+    accessibility: 50,
+    'best-practices': 50,
+    seo: 50,
+    pwa: 20
+  };
+
+  // the 2nd, and optional argument to cy.lighthouse() replicates Lighthouse CLI commands https://github.com/GoogleChrome/lighthouse#cli-options
+  const desktopConfig = {
+    formFactor: 'desktop',
+    screenEmulation: { disabled: true }
+  };
+
+  // your app may need this beforeEach and afterEach workaround for cross-origin (linked above)
+  beforeEach(() => {
+    cy.restoreLocalStorage();
+    // Preserve Cookies between tests
+    Cypress.Cookies.defaults({
+      preserve: /[\s\S]*/
+    });
+  });
+
+  afterEach(() => {
+    cy.saveLocalStorage();
+  });
+
+  it('should pass audit for main page ', () => {
+    cy.lighthouse(thresholds, desktopConfig);
+  });
+
+  it('should pass audit for another page', () => {
+    cy.forceVisit('anotherUrl');
+    cy.lighthouse(thresholds, desktopConfig);
+  });
+});
+
+// Commands for working around cross origin, if needed
+
+// -- Save localStorage between tests
+let LOCAL_STORAGE_MEMORY = {};
+Cypress.Commands.add('saveLocalStorage', () => {
+  Object.keys(localStorage).forEach(key => {
+    LOCAL_STORAGE_MEMORY[key] = localStorage[key];
+  });
+});
+
+Cypress.Commands.add('restoreLocalStorage', () => {
+  Object.keys(LOCAL_STORAGE_MEMORY).forEach(key => {
+    localStorage.setItem(key, LOCAL_STORAGE_MEMORY[key]);
+  });
+});
+
+// -- Visit multiple domains in one test
+Cypress.Commands.add('forceVisit', url => {
+  cy.window().then(win => win.open(url, '_self'));
+});
+```
+
+
 
 <br/><br/>
 
