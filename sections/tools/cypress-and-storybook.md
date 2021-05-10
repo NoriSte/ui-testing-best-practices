@@ -2,6 +2,8 @@
 
 _**UPDATE**: After this experimental approach, take a look at the “[Unit Testing React components with Cypress](./cypress-react-component-test.md)” chapter, things got simplified and more effective with Cypress 4.5.0 release!_
 
+_**UPDATE 2**: [Cypress 7 is out with a brand-new Component Test](https://docs.cypress.io/guides/component-testing/introduction#What-is-Component-Testing) support, check it out! And other exciting news is on the way thanks to [Storybook 6.2 release](https://twitter.com/NoriSte/status/1378204109841571840)!_
+
 ### Why testing components in isolation?
 
 Components are the building blocks of your app, Storybook allows you to build them in isolation, **checking** that they work properly and that they are aligned with the graphic layouts, sharing with the rest of the team, etc. There are essentially two kinds of component checks performed with Storybook:

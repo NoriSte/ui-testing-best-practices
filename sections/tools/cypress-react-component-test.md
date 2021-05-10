@@ -1,5 +1,7 @@
 # Unit Testing React components with Cypress
 
+_**UPDATE**: [Cypress 7 is out with a brand-new Component Test](https://docs.cypress.io/guides/component-testing/introduction#What-is-Component-Testing) support, check it out! And other exciting news is on the way thanks to [Storybook 6.2 release](https://twitter.com/NoriSte/status/1378204109841571840)!_
+
 Now that unit testing React component is possible with Cypress, this is an extending chapter of the [Testing a component with Cypress and Storybook](./cypress-and-storybook.md) one.
 
 The goal of the previous chapter was to run some experiments in the **React Component Testing world**, a really important topic nowadays.
