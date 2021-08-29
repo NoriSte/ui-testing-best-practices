@@ -59,9 +59,9 @@ Con: this technique ignores the user E2E way of clicking through the application
 
 ### Application actions
 
-Cypress gives complete control of your application. You can bypass the page object abstraction layer (which is detached from your application), access the UI directly via `cy.get()`, have access to the API, database, and even access the source code.
+Cypress gives you complete control of your application. You can bypass the page object abstraction layer (which is detached from your application), access the UI directly via `cy.get()`, have access to the API, database, and even access the source code.
 
-Application actions are shortcuts that allows to access internal utilities in order to save time. A simple example could be a `cy.signup()` custom command that goes to the registration form and invokes directly the callback of the registration form instead of filling the form and clicking the registration button.
+Application actions are shortcuts that allow you to access internal utilities in order to save time. A simple example could be a `cy.signup()` custom command that goes to the registration form and invokes the callback of the registration form instead of filling the form and clicking the registration button.
 
 Here is a quick example of how you would allow source code access to Cypress in an Angular application.
 ```javascript
@@ -97,13 +97,13 @@ Check out [the presentation slide](https://cypress.slides.com/cypress-io/siemens
 
 #### Another example on app actions utilizing states, using [Building Operator](https://new.siemens.com/us/en/products/buildingtechnologies/automation/talon/software/building-operator.html?stc=ussi100451&sp_source=ussi100451&&s_kwcid=AL!464!3!435315652461!b!!g!!%2Bbuilding%20%2Boperator&ef_id=CjwKCAjw8df2BRA3EiwAvfZWaAsQmgot5Ph-nGBB8rW1QLLr870q2HW-qzMKhqtQb1QvlPBVJxho5BoCmtMQAvD_BwE:G:s) building control product of Siemens.
 
-In the below state diagram there are 3 states. We begin where both left and right panes exist. If the right pane is deleted (delete point / red flow), only the left pane exists. If the left pane is deleted (delete device - blue flow), both panes go away and the UI get redirected.
+In the below state diagram there are 3 states. We begin where both left and right panes exist. If the right pane is deleted (delete point / red flow), only the left pane exists. If the left pane is deleted (delete device - blue flow), both panes go away and the UI is redirected.
 
 ![deleting building points and controllers](../../assets/images/ui-state/delete-states.PNG)
 
 Testing the UI, you might chose to delete the right pane (red flow) and then in another test you might choose to delete the left pane (blue flow). This leaves out 1 final path through the state diagram where right pane and then left pane are deleted one at a time.
 
-We already covered deleting the right pane in a UI test (red path). Why not avoid repeating this test and utilize app app actions, getting access to the delete function in the source code and using `cy.invoke()` to call it?
+We already covered deleting the right pane in a UI test (red path). Why not avoid repeating this test and utilize app actions, getting access to the delete function in the source code and using `cy.invoke()` to call it?
 
 ```javascript
 it('Component test: delete right pane and then left', () => {
@@ -122,9 +122,9 @@ it('Component test: delete right pane and then left', () => {
 
 #### Pro vs Con
 
-Using applications actions / having component access is fast! The tests are less prone to changes. Generally this is the benefit of testing at lower level. Alas, it can get addictive to engineers and testing the user interface start getting neglected; the pro can become a con.
+Using applications actions / having component access is fast! The tests are less prone to changes. Generally this is the benefit of testing at lower level. Alas, it can get addictive to engineers and testing the user interface starts getting neglected; the pro can become a con.
 
-There are a few counter arguments against application it. Developers may be opinionated that Cypress access to the source code is unideal. There is a not a counter argument to this until Cypress has official component testing support.
+There are a few counter arguments against application it. Developers may be opinionated that Cypress' access to the source code isn't ideal. There is a not a counter argument to this until Cypress has official component testing support.
 
 The real power of application actions comes out when combining application actions with other techniques; not duplicating the UI workflow to setup a state, combining component testing with visual testing, combining component testing with network manipulation are where this approach shines.
 
@@ -135,7 +135,7 @@ The real power of application actions comes out when combining application actio
 ### Network stub record & play
 This is an advanced technique that strongly relates to UI-integration tests. Recall UI-integration references [1](../testing-strategy/component-vs-integration-vs-e2e-testing.md), [2](../real-life-examples/test-front-end-with-integration-back-end-with-e2e.md).
 
-Cypress allows to stub all network traffic. We can record the network data from an endpoint, and stub that response every time the UI makes a call to an arbitrary server.
+Cypress allows you to stub all network traffic. We can record the network data from an endpoint, and stub that response every time the UI makes a call to an arbitrary server.
 
 Start by copying the network data from devTools to a json file. Place it in `cypress/fixtures` folder. This folder is made for this purpose, and any reference to it will default to the root of the folder.
 
