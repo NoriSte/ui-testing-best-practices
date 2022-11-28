@@ -199,6 +199,16 @@ some UI utilities that make easy to use them as a development tool.
 
 <br/><br/>
 
+## ![✔] 6.2 Visual Regression Testing
+
+**TL;DR:** Visual regression tests hard and why we should rely on premium services.
+
+**Otherwise:** Another continuous chore for regressions we do not care about.
+
+🔗 [**Read More: Visual Regression Testing**](/sections/tools/visual-regression-testing.md)
+
+<br/><br/>
+
 # `7. Component Testing`
 
 Please note: the whole Component Testing world is changing rapidly, more contents will be added.
@@ -284,7 +294,6 @@ If a test cannot produce reliable results, it reduces confidence in the tests an
 🔗 [**Read More: Test the front-end with the integration tests, the back-end with the E2E ones**](./sections/real-life-examples/test-front-end-with-integration-back-end-with-e2e.md)
 
 <br/> <br/>
-
 
 ## Steering Committee
 
