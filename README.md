@@ -203,7 +203,7 @@ some UI utilities that make easy to use them as a development tool.
 
 **TL;DR:** Visual regression tests hard and why we should rely on premium services.
 
-**Otherwise:** Another continuous chore for regressions we do not care about.
+**Otherwise:** Another continuous chore for regressions we do not care about. Possibility of missing out visual differences.
 
 🔗 [**Read More: Visual Regression Testing**](/sections/tools/visual-regression-testing.md)
 
