@@ -72,9 +72,8 @@ describe("User selection retainment between routes", () => {
       cy.url().should("contain", "/users");
       cy.get(".item-header").contains(users[3].name);
 
-      // the visual test - using custom command for css selector focus
-      cy.getByCy("user-details").percySnapshotElement(
-        // <--
+      // the visual test - using custom command for css selector focus // <--
+      cy.get('[data-cy="user-details"]').percySnapshotElement(
         "user details with custom selector"
       );
     });
@@ -126,9 +125,8 @@ describe("User selection retainment between routes", () => {
       cy.url().should("contain", "/users");
       cy.get(".item-header").contains(users[3].name);
 
-      // full page test
+      // full page test // <--
       cy.eyesCheckWindow({
-        // <--
         tag: "User selection retainment between routes",
         target: "window",
         // if fully is true (default) then the snapshot is of the entire page,
@@ -148,9 +146,8 @@ describe("User selection retainment between routes", () => {
       cy.url().should("contain", "/users");
       cy.get(".item-header").contains(users[3].name);
 
-      // partial page test
+      // partial page test // <--
       cy.eyesCheckWindow({
-        // <--
         tag: "user details with custom selector",
         target: "region",
         selector: '[data-cy="user-details"]',
