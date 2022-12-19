@@ -105,53 +105,63 @@ Here is [the same test written with Applitools](https://github.com/muratkeremozc
 ```javascript
 // Applitools version of the visual test
 // cypress/e2e/ui-integration/user-context-retainment-applitools.spec.js
-describe(
-  "User selection retainment between routes",
-  { tags: "@ui-integration" },
-  () => {
-    before(() => {
-      // Each test should open its own Eyes for its own snapshots
-      cy.eyesOpen({
-        appName: "hooks-in-action",
-        testName: Cypress.currentTest.title,
-      });
-
-      cy.stubNetwork();
-      cy.visit("/");
+describe("User selection retainment between routes", () => {
+  before(() => {
+    // Each test should open its own Eyes for its own snapshots
+    cy.eyesOpen({
+      appName: "hooks-in-action",
+      testName: Cypress.currentTest.title,
     });
 
-    it("Should keep the user context between routes", () => {
-      cy.fixture("users").then((users) => {
-        cy.get(".user-picker").select(users[3].name);
-        cy.contains("Users").click();
+    cy.stubNetwork();
+    cy.visit("/");
+  });
 
-        cy.wait("@userStub");
-        cy.url().should("contain", "/users");
-        cy.get(".item-header").contains(users[3].name);
+  it("Should keep the user context between routes - full snapshot", () => {
+    cy.fixture("users").then((users) => {
+      cy.get(".user-picker").select(users[3].name);
+      cy.contains("Users").click();
 
-        // full page test
-        cy.eyesCheckWindow({
-          tag: "User selection retainment between routes",
-          target: "window",
-          // if fully is true (default) then the snapshot is of the entire page,
-          // if fully is false then snapshot is of the viewport.
-          fully: false,
-          matchLevel: "Layout",
-        });
-        // partial page test
-        cy.eyesCheckWindow({
-          tag: "user details with custom selector",
-          target: "region",
-          selector: '[data-cy="user-details"]',
-        });
+      cy.wait("@userStub");
+      cy.url().should("contain", "/users");
+      cy.get(".item-header").contains(users[3].name);
+
+      // full page test
+      cy.eyesCheckWindow({
+        // <--
+        tag: "User selection retainment between routes",
+        target: "window",
+        // if fully is true (default) then the snapshot is of the entire page,
+        // if fully is false then snapshot is of the viewport.
+        fully: false,
+        matchLevel: "Layout",
       });
     });
+  });
 
-    afterEach(() => {
-      cy.eyesClose();
+  it("Should keep the user context between routes - css focused snapshot", () => {
+    cy.fixture("users").then((users) => {
+      cy.get(".user-picker").select(users[3].name);
+      cy.contains("Users").click();
+
+      cy.wait("@userStub");
+      cy.url().should("contain", "/users");
+      cy.get(".item-header").contains(users[3].name);
+
+      // partial page test
+      cy.eyesCheckWindow({
+        // <--
+        tag: "user details with custom selector",
+        target: "region",
+        selector: '[data-cy="user-details"]',
+      });
     });
-  }
-);
+  });
+
+  afterEach(() => {
+    cy.eyesClose();
+  });
+});
 ```
 
 We realize the additional `cy.eyesOpen` and `cy.eyesClose` commands that need to execute in the beginning and end of the test. We also see ` cy.eyesCheckWindow` is very customizable, not needing a custom command as in Percy.
