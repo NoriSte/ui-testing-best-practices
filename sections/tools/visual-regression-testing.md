@@ -35,7 +35,7 @@ Visual regression testing with services has a common flow:
 
 Suppose we want to verify the user's avatar.
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/rnl9mszbi1uuwr0ytgaf.png)
+![user-avatar](../../assets/images/visual-testing/user-avatar.png)
 
 #### Percy flow:
 
@@ -87,11 +87,11 @@ In the first test we see the first one-liner taking a full screen shot. In the s
 
 Once we execute the test, the initial snapshot looks like so in the Percy interface. **We introduced one-liner tests, and the test ran against 4 browsers and 2 viewports; 8 combinations we did not have to worry about in CI**. Mind that every resolution x browser consumes quota; if we were testing 2 viewports and 4 browsers, the one-liner would consume 8 credits.
 
-![Percy initial](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ocbq96jqwe669vkpo6ve.png)
+![Percy initial](../../assets/images/visual-testing/percy-initial.png)
 
 In subsequent tests if there is a visual diff (for instance if we turn off the backend and cannot render the image) we will see a visual diff indicator in the Percy Interface. Here we can also verify the diff between browsers and viewports.
 
-![Visual diff](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/soakqphk5pt4o8lijjh6.png)
+![Visual diff](../../assets/images/visual-testing/percy-visual-diff.png)
 
 At this point we can train the AI to be not very good and auto-accept the broken avatar image in the future. However, you can imagine pesky pixel diffs that we do not care about. That is where **visual regression services save bandwidth; the maintenance of visual snapshots**.
 
@@ -167,15 +167,15 @@ We realize the additional `cy.eyesOpen` and `cy.eyesClose` commands that need to
 
 Similar to Percy, with Applitools our test executes cross browser & viewport, and records the base snapshot.
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/uwxxha4w1wno1w076qwb.png)
+![applitools ui](../../assets/images/visual-testing/applitools-ui.png)
 
 When / if there is a visual diff, there is a clear indicator in the web interface.
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/wrrat01cd06zz134n1l9.png)
+![applitools-failure](../../assets/images/visual-testing/applitools-failure.png)
 
 Here is a side by side comparison of the Percy vs Applitools code.
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/tbpd7fjt2idxkyur24tg.png)
+![percy-vs-applitools](../../assets/images/visual-testing/percy-vs-applitools.png)
 
 Overall Applitools is strong on configurability while Percy is strong on simplicity. The UX is leaner and easier to use on Percy side, while on Applitools the UX is busier in comparison, but it has improved much over the years. Percy certainly has less code, not having to "open" and "close" eyes and being able to fire off the main command is a big win. For local developer experience, Applitools is the winner; being able to execute the tests with Cypress open mode vs elaborate CLI commands is huge win. Failing an actual visual diff in the test runner, vs the visual failures being only on the web UI in Percy's case, is also a win for Applitools. For CI, not having to configure any yml makes Applitools the winner there as well. Another win is for being able to take snapshots of sub-sections of the UI via selectors; this feature is built-in to Applitools while with Percy it has to be custom command that is not sure to work everywhere in the real world.
 
