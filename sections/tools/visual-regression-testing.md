@@ -181,7 +181,7 @@ Overall Applitools is strong on configurability while Percy is strong on simplic
 
 |                           | Percy                                       | Applitools                        |
 | ------------------------- | ------------------------------------------- | --------------------------------- |
-| **Code**                  | less code                                   | more configurable                 |
+| **Code**                  | Less code                                   | More configurable                 |
 | **UX**                    | Lean                                        | Less lean, but got better         |
 | **Local**                 | Only headless                               | Also works with Cypress Open Mode |
 | **CI**                    | There is yml required                       | No yml                            |
