@@ -22,7 +22,7 @@ Without the AI, we would have to manually accept or reject every petty false neg
 
 ### Cypress examples with Percy and Applitools
 
-> All the code samples can be found in the [this repo](https://github.com/muratkeremozcan/react-hooks-in-action-with-cypress) where we have a ReactJS application with visual tests for Percy as well as their Applitool mirrors.
+> All the code samples can be found in [this repo](https://github.com/muratkeremozcan/react-hooks-in-action-with-cypress) where we have a ReactJS application with visual tests for Percy as well as their Applitool mirrors.
 
 We will go through two popular services, Percy and Applitools, and showcase how services can save bandwidth with the maintenance of visual snapshots. We will also cover how they can be a force multiplier when we are concerned with cross browser and viewport combinations.
 
