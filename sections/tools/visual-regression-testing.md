@@ -129,9 +129,6 @@ describe("User selection retainment between routes", () => {
       cy.eyesCheckWindow({
         tag: "User selection retainment between routes",
         target: "window",
-        // if fully is true (default) then the snapshot is of the entire page,
-        // if fully is false then snapshot is of the viewport.
-        fully: false,
         matchLevel: "Layout",
       });
     });
@@ -151,6 +148,10 @@ describe("User selection retainment between routes", () => {
         tag: "user details with custom selector",
         target: "region",
         selector: '[data-cy="user-details"]',
+
+        // if fully is true (default) then the snapshot is of the entire page,
+        // if fully is false then snapshot is of the viewport.
+        fully: false,
       });
     });
   });
