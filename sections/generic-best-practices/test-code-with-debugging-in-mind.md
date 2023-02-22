@@ -7,8 +7,8 @@
 UI tests are made up of a lot of steps and should accomplish three main things, but two of them are somewhat underestimated:
 
 1.  To test a feature _(the obvious one)_
-2.  To help the reader to understand what code does _(usually underestimate)_
-3.  To allow debugging itself with ease _(underestimate, and also requires experience)_
+2.  To help the reader to understand what the code does _(usually underestimate)_
+3.  To ease debuggability _(underestimate, and also requires experience)_
 
 Let's go through some simple yet effective tips to keep in mind when writing UI tests.
 
@@ -118,6 +118,7 @@ In my opinion:
 
 - When I want to hide some test oddities that could distract the readers for no value
 - When they are soft, almost parameters-free, only one-level deep
+- When there is a considerable amount of duplication (the precise amount is subjective, though)
 
 An example of a test oddity is the following
 
@@ -221,6 +222,16 @@ Please note that you can pass more arguments to 'cy.log', and they are logged ri
 
 Storybook and Playwright already have the concept of `step` utilities that allow explaining in English what is happening in the test. Cypress does not have the same option, so the `cy.log` I propose is valuable, in my opinion.
 
+Side note here: do not chain `cy.log` because it is not a query command; does not retry the chain.
+
+`cy.log` doesn’t retry at function level, as of Cypress V12.
+
+Ex:
+```js
+cy.log('foo').get('bar').should('baz') // does not retry
+cy.get('bar').should('baz') // retries the whole chain until the assertion passes (you have 10 sec timeout set)
+```
+
 ### Use clear selectors
 
 Look at this code
@@ -256,7 +267,7 @@ I do not want to speak about the value for the tests themselves and for their co
 If an element with a data-tesid cannot be retrieved from the page, the possible problems are
 
 1.  The element is not there.
-2.  The element is there, but it has not the attribute.
+2.  The element is there, but it does not have the attribute.
 3.  The element is there, and it has the attribute but not the expected value.
 
 All the above problems **cause the developer to re-launch the tests, inspect the elements**, look for the test-related attributes, etc. Instead, if the tests are based on the textual contents, a screenshot is enough to understand if the text searched by the test is not there or if it is wrong.
