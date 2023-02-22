@@ -131,6 +131,17 @@ some UI utilities that make easy to use them as a development tool.
 
 🔗 [**Read More: Use your testing tool as your primary development tool**](/sections/generic-best-practices/use-your-testing-tool-as-your-primary-development-tool.md)
 
+<br/>
+
+## ![✔] 2.6 Keep abstraction low to ease debugging the tests
+
+**TL;DR:** Tests should be written with readability and debuggability in mind. This is especially important when speaking about UI tests since the complex stack get harder to understand the real source of failure. Reducing the abstraction and thinking about the future ones that haver to debug the test is key for the test to survive the product evolutions and to continue to offer the confidence the tests offered when we wrote them.
+
+
+**Otherwise:** You are going to be hit hard when test fail and you need to debug and update them.
+
+🔗 [**Read More: Use your testing tool as your primary development tool**](/sections/generic-best-practices/use-your-testing-tool-as-your-primary-development-tool.md)
+
 <br/><br/>
 
 # `3. Server Communication Testing`
