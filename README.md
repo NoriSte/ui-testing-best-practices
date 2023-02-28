@@ -143,6 +143,17 @@ some UI utilities that make easy to use them as a development tool.
 
 🔗 [**Read More: Use your testing tool as your primary development tool**](/sections/generic-best-practices/use-your-testing-tool-as-your-primary-development-tool.md)
 
+<br/>
+
+## ![✔] 2.6 Keep abstraction low to ease debugging the tests
+
+**TL;DR:** Tests should be written with readability and debuggability in mind. Abstraction may be good in some instances, but it always incurs a cost in debuggability and therefore sometimes may not be worth it. This is especially important for UI tests; consequent of the complex stack, it can get harder to understand the real source of failures. Reducing abstraction for the sake of easier debugging is key for future proofing the test code.
+
+
+**Otherwise:** There is a balance between abstraction and debuggability; the higher the abstraction, the harder it is going to be to debug the tests in the future.
+
+🔗 [**Read More: Keep abstraction low to ease debugging the tests**](/sections/generic-best-practices/test-code-with-debugging-in-mind.md)
+
 <br/><br/>
 
 # `3. Server Communication Testing`
