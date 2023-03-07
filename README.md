@@ -9,12 +9,14 @@
 <br/>
 
 <div align="center">
-  <img src="https://img.shields.io/badge/⚙%20Item%20count%20-%2024%20Best%20Practices-blue.svg" alt="24 items"> <img src="https://img.shields.io/badge/%F0%9F%93%85%20Last%20update%20-%20Dec%202022-green.svg" alt="Last update: Dec, 2022">
+  <img src="https://img.shields.io/badge/⚙%20Item%20count%20-%2026%20Chapters-blue.svg" alt="26 items"> <img src="https://img.shields.io/badge/%F0%9F%93%85%20Last%20update%20-%20Mar%202023-green.svg" alt="Last update: Marc, 2023">
 </div>
 
 <br/>
 
-[![NoriSte](/assets/images/twitter-s.png)](https://twitter.com/NoriSte/) **Follow me on Twitter!** [**@NoriSte**](https://twitter.com/NoriSte/)
+**Follow us on Twitter!**:
+- [**@NoriSte**](https://twitter.com/NoriSte/)
+- [**@MuratKeremOzcan**](https://twitter.com/MuratKeremOzcan/)
 
 <br/>
 
@@ -76,6 +78,16 @@
 
 <br/>
 
+## ![✔] 1.5 One long E2E test or small, independent ones?
+
+**TL;DR:** When dealing with E2E tests and their difficulties, opting for a lot of small and independent tests or for a long one is not an obvious choice. Either the solutions have pros and cons, deriving from the inner complexity of the E2E tests where you deal with a real back-end and real data.
+
+**Otherwise:** You could create hard-to-maintain E2E tests.
+
+🔗 [**Read More: One long E2E test or small, independent ones?**](/sections/testing-strategy/small-tests-or-long-ones.md)
+
+<br/><br/>
+
 # `2. Generic Best Practices`
 
 ## ![✔] 2.1 Await, don't sleep
@@ -130,6 +142,17 @@ some UI utilities that make easy to use them as a development tool.
 **Otherwise:** You code the app the old way, losing a lot of time interacting manually with the UI itself.
 
 🔗 [**Read More: Use your testing tool as your primary development tool**](/sections/generic-best-practices/use-your-testing-tool-as-your-primary-development-tool.md)
+
+<br/>
+
+## ![✔] 2.6 Keep abstraction low to ease debugging the tests
+
+**TL;DR:** Tests should be written with readability and debuggability in mind. Abstraction may be good in some instances, but it always incurs a cost in debuggability and therefore sometimes may not be worth it. This is especially important for UI tests; consequent of the complex stack, it can get harder to understand the real source of failures. Reducing abstraction for the sake of easier debugging is key for future proofing the test code.
+
+
+**Otherwise:** There is a balance between abstraction and debuggability; the higher the abstraction, the harder it is going to be to debug the tests in the future.
+
+🔗 [**Read More: Keep abstraction low to ease debugging the tests**](/sections/generic-best-practices/test-code-with-debugging-in-mind.md)
 
 <br/><br/>
 
@@ -299,30 +322,41 @@ If a test cannot produce reliable results, it reduces confidence in the tests an
 
 Meet the steering committee members - the people who work together to provide guidance and future direction to the project.
 
+<div>
 <img align="left" width="100" height="100" src="assets/images/members/noriste.png">
 
 [Stefano Magni](https://github.com/NoriSte)
 <a href="https://twitter.com/NoriSte"><img src="assets/images/twitter-s.png" width="16" height="16"></img></a>
+<a href="https://github.com/NoriSte"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/images/github-dark.png"><img alt="GitHub" src="assets/images/github-light.png" width="16" height="16"></picture>
 <a href="https://www.linkedin.com/in/noriste/"><img src="assets/images/linkedin.png" width="16" height="16"></img></a>
-<a href="https://stackoverflow.com/users/story/700707"><img src="assets/images/stackoverflow.png" width="16" height="16"></img></a>
 
-A positive-minded front-end developer and Cypress Ambassador. He's a passion for good UIs, automation, testing and teaching. He's developed every kind of interface: webapps, mobile apps, smartTV apps and games.
+</img></a>
 
-<br/>
-
-## Collaborators
-
-Thank you to all our collaborators! 🙏
-
-Our collaborators are members who are contributing to the repository on a reguar basis, through suggesting new best practices, triaging issues, reviewing pull requests and more. If you are interested in helping us guide thousands of people to craft better UI tests.
+Passionate, positive-minded / Front-end Tech Leader (platform) [Hasura](https://hasura.io/) / Speaker / Instructor / Remote worker.
 
 <br/>
+<br/>
+</div>
 
-|              <a href="https://github.com/muratkeremozcan" target="_blank"><img src="https://avatars.githubusercontent.com/muratkeremozcan" width="75" height="75"></a>               |
-| :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| [Murat Ozcan](https://github.com/muratkeremozcan) <a href="https://www.linkedin.com/in/murat-ozcan-3489898/"><img src="assets/images/linkedin.png" width="16" height="16"></img></a> |
+<div>
+
+<img align="left" width="100" height="100" src="assets/images/members/muratkeremozcan.png">
+
+
+[Murat Ozcan](https://github.com/NoriSte)
+<a href="https://twitter.com/MuratKeremOzcan"><img src="assets/images/twitter-s.png" width="16" height="16"></img></a>
+<a href="https://github.com/muratkeremozcan"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/images/github-dark.png"><img alt="GitHub" src="assets/images/github-light.png" width="16" height="16"></picture>
+<a href="https://www.linkedin.com/in/murat-ozcan-3489898/"><img src="assets/images/linkedin.png" width="16" height="16"></img></a>
+
+</img></a>
+
+Tech enthusiast in love with testing, development, devops, web and cloud. Staff eng / Test architect at [Extend](https://www.extend.com/).
 
 <br/>
+<br/>
+
+</div>
+
 
 ## Thank You Notes
 
