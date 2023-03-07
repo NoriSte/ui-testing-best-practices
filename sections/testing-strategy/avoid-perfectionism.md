@@ -31,16 +31,16 @@ and forget, in the beginning, to test things like
 
 A beginning todo list to avoid falling into the perfectionism trap could be:
 
-- choose the simplest thing to test (something that's useful for the users)
-- think about it from the users perspective. Remember that the users care about contents and functionalities, not about selectors and internal application states
-- write your test
-- run it more than once to be sure that it's stable
-- when it succeeds, insert a bug into the front-end app that breaks it and checks that the test fails. Then, remove your made-on-purpose bug
-- run the test both in headless and non-headless mode
-- think about, based on your experience (ask your colleagues too), what are the reasons that could break the front-end application from the perspective of what you're testing
-- simulate the different front-end failures (kill the server, insert other bugs) and check if the test gives you enough feedback to understand what failed
-- do that for just two or three kinds of failures, remember that your limited experience could drive you to test the wrong things
-- then, move to another thing to test and repeat all the previous steps
+1. choose the simplest thing to test (something that's useful for the users)
+2. think about it from the users perspective. Remember that the **users care about contents and functionalities**, not about selectors and internal application states
+3. write your test
+4. run it more than once to be sure that it's stable
+5. when it succeeds, insert a bug into the front-end app that breaks it and checks that the test fails. Then, remove your made-on-purpose bug
+6. run the test both in headless and non-headless mode
+7. think about, based on your experience (ask your colleagues too), what are the reasons that could break the front-end application from the perspective of what you're testing
+8. simulate the different front-end failures (kill the server, insert other bugs) and check if the test gives you enough feedback to understand what failed
+9. do that for just two or three kinds of failures, remember that your limited experience could drive you to test the wrong things
+10. then, move to another thing to test and repeat all the previous steps
 
 Software testing is an amazing journey and the goal of this repo is helping you avoid the most common pitfalls.
 
