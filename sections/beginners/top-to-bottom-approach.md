@@ -14,7 +14,7 @@ how it’s related to your code, etc.
 
 We all know the Testing Pyramid and commonly, we approach it from the bottom
 
-![Bottom to top approach means starting with the Unit Tests.](../../assets/images/top-to-bottom-approach/bottom-to-top-approach.png)
+![Bottom to top approach means starting with the Unit Tests.](../../assets/images/top-to-bottom-approach/bottom-to-top-approach.jpg)
 _The standard Testing Pyramid approach: bottom to top._
 
 Approaching the pyramid from the bottom makes sense. Starting with the Unit
@@ -57,7 +57,7 @@ Take a look at this exhaustive image from the
 [JavaScript & Node.js testing best practices](https://github.com/goldbergyoni/javascript-testing-best-practices)
 project:
 
-![Mental and time capacity is mainly dedicated to the development phase, a few of them can be dedicated to writing tests.](../../assets/images/top-to-bottom-approach/headspace.png)
+![Mental and time capacity is mainly dedicated to the development phase, a few of them can be dedicated to writing tests.](../../assets/images/top-to-bottom-approach/headspace.jpg)
 _Courtesy of [Yoni Goldberg](https://goldbergyoni.com/), visit
 [testjavascript.com](https://testjavascript.com/) and add a star to the
 [JavaScript & Node.js testing best practices](https://github.com/goldbergyoni/javascript-testing-best-practices)
@@ -78,7 +78,7 @@ asking
   before, do the tests end with themselves?"
 - "Honestly, I've more doubts now than before starting with tests…"
 
-![The Testing Pyramid with every kind of tests highlighted with the attention you dedicate them with a bottom to top approach.](../../assets/images/top-to-bottom-approach/unit-testing-first.png)
+![The Testing Pyramid with every kind of tests highlighted with the attention you dedicate them with a bottom to top approach.](../../assets/images/top-to-bottom-approach/unit-testing-first.jpg)
 _The bottom to top approach inevitably makes you concentrate on the Unit Tests._
 
 The problem is not with you but with the wrong kind of tests for a beginner!
@@ -115,7 +115,7 @@ application and interacts with it. The pros are:
 There are cons too, but I'm going to list them later. That's the approach I
 suggest:
 
-![Starting from the top of the testing pyramid allows you to concentrate on UI tests firstly.](../../assets/images/top-to-bottom-approach/ui-testing-first.png)
+![Starting from the top of the testing pyramid allows you to concentrate on UI tests firstly.](../../assets/images/top-to-bottom-approach/ui-testing-first.jpg)
 _A top to bottom approach._
 
 ### Does the top to bottom approach enforce testing bad practices?
