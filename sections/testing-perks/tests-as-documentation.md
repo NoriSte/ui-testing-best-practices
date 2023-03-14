@@ -22,7 +22,7 @@ Bonus point: if you leverage the [Gherkin](https://cucumber.io/docs/gherkin/refe
 
 Please, keep in mind that:
 
-- test descriptions must be clear even for developers that do not know the project context the same way as you
+- test descriptions must be clear even for developers that do not know the project context the same way as you.
 
 - the re-used test functions, fixtures, etc. must have meaningful names. A `registration-success.json` fixture used for both the sign-up and the login tests could mislead the future reader and make historical knowledge needed. Remember that relying on historical knowledge is always negative for a codebase that must survive the developers' turnover.
 
@@ -35,3 +35,5 @@ Please, keep in mind that:
 - "connect" the code with the tests: if a user flow is quite long, it could be useful to share some "steps" (with some comments) between the source code and the code of the tests. Something like `/** #1 \*/`, `/** #2 \*/`, etc.
 
 - UI tests are not the only ones: having more low-level tests for parts of the code that could be hard to be understood is a great way to describe the code expected behaviors.
+
+- comments in the test could help a lot the reader, look at the ["Matching the test's code and test runner's commands" section of the "Keep abstraction low to ease debugging the tests" chapter](../../sections/generic-best-practices/test-code-with-debugging-in-mind.md#matching-the-tests-code-and-test-runners-commands)
