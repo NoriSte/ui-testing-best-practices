@@ -1,4 +1,8 @@
-# Cypress + Storybook. Keeping test scenario, data and component rendering in one place.
+# [OBSOLETE] Cypress + Storybook. Keeping test scenario, data and component rendering in one place.
+
+*This section is now marked as obsolete because it refers to a very old version of Cypress and Storybook (either of them now fully support component tests).*
+
+---
 
 _Russian version: [Cypress + Storybook. Хранение тестового сценария, данных и рендеринг компонента в одном месте](https://habr.com/ru/post/497544/)._
 

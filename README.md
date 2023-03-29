@@ -30,9 +30,9 @@
 4.  [Beginners (1)](#4-beginners)
 5.  [Generic testing perks (1)](#5-generic-testing-perks)
 6.  [Tools (2)](#6-tools)
-7.  [Component Testing (3)](#7-component-testing)
-8.  [Advanced (5)](#8-advanced)
-9.  [Real Life Examples (2)](#9-real-life-examples)
+7.  [Advanced (5)](#7-advanced)
+8.  [Real Life Examples (2)](#8-real-life-examples)
+9.  [Obsolete chapters (3)](#9-obsolete-chapters)
 
 <br/><br/>
 
@@ -232,40 +232,11 @@ some UI utilities that make easy to use them as a development tool.
 
 <br/><br/>
 
-# `7. Component Testing`
 
-Please note: the whole Component Testing world is changing rapidly, more contents will be added.
 
-## ![✔] 7.1 [@NoriSte](https://github.com/NoriSte)'s approach: Testing a component with Cypress and Storybook
+# `7. Advanced`
 
-**TL;DR:** Components ar the building blocks of your app, testing them in isolation is important to discover, as soon as possible, iof there is something wrong with them.
-
-**Otherwise:** UI Tests without lower-level tests do not allow you to understand the source of the problem.
-
-🔗 [**Read More: Testing a component with Cypress and Storybook**](/sections/tools/cypress-and-storybook.md)
-
-<br/>
-
-## ![✔] 7.2 [@daedalius](https://github.com/daedalius)'s approach: Exposing components from Storybook separating stories from tests
-
-**TL;DR:** You may expose the component reference from Storybook Story to test it whatever you wish in Cypress without breaking testing logic into pieces.
-
-**Otherwise:** Splitted test logic and test data will make it difficult to read and support.
-
-🔗 [**Read More: Cypress + Storybook. Keeping test scenario, data and component rendering in one place.**](/sections/tools/cypress-and-storybook-exposing-component-from-story.md)
-
-<br/>
-
-## ![✔] 7.3 Unit Testing React components with Cypress
-
-**TL;DR:** Cypress v4.5.0 release allowed Unit Testing React components, an external tool like Storybook is not necessary anymore to test isolated components.
-
-🔗 [**Read More: Unit Testing React components with Cypress.**](/sections/tools/cypress-react-component-test.md)
-<br/> <br/>
-
-# `8. Advanced`
-
-## ![✔] 8.1 Test States
+## ![✔] 7.1 Test States
 
 **TL;DR:** Tests should be repeatable, modular and should handle their own state setup. UI Tests should not be repeated in order to achieve state for another test.
 
@@ -273,7 +244,7 @@ Please note: the whole Component Testing world is changing rapidly, more content
 
 <br/>
 
-## ![✔] 8.2 Test Flake
+## ![✔] 7.2 Test Flake
 
 **TL;DR:** Tests must produce consistent results every time. Repeatable pipeline execution results are the quorum.
 If a test cannot produce reliable results, it reduces confidence in the tests and requires maintenance which reduces all value. In these cases it is best to manually test the functionality.
@@ -282,7 +253,7 @@ If a test cannot produce reliable results, it reduces confidence in the tests an
 
 <br/>
 
-## ![✔] 8.3 Combinatorial Testing
+## ![✔] 7.3 Combinatorial Testing
 
 **TL;DR:** Most software bugs and failures are caused by one or two parameters. Testing parameter combinations can provide more efficient fault detection than conventional methods. Combinatorial Testing is a proven method for more effective software testing at a lower cost.
 
@@ -290,7 +261,7 @@ If a test cannot produce reliable results, it reduces confidence in the tests an
 
 <br/>
 
-## ![✔] 8.4 Performance Testing
+## ![✔] 7.4 Performance Testing
 
 **TL;DR:** Although this is a vast topic, Performance testing from a web development perspective can be simplified with modern tools and understanding. It is highly effective in ensuring user experience, satisfying non-functional requirements (NFRS), and detecting possible system-flake early on.
 
@@ -298,7 +269,7 @@ If a test cannot produce reliable results, it reduces confidence in the tests an
 
 <br/>
 
-## ![✔] 8.5 Email Testing
+## ![✔] 7.5 Email Testing
 
 **TL;DR:** Email testing is [critical for business success](https://www.industrialmarketer.com/why-email-testing-is-critical-for-email-marketing-success/). Modern services not only allow automated email testing but also provide a stateless, scalable solution while testing SaaS applications.
 
@@ -306,9 +277,9 @@ If a test cannot produce reliable results, it reduces confidence in the tests an
 
 <br/><br/>
 
-# `9. Real Life Examples`
+# `8. Real Life Examples`
 
-## ![✔] 9.1 Siemens - Test the front-end with the integration tests, the back-end with the E2E ones - in reference to [Component vs Integration vs E2e Testing](./sections/testing-strategy/component-vs-integration-vs-e2e-testing.md)
+## ![✔] 8.1 Siemens - Test the front-end with the integration tests, the back-end with the E2E ones - in reference to [Component vs Integration vs E2e Testing](./sections/testing-strategy/component-vs-integration-vs-e2e-testing.md)
 
 **TL;DR:** UI tests with a stubbed server are reliable and faster compared to full E2E tests. Full E2E tests are not always necessary to ensure front-end quality. We can instead have high confidence in front-end quality by using lower-cost UI integration tests and saving higher cost E2E tests for the back-end.
 
@@ -318,13 +289,47 @@ If a test cannot produce reliable results, it reduces confidence in the tests an
 
 <br/>
 
-## ![✔] 9.2 WorkWave - From unreadable React Component Tests to simple, stupid ones
+## ![✔] 8.2 WorkWave - From unreadable React Component Tests to simple, stupid ones
 
 **TL;DR:** The test's code must be as straightforward as possible. The benefit is to save a lot of time to understand, update, refactor, fix it when needed. At the opposite, a terrible scenario happens when you are not able to read some tests, even if you are the author! Here are reported some examples explaining why the test's code is hard, and how they have been refactored.
 
 **Otherwise:** You waste a lot of time reading and understanding the tests when you have to update or fix them.
 
 🔗 [**Read More: From unreadable React Component Tests to simple, stupid ones**](./sections/real-life-examples/from-unreadable-react-component-tests-to-simple-ones.md)
+
+<br/> <br/>
+
+# `9. Obsolete chapters`
+
+## Unit Testing React components with Cypress
+
+*This section is now marked as obsolete because it refers to a very old version of Cypress (that now fully supports component tests).*
+
+**TL;DR:** Cypress v4.5.0 release allowed Unit Testing React components, an external tool like Storybook is not necessary anymore to test isolated components.
+
+🔗 [**Read More: Unit Testing React components with Cypress.**](/sections/tools/cypress-react-component-test.md)
+
+<br/>
+
+## [@daedalius](https://github.com/daedalius)'s approach: Exposing components from Storybook separating stories from tests
+
+*This section is now marked as obsolete because it refers to a very old version of Cypress and Storybook (either of them now fully support component tests).*
+
+**TL;DR:** You may expose the component reference from Storybook Story to test it whatever you wish in Cypress without breaking testing logic into pieces.
+
+**Otherwise:** Splitted test logic and test data will make it difficult to read and support.
+
+🔗 [**Read More: Cypress + Storybook. Keeping test scenario, data and component rendering in one place.**](/sections/tools/cypress-and-storybook-exposing-component-from-story.md)
+
+## [@NoriSte](https://github.com/NoriSte)'s approach: Testing a component with Cypress and Storybook
+
+*This section is now marked as obsolete because it refers to a very old version of Cypress and Storybook (either of them now fully support component tests).*
+
+**TL;DR:** Components ar the building blocks of your app, testing them in isolation is important to discover, as soon as possible, iof there is something wrong with them.
+
+**Otherwise:** UI Tests without lower-level tests do not allow you to understand the source of the problem.
+
+🔗 [**Read More: Testing a component with Cypress and Storybook**](/sections/tools/cypress-and-storybook.md)
 
 <br/> <br/>
 
