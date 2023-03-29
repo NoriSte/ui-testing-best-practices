@@ -32,7 +32,7 @@
 6.  [Tools (2)](#6-tools)
 7.  [Component Testing (3)](#7-component-testing)
 8.  [Advanced (5)](#8-advanced)
-9.  [Real Life Examples (2)](#9-real-life-examples)
+9.  [Real Life Examples (3)](#9-real-life-examples)
 
 <br/><br/>
 
@@ -325,6 +325,16 @@ If a test cannot produce reliable results, it reduces confidence in the tests an
 **Otherwise:** You waste a lot of time reading and understanding the tests when you have to update or fix them.
 
 🔗 [**Read More: From unreadable React Component Tests to simple, stupid ones**](./sections/real-life-examples/from-unreadable-react-component-tests-to-simple-ones.md)
+
+<br/>
+
+## ![✔] 9.3 Hasura - Decouple the back-end and front-end test through Contract Testing
+
+**TL;DR:** E2E tests do not scale well for hig applications, with thousands of user flows. Things get even worse if the UI E2E tests are used to test the server too because the result is hundred of slow and coupled tests. In Hasura, an internal working group proposed to decouple the back-end and front-end tests.
+
+**Otherwise:** The test suite grows to hundreds and hundreds of (slightly brittle, by nature) tests becoming a serious bottleneck for the release pipeline.
+
+🔗 [**Read More: Decouple the back-end and front-end test through Contract Testing**](./sections/real-life-examples/hasura-contract-tests.md)
 
 <br/> <br/>
 
