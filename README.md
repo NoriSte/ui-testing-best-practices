@@ -32,7 +32,7 @@
 6.  [Tools (2)](#6-tools)
 7.  [Component Testing (3)](#7-component-testing)
 8.  [Advanced (5)](#8-advanced)
-9.  [Real Life Examples (3)](#9-real-life-examples)
+9.  [Real Life Examples (4)](#9-real-life-examples)
 
 <br/><br/>
 
@@ -335,6 +335,14 @@ If a test cannot produce reliable results, it reduces confidence in the tests an
 **Otherwise:** The test suite grows to hundreds and hundreds of (slightly brittle, by nature) tests becoming a serious bottleneck for the release pipeline.
 
 🔗 [**Read More: Decouple the back-end and front-end test through Contract Testing**](./sections/real-life-examples/hasura-contract-tests.md)
+
+<br/>
+
+## ![✔] 9.4 Hasura E2E tests chronicles, February 2023
+
+**TL;DR:** Hasura ended up wiping out almost all the E2E tests after a lot of efforts put in saving them.
+
+🔗 [**Read More: Hasura E2E tests chronicles, February 2023**](./sections/real-life-examples/hasura-e2e-tests-chronicles-february-2023.md)
 
 <br/> <br/>
 
