@@ -327,30 +327,11 @@ Instead, un-flattening the list could help the readers to create a mental model 
 Again: Storybook and Playwright already have the concept of `step` utilities that allow grouping actions, the above suggestion is handy with Cypress.
 
 
+## Related chapters
 
-<!--
-TODO: crosslink chapters
-## Related articles
-
-I touch code's readability in the following articles
-- [From unreadable React Component Tests to simple, stupid ones](https://dev.to/noriste/from-unreadable-react-component-tests-to-simple-stupid-ones-3ge6)
-- [How I ease the next developer reading my code](https://dev.to/noriste/how-i-ease-the-next-developer-reading-my-code-1986)
-- [Hasura Console UI coding patterns](https://dev.to/noriste/hasura-console-ui-coding-patterns-testing-281d)
-- [WorkWave RouteManager UI coding patterns](https://dev.to/noriste/routemanager-ui-coding-patterns-generic-ones-4iaa)
-
-and also I touch the topic of getting your code clear in the next ones
-- [My take on Snapshot Testing](https://dev.to/noriste/my-take-on-snapshot-testing-19k6)
-- [How I strive for XState machine, types, and tests readability](https://dev.to/noriste/how-i-strive-for-xstate-machine-types-and-tests-readability-19f4)
-- [Support the Reviewers with detailed Pull Request descriptions](https://dev.to/noriste/support-the-reviewers-with-detailed-pull-request-descriptions-2khn)
-- [Re-building a branch and telling a story to ease the Code Review](https://dev.to/noriste/re-building-a-branch-and-telling-a-story-to-ease-the-code-review-485o)
-
-Last but not least: I loved and I suggest ["The Art of Readable Code" book](https://www.oreilly.com/library/view/the-art-of/9781449318482/). -->
-
----
----
----
----
+- 🔗 [From unreadable React Component Tests to simple, stupid ones](/sections//real-life-examples/from-unreadable-react-component-tests-to-simple-ones.md)
 
 <br/><br/>
+
 
 *Crossposted by [NoriSte](https://github.com/NoriSte) on [dev.to](https://dev.to/noriste/improving-ui-testss-code-to-ease-debugging-them-later-2478j).*

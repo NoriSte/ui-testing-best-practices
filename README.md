@@ -9,7 +9,7 @@
 <br/>
 
 <div align="center">
-  <img src="https://img.shields.io/badge/⚙%20Item%20count%20-%2026%20Chapters-blue.svg" alt="26 items"> <img src="https://img.shields.io/badge/%F0%9F%93%85%20Last%20update%20-%20Mar%202023-green.svg" alt="Last update: Marc, 2023">
+  <img src="https://img.shields.io/badge/⚙%20Item%20count%20-%2026%20Chapters-blue.svg" alt="26 items"> <img src="https://img.shields.io/badge/%F0%9F%93%85%20Last%20update%20-%20Mar%202023-green.svg" alt="Last update: March, 2023">
 </div>
 
 <br/>
@@ -24,15 +24,15 @@
 
 ## Table of Contents
 
-1.  [Testing strategies (4)](#1-testing-strategies)
-2.  [Generic Best Practices (5)](#2-generic-best-practices)
+1.  [Testing strategies (5)](#1-testing-strategies)
+2.  [Generic Best Practices (6)](#2-generic-best-practices)
 3.  [Server Communication Testing (3)](#3-server-communication-testing)
 4.  [Beginners (1)](#4-beginners)
 5.  [Generic testing perks (1)](#5-generic-testing-perks)
-6.  [Tools (1)](#6-tools)
+6.  [Tools (2)](#6-tools)
 7.  [Component Testing (3)](#7-component-testing)
 8.  [Advanced (5)](#8-advanced)
-9.  [Real Life Examples (1)](#9-real-life-examples)
+9.  [Real Life Examples (2)](#9-real-life-examples)
 
 <br/><br/>
 
@@ -315,6 +315,16 @@ If a test cannot produce reliable results, it reduces confidence in the tests an
 **Otherwise:** You waste time and resources with slow and brittle E2E tests while you can get a lot of confidence with a lot of UI integrations tests.
 
 🔗 [**Read More: Test the front-end with the integration tests, the back-end with the E2E ones**](./sections/real-life-examples/test-front-end-with-integration-back-end-with-e2e.md)
+
+<br/>
+
+## ![✔] 9.2 WorkWave - From unreadable React Component Tests to simple, stupid ones
+
+**TL;DR:** The test's code must be as straightforward as possible. The benefit is to save a lot of time to understand, update, refactor, fix it when needed. At the opposite, a terrible scenario happens when you are not able to read some tests, even if you are the author! Here are reported some examples explaining why the test's code is hard, and how they have been refactored.
+
+**Otherwise:** You waste a lot of time reading and understanding the tests when you have to update or fix them.
+
+🔗 [**Read More: From unreadable React Component Tests to simple, stupid ones**](./sections/real-life-examples/from-unreadable-react-component-tests-to-simple-ones.md)
 
 <br/> <br/>
 
