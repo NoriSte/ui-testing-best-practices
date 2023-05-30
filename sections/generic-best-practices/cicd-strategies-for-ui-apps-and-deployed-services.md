@@ -1,21 +1,22 @@
 # CI CD strategies for UI apps and deployed services
 
-In today's rapidly-evolving digital ecosystem, Continuous Integration and Continuous Deployment (CI/CD) strategies have become integral to the lifecycle of web applications and services. When correctly implemented, CI/CD offers a plethora of benefits that enable organizations to deliver products to market rapidly, streamline their operations, and drastically improve their overall software quality. CI/CD is the heartbeat of modern DevOps practices. It bridges the gap between development and operations teams, fostering a culture of seamless collaboration. This synergy is underpinned by a fail-fast mentality, where errors are detected and corrected promptly during the development process, rather than after deployment.
+In today's rapidly-evolving digital ecosystem, Continuous Integration and Continuous Deployment (CI/CD) strategies have become integral to the lifecycle of web applications and services. CI/CD offers a plethora of benefits that enable organizations to deliver products to market rapidly, streamline their operations, and drastically improve their overall software quality. CI/CD is the heartbeat of modern DevOps practices. It bridges the gap between development and operations teams, fostering a culture of seamless collaboration. This synergy is underpinned by a fail-fast mentality, where errors are detected and corrected promptly during the development process, rather than after deployment.
 
-Without CI/CD, software development becomes a cumbersome, time-consuming endeavor fraught with bottlenecks and pitfalls. This traditional, siloed approach to software development and deployment—known as the waterfall model—often leads to 'integration hell', where merging changes from different team members becomes a nightmare, causing delays, and potentially leading to flawed final products. In a world that demands agility and reliability, the absence of CI/CD strategies can make your UI apps and deployed services lag in the competitive landscape. By harnessing the power of CI/CD, organizations can stay ahead of the curve, continually improving their software delivery performance while ensuring robustness, scalability, and customer satisfaction.
+Without CI/CD, software development becomes a cumbersome, time-consuming endeavor fraught with bottlenecks and pitfalls. This traditional, siloed approach to software development and deployment—known as the waterfall model—often leads to "integration hell", where merging changes from different team members becomes a nightmare, causing delays, and potentially leading to flawed final products. In a world that demands agility and reliability, the absence of CI/CD strategies can make your UI apps and deployed services lag in the competitive landscape.
 
-In this article, we'll explore two distinct examples of CI/CD implementations, each demonstrating a unique scenario. Our first example centers on a React application, while the second focuses on a service deployed on Amazon Web Services (AWS). For both cases, we will be utilizing GitHub Actions as our CI/CD platform, giving us the advantage of exploring actual repositories to deepen our understanding. Remember, there is
-no one-size-fits-all solution when it comes to CI/CD. However, the overarching principles and strategies we'll discuss in these examples hold universal applicability. They can be adapted and modified to fit a variety of different situations and needs
+In this article, we'll explore two distinct examples of CI/CD implementations, each demonstrating a unique scenario. Our first example centers on a React application, while the second focuses on a service deployed on Amazon Web Services (AWS). For both cases, we will be utilizing GitHub Actions as our CI/CD platform and sharing the repos, giving us the advantage of exploring actual repositories to deepen our understanding.
+
+Remember, there is no one-size-fits-all solution when it comes to CI/CD. However, the overarching principles and strategies we'll discuss in these examples hold universal applicability. They can be adapted and modified to fit a variety of different situations and needs
 
 - [CI CD strategies for UI apps and deployed services](#ci-cd-strategies-for-ui-apps-and-deployed-services)
-	- [CI CD for a UI app](#ci-cd-for-a-ui-app)
-		- [Key Concepts](#key-concepts)
-		- [Testing Against Localhost on PRs, Testing Against Deployments](#testing-against-localhost-on-prs-testing-against-deployments)
-	- [CI CD for a deployed AWS service](#ci-cd-for-a-deployed-aws-service)
-		- [Testing against temporary branches on PRs](#testing-against-temporary-branches-on-prs)
-			- [Key Concepts:](#key-concepts-1)
-		- [Testing against deployments](#testing-against-deployments)
-	- [Wrap up](#wrap-up)
+  - [CI CD for a UI app](#ci-cd-for-a-ui-app)
+    - [Key Concepts](#key-concepts)
+    - [Testing Against Localhost on PRs, Testing Against Deployments](#testing-against-localhost-on-prs-testing-against-deployments)
+  - [CI CD for a deployed AWS service](#ci-cd-for-a-deployed-aws-service)
+    - [Testing against temporary branches on PRs](#testing-against-temporary-branches-on-prs)
+      - [Key Concepts:](#key-concepts-1)
+    - [Testing against deployments](#testing-against-deployments)
+  - [Wrap up](#wrap-up)
 
 ## CI CD for a UI app
 
@@ -25,7 +26,7 @@ Below is the CI architecture for this project:
 
 ![CICD-ui-app](/assets/images/cicd/CICD-ui-app.png)
 
-The app contains 22 Cypress component tests, 22 Jest/RTL unit/component tests, and 11 Cypress end-to-end tests. With [Cypress Cloud analytics](https://cloud.cypress.io/projects/x953wq/runs/831/specs), there's potential to further reduce this time.
+The app contains 22 Cypress component tests, 22 Jest/RTL unit/component tests, and 11 Cypress end-to-end tests. With [Cypress Cloud analytics](https://cloud.cypress.io/projects/x953wq/runs/831/specs), there is potential to further reduce this time.
 
 ![Cy-Cloud](/assets/images/cicd/Cy-Cloud.png)
 
@@ -169,7 +170,7 @@ In our 'Tour of Heroes' example, this requirement extends to combined code cover
 
 This rigorous testing practice not only encourages code quality but also fosters a paradigm shift towards process automation. Consequently, it reduces the reliance on management tools for process enforcement, thus improving efficiency and developer experience.
 
-But what happens after the PR is merged? What about continuous deployment? For this, let's examine another UI app which employs Amplify for deployments: Yan Cui's [Vue-based Twitter clone](https://github.com/muratkeremozcan/appsyncmasterclass-frontend/tree/main/.github/workflows). Looking at this repository, we find two YAML files. [`PR.yml`](https://github.com/muratkeremozcan/appsyncmasterclass-frontend/blob/main/.github/workflows/PR.yml) is very similar to our previous Tour of Heroes example, though this application is built with Vue & JavaScript rather than React & TypeScript. Noticeably, it only runs on PRs.
+But what happens after the PR is merged? What about continuous deployment? For this, let us examine another UI app which employs Amplify for deployments: Yan Cui's [Vue-based Twitter clone](https://github.com/muratkeremozcan/appsyncmasterclass-frontend/tree/main/.github/workflows). Looking at this repository, we find two YAML files. [`PR.yml`](https://github.com/muratkeremozcan/appsyncmasterclass-frontend/blob/main/.github/workflows/PR.yml) is very similar to our previous Tour of Heroes example, though this application is built with Vue & JavaScript rather than React & TypeScript. Noticeably, it only runs on PRs.
 
 ```yml
 # ./.github/workflows/PR.yml
@@ -206,10 +207,10 @@ jobs:
         # generic settings...
 ```
 
-When running tests against multiple deployments, it's best practice to have separate config files for each deployment, usually differentiating by the baseUrl.
+When running tests against multiple deployments, it is a best practice to have separate config files for each deployment, usually differentiating by the baseUrl.
 
 ```js
-// ./cypress/config/dev.config.js
+// ./cypress/config/local.config.js
 
 const { defineConfig } = require("cypress");
 
@@ -242,7 +243,7 @@ module.exports = defineConfig({
 ```
 
 ```js
-// ./cypress/config/local.config.js
+// ./cypress/config/dev.config.js
 
 const { defineConfig } = require("cypress");
 
@@ -267,35 +268,39 @@ module.exports = defineConfig({
 });
 ```
 
-As for the Amplify specifics, there's an `amplify.yml` file in the repository and AWS Amplify is configured to recognize our repository. Several options are available for Continuous Deployment of UI applications. Apart from AWS Amplify, Netlify, Vercel, Google Firebase, Heroku, GitHub Pages, Azure App Service are just a few of the other platforms. Each typically requires a configuration file in the repository and a web app where a project is created and linked to a repository.
+As for the Amplify specifics, there is an `amplify.yml` file in the repository and AWS Amplify is configured to recognize our repository. Several options are available for Continuous Deployment of UI applications. Apart from AWS Amplify, Netlify, Vercel, Google Firebase, Heroku, GitHub Pages, Azure App Service are just a few of the other platforms. Each typically requires a configuration file in the repository and a web app where a project is created and linked to a repository.
 
-However, as these configurations are vendor-specific, we will instead delve into continuous deployment details using an AWS service example with temporary branches or ephemeral instances. (Perhaps in the future we will take the ToH and deploy it via multiple vendors for a through comparison!)
+However, as these configurations are vendor-specific, we will instead delve into continuous deployment details using an AWS service example with temporary branches or ephemeral instances. (Perhaps in the future we will take the ToH and deploy it via multiple vendors for a through comparison.)
 
 ## CI CD for a deployed AWS service
 
-In this section, we will explore the process of implementing Continuous Integration and Continuous Deployment (CI/CD) for a service deployed on AWS. We will be using Yan Cui's [AWS AppSync Twitter clone](https://github.com/muratkeremozcan/appsyncmasterclass-backend) as a sample. AWS AppSync is a fully managed service that enables developers to develop GraphQL APIs with ease.
+In this section, we will explore the process of implementing Continuous Integration and Continuous Deployment (CI/CD) for a service deployed on AWS. We will be using Yan Cui's [AWS AppSync Twitter clone](https://github.com/muratkeremozcan/appsyncmasterclass-backend) as a sample.
 
-Of interest are 3 yml files under [./github/workflows/](https://github.com/muratkeremozcan/appsyncmasterclass-backend/tree/main/.github/workflows); `PR.yml`, `dev.yml`, `stage.yml`. Let's work through [ `PR.yml`](https://github.com/muratkeremozcan/appsyncmasterclass-backend/blob/main/.github/workflows/PR.yml)
+> For the record, AWS AppSync is a fully managed service that enables developers to develop GraphQL APIs with ease, and this service uses GraphQL instead of a more wide spread API gateway.
+
+Of interest are 3 yml files under [./github/workflows/](https://github.com/muratkeremozcan/appsyncmasterclass-backend/tree/main/.github/workflows); `PR.yml`, `dev.yml`, `stage.yml`. Let us work through [ `PR.yml`](https://github.com/muratkeremozcan/appsyncmasterclass-backend/blob/main/.github/workflows/PR.yml)
 
 > Disclaimer: Yan uses Jest for unit (mocks AWS resources), integration (unit test-like, uses real AWS resources) and e2e tests. We took this opportunity to create Cypress mirrors of the e2e tests, and discussed the style further [in this video](https://www.youtube.com/watch?v=jTgT3VGhqKw). Therefore, we are less worried about parallelization, or running Jest tests separately for unit, integration or e2e. We just want a serial job set, and the main focus is the deployment and the removal of the temporary stack.
 
 ### Testing against temporary branches on PRs
 
-A critical aspect of CI/CD at PR level is the ability to create and test against temporary branches with Serverless Framework. Each feature branch is deployed to a dedicated environment, like `my-feature`, and the temporary branch's name is typically the same as the git branch (with the `/` character replaced).
+A critical aspect of CI/CD at PR level is the ability to create and test against temporary branches with Serverless Framework. Each feature branch is deployed to a dedicated environment, like `my-feature`, and the temporary branch's name is typically the same as the git branch (with the `/` character avoided or replaced).
 
 > If we have external services that are not a part of our stack, or serverful resources we would like to keep outside of our stack, we do not include these serverful resources as part of the ephemeral environments and would share to those resources, and/or refer to their dev deployments on our PRs. Check out Yan Cui's blog post [How to handle serverful resources when using ephemeral environments](https://theburningmonk.com/2023/02/how-to-handle-serverful-resources-when-using-ephemeral-environments/) for a through explanation.
 
 Deploying a temporary branch using the [Serverless framework](https://serverless.com/framework/) is simple with the command `sls deploy -s my-feature`. Once the feature has been fully tested and integrated, the temporary stack can be removed using `sls remove -s dev-my-feature`.
 
+> SAM (Serverless application model), CDK (Cloud Development Kit), Amplify CLI, Terraform are other infra as code alternatives to Serverless Framework, and we assume each has the capability to deploy and remove stacks in some shape or form. Temporary branches are just so fundamental and easy in Serverless Framework, therefore it is being used in the examples.
+
 #### Key Concepts:
 
 - To use the Serverless Framework, we need to install the AWS CLI.
 - A unique name for our temporary stack is generated from the branch name.
-- Steps like linting and testing are generic and must be performed.
+- Generic steps like linting and testing are performed.
 - The temporary branch is deployed before running e2e tests against it.
 - The temporary stack is removed at the end of the run.
 
-Temporary branches are regarded as crucial in serverless engineering. They allow engineers to develop and test in isolated environments and stacks without clashing with each other on a shared deployment. This setup also helps avoid having to clean up test data.
+Temporary branches are regarded as crucial in serverless engineering. They allow engineers to develop and test in isolated environments and stacks without clashing with each other on a shared deployment. This setup also helps avoid having to clean up test data, but mind data if tests run on deployments test data still has to be cleared.
 
 ```yml
 name: deploy to temp stack
@@ -388,11 +393,11 @@ jobs:
 
 Here is [a sample run](https://github.com/muratkeremozcan/appsyncmasterclass-backend/actions/runs/4667128107), taking under 10 minutes. The biggest time consumption is the deployment taking under 5 minutes which is the worst case scenario since this is a new stack. We can reduce this by half if we use [lambda layers](https://github.com/muratkeremozcan/appsyncmasterclass-backend#79-serverless-layers-to-reduce-package-size). Another one is Removing the stack taking 1:41. We could instead only remove the stack once the PR is merged (but currently we do not know how to handle this with GHA - let us know in the comments if you do). Finally, the tests take a serial 1:33 with Jest and 51s with Cypress, which we could save a minute with parallelization. This is a beefy service with many tests and we could reduce the feedback time to around 5 minutes. Albeit, around 10 minutes CI feedback is fair when deploying stacks from scratch and removing them because temporary stacks is considered the holy grail of e2e testing deployed services.
 
-> Important note about config file and environment variables: in this service, the environment variables are unique per deployment, meaning our dozen+ environment variables change values with each branch, including the API url. For this reason, we have a step to export environment variables in CI, and this is also a requirement when working locally. This means we cannot have unique config files for Cypress, but we can map `process.env` to Cypress `env` [like so](https://github.com/muratkeremozcan/appsyncmasterclass-backend/blob/main/cypress.config.js#L11). Check out the video [map your .env file to Cypress environment variables](https://www.youtube.com/watch?v=fq-VDY6VQls) for a demo.
+> Note about config file and environment variables: in this service, the environment variables are unique per deployment, meaning our dozen+ environment variables change values with each branch, including the API url. For this reason, we have a step to export environment variables in CI, and this is also a requirement when working locally. This means we cannot have unique config files for Cypress, but we can map `process.env` to Cypress `env` [like so](https://github.com/muratkeremozcan/appsyncmasterclass-backend/blob/main/cypress.config.js#L11). Check out the video [map your .env file to Cypress environment variables](https://www.youtube.com/watch?v=fq-VDY6VQls) for a demo.
 
 ### Testing against deployments
 
-Next, let's look at [`dev.yml`](https://github.com/muratkeremozcan/appsyncmasterclass-backend/blob/main/.github/workflows/dev.yml). This file simplifies the process for branches as it doesn't need to lint, unit test, or remove the branch. The deployments are persistent and environment variables do not change frequently, making the overall testing simpler. We can see that [a sample run](https://github.com/muratkeremozcan/appsyncmasterclass-backend/actions/runs/5120215093) takes under 5 minutes because we have deployed to dev before and we do not remove it at the end.
+Next, let us look at [`dev.yml`](https://github.com/muratkeremozcan/appsyncmasterclass-backend/blob/main/.github/workflows/dev.yml). This file simplifies the process for branches as it doesn't need to lint, unit test, or remove the branch. The deployments are persistent and environment variables do not change frequently, making the overall testing simpler. We can see that [a sample run](https://github.com/muratkeremozcan/appsyncmasterclass-backend/actions/runs/5120215093) takes under 5 minutes because we have deployed to dev before and we do not remove it at the end.
 
 ```yml
 # /.github/workflows/dev.yml
