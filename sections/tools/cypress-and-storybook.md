@@ -1,4 +1,8 @@
-# Testing a component with Cypress and Storybook
+# [OBSOLETE] Testing a component with Cypress and Storybook
+
+*This section is now marked as obsolete because it refers to a very old version of Cypress and Storybook (either of them now fully support component tests).*
+
+---
 
 _**UPDATE**: After this experimental approach, take a look at the “[Unit Testing React components with Cypress](./cypress-react-component-test.md)” chapter, things got simplified and more effective with Cypress 4.5.0 release!_
 

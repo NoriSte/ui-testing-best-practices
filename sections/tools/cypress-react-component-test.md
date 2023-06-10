@@ -1,4 +1,8 @@
-# Unit Testing React components with Cypress
+# [OBSOLETE] Unit Testing React components with Cypress
+
+*This section is now marked as obsolete because it refers to a very old version of Cypress (that now fully supports component tests).*
+
+---
 
 _**UPDATE**: [Cypress 10 is out with Component Testing integrated with E2E testing](https://www.cypress.io/blog/2022/06/01/cypress-10-release/), please check it out and ignore all the configuration steps reported below since they are outdated!_
 
