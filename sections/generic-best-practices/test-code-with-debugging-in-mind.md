@@ -232,6 +232,8 @@ cy.log('foo').get('bar').should('baz') // does not retry
 cy.get('bar').should('baz') // retries the whole chain until the assertion passes (you have 10 sec timeout set)
 ```
 
+It's worth mentioning that even if Cypress does not have `step`, [Filip Hric](https://github.com/filiphric)'s [cypress-plugin-steps](https://github.com/NoriSte/ui-testing-best-practices/issues/43) is a valid alternative.
+
 ### Use clear selectors
 
 Look at this code
