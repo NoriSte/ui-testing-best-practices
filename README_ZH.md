@@ -49,13 +49,13 @@
 
 <br/>
 
-## ![✔] 1.2 In the beginning, avoid perfectionism
+## ![✔] 1.2 在开始阶段，避免追求完美主义
 
-**TL;DR:** Software Testing is an amazing topic but a limited experience could make you fighting with a new enemy instead of relying on a new ally. Avoid, if you can, to test every complex user flows since the beginning of your UI testing journey. The simpler your first tests are, the sooner you get the advantages.
+**简要总结：** 软件测试是一个令人惊叹的话题，但有限的经验可能使您陷入与新敌人的斗争，而不是依赖新盟友。如果可能的话，在 UI 测试旅程的初期避免测试每个复杂的用户流程。您的第一个测试越简单，您越早获得优势。
 
-**Otherwise:** You create complex and hard to be debugged tests. This kind of tests slow down your work and do not have any kind of usefulness.
+**详细解释：** 您将创建复杂且难以调试的测试。这种类型的测试会拖慢您的工作，而且毫无用处。
 
-🔗 [**Read More: In the beginning, avoid perfectionism**](/sections/testing-strategy/avoid-perfectionism.md)
+🔗 [**阅读更多：在开始阶段，避免追求完美主义**](/sections/testing-strategy/avoid-perfectionism-zh.md)
 
 <br/>
 
