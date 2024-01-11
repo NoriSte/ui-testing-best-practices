@@ -41,51 +41,51 @@
 
 ## ![✔] 1.1 组件测试 vs 集成测试 vs E2E 测试
 
-**简要总结：** 辨识测试类型是理解和掌握所有 UI 测试策略、工具以及它们的利弊的起点。UI 集成测试是最有效的（你会喜欢上它们的），E2E 测试提供最高的信心，而组件测试则允许你独立测试 UI 的各个单元。
+**简而言之：** 辨识测试类型是理解和掌握所有 UI 测试策略、工具以及它们的利弊的起点。UI 集成测试是最有效的（你会喜欢上它们的），E2E 测试提供最高的信心，而组件测试则允许你独立测试 UI 的各个单元。
 
-**详细解释：** 否则，你可能会陷入过多编写 E2E 测试的困境，而忽略其他更简单的测试类型。E2E 测试是最为可靠的测试类型，但同时也是最难、最慢且最脆弱的一种。
+**或者说：** 否则，你可能会陷入过多编写 E2E 测试的困境，而忽略其他更简单的测试类型。E2E 测试是最为可靠的测试类型，但同时也是最难、最慢且最脆弱的一种。
 
-🔗 [**阅读更多：组件测试 vs (UI) 集成测试 vs E2E 测试**](/sections/testing-strategy/component-vs-integration-vs-e2e-testing-zh.md)
+🔗 [**阅读更多：组件测试 vs (UI) 集成测试 vs E2E 测试**](/sections/testing-strategy/component-vs-integration-vs-e2e-testing.zh.md)
 
 <br/>
 
 ## ![✔] 1.2 在开始阶段，避免追求完美主义
 
-**简要总结：** 软件测试是一个令人惊叹的话题，但有限的经验可能使您陷入与新敌人的斗争，而不是依赖新盟友。如果可能的话，在 UI 测试旅程的初期避免测试每个复杂的用户流程。您的第一个测试越简单，您越早获得优势。
+**简而言之：** 软件测试是一个令人惊叹的话题，但有限的经验可能使您陷入与新敌人的斗争，而不是依赖新盟友。如果可能的话，在 UI 测试旅程的初期避免测试每个复杂的用户流程。您的第一个测试越简单，您越早获得优势。
 
-**详细解释：** 您将创建复杂且难以调试的测试。这种类型的测试会拖慢您的工作，而且毫无用处。
+**或者说：** 您将创建复杂且难以调试的测试。这种类型的测试会拖慢您的工作，而且毫无用处。
 
-🔗 [**阅读更多：在开始阶段，避免追求完美主义**](/sections/testing-strategy/avoid-perfectionism-zh.md)
-
-<br/>
-
-## ![✔] 1.3 Choose a reference browser
-
-**TL;DR:** Cross-browser testing is way overrated. It's an important topic and it's the first thing you can think while starting evaluating the right testing tool. Don't worry: start by splitting functional testing from visual testing, that's the first step to correctly evaluate the need for cross-browser support (and to choose the right testing tool, too). Visual testing can be integrated into every testing tool, thank services like Applitools and Percy.
-
-**Otherwise:** You could choose the wrong testing tool based on the cross-browser support.
-
-🔗 [**Read More: Choose a reference browser**](/sections/testing-strategy/choose-a-reference-browser.md)
+🔗 [**阅读更多：在开始阶段，避免追求完美主义**](/sections/testing-strategy/avoid-perfectionism.zh.md)
 
 <br/>
 
-## ![✔] 1.4 Found a bug? Write the test, then fix it
+## ![✔] 1.3 选择一个参考浏览器
 
-**TL;DR:** A test is a good ally when you need to be sure that you are able to systematically reproducing a bug. A test allows you to speed up the fixing flow and to be 100% confident that the same bug is caught forever.
+**简而言之：** 跨浏览器测试被高估了。虽然这是一个重要的主题，也是在开始评估合适的测试工具时首先考虑的事项，但不必过于担心。首先，要将功能测试与视觉测试分开，这是正确评估是否需要跨浏览器支持的第一步，也是选择合适的测试工具的关键。视觉测试可以集成到每个测试工具中，这得益于诸如 Applitools 和 Percy 这样的服务。
 
-**Otherwise:** You could not identify correctly the bug and you can not be sure that the bug will not present again in the future.
+**或者说：** 基于跨浏览器支持做出选择，可能导致选择错误的测试工具。
 
-🔗 [**Read More: Found a bug? Write the test, then fix it**](/sections/testing-strategy/write-test-then-fix-bug.md)
+🔗 [**阅读更多：选择一个参考浏览器**](/sections/testing-strategy/choose-a-reference-browser.zh.md)
 
 <br/>
 
-## ![✔] 1.5 One long E2E test or small, independent ones?
+## ![✔] 1.4 发现了 bug？先编写测试，然后再着手修复
 
-**TL;DR:** When dealing with E2E tests and their difficulties, opting for a lot of small and independent tests or for a long one is not an obvious choice. Either the solutions have pros and cons, deriving from the inner complexity of the E2E tests where you deal with a real back-end and real data.
+**简而言之：** 在你需要确保能够有系统性地重现某个程序漏洞时，测试是一个极佳的助手。测试可以加速修复流程，同时让你百分之百确信同样的漏洞永远都能被捕捉到。
 
-**Otherwise:** You could create hard-to-maintain E2E tests.
+**或者说：** 如果你不能正确地辨别漏洞，那么你无法确定这个漏洞将来是否还会再次出现。
 
-🔗 [**Read More: One long E2E test or small, independent ones?**](/sections/testing-strategy/small-tests-or-long-ones.md)
+🔗 [**阅读更多：发现了 bug？先编写测试，然后再着手修复**](/sections/testing-strategy/write-test-then-fix-bug.zh.md)
+
+<br/>
+
+## ![✔] 1.5 单个长的端到端测试还是多个小的独立测试？
+
+**简而言之：** 在处理端到端测试及其困难时，选择进行一次长时间的测试还是选择许多小而独立的测试并非显而易见。这两种解决方案都有各自的优劣，这源于端到端测试的内在复杂性，其中涉及真实后端和真实数据。
+
+**或者说：** 你可能会创建难以维护的端到端测试。
+
+🔗 [**阅读更多：单个长的端到端测试还是多个小的独立测试？**](/sections/testing-strategy/small-tests-or-long-ones.zh.md)
 
 <br/><br/>
 

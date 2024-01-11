@@ -21,7 +21,7 @@
   - **回调测试**：一个小的 React 容器应用呈现组件并传递一些回调。然后，模拟用户交互并传递期望调用的回调。[React Testing Library](https://testing-library.com/docs/react-testing-library/) 是这类测试的标准库。
   - **交互/状态测试**：与组件的一些交互期望正确的状态管理。这种类型的测试必须从消费者的角度编写，而不是从内部的角度（例如，用户填写输入字段时的输入字段值，而不是内部组件状态）。交互/状态测试应在触发键盘事件后断言输入字段的值。
   
-或者，Cypress 推出了自己的解决方案，以便在其中启动组件测试，请查看 [使用 Cypress 进行 React 组件单元测试](../tools/cypress-react-component-test-zh.md) 章节。
+或者，Cypress 推出了自己的解决方案，以便在其中启动组件测试，请查看 [使用 Cypress 进行 React 组件单元测试](../tools/cypress-react-component-test.zh.md) 章节。
 
 - **UI 集成测试**：它们在真实浏览器中运行整个应用 **而不连接真实服务器**。这些测试是每个前端开发人员的王牌。它们运行速度快，不容易出现随机失败或假阴性。
 
@@ -46,7 +46,7 @@
   - 对您的业务有价值的一切：无论是快乐路径还是其他，都要测试您的业务关心的任何内容（明显是优先考虑它们）
   - 经常中断的一切：系统的薄弱区域也必须受到监视
 
-识别/定义测试类型对于对它们进行分组、[合理命名测试文件](/sections/generic-best-practices/name-test-files-wisely-zh.md)、限制它们的
+识别/定义测试类型对于对它们进行分组、[合理命名测试文件](/sections/generic-best-practices/name-test-files-wisely.zh.md)、限制它们的
 
 范围以及选择是否在整个应用程序和部署流水线中运行它们很有用。
 
