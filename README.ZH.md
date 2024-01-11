@@ -1,3 +1,9 @@
+<!-- markdownlint-disable MD041 -->
+<!-- markdownlint-disable MD033 -->
+<div align="right"><strong>🇨🇳中文</a></strong>  | <strong><a href="./README.md">🇬🇧English</strong></div>
+<!-- markdownlint-disable MD041 -->
+<!-- markdownlint-disable MD033 -->
+
 [✔]: assets/images/checkbox-small-blue.png
 
 # UI 测试最佳实践
