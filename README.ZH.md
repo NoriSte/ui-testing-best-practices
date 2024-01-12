@@ -31,8 +31,8 @@
 
 ## 目录
 
-1. [测试策略 (5)](#1-testing-strategies)
-2. [通用最佳实践 (6)](#2-generic-best-practices)
+1. [测试策略 (5)](#1-测试策略)
+2. [通用最佳实践 (6)](#2-通用最佳实践)
 3. [服务器通信测试 (3)](#3-server-communication-testing)
 4. [初学者 (1)](#4-beginners)
 5. [通用测试的优势 (1)](#5-generic-testing-perks)
@@ -43,13 +43,13 @@
 
 <br/><br/>
 
-# `1. 测试策略`
+# 1-测试策略
 
 ## ![✔] 1.1 组件测试 vs 集成测试 vs E2E 测试
 
 **简而言之：** 辨识测试类型是理解和掌握所有 UI 测试策略、工具以及它们的利弊的起点。UI 集成测试是最有效的（你会喜欢上它们的），E2E 测试提供最高的信心，而组件测试则允许你独立测试 UI 的各个单元。
 
-**或者说：** 否则，你可能会陷入过多编写 E2E 测试的困境，而忽略其他更简单的测试类型。E2E 测试是最为可靠的测试类型，但同时也是最难、最慢且最脆弱的一种。
+**否则：** 否则，你可能会陷入过多编写 E2E 测试的困境，而忽略其他更简单的测试类型。E2E 测试是最为可靠的测试类型，但同时也是最难、最慢且最脆弱的一种。
 
 🔗 [**阅读更多：组件测试 vs (UI) 集成测试 vs E2E 测试**](/sections/testing-strategy/component-vs-integration-vs-e2e-testing.zh.md)
 
@@ -59,7 +59,7 @@
 
 **简而言之：** 软件测试是一个令人惊叹的话题，但有限的经验可能使您陷入与新敌人的斗争，而不是依赖新盟友。如果可能的话，在 UI 测试旅程的初期避免测试每个复杂的用户流程。您的第一个测试越简单，您越早获得优势。
 
-**或者说：** 您将创建复杂且难以调试的测试。这种类型的测试会拖慢您的工作，而且毫无用处。
+**否则：** 您将创建复杂且难以调试的测试。这种类型的测试会拖慢您的工作，而且毫无用处。
 
 🔗 [**阅读更多：在开始阶段，避免追求完美主义**](/sections/testing-strategy/avoid-perfectionism.zh.md)
 
@@ -69,7 +69,7 @@
 
 **简而言之：** 跨浏览器测试被高估了。虽然这是一个重要的主题，也是在开始评估合适的测试工具时首先考虑的事项，但不必过于担心。首先，要将功能测试与视觉测试分开，这是正确评估是否需要跨浏览器支持的第一步，也是选择合适的测试工具的关键。视觉测试可以集成到每个测试工具中，这得益于诸如 Applitools 和 Percy 这样的服务。
 
-**或者说：** 基于跨浏览器支持做出选择，可能导致选择错误的测试工具。
+**否则：** 基于跨浏览器支持做出选择，可能导致选择错误的测试工具。
 
 🔗 [**阅读更多：选择一个参考浏览器**](/sections/testing-strategy/choose-a-reference-browser.zh.md)
 
@@ -79,7 +79,7 @@
 
 **简而言之：** 在你需要确保能够有系统性地重现某个程序漏洞时，测试是一个极佳的助手。测试可以加速修复流程，同时让你百分之百确信同样的漏洞永远都能被捕捉到。
 
-**或者说：** 如果你不能正确地辨别漏洞，那么你无法确定这个漏洞将来是否还会再次出现。
+**否则：** 如果你不能正确地辨别漏洞，那么你无法确定这个漏洞将来是否还会再次出现。
 
 🔗 [**阅读更多：发现了 bug？先编写测试，然后再着手修复**](/sections/testing-strategy/write-test-then-fix-bug.zh.md)
 
@@ -89,76 +89,69 @@
 
 **简而言之：** 在处理端到端测试及其困难时，选择进行一次长时间的测试还是选择许多小而独立的测试并非显而易见。这两种解决方案都有各自的优劣，这源于端到端测试的内在复杂性，其中涉及真实后端和真实数据。
 
-**或者说：** 你可能会创建难以维护的端到端测试。
+**否则：** 你可能会创建难以维护的端到端测试。
 
 🔗 [**阅读更多：单个长的端到端测试还是多个小的独立测试？**](/sections/testing-strategy/small-tests-or-long-ones.zh.md)
 
 <br/><br/>
 
-# `2. Generic Best Practices`
+# 2-通用最佳实践
 
-## ![✔] 2.1 Await, don't sleep
+## ![✔] 2.1 等待，不要休眠
 
-**TL;DR:** When testing your UI, you define a sort of key points the app must pass through. Reaching these key
-points is an asynchronous process because, almost 100% of the times, your UI does not update
-synchronously. Those key points are called **deterministic events**, as known as something that you
-know that must happen. You need to wait for these events to make your tests robust.
+**简而言之：** 在测试用户界面时，您要定义应用程序必须经过的关键点。达到这些关键点是一个异步的过程，因为几乎百分之百的情况下，用户界面不会同步更新。这些关键点被称为**确定性事件**，即您知道必须发生的事情。您需要等待这些事件以确保您的测试更加健壮。
 
-**Otherwise:** Sleeping the tests make your tests slow and brittle, it's one of the most common and biggest errors in UI testing.
+**否则：** 让测试休眠会使测试变得缓慢而脆弱，这是用户界面测试中最常见且最严重的错误之一。
 
-🔗 [**Read More: Await, don't sleep**](/sections/generic-best-practices/await-dont-sleep.md)
+🔗 [**阅读更多：等待，不要休眠**](/sections/generic-best-practices/await-dont-sleep.zh.md)
 
 <br/>
 
-## ![✔] 2.2 Name your test files wisely
+## ![✔] 2.2 明智地为测试文件命名
 
-**TL;DR:** Lot of times you need to launch just a type of tests and it's super easy if you follow a
-common pattern while naming your testing files.
+**简而言之：** 很多时候，您可能只需要运行某一类测试，如果您在为测试文件命名时遵循一种常见的模式，那将非常方便。
 
-**Otherwise:** You need to launch a long test suite just to have some of them run.
+**否则：** 您可能需要运行一个冗长的测试套件，而实际上只是为了运行其中的一些测试。
 
-🔗 [**Read More: Name the test files
-wisely**](/sections/generic-best-practices/name-test-files-wisely.md)
+🔗 [**阅读更多：明智地为测试文件命名**](/sections/generic-best-practices/name-test-files-wisely.zh.md)
 
 <br/>
 
-## ![✔] 2.3 UI Tests Debugging Best Practices
+## ![✔] 2.3 UI 测试调试最佳实践
 
-**TL;DR:** Debugging a UI test could be really hard, especially if you use generic browser automation tools. Here is a list of simple rules that are at the base of the debugging process.
+**简而言之：** 调试 UI 测试可能非常困难，特别是当您使用通用的浏览器自动化工具时。以下是调试过程中的一些基本规则。
 
-**Otherwise:** You are going to waste a lot of time without taming the exponential complexity of a UI test.
+**否则：** 您将会花费大量时间，而无法应对 UI 测试的指数复杂性。
 
-🔗 [**Read More: UI Tests Debugging Best Practices**](/sections/generic-best-practices/ui-tests-debugging-best-practices.md)
-
-<br/>
-
-## ![✔] 2.4 Reaching UI state for tests without using the UI
-
-**TL;DR:** As a developer who wants to ensure quality, it is important to think about cost of tests vs the value they provide. Where reasonable, strive to not duplicate effort, and still get high value by considering alternatives for setting up state for a test.
-
-🔗 [**Read More: Reaching UI state**](./sections/generic-best-practices/reaching-ui-state.md)
+🔗 [**阅读更多：UI 测试调试最佳实践**](/sections/generic-best-practices/ui-tests-debugging-best-practices.zh.md)
 
 <br/>
 
-## ![✔] 2.5 Use your testing tool as your primary development tool
+## ![✔] 2.4 在测试中达到 UI 状态而无需使用 UI
 
-**TL;DR:** Leveraging your testing tool to avoid manual tests is one of the biggest improvements you
-could do to speed up your working flow. Testing tools are faster than you and the most modern ones include
-some UI utilities that make easy to use them as a development tool.
+**简而言之：** 作为一个追求质量的开发者，思考测试的成本与它们提供的价值是至关重要的。在合理的情况下，努力避免重复努力，并通过考虑为测试设置状态的替代方案，依然能够获得高价值。
 
-**Otherwise:** You code the app the old way, losing a lot of time interacting manually with the UI itself.
-
-🔗 [**Read More: Use your testing tool as your primary development tool**](/sections/generic-best-practices/use-your-testing-tool-as-your-primary-development-tool.md)
+🔗 [**阅读更多：达到 UI 状态**](./sections/generic-best-practices/reaching-ui-state.zh.md)
 
 <br/>
 
-## ![✔] 2.6 Keep abstraction low to ease debugging the tests
+## ![✔] 2.5 将您的测试工具用作主要的开发工具
 
-**TL;DR:** Tests should be written with readability and debuggability in mind. Abstraction may be good in some instances, but it always incurs a cost in debuggability and therefore sometimes may not be worth it. This is especially important for UI tests; consequent of the complex stack, it can get harder to understand the real source of failures. Reducing abstraction for the sake of easier debugging is key for future proofing the test code.
+**简而言之：** 利用测试工具来避免手动测试是提高工作效率的最大改进之一。测试工具比你更快，而且大多数现代工具都包含一些 UI 工具，使得将其用作开发工具变得更加容易。
 
-**Otherwise:** There is a balance between abstraction and debuggability; the higher the abstraction, the harder it is going to be to debug the tests in the future.
+**否则：** 以传统方式编写应用程序，花费大量时间手动与 UI 进行交互。
 
-🔗 [**Read More: Keep abstraction low to ease debugging the tests**](/sections/generic-best-practices/test-code-with-debugging-in-mind.md)
+🔗 [**阅读更多：将您的测试工具用作主要的开发工具**](/sections/generic-best-practices/use-your-testing-tool-as-your-primary-development-tool.zh.md)
+
+<br/>
+
+## ![✔] 2.6 保持低抽象度以便于调试测试
+
+**简而言之：** 编写测试时应考虑可读性和可调试性。在某些情况下，抽象可能是有益的，但它总是会增加调试的成本，因此有时可能不值得。这对于 UI 测试尤为重要；由于复杂的技术栈，理解故障的真实源头可能变得更加困难。为了更容易调试，降低抽象度是未来测试代码的关键。
+
+**否则：** 抽象度和可调试性之间存在平衡；抽象度越高，将来调试测试就越困难。
+
+🔗 [**阅读更多：保持低抽象度以便于调试测试**](/sections/generic-best-practices/test-code-with-debugging-in-mind.zh.md)
 
 <br/><br/>
 

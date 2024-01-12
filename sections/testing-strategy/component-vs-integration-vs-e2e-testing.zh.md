@@ -53,4 +53,4 @@
 <!-- markdownlint-disable MD033 -->
 <br /><br />
 
-*由[NoriSte](https://github.com/NoriSte)在[dev.to](https://dev.to/noriste/component-vs-ui-integration-vs-e2e-tests-3i0d)和[Medium](https://medium.com/@NoriSte/component-vs-ui-integration-vs-e2e-tests-f02b575339dc)上进行了跨发表。*
+*由[NoriSte](https://github.com/NoriSte)在[dev.to](https://dev.to/noriste/component-vs-ui-integration-vs-e2e-tests-3i0d)和[Medium](https://medium.com/@NoriSte/component-vs-ui-integration-vs-e2e-tests-f02b575339dc)上进行了联合发表。*

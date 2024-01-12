@@ -283,4 +283,4 @@ export function createLoginAction() {
 - 🔗 [把你的测试工具当作主要的开发工具来使用](/sections/generic-best-practices/use-your-testing-tool-as-your-primary-development-tool.zh.md)
 <br/><br/>
 
-*由 [NoriSte](https://github.com/NoriSte) 在 [dev.to](https://dev.to/noriste/decouple-the-back-end-and-front-end-test-through-contract-testing-112k)上进行了跨发表。*
+*由 [NoriSte](https://github.com/NoriSte) 在 [dev.to](https://dev.to/noriste/decouple-the-back-end-and-front-end-test-through-contract-testing-112k)上进行了联合发表。*
