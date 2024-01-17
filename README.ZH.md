@@ -33,7 +33,7 @@
 
 1. [测试策略 (5)](#1-测试策略)
 2. [通用最佳实践 (6)](#2-通用最佳实践)
-3. [服务器通信测试 (3)](#3-server-communication-testing)
+3. [服务通信测试 (3)](#3-服务通信测试)
 4. [初学者 (1)](#4-beginners)
 5. [通用测试的优势 (1)](#5-generic-testing-perks)
 6. [工具 (2)](#6-tools)
@@ -155,33 +155,33 @@
 
 <br/><br/>
 
-# `3. Server Communication Testing`
+# 3-服务通信测试
 
-## ![✔] 3.1 Test the request and response payloads
+## ![✔] 3.1 检验请求和响应负载
 
-**TL;DR:** The UI communicates continuously with the back-end, and usually every communication is critical. A bad request or a bad response could cause inconsistent data and inconsistent UI state. Remember that all the business is built around data and the user experience is scratched by every single UI failure. So, every single XHR request must be checked carefully. XHR request checks make your test more robust too, correct XHR management and testing are one of the most important aspects of a UI test.
+**简而言之：** UI 与后端持续通信，通常每次通信都至关重要。不良的请求或响应可能导致不一致的数据和不一致的 UI 状态。请记住，所有业务都围绕数据构建，而每次 UI 失败都会影响用户体验。因此，必须仔细检查每个 XHR 请求。XHR 请求的检查还能使测试更为健壮，正确的 XHR 管理和测试是 UI 测试中最重要的方面之一。
 
-**Otherwise:** You could miss some relevant communication inconsistencies and when you need to debug them, you are going to waste a lot of time because the test will not drive you directly to the issue.
+**否则：** 您可能会错过一些相关的通信不一致性，当您需要调试时，由于测试不会直接指引您找到问题，您将浪费大量时间。
 
-🔗 [**Read More: Test the request and response payloads**](/sections/server-communication-testing/test-request-and-response-payload.md)
-
-<br/>
-
-## ![✔] 3.2 Test the server schema
-
-**TL;DR:** A lot of times, the front-end application breaks because of a change in the back-end. Ask your back-end colleagues to allow you to export every schema that describes the back-end entities and the communication with the front-end. Some examples could be the GraphQL schema, the TypeScript types, the ElasticSearch mapping, the Pact contract, a Postman configuration etc. more in general, everything that can warn you that something changed in the back-end. Every back-end change could impact the front-end and you must discover it as soonest as possible.
-
-**Otherwise:** You could miss some back-end change and your front-end application could break inadvertently.
+🔗 [**阅读更多：检验请求和响应负载**](/sections/server-communication-testing/test-request-and-response-payload.zh.md)
 
 <br/>
 
-## ![✔] 3.3 Monitoring tests
+## ![✔] 3.2 审查服务器架构
 
-**TL;DR:** The more the test suites are launched periodically, the more confident you are that everything works as expected. UI tests should be based on the user perspective but there are a lot of small tests that could give you a lot of immediate feedback without debugging the expected user flows. Monitoring small and taken-for-granted tech details helps you preventing bigger test failures.
+**简而言之：** 前端应用很多时候会因后端的变化而出现故障。请向后端同事请求允许您导出描述后端实体和与前端通信的每个架构的所有模式。一些示例可能包括 GraphQL 架构、TypeScript 类型、ElasticSearch 映射、Pact 合同、Postman 配置等，更一般地说，一切都可以提醒您后端发生了变化。每次后端更改都可能影响前端，您必须尽早发现。
 
-**Otherwise:** You mix tech-details tests with the user-oriented ones.
+**否则：** 您可能会错过一些后端更改，导致前端应用不经意间崩溃。
 
-🔗 [**Read More: Monitoring tests**](/sections/server-communication-testing/monitoring-tests.md)
+<br/>
+
+## ![✔] 3.3 测试监控
+
+**简而言之：** 测试套件定期启动的次数越多，您对一切都按预期工作的信心就越足。UI 测试应该基于用户的视角，但有许多小测试可以为您提供大量即时反馈，而无需调试用户流程。监控那些看似微不足道的技术细节有助于预防更大的测试失败。
+
+**否则：** 您会将技术细节测试与用户导向的测试混为一谈。
+
+🔗 [**阅读更多：测试监控**](/sections/server-communication-testing/monitoring-tests.zh.md)
 
 <br/><br/>
 
