@@ -34,7 +34,7 @@
 1. [测试策略 (5)](#1-测试策略)
 2. [通用最佳实践 (6)](#2-通用最佳实践)
 3. [服务通信测试 (3)](#3-服务通信测试)
-4. [初学者 (1)](#4-beginners)
+4. [初学者 (1)](#4-初学者)
 5. [通用测试的优势 (1)](#5-generic-testing-perks)
 6. [工具 (2)](#6-tools)
 7. [高级 (5)](#7-advanced)
@@ -185,15 +185,15 @@
 
 <br/><br/>
 
-# `4. Beginners`
+# 4-初学者
 
-## ![✔] 4.1 Approach the testing pyramid from the top
+## ![✔] 4.1 从金字塔顶层入手测试
 
-**TL;DR:** Approaching the testing world could be inefficient and not satisfactory. You start writing some unit tests but you are left with a lot of doubts. UI Testing allows you to start with a high confidence since the very first day.
+**简而言之：** 以金字塔顶层作为测试入手可能效率低下且不令人满意。你开始编写一些单元测试，但仍然存在许多疑虑。通过 UI 测试，你可以从第一天就以较高的信心开始测试。
 
-**Otherwise:** The wrong approach could condition the way you think about testing and could leave you with the false idea of testing the right way when the truth is you're testing nothing.
+**否则：** 错误的方法可能会影响你对测试的思考方式，使你产生错误的测试方式的错误观念，而实际上你并没有进行有效的测试。
 
-🔗 [**Read More: Approach the testing pyramid from the top!**](/sections/beginners/top-to-bottom-approach.md)
+🔗 [**阅读更多：从金字塔顶层入手测试！**](/sections/beginners/top-to-bottom-approach.zh.md)
 
 <br/><br/>
 
