@@ -35,7 +35,7 @@
 2. [通用最佳实践 (6)](#2-通用最佳实践)
 3. [服务通信测试 (3)](#3-服务通信测试)
 4. [初学者 (1)](#4-初学者)
-5. [通用测试的优势 (1)](#5-generic-testing-perks)
+5. [通用测试的好处 (1)](#5-通用测试的好处)
 6. [工具 (2)](#6-tools)
 7. [高级 (5)](#7-advanced)
 8. [真实案例 (2)](#8-real-life-examples)
@@ -43,7 +43,7 @@
 
 <br/><br/>
 
-# 1-测试策略
+# `1-测试策略`
 
 ## ![✔] 1.1 组件测试 vs 集成测试 vs E2E 测试
 
@@ -95,7 +95,7 @@
 
 <br/><br/>
 
-# 2-通用最佳实践
+# `2-通用最佳实践`
 
 ## ![✔] 2.1 等待，不要休眠
 
@@ -155,7 +155,7 @@
 
 <br/><br/>
 
-# 3-服务通信测试
+# `3-服务通信测试`
 
 ## ![✔] 3.1 检验请求和响应负载
 
@@ -185,7 +185,7 @@
 
 <br/><br/>
 
-# 4-初学者
+# `4-初学者`
 
 ## ![✔] 4.1 从金字塔顶层入手测试
 
@@ -197,15 +197,15 @@
 
 <br/><br/>
 
-# `5. Generic testing perks`
+# `5-通用测试的好处`
 
-## ![✔] 5.1 Software tests as a documentation tool
+## ![✔] 5.1 将软件测试视为文档工具
 
-**TL;DR:** Tests are a good way to have a concise, code-coupled, and updated documentation. Good storytelling test descriptions could make the comprehension of a codebase or a new project very simple.
+**简而言之：** 测试是一种简洁、与代码紧密关联且不断更新的文档方式。通过具有良好叙述的测试描述，可以使对代码库或新项目的理解变得非常简单。
 
-**Otherwise:** You rely on the code documentation or, worse, on the readability of the code to comprehend that the code does.
+**否则：** 如果不依赖于代码文档，甚至更糟糕的是依赖于代码的可读性来理解代码的作用。
 
-🔗 [**Read More: Software tests as a documentation tool**](/sections/testing-perks/tests-as-documentation.md)
+🔗 [**阅读更多：将软件测试视为文档工具**](/sections/testing-perks/tests-as-documentation.zh.md)
 
 <br/><br/>
 
