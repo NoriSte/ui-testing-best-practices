@@ -156,7 +156,7 @@ cy.intercept('some-xhr-call-that-happens-upon-landing', { fixture: 'agents.json'
 
 至少有两个 Cypress 插件可以用于这个目的 [1](https://github.com/Nanciee/cypress-autorecord) 和 [2](https://github.com/scottschafer/cypressautomocker)。
 
-如果这些插件不适用于您，您可以轻松使用以下三个函数创建自己的记录和回放工具。
+如果这些插件不适用于你，你可以轻松使用以下三个函数创建自己的记录和回放工具。
 
 ```javascript
 function stubRecorder(pathToJson) {
@@ -239,7 +239,7 @@ UI 集成测试是 UI 测试的核心。它们在真实浏览器中运行整个�
 
 ## 填充数据库
 
-Cypress [`cy.task()`](https://docs.cypress.io/api/commands/task.html#Requirements) 功能非常强大。实际上，它允许您在 Cypress 上下文中使用 Node.js。这可以是任何内容，从 Node.js 代码到使用 npm 包来操纵数据库。如果您的应用程序使用 Node.js，您可以重用应用程序代码来帮助设置和操纵测试数据。
+Cypress [`cy.task()`](https://docs.cypress.io/api/commands/task.html#Requirements) 功能非常强大。实际上，它允许你在 Cypress 上下文中使用 Node.js。这可以是任何内容，从 Node.js 代码到使用 npm 包来操纵数据库。如果你的应用程序使用 Node.js，你可以重用应用程序代码来帮助设置和操纵测试数据。
 
 关于这个主题有一个 [Cypress 示例](https://github.com/cypress-io/cypress-example-recipes/tree/master/examples/server-communication__seeding-database-in-node)，我们将以此作为参考结束。
 

@@ -36,7 +36,7 @@
 3. [服务通信测试 (3)](#3-服务通信测试)
 4. [初学者 (1)](#4-初学者)
 5. [通用测试的好处 (1)](#5-通用测试的好处)
-6. [工具 (2)](#6-tools)
+6. [工具 (2)](#6-工具)
 7. [高级 (5)](#7-advanced)
 8. [真实案例 (2)](#8-real-life-examples)
 9. [过时章节 (3)](#9-obsolete-chapters)
@@ -57,9 +57,9 @@
 
 ## ![✔] 1.2 在开始阶段，避免追求完美主义
 
-**简而言之：** 软件测试是一个令人惊叹的话题，但有限的经验可能使您陷入与新敌人的斗争，而不是依赖新盟友。如果可能的话，在 UI 测试旅程的初期避免测试每个复杂的用户流程。您的第一个测试越简单，您越早获得优势。
+**简而言之：** 软件测试是一个令人惊叹的话题，但有限的经验可能使你陷入与新敌人的斗争，而不是依赖新盟友。如果可能的话，在 UI 测试旅程的初期避免测试每个复杂的用户流程。你的第一个测试越简单，你越早获得优势。
 
-**否则：** 您将创建复杂且难以调试的测试。这种类型的测试会拖慢您的工作，而且毫无用处。
+**否则：** 你将创建复杂且难以调试的测试。这种类型的测试会拖慢你的工作，而且毫无用处。
 
 🔗 [**阅读更多：在开始阶段，避免追求完美主义**](/sections/testing-strategy/avoid-perfectionism.zh.md)
 
@@ -99,7 +99,7 @@
 
 ## ![✔] 2.1 等待，不要休眠
 
-**简而言之：** 在测试用户界面时，您要定义应用程序必须经过的关键点。达到这些关键点是一个异步的过程，因为几乎百分之百的情况下，用户界面不会同步更新。这些关键点被称为**确定性事件**，即您知道必须发生的事情。您需要等待这些事件以确保您的测试更加健壮。
+**简而言之：** 在测试用户界面时，你要定义应用程序必须经过的关键点。达到这些关键点是一个异步的过程，因为几乎百分之百的情况下，用户界面不会同步更新。这些关键点被称为**确定性事件**，即你知道必须发生的事情。你需要等待这些事件以确保你的测试更加健壮。
 
 **否则：** 让测试休眠会使测试变得缓慢而脆弱，这是用户界面测试中最常见且最严重的错误之一。
 
@@ -109,9 +109,9 @@
 
 ## ![✔] 2.2 明智地为测试文件命名
 
-**简而言之：** 很多时候，您可能只需要运行某一类测试，如果您在为测试文件命名时遵循一种常见的模式，那将非常方便。
+**简而言之：** 很多时候，你可能只需要运行某一类测试，如果你在为测试文件命名时遵循一种常见的模式，那将非常方便。
 
-**否则：** 您可能需要运行一个冗长的测试套件，而实际上只是为了运行其中的一些测试。
+**否则：** 你可能需要运行一个冗长的测试套件，而实际上只是为了运行其中的一些测试。
 
 🔗 [**阅读更多：明智地为测试文件命名**](/sections/generic-best-practices/name-test-files-wisely.zh.md)
 
@@ -119,9 +119,9 @@
 
 ## ![✔] 2.3 UI 测试调试最佳实践
 
-**简而言之：** 调试 UI 测试可能非常困难，特别是当您使用通用的浏览器自动化工具时。以下是调试过程中的一些基本规则。
+**简而言之：** 调试 UI 测试可能非常困难，特别是当你使用通用的浏览器自动化工具时。以下是调试过程中的一些基本规则。
 
-**否则：** 您将会花费大量时间，而无法应对 UI 测试的指数复杂性。
+**否则：** 你将会花费大量时间，而无法应对 UI 测试的指数复杂性。
 
 🔗 [**阅读更多：UI 测试调试最佳实践**](/sections/generic-best-practices/ui-tests-debugging-best-practices.zh.md)
 
@@ -135,13 +135,13 @@
 
 <br/>
 
-## ![✔] 2.5 将您的测试工具用作主要的开发工具
+## ![✔] 2.5 将你的测试工具用作主要的开发工具
 
 **简而言之：** 利用测试工具来避免手动测试是提高工作效率的最大改进之一。测试工具比你更快，而且大多数现代工具都包含一些 UI 工具，使得将其用作开发工具变得更加容易。
 
 **否则：** 以传统方式编写应用程序，花费大量时间手动与 UI 进行交互。
 
-🔗 [**阅读更多：将您的测试工具用作主要的开发工具**](/sections/generic-best-practices/use-your-testing-tool-as-your-primary-development-tool.zh.md)
+🔗 [**阅读更多：将你的测试工具用作主要的开发工具**](/sections/generic-best-practices/use-your-testing-tool-as-your-primary-development-tool.zh.md)
 
 <br/>
 
@@ -161,7 +161,7 @@
 
 **简而言之：** UI 与后端持续通信，通常每次通信都至关重要。不良的请求或响应可能导致不一致的数据和不一致的 UI 状态。请记住，所有业务都围绕数据构建，而每次 UI 失败都会影响用户体验。因此，必须仔细检查每个 XHR 请求。XHR 请求的检查还能使测试更为健壮，正确的 XHR 管理和测试是 UI 测试中最重要的方面之一。
 
-**否则：** 您可能会错过一些相关的通信不一致性，当您需要调试时，由于测试不会直接指引您找到问题，您将浪费大量时间。
+**否则：** 你可能会错过一些相关的通信不一致性，当你需要调试时，由于测试不会直接指引你找到问题，你将浪费大量时间。
 
 🔗 [**阅读更多：检验请求和响应负载**](/sections/server-communication-testing/test-request-and-response-payload.zh.md)
 
@@ -169,17 +169,17 @@
 
 ## ![✔] 3.2 审查服务器架构
 
-**简而言之：** 前端应用很多时候会因后端的变化而出现故障。请向后端同事请求允许您导出描述后端实体和与前端通信的每个架构的所有模式。一些示例可能包括 GraphQL 架构、TypeScript 类型、ElasticSearch 映射、Pact 合同、Postman 配置等，更一般地说，一切都可以提醒您后端发生了变化。每次后端更改都可能影响前端，您必须尽早发现。
+**简而言之：** 前端应用很多时候会因后端的变化而出现故障。请向后端同事请求允许你导出描述后端实体和与前端通信的每个架构的所有模式。一些示例可能包括 GraphQL 架构、TypeScript 类型、ElasticSearch 映射、Pact 合同、Postman 配置等，更一般地说，一切都可以提醒你后端发生了变化。每次后端更改都可能影响前端，你必须尽早发现。
 
-**否则：** 您可能会错过一些后端更改，导致前端应用不经意间崩溃。
+**否则：** 你可能会错过一些后端更改，导致前端应用不经意间崩溃。
 
 <br/>
 
 ## ![✔] 3.3 测试监控
 
-**简而言之：** 测试套件定期启动的次数越多，您对一切都按预期工作的信心就越足。UI 测试应该基于用户的视角，但有许多小测试可以为您提供大量即时反馈，而无需调试用户流程。监控那些看似微不足道的技术细节有助于预防更大的测试失败。
+**简而言之：** 测试套件定期启动的次数越多，你对一切都按预期工作的信心就越足。UI 测试应该基于用户的视角，但有许多小测试可以为你提供大量即时反馈，而无需调试用户流程。监控那些看似微不足道的技术细节有助于预防更大的测试失败。
 
-**否则：** 您会将技术细节测试与用户导向的测试混为一谈。
+**否则：** 你会将技术细节测试与用户导向的测试混为一谈。
 
 🔗 [**阅读更多：测试监控**](/sections/server-communication-testing/monitoring-tests.zh.md)
 
@@ -209,25 +209,25 @@
 
 <br/><br/>
 
-# `6. Tools`
+# `6-工具`
 
-## ![✔] 6.1 Some UI testing problems and the Cypress way
+## ![✔] 6.1 一些 UI 测试问题及 Cypress 的解决方案
 
-**TL;DR:** Why is testing a web application so hard? Why generic browser automation tools do not fit well the UI/E2E testing needs? Why does Cypress outstand?
+**简而言之：** 为什么测试 Web 应用这么难？通用的浏览器自动化工具为什么不太适用于 UI/E2E 测试的需求？Cypress 为什么如此出色？
 
-**Otherwise:** A generic features comparison is not enough to understand what are the main UI Testing pains and how Cypress removes them.
+**否则：** 仅仅通过通用功能比较无法理解 UI 测试的主要问题，以及 Cypress 是如何解决它们的。
 
-🔗 [**Read More: Some UI testing problems and the Cypress way**](/sections/tools/ui-testing-problems-cypress.md)
+🔗 [**阅读更多：一些 UI 测试问题及 Cypress 的解决方案**](/sections/tools/ui-testing-problems-cypress.zh.md)
 
 <br/><br/>
 
-## ![✔] 6.2 Visual Regression Testing
+## ![✔] 6.2 视觉回归测试
 
-**TL;DR:** Visual regression tests hard and why we should rely on premium services.
+**简而言之：** 视觉回归测试为什么如此困难，以及为什么我们应该依赖高级服务。
 
-**Otherwise:** Another continuous chore for regressions we do not care about. Possibility of missing out visual differences.
+**否则：** 又是一个我们不在意的回归测试工作。有可能会漏掉视觉差异。
 
-🔗 [**Read More: Visual Regression Testing**](/sections/tools/visual-regression-testing.md)
+🔗 [**阅读更多：视觉回归测试**](/sections/tools/visual-regression-testing.zh.md)
 
 <br/><br/>
 
