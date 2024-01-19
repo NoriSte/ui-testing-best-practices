@@ -37,7 +37,7 @@
 4. [初学者 (1)](#4-初学者)
 5. [通用测试的好处 (1)](#5-通用测试的好处)
 6. [工具 (2)](#6-工具)
-7. [高级 (5)](#7-advanced)
+7. [进阶 (5)](#7-进阶)
 8. [真实案例 (2)](#8-real-life-examples)
 9. [过时章节 (3)](#9-obsolete-chapters)
 
@@ -231,46 +231,48 @@
 
 <br/><br/>
 
-# `7. Advanced`
+# `7-进阶`
 
-## ![✔] 7.1 Test States
+## ![✔] 7.1 测试状态
 
-**TL;DR:** Tests should be repeatable, modular and should handle their own state setup. UI Tests should not be repeated in order to achieve state for another test.
+**简而言之：** 测试应该是可重复的、模块化的，并且应该处理自身的状态设置。为了实现其他测试的状态，不应重复执行 UI 测试。
 
-🔗 [**Read More: Test States**](./sections/advanced/test-states.md)
-
-<br/>
-
-## ![✔] 7.2 Test Flake
-
-**TL;DR:** Tests must produce consistent results every time. Repeatable pipeline execution results are the quorum.
-If a test cannot produce reliable results, it reduces confidence in the tests and requires maintenance which reduces all value. In these cases it is best to manually test the functionality.
-
-🔗 [**Read More: Test Flake**](./sections/advanced/test-flake.md)
+🔗 [**阅读更多：测试状态**](./sections/advanced/test-states.zh.md)
 
 <br/>
 
-## ![✔] 7.3 Combinatorial Testing
+## ![✔] 7.2 不稳定的测试
 
-**TL;DR:** Most software bugs and failures are caused by one or two parameters. Testing parameter combinations can provide more efficient fault detection than conventional methods. Combinatorial Testing is a proven method for more effective software testing at a lower cost.
+**简而言之：** 每次测试应产生一致的结果。可重复的流水线执行结果是选举的基准。
+如果测试无法产生可靠的结果，它会降低对测试的信心并需要维护，从而降低所有价值。在这些情况下，最好手动测试功能。
 
-🔗 [**Read More: Combinatorial Testing**](./sections/advanced/combinatorial-testing.md)
-
-<br/>
-
-## ![✔] 7.4 Performance Testing
-
-**TL;DR:** Although this is a vast topic, Performance testing from a web development perspective can be simplified with modern tools and understanding. It is highly effective in ensuring user experience, satisfying non-functional requirements (NFRS), and detecting possible system-flake early on.
-
-🔗 [**Read More: Performance Testing**](./sections/advanced/performance-testing.md)
+🔗 [**阅读更多：不稳定的测试**](./sections/advanced/test-flake.zh.md)
 
 <br/>
 
-## ![✔] 7.5 Email Testing
+## ![✔] 7.3 组合测试
 
-**TL;DR:** Email testing is [critical for business success](https://www.industrialmarketer.com/why-email-testing-is-critical-for-email-marketing-success/). Modern services not only allow automated email testing but also provide a stateless, scalable solution while testing SaaS applications.
+**简而言之：** 大多数软件错误和故障是由一个或两个参数引起的。测试参数组合可以比传统方法更有效地检测故障。组合测试是一种经过验证的、成本更低的更有效的软件测试方法。
 
-🔗 [**Read More: Email Testing**](./sections/advanced/email-testing.md)
+🔗 [**阅读更多：组合测试**](./sections/advanced/combinatorial-testing.zh.md)
+
+<br/>
+
+## ![✔] 7.4 性能测试
+
+**简而言之：** 尽管这是一个庞大的主题，但从 Web 开发的角度来看，性能测试可以通过现代工具和理解来简化。它在确保用户体验、满足非功能性需求（NFRS）以及及早检测可能的系统故障方面非常有效。
+
+🔗 [**阅读更多：性能测试**](./sections/advanced/performance-testing.zh.md)
+
+<br/>
+
+## ![✔] 7.5 电子邮件测试
+
+**简而言之：** 电子邮件测试对于业务成功至关重要。现代服务不仅允许自动化的电子邮件测试，而且在测试 SaaS 应用程序时还提供了一种无状态、可扩展的解决方案。
+
+🔗 [**阅读更多：电子邮件测试**](./sections/advanced/email-testing.zh.md)
+
+---
 
 <br/><br/>
 
