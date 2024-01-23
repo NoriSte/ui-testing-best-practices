@@ -27,7 +27,7 @@
 
 <br/>
 
-###### 由我们的[指导委员会]（#steering-committee）和[合作者]（#collaborators）构建和维护
+###### 由我们的[指导委员会](#指导委员会)和[合作者](#collaborators)构建和维护
 
 ## 目录
 
@@ -332,9 +332,9 @@
 
 <br/> <br/>
 
-## Steering Committee
+## 指导委员会
 
-Meet the steering committee members - the people who work together to provide guidance and future direction to the project.
+了解指导委员会成员 - 一起为项目提供指导和未来方向的人们。
 
 <div>
 <img align="left" width="100" height="100" src="assets/images/members/noriste.png">
@@ -346,7 +346,7 @@ Meet the steering committee members - the people who work together to provide gu
 
 </img></a>
 
-Passionate, positive-minded / Front-end Tech Leader (platform) [Hasura](https://hasura.io/) / Speaker / Instructor / Remote worker.
+充满激情，积极乐观 / 前端技术领导者（平台）[Hasura](https://hasura.io/) / 演讲者 / 讲师 / 远程工作者。
 
 <br/>
 <br/>
@@ -363,27 +363,27 @@ Passionate, positive-minded / Front-end Tech Leader (platform) [Hasura](https://
 
 </img></a>
 
-Tech enthusiast in love with testing, development, devops, web and cloud. Staff eng / Test architect at [Extend](https://www.extend.com/).
+热衷于技术，热爱测试、开发、DevOps、Web 和云。[Extend](https://www.extend.com/) 的技术专家 / 测试架构师。
 
 <br/>
 <br/>
 
 </div>
 
-## Thank You Notes
+## 感谢信
 
-We appreciate any contribution, from a single word fix to a new best practice. Below is a list of everyone who contributed to this project. A 🌻 marks a successful pull request and a ⭐ marks an approved new best practice.
+我们感激任何贡献，无论是单个词汇的修复还是新的最佳实践。下面是为这个项目做出贡献的所有人的列表。🌻标记着成功的拉取请求，⭐标记着被批准的新最佳实践。
 
 ### Stars
 
-An approved new best practice Be the first to collect a ⭐, contribute to this repository 😁
+一个被批准的新最佳实践，成为第一个收到⭐的人，为这个仓库做出贡献 😁
 
 ⭐ [Murat Ozcan](https://github.com/muratkeremozcan)
 ⭐ [Dmitriy Tishin](https://github.com/daedalius)
 
-### Flowers
+### 鲜花
 
-A successfull PR gives you a 🌻, be the first to collect it.
+一个成功的 PR 会给你一朵 🌻，成为第一个收到它的人。
 
 🌻 [Anoop Kumar Gupta](https://github.com/anoop-gupt)
 🌻 [Ferdinando Santacroce](https://github.com/jesuswasrasta)
@@ -394,6 +394,6 @@ A successfull PR gives you a 🌻, be the first to collect it.
 
 <br/><br/><br/>
 
-This repository is inspired by the [nodebestpractices](https://github.com/i0natan/nodebestpractices) one, thank you [Yoni](https://github.com/i0natan) and the whole [steering team](https://github.com/i0natan/nodebestpractices#steering-committee) to keep it updated and to allow the creation of this repository.
+这个仓库受到了 [nodebestpractices](https://github.com/i0natan/nodebestpractices) 仓库的启发，感谢 [Yoni](https://github.com/i0natan) 和整个 [指导委员会](https://github.com/i0natan/nodebestpractices#steering-committee) 的努力，保持其更新并允许创建这个仓库。
 
 <br/><br/><br/>
