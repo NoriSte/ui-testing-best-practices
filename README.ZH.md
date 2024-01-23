@@ -39,7 +39,7 @@
 6. [工具 (2)](#6-工具)
 7. [进阶 (5)](#7-进阶)
 8. [真实案例 (2)](#8-真实案例)
-9. [过时章节 (3)](#9-obsolete-chapters)
+9. [过时章节 (3)](#9-过时章节)
 
 <br/><br/>
 
@@ -298,37 +298,37 @@
 
 <br/> <br/>
 
-# `9. Obsolete chapters`
+# `9-过时章节`
 
-## Unit Testing React components with Cypress
+## 使用 Cypress 进行 React 组件的单元测试
 
-*This section is now marked as obsolete because it refers to a very old version of Cypress (that now fully supports component tests).*
+*此部分现已标记为过时，因为它涉及到一个非常旧的 Cypress 版本（现在已完全支持组件测试）。
 
-**TL;DR:** Cypress v4.5.0 release allowed Unit Testing React components, an external tool like Storybook is not necessary anymore to test isolated components.
+**简而言之：** Cypress v4.5.0 发布允许对 React 组件进行单元测试，不再需要类似 Storybook 的外部工具来测试孤立的组件。
 
-🔗 [**Read More: Unit Testing React components with Cypress.**](/sections/tools/cypress-react-component-test.md)
+🔗 [**阅读更多：使用 Cypress 进行 React 组件的单元测试**](/sections/tools/cypress-react-component-test.zh.md)
 
 <br/>
 
-## [@daedalius](https://github.com/daedalius)'s approach: Exposing components from Storybook separating stories from tests
+## [@daedalius](https://github.com/daedalius) 的方法：从 Storybook 中公开组件，将故事与测试分离
 
-*This section is now marked as obsolete because it refers to a very old version of Cypress and Storybook (either of them now fully support component tests).*
+*此部分现已标记为过时，因为它涉及到一个非常旧的 Cypress 和 Storybook 版本（现在它们都完全支持组件测试）。
 
-**TL;DR:** You may expose the component reference from Storybook Story to test it whatever you wish in Cypress without breaking testing logic into pieces.
+**简而言之：** 你可以从 Storybook 故事中公开组件引用，以在 Cypress 中测试任何你希望测试的内容，而不会将测试逻辑分解成多个部分。
 
-**Otherwise:** Splitted test logic and test data will make it difficult to read and support.
+**反之：** 将测试逻辑和测试数据拆分开会使其难以阅读和维护。
 
-🔗 [**Read More: Cypress + Storybook. Keeping test scenario, data and component rendering in one place.**](/sections/tools/cypress-and-storybook-exposing-component-from-story.md)
+🔗 [**阅读更多：Cypress + Storybook。保持测试场景、数据和组件渲染在一个地方。**](/sections/tools/cypress-and-storybook-exposing-component-from-story.zh.md)
 
-## [@NoriSte](https://github.com/NoriSte)'s approach: Testing a component with Cypress and Storybook
+## [@NoriSte](https://github.com/NoriSte) 的方法：使用 Cypress 和 Storybook 进行组件测试
 
-*This section is now marked as obsolete because it refers to a very old version of Cypress and Storybook (either of them now fully support component tests).*
+*此部分现已标记为过时，因为它涉及到一个非常旧的 Cypress 和 Storybook 版本（现在它们都完全支持组件测试）。
 
-**TL;DR:** Components ar the building blocks of your app, testing them in isolation is important to discover, as soon as possible, iof there is something wrong with them.
+**简而言之：** 组件是你的应用程序的构建块，在孤立状态下测试它们对于尽早发现问题非常重要。
 
-**Otherwise:** UI Tests without lower-level tests do not allow you to understand the source of the problem.
+**反之：** 没有底层测试的 UI 测试无法让你了解问题的根源。
 
-🔗 [**Read More: Testing a component with Cypress and Storybook**](/sections/tools/cypress-and-storybook.md)
+🔗 [**阅读更多：使用 Cypress 和 Storybook 进行组件测试**](/sections/tools/cypress-and-storybook.zh.md)
 
 <br/> <br/>
 
