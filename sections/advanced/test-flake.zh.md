@@ -104,7 +104,6 @@ it('allows user to login', { // can also be in a context or describe block
 ... 我们如何检测系统存在的更深层次问题，这可能表明存在*不稳定的系统*？以下是团队[Cypress 仪表板](https://www.cypress.io/dashboard/)上的一个示例快照：
 
 >*“在周末的 40 次执行中，它以 10% 的错误率失败... 我们运行了测试套件 40 次，在其中的一次执行中看到该规范重试了 2 次，直到通过...”*
-![ ](../../assets/images/test-retry-pipeline.PNG)
 
 *请注意：相机图标表示一些测试失败，因为 Cypress 在失败时会拍摄视频和截图。*
 
