@@ -105,6 +105,8 @@ it('allows user to login', { // can also be in a context or describe block
 
 >*“在周末的 40 次执行中，它以 10% 的错误率失败... 我们运行了测试套件 40 次，在其中的一次执行中看到该规范重试了 2 次，直到通过...”*
 
+![ ](/assets/images/test-retry-pipeline.png)
+
 *请注意：相机图标表示一些测试失败，因为 Cypress 在失败时会拍摄视频和截图。*
 
 在这些情况下，可以通过每晚或周末的 [cron 任务](https://crontab.guru/#0_1-23_*_*_6-7) 进行一致性测试，作为更深层次系统问题的初始指标。这些通常是那些容易泄漏到生产环境中、在实际使用中被发现并具有昂贵后果的模糊缺陷。
