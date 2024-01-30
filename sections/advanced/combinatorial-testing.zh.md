@@ -37,15 +37,15 @@ Model POquestion
    # customer = 5 => features = A || features = B || features = C || features = D || features = E #
 ```
 
-Paste the script in here to generate results [here](http://foselab.unibg.it/ctwedge/).
+在这里粘贴脚本以生成结果 [这里](http://foselab.unibg.it/ctwedge/)。
 
-The goal is to test 2-way (or more) interactions between parameters. When you have only 2 parameters, there is not much profit, because it is exhaustive.
+测试的目标是检验参数之间的双向（或更多）相互作用。当只有两个参数时，收益并不太明显，因为这是一种穷举的方法。
 
-If you have more than 2 parameters, 2-way interaction coverage between them will guarantee to find 60-99% of all possible defects that can arise from that area. 3-way 90%, 4-way 95% , 5-way 97%, 6-way guarantees 100%.
+如果参数数量超过两个，对它们之间的双向交互进行覆盖将确保找到该领域可能存在的 60-99% 的所有潜在缺陷。三向交互为 90%，四向为 95%，五向为 97%，六向为 100%。
 
-![Combinatorial testing graph](../../assets/images/combinatorial-testing/ct-graph.PNG)
+![组合测试图](../../assets/images/combinatorial-testing/ct-graph.PNG)
 
-In this example you would profit from adding another *parameter*. Let us name it `configuration` and assume 5 possible configurations / *parameter values*. This would make the exhaustive suite of 125 tests.
+在这个例子中，通过添加另一个*参数*，我们称之为 `configuration`，并假设有 5 种可能的配置 / *参数值*。这将生成一个包含 125 个测试的详尽套件。
 
 ```Text
 Model POquestion
