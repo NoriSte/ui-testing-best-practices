@@ -47,7 +47,7 @@ const fillFormAndClick = ({ username, password }) => { .. };
 
 // This is an UI integration test with server stubbing.
 // Remember to write a few E2E tests and a lot of integration ones
-// @see https://github.com/NoriSte/ui-testing-best-practices/blob/master/sections/testing-strategy/component-vs-integration-vs-e2e-testing.md#ui-integration-tests
+// @see https://github.com/NoriSte/ui-testing-best-practices/blob/master/sections/testing-strategy/component-vs-integration-vs-e2e-testing.zh.md#ui-integration-tests
 it("Login: front-end integration tests", () => {
 
   // A route that intercepts / sniffs every POST request that goes to the authentication URL.
