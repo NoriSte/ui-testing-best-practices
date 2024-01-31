@@ -1,3 +1,9 @@
+<!-- markdownlint-disable MD041 -->
+<!-- markdownlint-disable MD033 -->
+<div align="right"><strong><a href="./README.ZH.md">🇨🇳 中文 (Chinese version)</a></strong>  | <strong>🇬🇧 English version</strong></div>
+<!-- markdownlint-disable MD041 -->
+<!-- markdownlint-disable MD033 -->
+
 [✔]: assets/images/checkbox-small-blue.png
 
 # UI Testing Best Practices
