@@ -168,7 +168,7 @@ describe('VirtualList', () => {
 
 ### 回调测试
 
-将所有测试从[上一章](./cypress-and-storybook.md)迁移过来相当容易，缺失的是“选择测试”的回调测试部分。
+将所有测试从[上一章](./cypress-and-storybook.zh.md)迁移过来相当容易，缺失的是“选择测试”的回调测试部分。
 
 创建一个名为 _WithSelectionManagement_ 的包装组件，它渲染 _VirtualList_ 并管理项的选择是相当容易的，我们可以将我们的存根传递给它并对其进行断言。
 
