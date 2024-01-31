@@ -1,6 +1,6 @@
 <!-- markdownlint-disable MD041 -->
 <!-- markdownlint-disable MD033 -->
-<div align="right"><strong>🇨🇳 中文 (Chinese version)</a></strong>  | <strong><a href="./README.md">🇬🇧 English version</strong></div>
+<div align="right"><strong><a href="./README.md">🇬🇧 English version</a></strong>  | <strong>🇨🇳 中文 (Chinese version)</strong></div>
 <!-- markdownlint-disable MD041 -->
 <!-- markdownlint-disable MD033 -->
 
