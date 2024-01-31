@@ -4,7 +4,7 @@
 
 ## 一段简要说明
 
-UI tests with a stubbed server are [highly reliable and faster](../testing-strategy/component-vs-integration-vs-e2e-testing.zh==.md#ui-integration-tests)<!--TODO: check that the deeplinkl works--> in comparison to full E2E tests.
+UI tests with a stubbed server are [highly reliable and faster](../testing-strategy/component-vs-integration-vs-e2e-testing.zh.md#ui-integration-tests)<!--TODO: check that the deeplinkl works--> in comparison to full E2E tests.
 
 Full E2E tests still provide the highest possible confidence, but at a high cost: being brittle, potentially unreliable, and slow.
 
