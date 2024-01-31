@@ -318,7 +318,7 @@ cy.get('[data-test="Actions list"]').within(() => { // <-- reduce the scope
 
 ## 相关章节
 
-- 🔗 [从晦涩难懂的 React 组件测试到简单、易读的版本](/sections//real-life-examples/from-unreadable-react-component-tests-to-simple-ones.md)
+- 🔗 [从晦涩难懂的 React 组件测试到简单、易读的版本](/sections//real-life-examples/from-unreadable-react-component-tests-to-simple-ones.zh.md)
 
 <br/><br/>
 
