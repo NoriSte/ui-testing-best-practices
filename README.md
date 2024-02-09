@@ -21,6 +21,7 @@
 <br/>
 
 **Follow us on Twitter!**:
+
 - [**@NoriSte**](https://twitter.com/NoriSte/)
 - [**@MuratKeremOzcan**](https://twitter.com/MuratKeremOzcan/)
 
@@ -155,10 +156,19 @@ some UI utilities that make easy to use them as a development tool.
 
 **TL;DR:** Tests should be written with readability and debuggability in mind. Abstraction may be good in some instances, but it always incurs a cost in debuggability and therefore sometimes may not be worth it. This is especially important for UI tests; consequent of the complex stack, it can get harder to understand the real source of failures. Reducing abstraction for the sake of easier debugging is key for future proofing the test code.
 
-
 **Otherwise:** There is a balance between abstraction and debuggability; the higher the abstraction, the harder it is going to be to debug the tests in the future.
 
 🔗 [**Read More: Keep abstraction low to ease debugging the tests**](/sections/generic-best-practices/test-code-with-debugging-in-mind.md)
+
+<br/><br/>
+
+## ![✔] 2.7 CI CD strategies for UI apps and deployed services
+
+**TL;DR:** CI/CD is the heartbeat of modern DevOps practices. It bridges the gap between development and operations teams, fostering a culture of seamless collaboration. This synergy is underpinned by a fail-fast mentality, where errors are detected and corrected promptly during the development process, rather than after deployment. There are similar benefits to be gained from applying CI/CD to UI testing and to deployed services (or deployed UI apps).
+
+**Otherwise:** Without CI/CD, software development becomes a cumbersome, time-consuming endeavor fraught with bottlenecks and pitfalls. This traditional, siloed approach to software development and deployment—known as the waterfall model—often leads to 'integration hell', where merging changes from different team members becomes a nightmare, causing delays, and potentially leading to flawed final products..
+
+🔗 [**Read More: Keep abstraction low to ease debugging the tests**](/sections/generic-best-practices/cicd-strategies-for-ui-apps-and-deployed-services.md)
 
 <br/><br/>
 
@@ -363,7 +373,6 @@ Passionate, positive-minded / Front-end Tech Leader (platform) [Hasura](https://
 
 <img align="left" width="100" height="100" src="assets/images/members/muratkeremozcan.png">
 
-
 [Murat Ozcan](https://github.com/NoriSte)
 <a href="https://twitter.com/MuratKeremOzcan"><img src="assets/images/twitter-s.png" width="16" height="16"></img></a>
 <a href="https://github.com/muratkeremozcan"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/images/github-dark.png"><img alt="GitHub" src="assets/images/github-light.png" width="16" height="16"></picture>
@@ -377,7 +386,6 @@ Tech enthusiast in love with testing, development, devops, web and cloud. Staff 
 <br/>
 
 </div>
-
 
 ## Thank You Notes
 
