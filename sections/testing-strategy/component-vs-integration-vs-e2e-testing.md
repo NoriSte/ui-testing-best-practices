@@ -19,7 +19,7 @@ Speaking about UI Testing (remember that we are speaking about the UI only, not 
   - **the callback tests**: a small React container app renders the component passing it some callbacks. Then, the user interactions are simulated and passed the callback is expected to be called. [React Testing Library](https://testing-library.com/docs/react-testing-library/) is the standard library of choice for this kind of tests
   - **the interaction/state tests**: some interactions with a component expect correct state management. This kind of test must be written from the consumer point of view, not from the inner one (ex. the value of the input field when the user fills it, not the inner component state). An interaction/state test should assert the input field value after the keyboard events triggered.
   
-Alternatively, Cypress came out with its own solution in order to launch component tests iside it, take a look at the [Unit Testing React components with Cypress](../tools/cypress-react-component-test.md) chapter.
+Alternatively, Cypress came out with its own solution in order to launch component tests inside it, take a look at the [Unit Testing React components with Cypress](../tools/cypress-react-component-test.md) chapter.
 
 
 - <strong id="ui-integration-tests">UI integration tests</strong>: they run the whole app in a real browser **without hitting a real server**. These tests are the ace in the hole of every front-end developer. They are blazing fast and less exposed to random failures or false negatives.
