@@ -393,7 +393,7 @@ An approved new best practice Be the first to collect a ⭐, contribute to this 
 
 ### Flowers
 
-A successfull PR gives you a 🌻, be the first to collect it.
+A successful PR gives you a 🌻, be the first to collect it.
 
 🌻 [Anoop Kumar Gupta](https://github.com/anoop-gupt)
 🌻 [Ferdinando Santacroce](https://github.com/jesuswasrasta)
