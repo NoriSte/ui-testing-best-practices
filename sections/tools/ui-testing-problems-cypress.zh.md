@@ -1,3 +1,6 @@
+> [!NOTE]
+> 所有现代前端测试工具（Playwright、Storybook、Cypress、TestCafé）都具有类似的功能和 UI 工具，因此相同的内容适用于所有工具，而不仅仅是 Cypress。
+
 # 一些 UI 测试问题及 Cypress 的解决方案
 
 _招募贡献者：你是否是 TestCafé 专家？我希望将“问题”部分与“Cypress 如何解决它们”部分分开，并添加一个专门介绍 TestCafé 如何解决问题的章节！_

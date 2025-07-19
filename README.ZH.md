@@ -217,6 +217,9 @@
 
 **否则：** 仅仅通过通用功能比较无法理解 UI 测试的主要问题，以及 Cypress 是如何解决它们的。
 
+> [!NOTE]
+> 所有现代前端测试工具（Playwright、Storybook、Cypress、TestCafé）都具有类似的功能和 UI 工具，因此相同的内容适用于所有工具，而不仅仅是 Cypress。
+
 🔗 [**阅读更多：一些 UI 测试问题及 Cypress 的解决方案**](/sections/tools/ui-testing-problems-cypress.zh.md)
 
 <br/><br/>

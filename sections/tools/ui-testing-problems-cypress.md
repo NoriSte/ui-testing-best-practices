@@ -1,3 +1,7 @@
+> [!NOTE]
+> All the modern front-end testing tools (Playwright, Storybook, Cypress, TestCafé) all have the similar functionalities and UI tools, so this same contents applies to all of them, not just Cypress.
+
+
 # Some UI testing problems and the Cypress way
 
 _Call for contributors: are you a TestCafé expert? I would like to split the "problems" section from the "how Cypress solves them" one, and add a section dedicated to how TestCafé solves them!_

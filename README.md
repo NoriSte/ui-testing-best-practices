@@ -224,7 +224,12 @@ some UI utilities that make easy to use them as a development tool.
 
 **Otherwise:** A generic features comparison is not enough to understand what are the main UI Testing pains and how Cypress removes them.
 
+> [!NOTE]
+> All the modern front-end testing tools (Playwright, Storybook, Cypress, TestCafé) all have the similar functionalities and UI tools, so this same contents applies to all of them, not just Cypress.
+
 🔗 [**Read More: Some UI testing problems and the Cypress way**](/sections/tools/ui-testing-problems-cypress.md)
+
+
 
 <br/><br/>
 
