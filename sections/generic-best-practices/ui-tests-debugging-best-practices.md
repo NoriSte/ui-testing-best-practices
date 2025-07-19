@@ -94,13 +94,10 @@ Prefer duplication over abstraction. Strive to keep your tests code simple and e
 
 More in general, tests are little scripts that must be two levels of magnitude simpler than the code they test, get them an ally, and not some more complex programs.
 
-## Choose a made-on-purpose tool
+You can dig more about this topic in [Keep abstraction low to ease debugging the tests](/sections/generic-best-practices/test-code-with-debugging-in-mind.md), and [From unreadable React Component Tests to simple, stupid ones](/sections/real-life-examples/from-unreadable-react-component-tests-to-simple-ones.md).
 
-All the above mentioned are valid solutions, but they have one thing in common: **they are workarounds**. Workarounds to the fact that the tool I used for the example, Puppeteer, has not been created for UI Testing, but for generic browser automation, then, with the help of some external utilities and consumed inside a test, Puppeteer could be used for UI Testing. Testing a web-app has different needs and requires different tools compared to just automating actions.
 
-You should consider moving to Cypress or TestCafé if you need to write UI tests because they have been designed to simplify your testing life. How? With a large set of utilities and default behaviors and with a list of first-class solutions that allows you to understand and debug what is happening in the browser. Consider that all the Puppeteer **best practices mentioned** in this chapter... **Are completely useless with Cypress or TestCafé** 😉
 
-The [Some UI testing problems and the Cypress way](../tools/ui-testing-problems-cypress.md) and [Front-end productivity boost: Cypress as your main development browser](./use-your-testing-tool-as-your-primary-development-tool.md) chapters include an overview of Cypress first-class utilities.
 
 <br /><br />
 

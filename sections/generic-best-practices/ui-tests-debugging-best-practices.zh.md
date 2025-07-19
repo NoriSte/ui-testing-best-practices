@@ -106,13 +106,8 @@ await page.evaluate(() => {debugger;});
 
 更一般而言，测试是小型脚本，它们必须比它们测试的代码简单两个数量级，将其视为一个盟友，而不是更复杂的程序。
 
-## 选择专门设计的工具
+您可以在 [保持低抽象度以便于调试测试](/sections/generic-best-practices/test-code-with-debugging-in-mind.zh.md), 和 [从难以理解的 React 组件测试到简单愚蠢的测试](/sections/real-life-examples/from-unreadable-react-component-tests-to-simple-ones.zh.md).
 
-上述提到的解决方案都是有效的，但它们有一个共同点：**它们都是变通方法**。这是因为我在示例中使用的工具 Puppeteer 并非为 UI 测试而创建的，而是为通用浏览器自动化而设计的，然后，通过一些外部工具的帮助，并在测试中使用 Puppeteer，使其可以用于 UI 测试。测试 Web 应用有不同的需求，需要不同的工具，而不仅仅是自动化操作。
-
-如果你需要编写 UI 测试，你应该考虑切换到 Cypress 或 TestCafé，因为它们已经被设计成简化你的测试工作。如何实现的呢？通过一系列实用工具和默认行为，以及一系列一流的解决方案，使你能够理解并调试浏览器中发生的情况。请注意，本章中提到的所有 Puppeteer **最佳实践**... **在 Cypress 或 TestCafé 中完全无用** 😉
-
-[一些 UI 测试问题及 Cypress 方法](../tools/ui-testing-problems-cypress.zh.md) 和 [前端生产力提升：将 Cypress 作为你的主要开发浏览器](./use-your-testing-tool-as-your-primary-development-tool.zh.md) 这两章包括了 Cypress 一流工具的概述。
 
 <br /><br />
 
