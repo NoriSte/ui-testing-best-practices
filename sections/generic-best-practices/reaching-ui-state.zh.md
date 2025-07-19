@@ -243,4 +243,6 @@ Cypress [`cy.task()`](https://docs.cypress.io/api/commands/task.html#Requirement
 
 关于这个主题有一个 [Cypress 示例](https://github.com/cypress-io/cypress-example-recipes/tree/master/examples/server-communication__seeding-database-in-node)，我们将以此作为参考结束。
 
-<br/><br/>
+## 相关章节
+
+- 🔗 [从难以理解的 React 组件测试到简单愚蠢的测试](/sections/real-life-examples/from-unreadable-react-component-tests-to-simple-ones.zh.md)
