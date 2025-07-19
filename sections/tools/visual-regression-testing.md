@@ -20,7 +20,7 @@ Without the AI, we would have to manually accept or reject every petty false neg
 
 **The second selling point of services is how they can address cross viewport and browser concerns with a single test, so that we do not have to repeat the same test with different variants in CI**.
 
-### Cypress examples with Percy and Applitools
+### Example: Cypress examples with Percy and Applitools
 
 > All the code samples can be found in [this repo](https://github.com/muratkeremozcan/react-hooks-in-action-with-cypress) where we have a ReactJS application with visual tests for Percy as well as their Applitool mirrors.
 

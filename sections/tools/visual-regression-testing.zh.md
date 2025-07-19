@@ -22,7 +22,7 @@
 
 **服务的第二大优势在于它们可以通过单个测试解决跨窗口和浏览器的问题，因此我们无需在 CI 中重复执行相同的测试以涵盖不同的变体**。
 
-## 使用 Percy 和 Applitools 的 Cypress 示例
+## 例子：使用 Percy 和 Applitools 的 Cypress 示例
 
 > 所有的代码示例都可以在[这个仓库](https://github.com/muratkeremozcan/react-hooks-in-action-with-cypress)中找到，里面包含一个带有 Percy 以及 Applitools 镜像的 ReactJS 应用程序，用于视觉测试。
 
