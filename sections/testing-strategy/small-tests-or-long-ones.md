@@ -288,6 +288,8 @@ Working with E2E tests is hard. Dealing with real data, real application state t
 
 ## Related chapters
 
+
+- 🔗 [Component vs (UI) Integration vs E2E tests](/sections/testing-strategy/component-vs-integration-vs-e2e-testing.md)
 - 🔗 [Approach the testing pyramid from the top!](/sections/beginners/top-to-bottom-approach.md)
 - 🔗 [Use your testing tool as your primary development tool](/sections/generic-best-practices/use-your-testing-tool-as-your-primary-development-tool.md)
 <br/><br/>
