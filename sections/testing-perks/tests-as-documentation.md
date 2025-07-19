@@ -37,3 +37,11 @@ Please, keep in mind that:
 - UI tests are not the only ones: having more low-level tests for parts of the code that could be hard to be understood is a great way to describe the code expected behaviors.
 
 - comments in the test could help a lot the reader, look at the ["Matching the test's code and test runner's commands" section of the "Keep abstraction low to ease debugging the tests" chapter](../generic-best-practices/test-code-with-debugging-in-mind.md#matching-the-tests-code-and-test-runners-commands).
+
+## Related chapters
+
+- 🔗 [Found a bug? Write the test, then fix it](/sections/testing-strategy/write-test-then-fix-bug.md)
+- 🔗 [Name the test files wisely](/sections/generic-best-practices/name-test-files-wisely.md)
+- 🔗 [Use your testing tool as your primary development tool](/sections/generic-best-practices/use-your-testing-tool-as-your-primary-development-tool.md)
+- 🔗 [Keep abstraction low to ease debugging the tests](/sections/generic-best-practices/test-code-with-debugging-in-mind.md)
+- 🔗 [Test the request and response payloads](/sections/server-communication-testing/test-request-and-response-payload.md)
