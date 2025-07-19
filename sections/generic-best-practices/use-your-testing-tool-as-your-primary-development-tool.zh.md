@@ -30,7 +30,7 @@
 这个工作流程可以很容易地得到改进，如果我们在编写表单的同时编写测试（TDD 开发者已经训练成这样）：
 
 - **编写用户名输入字段的代码** *
-- **编写填充**用户名输入字段的测试* 
+- **编写填充**用户名输入字段的测试*
 - 编写密码输入字段的代码
 - 更新测试以填充密码输入字段
 - 编写提交按钮的代码
@@ -75,6 +75,10 @@
 **Cypress [观察和重新加载插件](https://github.com/bahmutov/cypress-watch-and-reload)** 此功能使您能够在每次源代码编译时重新运行 Cypress 测试。
 
 如果您想在 Cypress 控制的浏览器中查看 React/Redux 开发工具的实际效果，可以使用 [cypress-react-devtools](https://github.com/NoriSte/cypress-react-devtools) 存储库。
+
+## 相关章节
+
+- 🔗 [发现了 bug？先编写测试，然后再着手修复](/sections/testing-strategy/write-test-then-fix-bug.zh.md)
 
 <br /><br />
 
