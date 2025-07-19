@@ -21,3 +21,7 @@ Don't take for granted that testing everything on every browser is always the be
 - cross-browser testing is usually related to visual testing (CSS browser differences) but this is not related to functional testing. Visual testing is made easy by a lot of dedicated plugins and tools. Take a look at [the dedicated chapter](../tools/visual-regression-testing.md) [Applitools](https://applitools.com) where we talk about some dedicated products that can be integrated with almost all the testing tools and work by uploading a snapshot of the page under test into their servers and render them.
 
 You can also take a sneak peek at some differences between the various testing tools into the [Await, don't sleep](/sections/generic-best-practices/await-dont-sleep.md) chapter.
+
+## Related chapters
+
+- 🔗 [Combinatorial Testing](/sections/advanced/combinatorial-testing.md)
