@@ -13,16 +13,16 @@
 <br/>
 
 <div align="center">
-  <img src="https://img.shields.io/badge/⚙%20Item%20count%20-%2026%20Chapters-blue.svg" alt="26 items"> <img src="https://img.shields.io/badge/%F0%9F%93%85%20Last%20update%20-%20Jun%202023-green.svg" alt="Last update: June, 2023">
+  <img src="https://img.shields.io/badge/⚙%20Item%20count%20-%2026%20Chapters-blue.svg" alt="26 items"> <img src="https://img.shields.io/badge/%F0%9F%93%85%20Last%20update%20-%20Jun%202025-green.svg" alt="Last update: June, 2025">
 </div>
 
 <br/>
 
-**Follow us on Twitter!**:
-- [**@NoriSte**](https://twitter.com/NoriSte/)
-- [**@MuratKeremOzcan**](https://twitter.com/MuratKeremOzcan/)
+**Follow us on Twitter or LinkedIn!**:
+- [**@NoriSte**](https://twitter.com/NoriSte/) - [Stefano Magni](https://www.linkedin.com/in/noriste/)
+- [**@MuratKeremOzcan**](https://twitter.com/MuratKeremOzcan/) - [Murat Ozcan](https://www.linkedin.com/in/murat-ozcan-3489898/)
 
-<br/>
+and reach out to us if you need a consultancy or a course.
 
 ###### Built and maintained by our [Steering Committee](#steering-committee) and [Collaborators](#collaborators)
 
@@ -356,7 +356,7 @@ Meet the steering committee members - the people who work together to provide gu
 
 </img></a>
 
-Passionate, positive-minded / Front-end Tech Leader (platform) [Hasura](https://hasura.io/) / Speaker / Instructor / Remote worker.
+Passionate, positive-minded / Front-end Senior Engineers (design system) at [Preply](https://preply.com/) / Speaker / Instructor / Remote worker.
 
 <br/>
 <br/>
@@ -374,7 +374,7 @@ Passionate, positive-minded / Front-end Tech Leader (platform) [Hasura](https://
 
 </img></a>
 
-Tech enthusiast in love with testing, development, devops, web and cloud. Staff eng / Test architect at [Extend](https://www.extend.com/).
+Tech enthusiast in love with testing, development, devops, web and cloud. Staff Engineer, Test Architect at [Seon]https://seon.io/).
 
 <br/>
 <br/>
