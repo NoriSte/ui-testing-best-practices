@@ -7,7 +7,7 @@
 # UI 测试最佳实践
 
 <h1 align="center">
-  <img src="assets/images/banner-2.jpg" alt="UI testing Best Practices">
+  <img src="assets/images/banner-2.png" alt="UI testing Best Practices">
 </h1>
 
 <br/>
