@@ -45,3 +45,8 @@ A beginning todo list to avoid falling into the perfectionism trap could be:
 Software testing is an amazing journey and the goal of this repo is helping you avoid the most common pitfalls.
 
 The suggested flow is just one of the possible approaches. I know that everything is subjective and please, open a PR for every suggestion!
+
+## Related chapters
+
+- 🔗 [From unreadable React Component Tests to simple, stupid ones](/sections/real-life-examples/from-unreadable-react-component-tests-to-simple-ones.md)
+- 🔗 [Use your testing tool as your primary development tool](/sections/generic-best-practices/use-your-testing-tool-as-your-primary-development-tool.md)
