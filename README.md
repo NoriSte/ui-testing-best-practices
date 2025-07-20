@@ -356,7 +356,7 @@ Meet the steering committee members - the people who work together to provide gu
 
 </img></a>
 
-Passionate, positive-minded / Front-end Senior Engineers (design system) at [Preply](https://preply.com/) / Speaker / Instructor / Remote worker.
+Passionate, positive-minded / Front-end Senior Engineer (design system) at [Preply](https://preply.com/) / Speaker / Instructor / Remote worker.
 
 <br/>
 <br/>
@@ -374,7 +374,7 @@ Passionate, positive-minded / Front-end Senior Engineers (design system) at [Pre
 
 </img></a>
 
-Tech enthusiast in love with testing, development, devops, web and cloud. Staff Engineer, Test Architect at [Seon]https://seon.io/).
+Tech enthusiast in love with testing, development, devops, web and cloud. Staff Engineer, Test Architect at [Seon](https://seon.io/).
 
 <br/>
 <br/>
