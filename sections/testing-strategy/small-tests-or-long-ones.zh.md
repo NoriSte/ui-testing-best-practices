@@ -279,6 +279,7 @@ export function createLoginAction() {
 
 ## 相关章节
 
+- 🔗 [组件测试 vs（UI）集成测试 vs E2E 测试](/sections/testing-strategy/component-vs-integration-vs-e2e-testing.zh.md)
 - 🔗 [从金字塔的顶端着手构建测试！](/sections/beginners/top-to-bottom-approach.zh.md)
 - 🔗 [把你的测试工具当作主要的开发工具来使用](/sections/generic-best-practices/use-your-testing-tool-as-your-primary-development-tool.zh.md)
 <br/><br/>

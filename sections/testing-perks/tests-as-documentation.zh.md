@@ -39,3 +39,11 @@
 - UI 测试并不是唯一的测试类型：为代码的某些可能难以理解的部分编写更多的低级测试是描述代码期望行为的好方法。
 
 - 在测试中添加注释可以极大地帮助读者，参见["匹配测试代码和测试运行命令"章节](../generic-best-practices/test-code-with-debugging-in-mind.zh.md#匹配测试代码和测试运行器命令)中的“保持抽象水平以便于调试测试”一章。
+
+## 相关章节
+
+- 🔗 [发现了 bug？先编写测试，然后再着手修复](/sections/testing-strategy/write-test-then-fix-bug.zh.md)
+- 🔗 [明智地为测试文件命名](/sections/generic-best-practices/name-test-files-wisely.zh.md)
+- 🔗 [将您的测试工具用作主要的开发工具](/sections/generic-best-practices/use-your-testing-tool-as-your-primary-development-tool.zh.md)
+- 🔗 [保持低抽象度以便于调试测试](/sections/generic-best-practices/test-code-with-debugging-in-mind.zh.md)
+- 🔗 [检验请求和响应负载](/sections/server-communication-testing/test-request-and-response-payload.zh.md)

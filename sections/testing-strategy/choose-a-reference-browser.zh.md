@@ -23,3 +23,7 @@
 - 跨浏览器测试通常涉及到视觉测试（CSS 浏览器差异），但这与功能测试不同。视觉测试得益于许多专用插件和工具的支持。详细了解 [视觉测试对应的章节](../tools/visual-regression-testing.zh.md) [Applitools](https://applitools.com)，其中我们讨论了一些专用产品，这些产品可以与几乎所有测试工具集成，通过将被测试页面的快照上传到其服务器并进行呈现来进行工作。
 
 你还可以在 [等待，不是休眠](/sections/generic-best-practices/await-dont-sleep.zh.md) 章节中了解各种测试工具之间的一些差异。
+
+## 相关章节
+
+- 🔗 [组合测试](/sections/advanced/combinatorial-testing.zh.md)

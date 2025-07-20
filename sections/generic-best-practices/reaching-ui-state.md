@@ -243,4 +243,6 @@ Cypress [`cy.task()`](https://docs.cypress.io/api/commands/task.html#Requirement
 There is a [Cypress recipe](https://github.com/cypress-io/cypress-example-recipes/tree/master/examples/server-communication__seeding-database-in-node) on this topic and we will end with that reference.
 
 
-<br/><br/>
+## Related chapters
+
+- 🔗 [From unreadable React Component Tests to simple, stupid ones](/sections/real-life-examples/from-unreadable-react-component-tests-to-simple-ones.md)

@@ -4,27 +4,25 @@
 <!-- markdownlint-disable MD041 -->
 <!-- markdownlint-disable MD033 -->
 
-[✔]: assets/images/checkbox-small-blue.png
-
 # UI Testing Best Practices
 
 <h1 align="center">
-  <img src="assets/images/banner-2.jpg" alt="UI testing Best Practices">
+  <img src="assets/images/banner-2.png" alt="UI testing Best Practices">
 </h1>
 
 <br/>
 
 <div align="center">
-  <img src="https://img.shields.io/badge/⚙%20Item%20count%20-%2026%20Chapters-blue.svg" alt="26 items"> <img src="https://img.shields.io/badge/%F0%9F%93%85%20Last%20update%20-%20Jun%202023-green.svg" alt="Last update: June, 2023">
+  <img src="https://img.shields.io/badge/⚙%20Item%20count%20-%2026%20Chapters-blue.svg" alt="26 items"> <img src="https://img.shields.io/badge/%F0%9F%93%85%20Last%20update%20-%20Jun%202025-green.svg" alt="Last update: June, 2025">
 </div>
 
 <br/>
 
-**Follow us on Twitter!**:
-- [**@NoriSte**](https://twitter.com/NoriSte/)
-- [**@MuratKeremOzcan**](https://twitter.com/MuratKeremOzcan/)
+**Follow us on Twitter or LinkedIn!**:
+- [**@NoriSte**](https://twitter.com/NoriSte/) - [Stefano Magni](https://www.linkedin.com/in/noriste/)
+- [**@MuratKeremOzcan**](https://twitter.com/MuratKeremOzcan/) - [Murat Ozcan](https://www.linkedin.com/in/murat-ozcan-3489898/)
 
-<br/>
+and reach out to us if you need a consultancy or a course.
 
 ###### Built and maintained by our [Steering Committee](#steering-committee) and [Collaborators](#collaborators)
 
@@ -44,7 +42,7 @@
 
 # `1. Testing strategies`
 
-## ![✔] 1.1 Component tests vs (UI) Integration tests vs E2E tests
+## 1.1 Component tests vs (UI) Integration tests vs E2E tests
 
 **TL;DR:** Identifying the test types is the starting point to understand and master all the UI testing strategies, the tools, and the pro/cons of them. UI integration tests are the most effective ones (you are going to love them), E2E tests give you the highest confidence, and Component tests allow you to test the units of the UI in isolation.
 
@@ -54,7 +52,7 @@
 
 <br/>
 
-## ![✔] 1.2 In the beginning, avoid perfectionism
+## 1.2 In the beginning, avoid perfectionism
 
 **TL;DR:** Software Testing is an amazing topic but a limited experience could make you fighting with a new enemy instead of relying on a new ally. Avoid, if you can, to test every complex user flows since the beginning of your UI testing journey. The simpler your first tests are, the sooner you get the advantages.
 
@@ -64,7 +62,7 @@
 
 <br/>
 
-## ![✔] 1.3 Choose a reference browser
+## 1.3 Choose a reference browser
 
 **TL;DR:** Cross-browser testing is way overrated. It's an important topic and it's the first thing you can think while starting evaluating the right testing tool. Don't worry: start by splitting functional testing from visual testing, that's the first step to correctly evaluate the need for cross-browser support (and to choose the right testing tool, too). Visual testing can be integrated into every testing tool, thank services like Applitools and Percy.
 
@@ -74,7 +72,7 @@
 
 <br/>
 
-## ![✔] 1.4 Found a bug? Write the test, then fix it
+## 1.4 Found a bug? Write the test, then fix it
 
 **TL;DR:** A test is a good ally when you need to be sure that you are able to systematically reproducing a bug. A test allows you to speed up the fixing flow and to be 100% confident that the same bug is caught forever.
 
@@ -84,7 +82,7 @@
 
 <br/>
 
-## ![✔] 1.5 One long E2E test or small, independent ones?
+## 1.5 One long E2E test or small, independent ones?
 
 **TL;DR:** When dealing with E2E tests and their difficulties, opting for a lot of small and independent tests or for a long one is not an obvious choice. Either the solutions have pros and cons, deriving from the inner complexity of the E2E tests where you deal with a real back-end and real data.
 
@@ -96,7 +94,7 @@
 
 # `2. Generic Best Practices`
 
-## ![✔] 2.1 Await, don't sleep
+## 2.1 Await, don't sleep
 
 **TL;DR:** When testing your UI, you define a sort of key points the app must pass through. Reaching these key
 points is an asynchronous process because, almost 100% of the times, your UI does not update
@@ -109,7 +107,7 @@ know that must happen. You need to wait for these events to make your tests robu
 
 <br/>
 
-## ![✔] 2.2 Name your test files wisely
+## 2.2 Name your test files wisely
 
 **TL;DR:** Lot of times you need to launch just a type of tests and it's super easy if you follow a
 common pattern while naming your testing files.
@@ -121,7 +119,7 @@ wisely**](/sections/generic-best-practices/name-test-files-wisely.md)
 
 <br/>
 
-## ![✔] 2.3 UI Tests Debugging Best Practices
+## 2.3 UI Tests Debugging Best Practices
 
 **TL;DR:** Debugging a UI test could be really hard, especially if you use generic browser automation tools. Here is a list of simple rules that are at the base of the debugging process.
 
@@ -131,7 +129,7 @@ wisely**](/sections/generic-best-practices/name-test-files-wisely.md)
 
 <br/>
 
-## ![✔] 2.4 Reaching UI state for tests without using the UI
+## 2.4 Reaching UI state for tests without using the UI
 
 **TL;DR:** As a developer who wants to ensure quality, it is important to think about cost of tests vs the value they provide. Where reasonable, strive to not duplicate effort, and still get high value by considering alternatives for setting up state for a test.
 
@@ -139,7 +137,7 @@ wisely**](/sections/generic-best-practices/name-test-files-wisely.md)
 
 <br/>
 
-## ![✔] 2.5 Use your testing tool as your primary development tool
+## 2.5 Use your testing tool as your primary development tool
 
 **TL;DR:** Leveraging your testing tool to avoid manual tests is one of the biggest improvements you
 could do to speed up your working flow. Testing tools are faster than you and the most modern ones include
@@ -151,7 +149,7 @@ some UI utilities that make easy to use them as a development tool.
 
 <br/>
 
-## ![✔] 2.6 Keep abstraction low to ease debugging the tests
+## 2.6 Keep abstraction low to ease debugging the tests
 
 **TL;DR:** Tests should be written with readability and debuggability in mind. Abstraction may be good in some instances, but it always incurs a cost in debuggability and therefore sometimes may not be worth it. This is especially important for UI tests; consequent of the complex stack, it can get harder to understand the real source of failures. Reducing abstraction for the sake of easier debugging is key for future proofing the test code.
 
@@ -164,7 +162,7 @@ some UI utilities that make easy to use them as a development tool.
 
 # `3. Server Communication Testing`
 
-## ![✔] 3.1 Test the request and response payloads
+## 3.1 Test the request and response payloads
 
 **TL;DR:** The UI communicates continuously with the back-end, and usually every communication is critical. A bad request or a bad response could cause inconsistent data and inconsistent UI state. Remember that all the business is built around data and the user experience is scratched by every single UI failure. So, every single XHR request must be checked carefully. XHR request checks make your test more robust too, correct XHR management and testing are one of the most important aspects of a UI test.
 
@@ -174,7 +172,7 @@ some UI utilities that make easy to use them as a development tool.
 
 <br/>
 
-## ![✔] 3.2 Test the server schema
+## 3.2 Test the server schema
 
 **TL;DR:** A lot of times, the front-end application breaks because of a change in the back-end. Ask your back-end colleagues to allow you to export every schema that describes the back-end entities and the communication with the front-end. Some examples could be the GraphQL schema, the TypeScript types, the ElasticSearch mapping, the Pact contract, a Postman configuration etc. more in general, everything that can warn you that something changed in the back-end. Every back-end change could impact the front-end and you must discover it as soonest as possible.
 
@@ -182,7 +180,7 @@ some UI utilities that make easy to use them as a development tool.
 
 <br/>
 
-## ![✔] 3.3 Monitoring tests
+## 3.3 Monitoring tests
 
 **TL;DR:** The more the test suites are launched periodically, the more confident you are that everything works as expected. UI tests should be based on the user perspective but there are a lot of small tests that could give you a lot of immediate feedback without debugging the expected user flows. Monitoring small and taken-for-granted tech details helps you preventing bigger test failures.
 
@@ -194,7 +192,7 @@ some UI utilities that make easy to use them as a development tool.
 
 # `4. Beginners`
 
-## ![✔] 4.1 Approach the testing pyramid from the top!
+## 4.1 Approach the testing pyramid from the top!
 
 **TL;DR:** Approaching the testing world could be inefficient and not satisfactory. You start writing some unit tests but you are left with a lot of doubts. UI Testing allows you to start with a high confidence since the very first day.
 
@@ -206,7 +204,7 @@ some UI utilities that make easy to use them as a development tool.
 
 # `5. Generic testing perks`
 
-## ![✔] 5.1 Software tests as a documentation tool
+## 5.1 Software tests as a documentation tool
 
 **TL;DR:** Tests are a good way to have a concise, code-coupled, and updated documentation. Good storytelling test descriptions could make the comprehension of a codebase or a new project very simple.
 
@@ -218,17 +216,22 @@ some UI utilities that make easy to use them as a development tool.
 
 # `6. Tools`
 
-## ![✔] 6.1 Some UI testing problems and the Cypress way
+## 6.1 Some UI testing problems and the Cypress way
 
 **TL;DR:** Why is testing a web application so hard? Why generic browser automation tools do not fit well the UI/E2E testing needs? Why does Cypress outstand?
 
 **Otherwise:** A generic features comparison is not enough to understand what are the main UI Testing pains and how Cypress removes them.
 
+> [!NOTE]
+> All the modern front-end testing tools (Playwright, Storybook, Cypress, TestCafé) all have the similar functionalities and UI tools, so this same contents applies to all of them, not just Cypress.
+
 🔗 [**Read More: Some UI testing problems and the Cypress way**](/sections/tools/ui-testing-problems-cypress.md)
+
+
 
 <br/><br/>
 
-## ![✔] 6.2 Visual Regression Testing
+## 6.2 Visual Regression Testing
 
 **TL;DR:** Visual regression tests hard and why we should rely on premium services.
 
@@ -242,7 +245,7 @@ some UI utilities that make easy to use them as a development tool.
 
 # `7. Advanced`
 
-## ![✔] 7.1 Test States
+## 7.1 Test States
 
 **TL;DR:** Tests should be repeatable, modular and should handle their own state setup. UI Tests should not be repeated in order to achieve state for another test.
 
@@ -250,7 +253,7 @@ some UI utilities that make easy to use them as a development tool.
 
 <br/>
 
-## ![✔] 7.2 Test Flake
+## 7.2 Test Flake
 
 **TL;DR:** Tests must produce consistent results every time. Repeatable pipeline execution results are the quorum.
 If a test cannot produce reliable results, it reduces confidence in the tests and requires maintenance which reduces all value. In these cases it is best to manually test the functionality.
@@ -259,7 +262,7 @@ If a test cannot produce reliable results, it reduces confidence in the tests an
 
 <br/>
 
-## ![✔] 7.3 Combinatorial Testing
+## 7.3 Combinatorial Testing
 
 **TL;DR:** Most software bugs and failures are caused by one or two parameters. Testing parameter combinations can provide more efficient fault detection than conventional methods. Combinatorial Testing is a proven method for more effective software testing at a lower cost.
 
@@ -267,7 +270,7 @@ If a test cannot produce reliable results, it reduces confidence in the tests an
 
 <br/>
 
-## ![✔] 7.4 Performance Testing
+## 7.4 Performance Testing
 
 **TL;DR:** Although this is a vast topic, Performance testing from a web development perspective can be simplified with modern tools and understanding. It is highly effective in ensuring user experience, satisfying non-functional requirements (NFRS), and detecting possible system-flake early on.
 
@@ -275,7 +278,7 @@ If a test cannot produce reliable results, it reduces confidence in the tests an
 
 <br/>
 
-## ![✔] 7.5 Email Testing
+## 7.5 Email Testing
 
 **TL;DR:** Email testing is [critical for business success](https://www.industrialmarketer.com/why-email-testing-is-critical-for-email-marketing-success/). Modern services not only allow automated email testing but also provide a stateless, scalable solution while testing SaaS applications.
 
@@ -285,7 +288,7 @@ If a test cannot produce reliable results, it reduces confidence in the tests an
 
 # `8. Real Life Examples`
 
-## ![✔] 8.1 Siemens - Test the front-end with the integration tests, the back-end with the E2E ones - in reference to [Component vs Integration vs E2e Testing](./sections/testing-strategy/component-vs-integration-vs-e2e-testing.md)
+## 8.1 Siemens - Test the front-end with the integration tests, the back-end with the E2E ones - in reference to [Component vs Integration vs E2e Testing](./sections/testing-strategy/component-vs-integration-vs-e2e-testing.md)
 
 **TL;DR:** UI tests with a stubbed server are reliable and faster compared to full E2E tests. Full E2E tests are not always necessary to ensure front-end quality. We can instead have high confidence in front-end quality by using lower-cost UI integration tests and saving higher cost E2E tests for the back-end.
 
@@ -295,7 +298,7 @@ If a test cannot produce reliable results, it reduces confidence in the tests an
 
 <br/>
 
-## ![✔] 8.2 WorkWave - From unreadable React Component Tests to simple, stupid ones
+## 8.2 WorkWave - From unreadable React Component Tests to simple, stupid ones
 
 **TL;DR:** The test's code must be as straightforward as possible. The benefit is to save a lot of time to understand, update, refactor, fix it when needed. At the opposite, a terrible scenario happens when you are not able to read some tests, even if you are the author! Here are reported some examples explaining why the test's code is hard, and how they have been refactored.
 
@@ -353,7 +356,7 @@ Meet the steering committee members - the people who work together to provide gu
 
 </img></a>
 
-Passionate, positive-minded / Front-end Tech Leader (platform) [Hasura](https://hasura.io/) / Speaker / Instructor / Remote worker.
+Passionate, positive-minded / Front-end Senior Engineers (design system) at [Preply](https://preply.com/) / Speaker / Instructor / Remote worker.
 
 <br/>
 <br/>
@@ -371,7 +374,7 @@ Passionate, positive-minded / Front-end Tech Leader (platform) [Hasura](https://
 
 </img></a>
 
-Tech enthusiast in love with testing, development, devops, web and cloud. Staff eng / Test architect at [Extend](https://www.extend.com/).
+Tech enthusiast in love with testing, development, devops, web and cloud. Staff Engineer, Test Architect at [Seon]https://seon.io/).
 
 <br/>
 <br/>

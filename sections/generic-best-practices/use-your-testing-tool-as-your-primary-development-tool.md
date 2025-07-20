@@ -90,6 +90,10 @@ UI](../../assets/images/use-your-testing-tool-as-your-primary-development-tool/s
 
 If you want to see the React/Redux devtools in action with the Cypress controlled browser you can use the [cypress-react-devtools](https://github.com/NoriSte/cypress-react-devtools) repository.
 
+## Related chapters
+
+- 🔗 [Found a bug? Write the test, then fix it](/sections/testing-strategy/write-test-then-fix-bug.md)
+
 <br /><br />
 
 *Crossposted by [NoriSte](https://github.com/NoriSte) on [dev.to](https://dev.to/noriste/front-end-productivity-boost-cypress-as-your-main-development-browser-5cdk) and [Medium](https://medium.com/@NoriSte/front-end-productivity-boost-cypress-as-your-main-development-browser-f08721123498).*
