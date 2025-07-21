@@ -349,12 +349,11 @@ Meet the steering committee members - the people who work together to provide gu
 <div>
 <img align="left" width="100" height="100" src="assets/images/members/noriste.png">
 
-[Stefano Magni](https://github.com/NoriSte)
-<a href="https://twitter.com/NoriSte"><img src="assets/images/twitter-s.png" width="16" height="16"></img></a>
-<a href="https://github.com/NoriSte"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/images/github-dark.png"><img alt="GitHub" src="assets/images/github-light.png" width="16" height="16"></picture>
-<a href="https://www.linkedin.com/in/noriste/"><img src="assets/images/linkedin.png" width="16" height="16"></img></a>
+Stefano Magni - [Twitter](https://twitter.com/NoriSte),
+[GitHub](https://github.com/NoriSte),
+[LinkedIn](https://www.linkedin.com/in/noriste/)
 
-</img></a>
+
 
 Passionate, positive-minded / Front-end Senior Engineer (design system) at [Preply](https://preply.com/) / Speaker / Instructor / Remote worker.
 
@@ -367,12 +366,11 @@ Passionate, positive-minded / Front-end Senior Engineer (design system) at [Prep
 <img align="left" width="100" height="100" src="assets/images/members/muratkeremozcan.png">
 
 
-[Murat Ozcan](https://github.com/NoriSte)
-<a href="https://twitter.com/MuratKeremOzcan"><img src="assets/images/twitter-s.png" width="16" height="16"></img></a>
-<a href="https://github.com/muratkeremozcan"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/images/github-dark.png"><img alt="GitHub" src="assets/images/github-light.png" width="16" height="16"></picture>
-<a href="https://www.linkedin.com/in/murat-ozcan-3489898/"><img src="assets/images/linkedin.png" width="16" height="16"></img></a>
+Murat Ozcan - [Twitter](https://twitter.com/MuratKeremOzcan),
+[GitHub](https://github.com/muratkeremozcan),
+[LinkedIn](https://www.linkedin.com/in/murat-ozcan-3489898/), [YouTube](https://www.youtube.com/@MuratKeremOzcan), [Udemy](https://www.youtube.com/@MuratKeremOzcan)
 
-</img></a>
+
 
 Tech enthusiast in love with testing, development, devops, web and cloud. Staff Engineer, Test Architect at [Seon](https://seon.io/).
 
