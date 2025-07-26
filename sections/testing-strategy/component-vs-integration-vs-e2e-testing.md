@@ -15,7 +15,7 @@ Speaking about UI Testing (remember that we are speaking about the UI only, not 
   - **the a11y (accessibility) tests**: HTML serves different purposes, SEO and a11y for example, and testing the accessibility of the HTML is the most thorough way to ensure HTML is semantically correct and maintain a high-level of compatibility with screen readers. As a result, SEO benefits too.
   - **the visual regression tests**: the visual aspect of the component compared **pixel by pixel** with the previous one, again, you are prompted to choose if you accept the changes or not.
   - **the interaction tests**: some interactions with a component expect correct state management. This kind of test must be written from the consumer point of view, not from the inner one (ex. the value of the input field when the user fills it, not the inner component state). An interaction/state test should assert the input field value after the keyboard events triggered. If the callbacks accepted by the component are correctly called is testable through this type of tests.
-  - **the callbacks tests**: when components accept callbacks to notify the parent of some updates, it's important to test all the callbacks are correctly called.
+
 
 - <strong id="ui-integration-tests">UI integration tests</strong>: they run the whole app in a real browser **without hitting a real server**. These tests are the ace in the hole of every front-end developer. They are blazing fast and less exposed to random failures or false negatives.
 
