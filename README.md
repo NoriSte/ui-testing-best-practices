@@ -233,7 +233,7 @@ some UI utilities that make easy to use them as a development tool.
 
 ## 6.2 Visual Regression Testing
 
-**TL;DR:** Visual regression tests hard and why we should rely on premium services.
+**TL;DR:** Visual regression tests are hard and why we should rely on premium services.
 
 **Otherwise:** Another continuous chore for regressions we do not care about. Possibility of missing out visual differences.
 
