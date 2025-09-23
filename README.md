@@ -403,6 +403,7 @@ A successful PR gives you a 🌻, be the first to collect it.
 🌻 [Luca Previtali](https://www.linkedin.com/in/previtaliluca/)
 🌻 [Filip Hric](https://github.com/filiphric)
 🌻 [Dorottya K.](https://github.com/DoreyKiss)
+🌻 [Gabriele Concli](https://github.com/gabwithcli)
 
 <br/><br/><br/>
 
