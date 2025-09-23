@@ -148,7 +148,9 @@ The above feature has one more effect: do you remember the not-so-good test time
 
 Last but not least: DOM-related commands report **DOM-related errors** the way you need. Take a look at the following example:
 
-![Cypress reports clearly the problem from a user/DOM perspective.](../../assets/images/ui-testing-problems-cypress/dom-error.png)_Cypress reports clearly the problem from a user/DOM perspective._
+![Cypress reports clearly the problem from a user/DOM perspective.](../../assets/images/ui-testing-problems-cypress/dom-error.png) 
+
+_Cypress reports clearly the problem from a user/DOM perspective._
 
 It is pretty clear the reason why the user could not type into the input element. Cypress is not the only tool that has commands that act as the user would do, but its speaking errors are quite uncommon.
 
