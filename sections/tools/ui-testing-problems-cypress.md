@@ -148,7 +148,7 @@ The above feature has one more effect: do you remember the not-so-good test time
 
 Last but not least: DOM-related commands report **DOM-related errors** the way you need. Take a look at the following example:
 
-![Cypress reports clearly the problem from a user/DOM perspective.](../../assets/images/ui-testing-problems-cypress/dom-error.png) 
+![Cypress reports clearly the problem from a user/DOM perspective.](../../assets/images/ui-testing-problems-cypress/dom-error.png)
 
 _Cypress reports clearly the problem from a user/DOM perspective._
 
@@ -160,7 +160,7 @@ There are a lot of common mistakes that developers do while testing. Some mistak
 
 - With **AAA-quality [documentation](https://docs.cypress.io/guides/overview/why-cypress.html)**: take a look at it, it contains a lot of [best practices and anti-patterns too](https://docs.cypress.io/guides/references/best-practices.html). Everyone agrees about the quality of the documentation
 
-- **Resetting the state**: the tests do not share the state because cookies, localStorage, etc. are all reset before every test. You obviously can create smart commands that allow you to keep the tests independent (the real problem sharing the state is the independence of the tests, take a look at an [example from one of my courses](https://noriste.github.io/reactjsday-2019-testing-course/book/sharing-authentication-state.html)) but you cannot skip the reset. It is a pro, trust me 😉
+- **Resetting the state**: the tests do not share the state because cookies, localStorage, etc. are all reset before every test. You obviously can create smart commands that allow you to keep the tests independent by saving a test's state and restoring it at the beginning of the next test (the real problem sharing the state is the independence of the tests, take a look at [example from one of my courses](https://noriste.github.io/reactjsday-2019-testing-course/book/sharing-authentication-state.html)) but you cannot skip the state reset at the end of the test. It is a pro, trust me 😉
 
 - Removing the possibility of restoring a test, is an assertion fails, you cannot go ahead. You do need to make your test more stable, even if sometimes it could seem hard. This is a winning choice, otherwise, you would have been allowed to write bad tests
 

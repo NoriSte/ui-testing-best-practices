@@ -157,7 +157,7 @@ cy.contains("Contact Us").should("be.visible");
 
 - 通过 **AAA-质量的[文档](https://docs.cypress.io/guides/overview/why-cypress.html)**：快来看一下，它包含了很多[最佳实践和反模式](https://docs.cypress.io/guides/references/best-practices.html)。所有人都对文档的质量给予了高度评价。
 
-- **重置状态**：测试不会共享状态，因为每个测试运行之前都会重置 cookies、localStorage 等。你当然可以创建智能命令，以保持测试的独立性（共享状态的真正问题在于测试的独立性，可以看一下[我课程中的一个例子](https://noriste.github.io/reactjsday-2019-testing-course/book/sharing-authentication-state.html)），但你无法跳过重置。这是个优势，相信我 😉
+- **重置状态**：测试不共享状态，因为 cookie、localStorage 等都会在每次测试前重置。当然，你可以创建一些智能命令，通过保存测试状态并在下一个测试开始时恢复，来保持测试的独立性（共享状态的真正问题在于测试的独立性，可以参考[我的一门课程中的示例](https://noriste.github.io/reactjsday-2019-testing-course/book/sharing-authentication-state.html)），但你无法跳过测试结束时的状态重置。相信我，这很专业 😉
 
 - 移除了在断言失败时恢复测试的可能性，如果测试失败，你就无法继续进行。确实需要使测试更加稳定，即使有时可能看起来有些困难。这是一个明智的选择，否则你可能会被允许编写糟糕的测试。
 
